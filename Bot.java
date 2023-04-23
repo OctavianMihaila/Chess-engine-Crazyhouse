@@ -1,14 +1,20 @@
 public class Bot {
     /* Edit this, escaped characters (e.g newlines, quotes) are prohibited */
-    private static final String BOT_NAME = "MyBot";
+    private static final String BOT_NAME = "Verik";
 
     /* Declare custom fields below */
 
+    private Piece[][] board;
 
     /* Declare custom fields above */
 
     public Bot() {
-        /* Initialize custom fields here */
+
+    }
+
+    public void newBoard() {
+        this.board = new Piece[9][9];
+
     }
 
     /**
@@ -30,7 +36,7 @@ public class Bot {
         * Make sure to record your move in custom structures before returning.
         *
         * Return move that you are willing to submit
-        * Move is to be constructed via one of the factory methods defined in Move.java */
+        * Pieces.Move is to be constructed via one of the factory methods defined in Pieces.Move.java */
         return Move.resign();
     }
 

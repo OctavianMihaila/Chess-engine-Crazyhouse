@@ -174,6 +174,8 @@ public class Main {
             assert command.equals("xboard");
             System.out.print("\n");
 
+            System.out.println("Got xboard command");
+
             command = scanner.nextLine();
             assert command.startsWith("protover");
 
@@ -226,7 +228,6 @@ public class Main {
 
         while (true) {
             /* Fetch and execute next command */
-
             engine.executeOneCommand();
         }
     }
