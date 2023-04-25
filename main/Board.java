@@ -28,16 +28,16 @@ public class Board {
 		board[8][8] = new Rook(false, PieceType.ROOK, 8, 8);
 
 		// Setting up the knights
-		board[1][2] = new Knight(true, PieceType.KNIGHT, 1, 2);
-		board[1][7] = new Knight(true, PieceType.KNIGHT, 1, 7);
-		board[8][2] = new Knight(false, PieceType.KNIGHT, 8, 2);
-		board[8][7] = new Knight(false, PieceType.KNIGHT, 8, 7);
+		board[1][2] = new Knight(imBlack, PieceType.KNIGHT, 1, 2);
+		board[1][7] = new Knight(imBlack, PieceType.KNIGHT, 1, 7);
+		board[8][2] = new Knight(!imBlack, PieceType.KNIGHT, 8, 2);
+		board[8][7] = new Knight(!imBlack, PieceType.KNIGHT, 8, 7);
 
 		// Setting up the bishops
-		board[1][3] = new Bishop(true, PieceType.BISHOP, 1, 3);
-		board[1][6] = new Bishop(true, PieceType.BISHOP, 1, 6);
-		board[8][3] = new Bishop(false, PieceType.BISHOP, 8, 3);
-		board[8][6] = new Bishop(false, PieceType.BISHOP, 8, 6);
+		board[1][3] = new Bishop(imBlack, PieceType.BISHOP, 1, 3);
+		board[1][6] = new Bishop(imBlack, PieceType.BISHOP, 1, 6);
+		board[8][3] = new Bishop(!imBlack, PieceType.BISHOP, 8, 3);
+		board[8][6] = new Bishop(!imBlack, PieceType.BISHOP, 8, 6);
 
 		// Setting up the queens
 //		board[1][4] = new Queen(true, PieceType.QUEEN, 1, 4);

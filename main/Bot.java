@@ -44,7 +44,7 @@ public class Bot {
         board.movePiece(move);
 
         System.out.println("<<< Table after recording first move >>>");
-        DebugTools.printBoard(board.getBoard());
+        DebugTools.printBoardPretty(board.getBoard());
 
         this.lastMove = move;
     }
