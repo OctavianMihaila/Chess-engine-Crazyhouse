@@ -1,4 +1,7 @@
-package Pieces;
+package pieces;
+
+import main.Move;
+import main.PieceType;
 
 public class Pawn extends Piece {
 	public Pawn(boolean isMine, PieceType type, int x, int y) {
@@ -11,9 +14,9 @@ public class Pawn extends Piece {
 		int verticalDist = yDest - y;
 		int horizontalDist = xDest - x;
 
-		// Move 2 squares if it's the first move
+		// main.Move 2 squares if it's the first move
 		if (y == 2 && verticalDist != 1 && verticalDist != 2) return false;
-		// Move 1 square if it's not the first move
+		// main.Move 1 square if it's not the first move
 		if (verticalDist != 1) return false;
 		// Cant move horizontally
 		if (Math.abs(horizontalDist) > 1) return false;
@@ -33,6 +36,35 @@ public class Pawn extends Piece {
 
 	@Override
 	public Move suggestRandomMove(Piece[][] board) {
-		return Move.moveTo(getSrcString(), getDstString(x, y + 1));
+		System.out.println(">>>>>>> " + x + " " + y);
+		if (canMove(board, x, y + 1)) {
+			System.out.println("Pawn case 1: " + x + " " + y);
+			return Move.moveTo(getSrcString(), getDstString(0, 1));
+		} else {
+			System.out.println("Case 1 not possible");
+		}
+
+		if (canMove(board, x, y + 2)) {
+			System.out.println("Pawn case 2: " + x + " " + y);
+			return Move.moveTo(getSrcString(), getDstString(0, 2));
+		} else {
+			System.out.println("Case 2 not possible");
+		}
+
+		if (canCapture(board, x + 1, y + 1)) {
+			System.out.println("Pawn case 3: " + x + " " + y);
+			return Move.moveTo(getSrcString(), getDstString(1, 1));
+		} else {
+			System.out.println("Case 3 not possible");
+		}
+
+		if (canCapture(board, x + 1, y - 1)) {
+			System.out.println("Pawn case 4: " + x + " " + y);
+			return Move.moveTo(getSrcString(), getDstString(1, -1));
+		} else {
+			System.out.println("Case 4 not possible");
+		}
+
+		return null;
 	}
 }

@@ -1,4 +1,7 @@
-package Pieces;
+package pieces;
+
+import main.Move;
+import main.PieceType;
 
 public abstract class Piece {
 	public boolean isMine;
@@ -13,11 +16,18 @@ public abstract class Piece {
 
 	}
 
+	public PieceType getType() {
+		return type;
+	}
+
+	//TODO Check getSrcString getDstString.
 	public String getSrcString() {
+//		System.out.println("###### " + "x: " + x + " y: " + y);
 		return Character.toString((char) ('a' + x)) + y;
 	}
 
 	public String getDstString(int xDst, int yDst) {
+//		System.out.println("###### " + "xDst: " + xDst + " yDst: " + yDst);
 		int yFin = this.y + yDst;
 		int xFin = this.x + xDst;
 		return Character.toString((char) ('a' + xFin)) + yFin;

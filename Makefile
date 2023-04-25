@@ -1,13 +1,15 @@
 build:
-	javac Pieces/*.java
-	javac *.java
+	javac ./main/*.java
+	javac ./pieces/*.java
 
 run: build
-	java Main.java
+	java main/Main.java
 
 play:
 	xboard -fcp "make run" -debug
 
+fullTest: clean build play
+
 clean:
-	rm Pieces/*.class
-	rm *.class
+	rm ./main/*.class
+	rm ./pieces/*.class

@@ -1,4 +1,6 @@
-import Pieces.*;
+package main;
+
+import pieces.*;
 
 import java.util.ArrayList;
 
@@ -7,7 +9,7 @@ public class Board {
 	private ArrayList<Piece> myPieces = new ArrayList<Piece>();
 	private ArrayList<Piece> enemyPieces = new ArrayList<Piece>();
 
-	public void newBoard() {
+	public Board() {
 		board = new Piece[9][9];
 
 		// Setting up the pawns
@@ -38,8 +40,8 @@ public class Board {
 		board[8][6] = new Bishop(false, PieceType.BISHOP, 8, 6);
 
 		// Setting up the queens
-		board[1][4] = new Queen(true, PieceType.QUEEN, 1, 4);
-		board[8][4] = new Queen(false, PieceType.QUEEN, 8, 4);
+//		board[1][4] = new Queen(true, PieceType.QUEEN, 1, 4);
+//		board[8][4] = new Queen(false, PieceType.QUEEN, 8, 4);
 
 		// Setting up the kings
 		board[1][5] = new King(true, PieceType.KING, 1, 5);
@@ -59,6 +61,10 @@ public class Board {
 		}
 	}
 
+	public Piece[][] getBoard() {
+		return board;
+	}
+
 	public Piece getPiece(int x, int y) {
 		return board[x][y];
 	}
@@ -69,20 +75,43 @@ public class Board {
 		return board[x][y];
 	}
 
-	public boolean movePiece(Piece piece, int xDest, int yDest) {
-		if (!piece.canMove(board, xDest, yDest)) return false;
+	public boolean movePiece(Move move) {
+		int sourceY = move.getSource().get().charAt(0) - 'a' + 1;
+		int sourceX = move.getSource().get().charAt(1) - '0';
+		System.out.println("Source: " + move.getSource());
+		int destY = move.getDestination().get().charAt(0) - 'a' + 1;
+		int destX = move.getDestination().get().charAt(1) - '0';
+		System.out.println("Dest: " + move.getDestination());
+		Piece piece = board[sourceX][sourceY];
+
+		if (piece == null) {
+			System.out.println("No piece found at " + sourceX + ", " + sourceY);
+			return false;
+		}
+
 		board[piece.x][piece.y] = null;
-		board[xDest][yDest] = piece;
-		piece.x = xDest;
-		piece.y = yDest;
+		board[destX][destY] = piece;
+		piece.x = destX;
+		piece.y = destY;
+
 		return true;
 	}
 
 	public Move getRandMove() {
+		System.out.println(">>>>>>> Random move <<<<<<<");
+		DebugTools.printBoard(board);
 		for (Piece piece : myPieces) {
-			Move move = piece.suggestRandomMove(board);
-			if (move != null) return move;
+			Move move = null;
+			if (piece.isMine && piece.getType() == PieceType.PAWN) {
+				System.out.println(">>>>>>>> SOURCE: " + piece.getSrcString());
+				 move = piece.suggestRandomMove(board);
+			}
+
+			if (move != null) {
+				return move;
+			}
 		}
+
 		System.out.println("No moves found");
 		return null;
 	}

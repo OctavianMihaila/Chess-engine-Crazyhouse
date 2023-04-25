@@ -1,17 +1,19 @@
+package main;
+
 import java.util.Optional;
 
 public class Move {
     /* Positions (source, destination) are encoded in coordinate notation
      as strings (i.e. "e1", "f6", "a4" etc.) */
-    private final Optional<String> source;
-    private final Optional<String> destination;
+    private Optional<String> source;
+    private Optional<String> destination;
 
-    /* Piece to promote a pawn advancing to last row, or
+    /* main.Piece to promote a pawn advancing to last row, or
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
 
     /*
-      Use the following 4 constructors for Pieces.Move:
+      Use the following 4 constructors for Pieces.main.Move:
       moveTo(src, dst), if emitting a standard move (advance, capture, castle)
       promote(src, dst, replace), if advancing a pawn to last row
       dropIn(dst, replace), if placing a captured piece
@@ -35,6 +37,28 @@ public class Move {
         this.destination = Optional.ofNullable(destination);
         this.replacement = Optional.ofNullable(replacement);
     }
+
+    /**
+        Translates a move from opponent's perspective to engine's perspective
+     */
+    public void translateMove() {
+        if (source.isPresent() && destination.isPresent()) {
+            String translatedSource = translatePosition(source.get());
+            String translatedDest = translatePosition(destination.get());
+            source = Optional.of(translatedSource);
+            destination = Optional.of(translatedDest);
+        }
+    }
+
+    private String translatePosition(String pos) {
+        int row = pos.charAt(1) - '0';
+        int col = pos.charAt(0) - 'a';
+        int translatedRow = 9 - row;
+//        int translatedCol = 9 - col;
+        return "" + (char)('a' + col) + translatedRow;
+    }
+
+
 
     /**
      * Checks whether the move is an usual move/capture

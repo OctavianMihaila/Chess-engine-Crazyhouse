@@ -1,4 +1,6 @@
-public enum Piece {
+package main;
+
+public enum PieceType {
     PAWN,
     ROOK,
     BISHOP,

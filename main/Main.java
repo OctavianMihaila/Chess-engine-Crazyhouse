@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -66,26 +68,26 @@ public class Main {
         if (s.charAt(1) == '@') {
             /* Drop-in */
 
-            Piece piece = switch (s.charAt(0)) {
-                case 'P' -> Piece.PAWN;
-                case 'R' -> Piece.ROOK;
-                case 'B' -> Piece.BISHOP;
-                case 'N' -> Piece.KNIGHT;
-                case 'Q' -> Piece.QUEEN;
-                case 'K' -> Piece.KING; /* This is an illegal move */
+            PieceType piece = switch (s.charAt(0)) {
+                case 'P' -> PieceType.PAWN;
+                case 'R' -> PieceType.ROOK;
+                case 'B' -> PieceType.BISHOP;
+                case 'N' -> PieceType.KNIGHT;
+                case 'Q' -> PieceType.QUEEN;
+                case 'K' -> PieceType.KING; /* This is an illegal move */
                 default -> null;
             };
 
             return Move.dropIn(s.substring(2, 4), piece);
         } else if (s.length() == 5) {
             /* Pawn promotion */
-            Piece piece = switch (s.charAt(4)) {
-                case 'p' -> Piece.PAWN; /* This is an illegal move */
-                case 'r' -> Piece.ROOK;
-                case 'b' -> Piece.BISHOP;
-                case 'n' -> Piece.KNIGHT;
-                case 'q' -> Piece.QUEEN;
-                case 'k' -> Piece.KING; /* This is an illegal move */
+            PieceType piece = switch (s.charAt(4)) {
+                case 'p' -> PieceType.PAWN; /* This is an illegal move */
+                case 'r' -> PieceType.ROOK;
+                case 'b' -> PieceType.BISHOP;
+                case 'n' -> PieceType.KNIGHT;
+                case 'q' -> PieceType.QUEEN;
+                case 'k' -> PieceType.KING; /* This is an illegal move */
                 default -> null;
             };
 
@@ -108,7 +110,7 @@ public class Main {
         private boolean isStarted;
 
         public EngineComponents() {
-            this.bot = null;
+            this.bot = new Bot();
             this.state = null;
             this.scanner = new Scanner(System.in);
             this.bufferedCmd = null;
@@ -128,6 +130,7 @@ public class Main {
         }
 
         private void leaveForceMode() {
+            System.out.println(">>> Leaving force mode <<<");
             /* Called upon receiving "go" */
             state = EngineState.PLAYING;
 
@@ -146,11 +149,13 @@ public class Main {
         private void processIncomingMove(Move move) {
             switch (state) {
                 case RECV_NEW, FORCE_MODE -> {
+                    System.out.println(">>> Current State: " + state + " <<<");
                     /* Record move for side to move in internal structures */
                     bot.recordMove(move, sideToMove);
                     toggleSideToMove();
                 }
                 case PLAYING -> {
+                    System.out.println(">>> Current State: " + state + " <<<");
                     bot.recordMove(move, sideToMove);
                     toggleSideToMove();
 

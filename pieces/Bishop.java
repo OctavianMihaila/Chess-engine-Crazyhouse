@@ -1,7 +1,10 @@
-package Pieces;
+package pieces;
 
-public class Rook extends Piece {
-	public Rook(boolean isMine, PieceType type, int x, int y) {
+import main.Move;
+import main.PieceType;
+
+public class Bishop extends Piece {
+	public Bishop(boolean isMine, PieceType type, int x, int y) {
 		super(isMine, type, x, y);
 	}
 
@@ -11,17 +14,17 @@ public class Rook extends Piece {
 		int verticalDist = yDest - y;
 		int horizontalDist = xDest - x;
 
-		// Cant move if it's not moving horizontally or vertically
-		if (verticalDist != 0 && horizontalDist != 0) return false;
+		// Cant move if it's not moving diagonally
+		if (Math.abs(verticalDist) != Math.abs(horizontalDist)) return false;
 		// Cant move if it's not moving
-		if (verticalDist == 0 && horizontalDist == 0) return false;
+		if (verticalDist == 0) return false;
 		// Cant move if there is a piece in the destination
 		if (board[xDest][yDest] != null) return false;
 
 		// Check if there is a piece in the way
 		int xDir = (int) Math.signum(horizontalDist);
 		int yDir = (int) Math.signum(verticalDist);
-		for (int i = 1; i < Math.abs(verticalDist) + Math.abs(horizontalDist); i++) {
+		for (int i = 1; i < Math.abs(verticalDist); i++) {
 			if (board[x + i * xDir][y + i * yDir] != null) return false;
 		}
 
@@ -34,17 +37,17 @@ public class Rook extends Piece {
 		int verticalDist = yDest - y;
 		int horizontalDist = xDest - x;
 
-		// Cant capture if it's not moving horizontally or vertically
-		if (verticalDist != 0 && horizontalDist != 0) return false;
+		// Cant capture if it's not moving diagonally
+		if (Math.abs(verticalDist) != Math.abs(horizontalDist)) return false;
 		// Cant capture if it's not moving
-		if (verticalDist == 0 && horizontalDist == 0) return false;
+		if (verticalDist == 0) return false;
 		// Cant capture if there is no piece in the destination
 		if (board[xDest][yDest] == null) return false;
 
 		// Check if there is a piece in the way
 		int xDir = (int) Math.signum(horizontalDist);
 		int yDir = (int) Math.signum(verticalDist);
-		for (int i = 1; i < Math.abs(verticalDist) + Math.abs(horizontalDist); i++) {
+		for (int i = 1; i < Math.abs(verticalDist); i++) {
 			if (board[x + i * xDir][y + i * yDir] != null) return false;
 		}
 
