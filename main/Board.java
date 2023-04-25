@@ -6,26 +6,28 @@ import java.util.ArrayList;
 
 public class Board {
 	private Piece[][] board;
+	private boolean imBlack;
 	private ArrayList<Piece> myPieces = new ArrayList<Piece>();
 	private ArrayList<Piece> enemyPieces = new ArrayList<Piece>();
 
-	public Board() {
+	public Board(PlaySide playSide) {
 		board = new Piece[9][9];
-
+		System.out.println(playSide);
+		imBlack = playSide == PlaySide.WHITE;
 		// Setting up the pawns
 		for (int i = 1; i <= 8; i++) {
-			board[2][i] = new Pawn(true, PieceType.PAWN, 2, i);
+			board[2][i] = new Pawn(imBlack, PieceType.PAWN, 2, i);
 		}
 
 		for (int i = 1; i <= 8; i++) {
-			board[7][i] = new Pawn(false, PieceType.PAWN, 7, i);
+			board[7][i] = new Pawn(!imBlack, PieceType.PAWN, 7, i);
 		}
 
 		// Setting up the rooks
-		board[1][1] = new Rook(true, PieceType.ROOK, 1, 1);
-		board[1][8] = new Rook(true, PieceType.ROOK, 1, 8);
-		board[8][1] = new Rook(false, PieceType.ROOK, 8, 1);
-		board[8][8] = new Rook(false, PieceType.ROOK, 8, 8);
+		board[1][1] = new Rook(imBlack, PieceType.ROOK, 1, 1);
+		board[1][8] = new Rook(imBlack, PieceType.ROOK, 1, 8);
+		board[8][1] = new Rook(!imBlack, PieceType.ROOK, 8, 1);
+		board[8][8] = new Rook(!imBlack, PieceType.ROOK, 8, 8);
 
 		// Setting up the knights
 		board[1][2] = new Knight(imBlack, PieceType.KNIGHT, 1, 2);
@@ -44,8 +46,8 @@ public class Board {
 //		board[8][4] = new Queen(false, PieceType.QUEEN, 8, 4);
 
 		// Setting up the kings
-		board[1][5] = new King(true, PieceType.KING, 1, 5);
-		board[8][5] = new King(false, PieceType.KING, 8, 5);
+		board[1][5] = new King(imBlack, PieceType.KING, 1, 5);
+		board[8][5] = new King(!imBlack, PieceType.KING, 8, 5);
 
 		// Setting up the pieces
 		for (int i = 1; i <= 8; i++) {
@@ -75,17 +77,14 @@ public class Board {
 		return board[x][y];
 	}
 
-	public boolean movePiece(Move move) {
+	public boolean registerMove(Move move) {
 		int sourceY = move.getSource().get().charAt(0) - 'a' + 1;
 		int sourceX = move.getSource().get().charAt(1) - '0';
-		System.out.println("Source: " + move.getSource());
 		int destY = move.getDestination().get().charAt(0) - 'a' + 1;
 		int destX = move.getDestination().get().charAt(1) - '0';
-		System.out.println("Dest: " + move.getDestination());
 		Piece piece = board[sourceX][sourceY];
 
 		if (piece == null) {
-			System.out.println("No piece found at " + sourceX + ", " + sourceY);
 			return false;
 		}
 
@@ -98,20 +97,10 @@ public class Board {
 	}
 
 	public Move getRandMove() {
-		System.out.println(">>>>>>> Random move <<<<<<<");
-		DebugTools.printBoard(board);
 		for (Piece piece : myPieces) {
-			Move move = null;
-			if (piece.isMine && piece.getType() == PieceType.PAWN) {
-				System.out.println(">>>>>>>> SOURCE: " + piece.getSrcString());
-				 move = piece.suggestRandomMove(board);
-			}
-
-			if (move != null) {
-				return move;
-			}
+			Move move = piece.suggestRandomMove(board);
+			if (move != null) return move;
 		}
-
 		System.out.println("No moves found");
 		return null;
 	}

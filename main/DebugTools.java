@@ -33,4 +33,44 @@ public class DebugTools {
 			System.out.println();
 		}
 	}
+
+	public static void printBoardPretty(Piece[][] board) {
+		for (int i = 1; i <=8 ; i++) {
+			for (int j = 1; j <= 8; j++) {
+				if (board[i][j] == null) {
+					System.out.print("*  ");
+					continue;
+				}
+
+				switch (board[i][j].getType()) {
+					case PAWN:
+						System.out.print("P");
+						break;
+					case ROOK:
+						System.out.print("R");
+						break;
+					case KNIGHT:
+						System.out.print("N");
+						break;
+					case BISHOP:
+						System.out.print("B");
+						break;
+					case QUEEN:
+						System.out.print("Q");
+						break;
+					case KING:
+						System.out.print("K");
+						break;
+				}
+				if (board[i][j].isMine) {
+					System.out.print("m");
+				} else {
+					System.out.print("o");
+				}
+
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
 }

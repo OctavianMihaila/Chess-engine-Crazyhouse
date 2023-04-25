@@ -13,24 +13,19 @@ public abstract class Piece {
 		this.isMine = isMine;
 		this.type = type;
 		this.x = x;
-
+		this.y = y;
 	}
 
 	public PieceType getType() {
 		return type;
 	}
 
-	//TODO Check getSrcString getDstString.
 	public String getSrcString() {
-//		System.out.println("###### " + "x: " + x + " y: " + y);
-		return Character.toString((char) ('a' + x)) + y;
+		return Character.toString((char) ('a' + y)) + x;
 	}
 
-	public String getDstString(int xDst, int yDst) {
-//		System.out.println("###### " + "xDst: " + xDst + " yDst: " + yDst);
-		int yFin = this.y + yDst;
-		int xFin = this.x + xDst;
-		return Character.toString((char) ('a' + xFin)) + yFin;
+	public String getDstString(int x, int y) {
+		return Character.toString((char) ('a' + y)) + x;
 	}
 
 	public abstract boolean canMove(Piece[][] board, int xDest, int yDest);

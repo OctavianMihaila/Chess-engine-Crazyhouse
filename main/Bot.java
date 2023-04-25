@@ -1,7 +1,5 @@
 package main;
 
-import pieces.Piece;
-
 public class Bot {
     /* Edit this, escaped characters (e.g newlines, quotes) are prohibited */
     private static final String BOT_NAME = "Verik";
@@ -14,7 +12,7 @@ public class Bot {
     /* Declare custom fields above */
 
     public Bot() {
-        this.board = new Board();
+        this.board = new Board(Main.getEngineSide());
     }
 
     /**
@@ -23,25 +21,23 @@ public class Bot {
      * @param move received move
      * @param sideToMove side to move (either main.PlaySide.BLACK or main.PlaySide.WHITE)
      */
-
-
     public void recordMove(Move move, PlaySide sideToMove) {
-        PlaySide engineSide = Main.getEngineSide();
-
-        if (engineSide == PlaySide.NONE) {
-            System.out.println(">>> Engine side is NONE <<<");
-            return;
-        }
-
-        if (engineSide != sideToMove) {
-            move.translateMove();
-            System.out.println("Source after translation: " + move.getSource());
-            System.out.println("Dest after translation: " + move.getDestination());
-        }
+//        PlaySide engineSide = Main.getEngineSide();
+//
+//        if (engineSide == PlaySide.NONE) {
+//            System.out.println(">>> Engine side is NONE <<<");
+//            return;
+//        }
+//
+//        if (engineSide != sideToMove) {
+//            move.translateMove();
+//            System.out.println("Source after translation: " + move.getSource());
+//            System.out.println("Dest after translation: " + move.getDestination());
+//        }
 
         //TODO Handle drop scenario.
 
-        board.movePiece(move);
+        board.registerMove(move);
 
         System.out.println("<<< Table after recording first move >>>");
         DebugTools.printBoardPretty(board.getBoard());
@@ -54,13 +50,16 @@ public class Bot {
      * @return your move
      */
     public Move calculateNextMove() {
-        System.out.println(" >>>>>>>>>>>> Calculating next move...");
         /* Calculate next move for the side the engine is playing (Hint: main.Main.getEngineSide())
         * Make sure to record your move in custom structures before returning.
         *
         * Return move that you are willing to submit
         * Pieces.main.Move is to be constructed via one of the factory methods defined in Pieces.main.Move.java */
-        return board.getRandMove();
+        Move move = board.getRandMove();
+        board.registerMove(move);
+        System.out.println(" >>>>>>>>>>>> Table after calculating next move...");
+        DebugTools.printBoardPretty(board.getBoard());
+        return move;
     }
 
     public static String getBotName() {
