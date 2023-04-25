@@ -1,4 +1,5 @@
 build:
+	javac Pieces/*.java
 	javac *.java
 
 run: build
@@ -8,4 +9,5 @@ play:
 	xboard -fcp "make run" -debug
 
 clean:
+	rm Pieces/*.class
 	rm *.class

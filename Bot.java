@@ -4,17 +4,13 @@ public class Bot {
 
     /* Declare custom fields below */
 
-    private Piece[][] board;
+    private Board board = new Board();
+    private Move lastMove;
 
     /* Declare custom fields above */
 
     public Bot() {
-
-    }
-
-    public void newBoard() {
-        this.board = new Piece[9][9];
-
+        board.newBoard();
     }
 
     /**
@@ -25,6 +21,15 @@ public class Bot {
      */
     public void recordMove(Move move, PlaySide sideToMove) {
         /* You might find it useful to also separately record last move in another custom field */
+        int sourceY = move.getSource().get().charAt(0) - 'a' + 1;
+        int sourceX = move.getSource().get().charAt(1) - '0';
+
+        int destY = move.getDestination().get().charAt(0) - 'a' + 1;
+        int destX = move.getDestination().get().charAt(1) - '0';
+
+        Piece piece = board.getPiece(sourceX, sourceY);
+        board.movePiece(piece, destX, destY);
+        this.lastMove = move;
     }
 
     /**
@@ -37,7 +42,7 @@ public class Bot {
         *
         * Return move that you are willing to submit
         * Pieces.Move is to be constructed via one of the factory methods defined in Pieces.Move.java */
-        return Move.resign();
+        return board.getRandMove();
     }
 
     public static String getBotName() {
