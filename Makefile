@@ -8,6 +8,9 @@ run: build
 play:
 	xboard -fcp "make run" -debug
 
+playbots:
+	xboard -fcp "make run" -scp "fairymax" -debug
+
 fullTest: clean build play
 
 clean:

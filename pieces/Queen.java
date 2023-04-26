@@ -6,8 +6,9 @@ import main.PlaySide;
 
 import java.util.ArrayList;
 
-public class Rook extends Piece {
-	public Rook(PlaySide side, PieceType type, int x, int y) {
+public class Queen extends Piece {
+
+	public Queen(PlaySide side, PieceType type, int x, int y) {
 		super(side, type, x, y);
 	}
 

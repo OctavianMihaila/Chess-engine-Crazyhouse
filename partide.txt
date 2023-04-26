@@ -258,3 +258,963 @@
 1. b3
 {xboard exit (Clocks: 301, 297)} *
 
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b5 2. b4
+{xboard exit (Clocks: 303, 190)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 c6 2. b4 c5 3. b5 c4 4. b6 c3 5. e3 d6 6. e4 d5
+{xboard exit (Clocks: 265, 304)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4
+{xboard exit (Clocks: 303, 298)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b5 2. b4 a6
+{xboard exit (Clocks: 256, 241)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 298, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 301, 302)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 c6 2. b4 b6 3. b5
+{xboard exit (Clocks: 305, 300)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 301, 302)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 303, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 302)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 294, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 302)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 292, 299)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 301, 302)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 303, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. b4 b5
+{xboard exit (Clocks: 302, 303)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6 2. a4 a5 3. b3 b6 4. b4 b5 5. c3 c6 6. c4 c5 7. d3 e6 8. d4 e5 9.
+d5 d6 10. e3 f6 11. e4 f5 12. f3
+{xboard exit (Clocks: 322, 308)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 c6 2. a3 b6 3. a4 a6 4. a5 c5 5. b4 d5 6. b5 e6 7. c3 f6 8. c4 g6 9.
+e3 e5 10. e4 dxe4 11. d3 exd3
+{xboard exit (Clocks: 319, 301)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. c3 c6 2. a3 c5 3. a4 c4 4. a5 a6 5. e3 e6 6. d3 d6 7. b3 d5 8. b4 d4 9.
+b5 e5 10. b6 e4 11. h3 f6 12. f3 g6 13. f4 f5 14. h4 h6 15. h5 g5 16. g3 g4
+{xboard exit (Clocks: 324, 315)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 b6 2. a5 b5 3. a6 c6 4. b4 c5 5. c4 d6 6. d4
+{xboard exit (Clocks: 311, 301)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 b6 2. a5 b5 3. a6 c6 4. b3 d6 5. b4 e6 6. c3 c5 7. c4 d5 8. d3 d4 9.
+e3 e5 10. e4 f6 11. f4
+{xboard exit (Clocks: 321, 294)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 b6 2. a4 c6 3. a5 bxa5
+{xboard exit (Clocks: 300, 292)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 c6 2. a4 c5 3. a5 c4 4. a6 bxa6 5. b3
+{xboard exit (Clocks: 309, 287)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6 2. a4 c6 3. a5 b6 4. b4 bxa5 5. b5 cxb5 6. c3 d6 7. c4 e6 8. c5
+dxc5 9. d4 f6 10. d5 exd5 11. e3
+{xboard exit (Clocks: 321, 283)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 a6 2. a5 b6 3. axb6 d6 4. b7 e6 5. bxc8=Q
+{xboard exit (Clocks: 309, 291)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6
+{xboard exit (Clocks: 290, 301)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6
+{xboard exit (Clocks: 298, 300)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 a6 2. a5 b6 3. axb6 cxb6 4. b3 d6
+{xboard exit (Clocks: 304, 300)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 a6 2. a5 b6 3. axb6 cxb6 4. b3 b5 5. b4 d6
+{xboard exit (Clocks: 291, 301)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6 2. a4 b6 3. a5 bxa5 4. b4 c6 5. b5 cxb5 6. c3
+{xboard exit (Clocks: 311, 174)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 a6 2. a5 c6 3. b4 d6
+{xboard exit (Clocks: 294, 294)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6 2. a4 a5 3. b4 b6 4. bxa5 bxa5 5. c3 c6 6. c4 c5 7. d3 d6 8. d4 e6
+9. d5 exd5 10. cxd5 f6 11. e4 f5 12. exf5 g6 13. fxg6 hxg6 14. f3 g5 15. f4
+gxf4 16. g4 Bxg4 17. h4 Be7 18. h5 Bf6 19. h6 Bg7 20. h7 Rxh7
+{xboard exit (Clocks: 336, 270)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 a6 2. a5 c6 3. b3 b6 4. axb6 c5 5. b7 Bxb7 6. b4 cxb4 7. c3 bxc3 8.
+d4 e6 9. d5 exd5 10. e3 d6 11. e4 dxe4 12. f3 exf3 13. g3 f6 14. g4 h6 15.
+g5 hxg5 16. h3 g4 17. h4 g6 18. h5 gxh5
+{xboard exit (Clocks: 327, 301)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 a6 2. a5 b6 3. axb6 cxb6 4. b4 b5 5. c3 d6 6. c4 d5 7. cxd5 e6 8. d6
+f6 9. d7+ Kxd7 10. d4 Ke8 11. Nd2 e5 12. Nb1 f5 13. Nd2 f4 14. Nb1 f3 15.
+Nd2 g6 16. Nb3 g5 17. Nd2 g4 18. Nb1 g3 19. Nd2 h6 20. Nb1 h5 21. Nd2 h4
+22. Nb3 e4 23. Nd2
+{xboard exit (Clocks: 345, 288)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 a6 2. a4 b6 3. a5 c6 4. axb6
+{xboard exit (Clocks: 307, 296)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 b6 2. a5 bxa5 3. b3 a4 4. b4 a6 5. b5 axb5 6. c3 b4 7. c4 c6 8. c5 d6
+9. cxd6 exd6 10. d4 c5 11. Nd2 c4 12. Ndf3 c3 13. Nh4 g6 14. Nhf3 f5 15.
+Nh4 g5 16. Nxf5 h6 17. Nh4 d5 18. Nhf3 g4 19. Nh4 h5 20. Nf5 g3 21. Nh6 Nf6
+22. Nf5 Nfd7 23. Nd6+ Bxd6 24. e3 c2 25. Ne2 b3 26. Nxg3 h4 27. Ne2
+{xboard exit (Clocks: 352, 225)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. f4 h6
+{xboard exit (Clocks: 284, 295)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. c3 b6
+{xboard exit (Clocks: 292, 298)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 b6 2. d4 b5 3. Be3 e5
+{xboard exit (Clocks: 271, 298)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. f3 e6 2. h3 e5
+{xboard exit (Clocks: 268, 300)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. g3 f6 2. Bh3 f5 3. e3 f4 4. c4 c6 5. Bf5 c5
+{xboard exit (Clocks: 300, 300)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. h4 f5
+{xboard exit (Clocks: 291, 299)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. g3 f6 2. f4 f5 3. e3 e5 4. Be2 d5 5. Bg4 g6 6. b4 b5 7. Ba3 c5 8. Bf3
+exf4 9. h3 fxg3 10. Bb2 c4 11. Be5 f4 12. e4 d4 13. Ne2 d3 14. a3 c3
+{xboard exit (Clocks: 308, 290)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. d3 h5
+{xboard exit (Clocks: 292, 299)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b3 e5 2. h3 e4 3. b4 c5
+{xboard exit (Clocks: 299, 290)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. c3 f5 2. e4 c5 3. a4 a5 4. Ra3 c4 5. Ra1 fxe4 6. Be2 e3 7. f4 g5 8. dxe3
+d5 9. Ra2 d4 10. g4 d3
+{xboard exit (Clocks: 311, 286)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "0-1"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. d3 f6 2. Be3 f5 3. f3 f4 4. c4 e6 5. Bf2 e5 6. g3 e4 7. h3 e3 8. b3 c6
+9. a3 c5 10. a4 a6 11. b4 d6 12. a5 d5 13. h4 g6 14. b5 g5 15. Rh3 g4 16.
+Bg2 d4 17. Bh1 h6 18. Ra3 h5 19. b6 Bd7 20. Nd2 Be6 21. Nb3 Bf5 22. Nd2 Ne7
+23. Bg2 Nec6 24. Rh1 Ne5 25. Nb1 Nf7 26. Ra1 Ng5 27. Rh2 Ne6 28. Rh3 Nc7
+29. Rh2 Ne6 30. Bf1 Ng5 31. Rh1 Nh3 32. gxf4 g3 33. Bg2 Be4 34. Ra3 Nc6 35.
+Ra1 Nb4 36. dxe4 Na2 37. Nd2 d3 38. Rc1 Nc3 39. Bf1 gxf2#
+{Xboard adjudication: Checkmate} 0-1
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Fairy-Max 5.0b"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Annotator "1. +0.14"]
+
+1. d4 {+0.14/9} d5
+{xboard exit (Clocks: 290, 295)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b4
+{xboard exit (Clocks: 301, 294)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. b4
+{xboard exit (Clocks: 301, 290)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. c4 c5 2. g3 f6 3. g4 f5 4. f3 fxg4 5. d4 cxd4 6. Bh3 d3 7. Bf4 dxe2 8.
+b3 gxh3 9. Kd2
+{xboard exit (Clocks: 317, 263)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. c4 e5 2. h3 e4 3. h4 e3 4. d4 exf2+
+{xboard exit (Clocks: 297, 300)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. e3 e5 2. Ba6 e4 3. f3 bxa6 4. g4 f6 5. c4 f5 6. d3 fxg4 7. a4 gxf3 8.
+Kf1 f2 9. d4 c6 10. Kg2 h5 11. h4 g5
+{xboard exit (Clocks: 239, 209)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. d4 Nf6 2. g4 e5 3. c3 Nc6 4. f3 h5 5. b4 hxg4 6. f4 exf4 7. Kf2 Ne4+
+{xboard exit (Clocks: 283, 274)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a4 d5 2. g4 e6 3. e4 dxe4 4. Ba6 bxa6 5. c3 e3 6. h4 f5 7. Rh3 fxg4 8.
+c4 gxh3 9. f3 h2 10. Kf1 exd2 11. Qe1 a5 12. Kg2 Nc6 13. Qe3 Nb4 14. Ra2
+Nxa2 15. Qb3 Nxc1 16. Qb4 Nd3 17. Qb3 Nc5 18. Qe3 Qd3 19. Ne2 Qxb1 20. Qd3
+Qxb2 21. Qb3 Qf6
+{xboard exit (Clocks: 216, 260)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. a3 b5 2. g4 f5 3. f4 fxg4 4. c3 b4 5. Kf2 bxc3 6. Bh3 cxb2 7. Bf1 bxa1=Q
+8. Bh3 Qxb1 9. Kg2 Qxc1 10. a4 Qxd1 11. d3 Qxd3 12. e4 Qxe4+ 13. Kf2 Qxf4+
+{xboard exit (Clocks: 316, 308)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. f4 c6 2. f5 e6 3. fxe6 fxe6 4. e3 d6 5. Ke2 c5 6. a3 c4 7. Kf3 e5 8. h4
+g5 9. b4 gxh4 10. Ke4 c3 11. Ra2 cxd2 12. c3 dxc1=Q 13. a4 B@b5
+{xboard exit (Clocks: 318, 306)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. c3 c6 2. d3 c5 3. g4 d6 4. Bd2 c4 5. Bh3 cxd3 6. f4 dxe2 7. b3 d5 8.
+Nxe2 d4 9. Qc1 dxc3 10. Ng3 cxd2+ 11. Kd1
+{xboard exit (Clocks: 320, 306)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. f3 e5 2. h3 e4 3. d3 exf3 4. e4 d5 5. Kf2 dxe4 6. c4 exd3 7. b4 b6 8.
+Rh2 b5 9. Bh6 bxc4 10. Ke3 a5 11. Nd2 axb4 12. Be2 b3 13. a4 b2 14. Bf1
+bxa1=Q 15. Bg5 f6 16. h4 fxg5 17. Rh3 gxh4 18. Rg3 hxg3 19. Ke4 fxg2 20.
+Qc1 c5
+{xboard exit (Clocks: 318, 308)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. f4 c5 2. f5 c4 3. h3 c3 4. h4 cxd2+
+{xboard exit (Clocks: 303, 304)} *
+
+[Event "Computer Chess Game"]
+[Site "pop-os"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "Verik"]
+[Black "n0tm3"]
+[Result "*"]
+[TimeControl "300+2"]
+[Variant "crazyhouse"]
+
+1. e3 a6 2. b4 a5 3. a4 axb4 4. f4 b6 5. Ra2 b5 6. Ke2 bxa4 7. d4 a3 8. d5
+b3 9. g4 bxa2 10. Kd2 d6 11. h4 c6 12. Ne2 cxd5 13. Qe1 e6 14. g5 e5 15.
+Qd1 exf4 16. Kc3 fxe3 17. Rh3 f5 18. Ng3 g6 19. Rh2 h6 20. Kb4 hxg5 21.
+hxg5 Be7 22. Ne2 Bxg5 23. Kc3 Bh4 24. Rg2 Bg3 25. Qd2 Bh2 26. Qd1 Bg1 27.
+Rf2 Bxf2 28. Kb4 Nc6+ 29. Kc3 Nb4
+{xboard exit (Clocks: 341, 316)} *
+

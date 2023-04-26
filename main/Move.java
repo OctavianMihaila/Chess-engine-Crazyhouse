@@ -1,5 +1,7 @@
 package main;
 
+import pieces.Piece;
+
 import java.util.Optional;
 
 public class Move {

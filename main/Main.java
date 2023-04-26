@@ -130,7 +130,7 @@ public class Main {
         }
 
         private void leaveForceMode() {
-            System.out.println(">>> Leaving force mode <<<");
+//            System.out.println(">>> Leaving force mode <<<");
             /* Called upon receiving "go" */
             state = EngineState.PLAYING;
 
@@ -149,13 +149,13 @@ public class Main {
         private void processIncomingMove(Move move) {
             switch (state) {
                 case RECV_NEW, FORCE_MODE -> {
-                    System.out.println(">>> Current State: " + state + " <<<");
+//                    System.out.println(">>> Current State: " + state + " <<<");
                     /* Record move for side to move in internal structures */
                     bot.recordMove(move, sideToMove);
                     toggleSideToMove();
                 }
                 case PLAYING -> {
-                    System.out.println(">>> Current State: " + state + " <<<");
+//                    System.out.println(">>> Current State: " + state + " <<<");
                     bot.recordMove(move, sideToMove);
                     toggleSideToMove();
 

@@ -3,40 +3,17 @@ package main;
 import pieces.Piece;
 
 public class DebugTools {
+	public static void printBoardPretty(Piece[][] board, boolean whiteDown) {
+		int startX = whiteDown ? 8 : 1;
+		int limitX = whiteDown ? 0 : 9;
+		int stepX = whiteDown ? -1 : 1;
 
-	public static void printBoard(Board board) {
-		for (int i = 1; i <= 8; i++) {
-			for (int j = 1; j <= 8; j++) {
-				Piece piece = board.getPiece(i, j);
-				if (piece != null) {
-					System.out.println(piece.getType() + " " + i + " " + j + " Mine ? : " + piece.isMine);
-				} else {
-					System.out.println("Empty position: " + i + " " + j);
-				}
-			}
-		}
-	}
+		int startY = whiteDown ? 8 : 1;
+		int limitY = whiteDown ? 0 : 9;
+		int stepY = whiteDown ? -1 : 1;
 
-	public static void printBoard(Piece[][] board) {
-		System.out.println("Printing board");
-		System.out.println("  a b c d e f g h");
-		for (int i = 1; i <= 8; i++) {
-			System.out.print(i + " ");
-			for (int j = 1; j <= 8; j++) {
-				Piece piece = board[i][j];
-				if (piece != null) {
-					System.out.print(piece.getType() + " ");
-				} else {
-					System.out.print("  ");
-				}
-			}
-			System.out.println();
-		}
-	}
-
-	public static void printBoardPretty(Piece[][] board) {
-		for (int i = 1; i <=8 ; i++) {
-			for (int j = 1; j <= 8; j++) {
+		for (int i = startX; i != limitX; i += stepX) {
+			for (int j = startY; j != limitY; j += stepY) {
 				if (board[i][j] == null) {
 					System.out.print("*  ");
 					continue;
@@ -62,15 +39,29 @@ public class DebugTools {
 						System.out.print("K");
 						break;
 				}
-				if (board[i][j].isMine) {
-					System.out.print("m");
+				if (board[i][j].side == PlaySide.WHITE) {
+					System.out.print("w");
 				} else {
-					System.out.print("o");
+					System.out.print("b");
 				}
 
 				System.out.print(" ");
 			}
 			System.out.println();
+		}
+	}
+
+	public static void printBoardPretty(Board board, boolean whiteDown) {
+		printBoardPretty(board.getBoard(), whiteDown);
+	}
+
+	public static void printPawns(Piece[][] board) {
+		for (int i = 1; i <= 8; i++) {
+			for (int j = 1; j <= 8; j++) {
+				if (board[i][j] != null && board[i][j].getType() == PieceType.PAWN) {
+					System.out.println(board[i][j]);
+				}
+			}
 		}
 	}
 }

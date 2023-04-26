@@ -10,90 +10,249 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-135 >first : xboard
+124 >first : xboard
 protover 2
-137 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
-137 <first : javac ./main/*.java
-679 <first : javac ./pieces/*.java
-1205 <first : java main/Main.java
-1604 <first : null
-1613 <first : 
-1613 <first : Got xboard command
-1616 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-1616 >first : accepted done
-1616 >first : accepted sigint
-1616 >first : accepted sigterm
-1616 >first : accepted san
-1616 >first : accepted reuse
-1616 >first : accepted usermove
-1616 >first : accepted analyze
-1616 >first : accepted ping
-1616 >first : accepted setboard
-1616 >first : accepted level
-1616 >first : accepted variants
-1616 >first : accepted name
-1616 >first : accepted myname
-1616 >first : accepted done
+126 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
+126 <first : javac ./main/*.java
+985 <first : javac ./pieces/*.java
+1535 <first : java main/Main.java
+1956 <first : 
+1956 <first : Got xboard command
+1961 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+1961 >first : accepted done
+1961 >first : accepted sigint
+1961 >first : accepted sigterm
+1961 >first : accepted san
+1961 >first : accepted reuse
+1961 >first : accepted usermove
+1961 >first : accepted analyze
+1961 >first : accepted ping
+1961 >first : accepted setboard
+1961 >first : accepted level
+1961 >first : accepted variants
+1961 >first : accepted name
+1961 >first : accepted myname
+1961 >first : accepted done
 recognized 'crazyhouse' (-1) as variant crazyhouse
 Reset(1, 0) from gameMode 0
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-1617 >first : quit
+1963 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-1679 >first : xboard
+2016 >first : xboard
 protover 2
-1679 >first : new
+2016 >first : new
 random
-1679 >first : variant crazyhouse
-1679 >first : level 0 5 2
-1679 >first : post
-1679 >first : hard
-1684 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
-1684 <first : javac ./main/*.java
-2183 <first : javac ./pieces/*.java
-2257 >first : name n0tm3
-2257 >first : black
-2257 >first : time 30000
-2257 >first : otim 30000
-2257 >first : white
+2016 >first : variant crazyhouse
+2016 >first : level 0 5 2
+2016 >first : post
+2016 >first : hard
+2019 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
+2019 <first : javac ./main/*.java
+2321 >first : name n0tm3
+2321 >first : black
+2321 >first : time 30000
+2321 >first : otim 30000
+2321 >first : white
 book hit = (NULL)
-2257 >first : go
+2321 >first : go
 nps: w=-1, b=-1
-2568 <first : java main/Main.java
-2960 <first : null
-2968 <first : 
-2968 <first : Got xboard command
-2971 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-2971 >first : accepted done
-2971 >first : accepted sigint
-2971 >first : accepted sigterm
-2971 >first : accepted san
-2971 >first : accepted reuse
-2971 >first : accepted usermove
-2971 >first : accepted analyze
-2971 >first : accepted ping
-2971 >first : accepted setboard
-2971 >first : accepted level
-2971 >first : accepted variants
-2971 >first : accepted name
-2971 >first : accepted myname
-2971 >first : accepted done
-2972 <first : null
-2972 <first : >>> Leaving force mode <<<
-2972 <first : Pawn can only move forward square board[xDest][yDest]
-2972 <first : Pawn can only move forward square board[xDest][yDest]
-2972 <first : Pawn can only move forward square board[xDest][yDest]
-2974 <first :  >>>>>>>>>>>> Table after calculating next move...
-2975 <first : Ro No Bo *  Ko Bo No Ro 
-2975 <first : Po Po Po Po Po Po Po Po 
-2975 <first : *  *  *  *  *  *  *  *  
-2975 <first : *  *  *  *  *  *  *  *  
-2975 <first : *  *  *  *  *  *  *  *  
-2975 <first : *  *  *  *  *  *  *  *  
-2976 <first : Pm Pm Pm Pm *  Pm Pm Pm 
-2976 <first : Rm Nm Bm *  Pm Bm Nm Rm 
-2976 <first : move e7e8
+2523 <first : javac ./pieces/*.java
+3067 <first : java main/Main.java
+3478 <first : 
+3478 <first : Got xboard command
+3482 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+3482 >first : accepted done
+3482 >first : accepted sigint
+3482 >first : accepted sigterm
+3482 >first : accepted san
+3482 >first : accepted reuse
+3482 >first : accepted usermove
+3482 >first : accepted analyze
+3482 >first : accepted ping
+3482 >first : accepted setboard
+3482 >first : accepted level
+3482 >first : accepted variants
+3482 >first : accepted name
+3482 >first : accepted myname
+3482 >first : accepted done
+3485 <first : No moves found
+3486 <first : move e2e3
+3879 >first : time 30083
+3879 >first : otim 30160
+book hit = (NULL)
+3879 >first : usermove 3879 >first : a7a6
+3880 <first : No moves found
+3880 <first : move b2b4
+4737 >first : time 30283
+4737 >first : otim 30275
+book hit = (NULL)
+4737 >first : usermove 4737 >first : a6a5
+4739 <first : No moves found
+4739 <first : move a2a4
+5425 >first : time 30483
+5425 >first : otim 30406
+book hit = (NULL)
+5425 >first : usermove 5425 >first : a5b4
+5428 <first : No moves found
+5428 <first : move f2f4
+6413 >first : time 30682
+6413 >first : otim 30507
+book hit = (NULL)
+6413 >first : usermove 6413 >first : b7b6
+6415 <first : No moves found
+6415 <first : move a1a2
+6911 >first : time 30882
+6911 >first : otim 30658
+book hit = (NULL)
+6911 >first : usermove 6911 >first : b6b5
+6912 <first : No moves found
+6912 <first : move e1e2
+7343 >first : time 31082
+7343 >first : otim 30815
+book hit = (NULL)
+7343 >first : usermove 7343 >first : b5a4
+7347 <first : No moves found
+7347 <first : move d2d4
+8463 >first : time 31282
+8463 >first : otim 30903
+book hit = (NULL)
+8463 >first : usermove 8463 >first : a4a3
+8465 <first : No moves found
+8465 <first : move d4d5
+9542 >first : time 31482
+9542 >first : otim 30995
+book hit = (NULL)
+9542 >first : usermove 9542 >first : b4b3
+9544 <first : No moves found
+9544 <first : move g2g4
+10220 >first : time 31681
+10220 >first : otim 31128
+book hit = (NULL)
+10220 >first : usermove 10220 >first : b3a2
+10223 <first : No moves found
+10223 <first : move e2d2
+13756 >first : time 31881
+13756 >first : otim 30975
+book hit = (NULL)
+13756 >first : usermove 13756 >first : d7d6
+13757 <first : No moves found
+13757 <first : move h2h4
+14466 >first : time 32081
+14466 >first : otim 31104
+book hit = (NULL)
+14466 >first : usermove 14466 >first : c7c6
+14467 <first : No moves found
+14467 <first : move g1e2
+14945 >first : time 32281
+14945 >first : otim 31256
+book hit = (NULL)
+14945 >first : usermove 14945 >first : c6d5
+14950 <first : No moves found
+14950 <first : move d1e1
+16115 >first : time 32480
+16115 >first : otim 31339
+book hit = (NULL)
+16115 >first : usermove 16115 >first : e7e6
+16117 <first : No moves found
+16117 <first : move g4g5
+17137 >first : time 32680
+17137 >first : otim 31437
+book hit = (NULL)
+17137 >first : usermove 17137 >first : e6e5
+17139 <first : No moves found
+17139 <first : move e1d1
+17762 >first : time 32880
+17762 >first : otim 31575
+book hit = (NULL)
+17762 >first : usermove 17762 >first : e5f4
+17767 <first : No moves found
+17767 <first : move d2c3
+19203 >first : time 33079
+19203 >first : otim 31632
+book hit = (NULL)
+19203 >first : usermove 19203 >first : f4e3
+19205 <first : No moves found
+19205 <first : move h1h3
+20651 >first : time 33279
+20651 >first : otim 31687
+book hit = (NULL)
+20651 >first : usermove 20651 >first : f7f5
+20653 <first : No moves found
+20653 <first : move e2g3
+22507 >first : time 33479
+22507 >first : otim 31702
+book hit = (NULL)
+22507 >first : usermove 22507 >first : g7g6
+22514 <first : No moves found
+22514 <first : move h3h2
+23563 >first : time 33678
+23563 >first : otim 31797
+book hit = (NULL)
+23563 >first : usermove 23563 >first : h7h6
+23565 <first : No moves found
+23565 <first : move c3b4
+24008 >first : time 33878
+24008 >first : otim 31952
+book hit = (NULL)
+24008 >first : usermove 24008 >first : h6g5
+24010 <first : No moves found
+24010 <first : move h4g5
+27425 >first : time 34078
+27425 >first : otim 31811
+book hit = (NULL)
+27425 >first : usermove 27425 >first : f8e7
+27431 <first : No moves found
+27431 <first : move g3e2
+28329 >first : time 34277
+28329 >first : otim 31921
+book hit = (NULL)
+28329 >first : usermove 28329 >first : e7g5
+28331 <first : No moves found
+28331 <first : move b4c3
+30833 >first : time 34477
+30833 >first : otim 31871
+book hit = (NULL)
+30833 >first : usermove 30833 >first : g5h4
+30835 <first : No moves found
+30835 <first : move h2g2
+33310 >first : time 34677
+33310 >first : otim 31823
+book hit = (NULL)
+33310 >first : usermove 33310 >first : h4g3
+33316 <first : No moves found
+33316 <first : move d1d2
+34226 >first : time 34876
+34226 >first : otim 31932
+book hit = (NULL)
+34226 >first : usermove 34226 >first : g3h2
+34228 <first : No moves found
+34228 <first : move d2d1
+34826 >first : time 35076
+34826 >first : otim 32073
+book hit = (NULL)
+34826 >first : usermove 34826 >first : h2g1
+34828 <first : No moves found
+34828 <first : move g2f2
+35620 >first : time 35276
+35620 >first : otim 32193
+book hit = (NULL)
+35620 >first : usermove 35620 >first : g1f2
+35623 <first : No moves found
+35623 <first : move c3b4
+42732 >first : time 35476
+42732 >first : otim 31682
+book hit = (NULL)
+42732 >first : usermove 42732 >first : b8c6
+42733 <first : No moves found
+42733 <first : move b4c3
+44631 >first : time 35675
+44631 >first : otim 31693
+book hit = (NULL)
+44631 >first : usermove 44631 >first : c6b4
+44632 <first : No moves found
+44632 <first : move c3b2
 GameEnds(29, xboard exit, 2)
-4793 >first : result * {xboard exit}
-4793 >first : quit
+60320 >first : result * {xboard exit}
+60320 >first : quit
