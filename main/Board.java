@@ -3,7 +3,6 @@ package main;
 import pieces.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Random;
 
 public class Board {
@@ -109,14 +108,19 @@ public class Board {
 	}
 
 	public Move getRandMove() {
-		ArrayList<Move> allPossibleMoves = new ArrayList<Move>();
+		ArrayList<Move> allPossibleMoves = new ArrayList<>();
+
 		for (Piece piece : whites) {
-			ArrayList<Move> move = piece.suggestPossibleMoves(board);
+			ArrayList<Move> move = piece.getAllMoves(board);
 			if (move == null || move.size() == 0) continue;
 			allPossibleMoves.addAll(move);
 		}
-		System.out.println("No moves found");
-		if (allPossibleMoves.size() == 0) return Move.resign();
+
+		if (allPossibleMoves.size() == 0) {
+			System.out.println("No moves found");
+			return Move.resign();
+		}
+
 		Random rand = new Random(System.currentTimeMillis());
 		int index = rand.nextInt(allPossibleMoves.size());
 		return allPossibleMoves.get(index);

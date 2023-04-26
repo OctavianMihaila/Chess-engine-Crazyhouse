@@ -7,83 +7,59 @@ import main.PlaySide;
 import java.util.ArrayList;
 
 public class Rook extends Piece {
+	public static final int[][] moveDirections = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
 	public Rook(PlaySide side, PieceType type, int x, int y) {
 		super(side, type, x, y);
 	}
 
 	@Override
-	public boolean canMove(Piece[][] board, int xDest, int yDest) {
-		if (xDest < 1 || xDest > 8 || yDest < 1 || yDest > 8) return false;
+	public boolean clearPath(Piece[][] board, int xDest, int yDest) {
+		if (!validMove(board, xDest, yDest)) return false;
+
+		int verticalDist = xDest - x;
+		int horizontalDist = yDest - y;
+
+		// Check vertical path or horizontal path
+		if (verticalDist != 0) {
+			int xDir = (int) Math.signum(verticalDist);
+			for (int i = 1; i < Math.abs(verticalDist); i++) {
+				if (board[x + i * xDir][y] != null) return false;
+			}
+		} else {
+			int yDir = (int) Math.signum(horizontalDist);
+			for (int i = 1; i < Math.abs(horizontalDist); i++) {
+				if (board[x][y + i * yDir] != null) return false;
+			}
+		}
+
+		return true;
+	}
+
+	@Override
+	public boolean validMove(Piece[][] board, int xDest, int yDest) {
+		if (!onTable(xDest, yDest)) return false;
+
 		int verticalDist = xDest - x;
 		int horizontalDist = yDest - y;
 
 		// Cant move if it's not moving horizontally or vertically
 		if (verticalDist != 0 && horizontalDist != 0) return false;
-		// Cant move if it's not moving
-		if (verticalDist == 0 && horizontalDist == 0) return false;
-		// Cant move if there is a piece in the destination
-		if (board[xDest][yDest] != null) return false;
-
-		if (verticalDist != 0) {
-			int yDir = (int) Math.signum(verticalDist);
-			for (int i = 1; i <= Math.abs(verticalDist); i++) {
-				if (board[x + i * yDir][y] != null) return false;
-			}
-		} else {
-			int xDir = (int) Math.signum(horizontalDist);
-			for (int i = 1; i <= Math.abs(horizontalDist); i++) {
-				if (board[x][y + i * xDir] != null) return false;
-			}
-		}
-
-		return true;
+		return verticalDist != 0 || horizontalDist != 0;
 	}
 
 	@Override
-	public boolean canCapture(Piece[][] board, int xDest, int yDest) {
-		if (xDest < 1 || xDest > 8 || yDest < 1 || yDest > 8) return false;
-		int verticalDist = xDest - x;
-		int horizontalDist = yDest - y;
-
-		// Cant capture if it's not moving horizontally or vertically
-		if (verticalDist != 0 && horizontalDist != 0) return false;
-		// Cant capture if it's not moving
-		if (verticalDist == 0 && horizontalDist == 0) return false;
-		// Cant capture if there is no piece in the destination
-		if (board[xDest][yDest] == null) return false;
-
-		if (verticalDist != 0) {
-			int yDir = (int) Math.signum(verticalDist);
-			for (int i = 1; i <= Math.abs(verticalDist); i++) {
-				if (board[x + i * yDir][y] != null) return false;
-			}
-		} else {
-			int xDir = (int) Math.signum(horizontalDist);
-			for (int i = 1; i <= Math.abs(horizontalDist); i++) {
-				if (board[x][y + i * xDir] != null) return false;
-			}
-		}
-		return true;
+	public int[][] getMoveDirections() {
+		return moveDirections;
 	}
 
 	@Override
-	public ArrayList<Move> suggestPossibleMoves(Piece[][] board) {
-		ArrayList<Move> moves = new ArrayList<>();
-		for (int i = 1; i <= 8; i++) {
-			if (canCapture(board, x + i, y) || canMove(board, x + i, y)) {
-				moves.add(Move.moveTo(getSrcString(), getDstString(x + i, y)));
-			}
-			if (canCapture(board, x - i, y) || canMove(board, x - i, y)) {
-				moves.add(Move.moveTo(getSrcString(), getDstString(x - i, y)));
-			}
-			if (canCapture(board, x, y + i) || canMove(board, x, y + i)) {
-				moves.add(Move.moveTo(getSrcString(), getDstString(x, y + i)));
-			}
-			if (canCapture(board, x, y - i) || canMove(board, x , y - i)) {
-				moves.add(Move.moveTo(getSrcString(), getDstString(x, y - i)));
-			}
-		}
+	public int[][] getCaptureDirections() {
+		return moveDirections;
+	}
 
-		return moves;
+	@Override
+	public int getMaxMoves() {
+		return 7;
 	}
 }
