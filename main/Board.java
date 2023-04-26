@@ -12,6 +12,7 @@ public class Board {
 	private ArrayList<Piece> blacks = new ArrayList<Piece>();
 	private ArrayList<Piece> whiteCaptures = new ArrayList<Piece>();
 	private ArrayList<Piece> blacksCaptures = new ArrayList<Piece>();
+	private Piece king;
 
 
 	public Board() {
@@ -94,8 +95,10 @@ public class Board {
 			board[dstX][dstY] = srcPiece;
 			if (dstPiece.side == PlaySide.BLACK) {
 				whiteCaptures.add(dstPiece);
+				blacks.remove(dstPiece);
 			} else if (dstPiece.side == PlaySide.WHITE) {
 				blacksCaptures.add(dstPiece);
+				whites.remove(dstPiece);
 			}
 			dstPiece.captured = true;
 			dstPiece.x = dstPiece.y = -1;

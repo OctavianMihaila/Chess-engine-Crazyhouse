@@ -18,6 +18,7 @@ public class King extends Piece {
 		return validMove(board, xDest, yDest);
 	}
 
+	// TODO Implement additional checks for check
 	@Override
 	public boolean validMove(Piece[][] board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
@@ -29,6 +30,29 @@ public class King extends Piece {
 		// Cant move if it's not moving
 		return verticalDist == 0 || horizontalDist == 0;
 	}
+
+	public boolean isSafe(Piece[][] board, int xDest, int yDest) {
+		for (int i = 0; i < moveDirections.length; i++) {
+			for (int j = 0; j < moveDirections[i].length; j++) {
+				if(validMove(board, i, j) && !willBeCaptured(board, xDest, yDest, i, j)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+//	private boolean willBeCaptured(Piece[][] board, int x, int y, int xDest, int yDest) {
+//		Piece temp = board[xDest][yDest];
+//		board[xDest][yDest] = board[x][y];
+//		board[x][y] = null;
+//
+//		for(int[] dir : moveDirections) {
+//			int i = xDest + dir[0];
+//			int j = yDest + dir[1];
+//			if(onTable(i, j) && board[i][j] != null && board[i][j].playSide() != playSide() && board[i][j])
+//		}
+//	}
 
 	@Override
 	public int[][] getMoveDirections() {
