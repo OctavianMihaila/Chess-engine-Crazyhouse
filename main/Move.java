@@ -1,7 +1,5 @@
 package main;
 
-import pieces.Piece;
-
 import java.util.Optional;
 
 public class Move {
@@ -13,6 +11,16 @@ public class Move {
     /* main.Piece to promote a pawn advancing to last row, or
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
+
+    private boolean enablesEnPassant;
+
+    public void setEnablesEnPassant(boolean enablesEnPassant) {
+        this.enablesEnPassant = enablesEnPassant;
+    }
+
+    public boolean isEnablesEnPassant() {
+        return enablesEnPassant;
+    }
 
     /*
       Use the following 4 constructors for Pieces.main.Move:
@@ -38,6 +46,7 @@ public class Move {
         this.source = Optional.ofNullable(source);
         this.destination = Optional.ofNullable(destination);
         this.replacement = Optional.ofNullable(replacement);
+        this.enablesEnPassant = false;
     }
 
     /**
@@ -56,11 +65,24 @@ public class Move {
         int row = pos.charAt(1) - '0';
         int col = pos.charAt(0) - 'a';
         int translatedRow = 9 - row;
-//        int translatedCol = 9 - col;
         return "" + (char)('a' + col) + translatedRow;
     }
 
+    public int getSourceX() {
+        return this.source.get().charAt(1) - '0';
+    }
 
+    public int getSourceY() {
+        return this.source.get().charAt(0) - 'a' + 1;
+    }
+
+    public int getDestinationX() {
+        return this.destination.get().charAt(1) - '0';
+    }
+
+    public int getDestinationY() {
+        return this.destination.get().charAt(0) - 'a' + 1;
+    }
 
     /**
      * Checks whether the move is an usual move/capture

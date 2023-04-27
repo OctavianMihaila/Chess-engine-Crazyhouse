@@ -2,6 +2,7 @@ package main;
 
 import pieces.*;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -80,15 +81,46 @@ public class Board {
 		return board[x][y];
 	}
 
+	public boolean checkIfEnPassantIsEnabled(int srcX, int srcY, int dstX, int dstY) {
+		System.out.println("### positions in enpassant check");
+		System.out.println(srcX);
+		System.out.println(srcY);
+		System.out.println(dstX);
+		System.out.println(dstY);
+		// Check if the pawn has moved before
+		if (srcX != 7 && srcX != 2) {
+			return false;
+		}
+
+		// Check if the pawn moved 2 squares forward
+		if (Math.abs(dstX - srcX) == 2 && dstY == srcY) {
+			return true;
+		}
+
+		return false;
+	}
+
 	public void registerMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
-		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
-		int srcX = move.getSource().get().charAt(1) - '0';
-		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
-		int dstX = move.getDestination().get().charAt(1) - '0';
+//		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
+//		int srcX = move.getSource().get().charAt(1) - '0';
+//		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
+//		int dstX = move.getDestination().get().charAt(1) - '0';
+		int srcX = move.getSourceX();
+		int srcY = move.getSourceY();
+		int dstX = move.getDestinationX();
+		int dstY = move.getDestinationY();
+
 		Piece srcPiece = board[srcX][srcY];
 		Piece dstPiece = board[dstX][dstY];
 		if (srcPiece == null) return;
+
+		// Handle En Passant
+		if (move.isNormal() && srcPiece.getType() == PieceType.PAWN
+				&& srcPiece.side == (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
+				&& checkIfEnPassantIsEnabled(srcX, srcY, dstX, dstY)) {
+			move.setEnablesEnPassant(true);
+		}
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
@@ -111,6 +143,32 @@ public class Board {
 	}
 
 	public Move getRandMove() {
+		Move lastMove = Bot.getLastMove();
+
+		if (lastMove != null && lastMove.isEnablesEnPassant()) {
+			int xDestLastMove = lastMove.getDestinationX();
+			int yDestLastMove = lastMove.getDestinationY();
+			String sourceNewMove = null;
+			String destinationNewMove = Piece.getDstString(xDestLastMove + 1, yDestLastMove);
+
+			// Looking for a pawn that can do en passant.
+			if (board[xDestLastMove][yDestLastMove - 1] != null
+					&& board[xDestLastMove][yDestLastMove - 1].getType() == PieceType.PAWN) {
+				sourceNewMove = board[xDestLastMove][yDestLastMove - 1].getSrcString();
+				System.out.println("Performing en passant move from left");
+			} else if (board[xDestLastMove][yDestLastMove + 1] != null
+					&& board[xDestLastMove][yDestLastMove + 1].getType() == PieceType.PAWN) {
+				sourceNewMove = board[xDestLastMove][yDestLastMove + 1].getSrcString();
+				System.out.println("Performing en passant move from right");
+			}
+
+			if (sourceNewMove != null) {
+				// Moving pawn to do en passant and removing the enemy's pawn.
+				board[xDestLastMove][yDestLastMove] = null;
+				return Move.moveTo(sourceNewMove, destinationNewMove);
+			}
+		}
+
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
 		for (Piece piece : whites) {

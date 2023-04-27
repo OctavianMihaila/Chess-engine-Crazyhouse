@@ -31,17 +31,6 @@ public class King extends Piece {
 		return verticalDist == 0 || horizontalDist == 0;
 	}
 
-	public boolean isSafe(Piece[][] board, int xDest, int yDest) {
-		for (int i = 0; i < moveDirections.length; i++) {
-			for (int j = 0; j < moveDirections[i].length; j++) {
-				if(validMove(board, i, j) && !willBeCaptured(board, xDest, yDest, i, j)) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-
 //	private boolean willBeCaptured(Piece[][] board, int x, int y, int xDest, int yDest) {
 //		Piece temp = board[xDest][yDest];
 //		board[xDest][yDest] = board[x][y];

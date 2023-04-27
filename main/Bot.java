@@ -7,12 +7,16 @@ public class Bot {
     /* Declare custom fields below */
 
     private Board board;
-    private Move lastMove;
+    private static Move lastMove;
 
     /* Declare custom fields above */
 
     public Bot() {
         this.board = new Board();
+    }
+
+    public static Move getLastMove() {
+        return lastMove;
     }
 
     /**
@@ -23,25 +27,11 @@ public class Bot {
      */
     public void recordMove(Move move, PlaySide sideToMove) {
         board.registerMove(move);
+
 //        System.out.println("--- Table after player move ---");
 //        DebugTools.printBoardPretty(board.getBoard(), true);
 
         this.lastMove = move;
-    }
-
-    public boolean isEnPassantAvailable() {
-//        if (lastMove.isNormal() && lastMove.getPiece().getType() == PieceType.PAWN) {
-//            int x = lastMove.getPiece().x;
-//            int y = lastMove.getPiece().y;
-//            int xDest = lastMove.getxDest();
-//            int yDest = lastMove.getyDest();
-//
-//            if (Math.abs(x - xDest) == 2) {
-//                return true;
-//            }
-//        }
-
-        return false;
     }
 
     /**

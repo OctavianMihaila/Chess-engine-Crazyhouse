@@ -1,4 +1,4 @@
-locale = en_US.UTF-8
+locale = LC_CTYPE=en_US.UTF-8;LC_NUMERIC=ro_RO.UTF-8;LC_TIME=ro_RO.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=ro_RO.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=ro_RO.UTF-8;LC_NAME=ro_RO.UTF-8;LC_ADDRESS=ro_RO.UTF-8;LC_TELEPHONE=ro_RO.UTF-8;LC_MEASUREMENT=ro_RO.UTF-8;LC_IDENTIFICATION=ro_RO.UTF-8
 recognized 'normal' (-1) as variant normal
 recognized 'normal' (-1) as variant normal
 recognized 'normal' (-1) as variant normal
@@ -10,1044 +10,1803 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-121 >first : xboard
+125 >first : xboard
 protover 2
-123 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
-123 <first : javac ./main/*.java
-716 <first : javac ./pieces/*.java
-1224 <first : java main/Main.java
-1647 <first : 
-1647 <first : Got xboard command
-1652 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-1652 >first : accepted done
-1652 >first : accepted sigint
-1652 >first : accepted sigterm
-1652 >first : accepted san
-1652 >first : accepted reuse
-1652 >first : accepted usermove
-1652 >first : accepted analyze
-1652 >first : accepted ping
-1652 >first : accepted setboard
-1652 >first : accepted level
-1652 >first : accepted variants
-1652 >first : accepted name
-1652 >first : accepted myname
-1652 >first : accepted done
-recognized 'crazyhouse' (-1) as variant crazyhouse
-Reset(1, 0) from gameMode 0
-recognized 'crazyhouse' (-1) as variant crazyhouse
-GameEnds(0, (null), 2)
-1653 >first : quit
-shuffleOpenings = 0
-StartChildProcess (dir=".") make run
-1707 >first : xboard
-protover 2
-1708 >first : new
-random
-1708 >first : variant crazyhouse
-1708 >first : level 0 5 2
-1708 >first : post
-1708 >first : hard
-1712 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
-1712 <first : javac ./main/*.java
-2191 <first : javac ./pieces/*.java
-2628 <first : java main/Main.java
-3042 <first : 
-3042 <first : Got xboard command
-3046 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-3046 >first : accepted done
-3046 >first : accepted sigint
-3046 >first : accepted sigterm
-3046 >first : accepted san
-3046 >first : accepted reuse
-3046 >first : accepted usermove
-3046 >first : accepted analyze
-3046 >first : accepted ping
-3046 >first : accepted setboard
-3046 >first : accepted level
-3046 >first : accepted variants
-3046 >first : accepted name
-3046 >first : accepted myname
-3046 >first : accepted done
-nps: w=-1, b=-1
-3103 >first : name n0tm3
-nps: w=-1, b=-1
-3104 >first : time 30000
-3104 >first : otim 30200
+127 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+127 <first : javac ./main/*.java
+865 <first : javac ./pieces/*.java
+1490 <first : java main/Main.java
+1978 >first : black
+1979 >first : time 30000
+1979 >first : otim 30000
+1979 >first : white
 book hit = (NULL)
-3104 >first : usermove 3104 >first : e2e4
-Reset(1, 1) from gameMode 2
+1979 >first : go
+nps: w=-1, b=-1
+2068 <first : 
+2068 <first : Got xboard command
+2075 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+Interrupting first
+2075 >first : accepted done
+2075 >first : accepted sigint
+2075 >first : accepted sigterm
+2075 >first : accepted san
+2075 >first : accepted reuse
+2075 >first : accepted usermove
+2075 >first : accepted analyze
+2075 >first : accepted ping
+2075 >first : accepted setboard
+2075 >first : accepted level
+2075 >first : accepted variants
+2075 >first : accepted name
+2075 >first : accepted myname
+2075 >first : accepted done
+recognized 'crazyhouse' (-1) as variant crazyhouse
+Reset(1, 0) from gameMode 1
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-5290 >first : quit
+2077 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-5299 >first : xboard
+2128 >first : xboard
 protover 2
-5299 >first : new
+2129 >first : new
 random
-5299 >first : variant crazyhouse
-5299 >first : level 0 5 2
-5299 >first : post
-5299 >first : hard
-5301 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
-5301 <first : javac ./main/*.java
-5608 >first : name n0tm3
-5608 >first : black
-5608 >first : time 30000
-5608 >first : otim 30000
-5608 >first : white
+2129 >first : variant crazyhouse
+2129 >first : level 40 5 0
+2129 >first : post
+2129 >first : hard
+2132 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+2132 <first : javac ./main/*.java
+2876 <first : javac ./pieces/*.java
+3511 <first : java main/Main.java
+4087 <first : 
+4087 <first : Got xboard command
+4094 >first : name octavian
+4094 >first : black
+4094 >first : time 30000
+4094 >first : otim 30000
+4094 >first : white
 book hit = (NULL)
-5608 >first : go
+4094 >first : go
 nps: w=-1, b=-1
-5796 <first : javac ./pieces/*.java
-6238 <first : java main/Main.java
-6627 <first : 
-6627 <first : Got xboard command
-6631 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-6631 >first : accepted done
-6631 >first : accepted sigint
-6631 >first : accepted sigterm
-6631 >first : accepted san
-6631 >first : accepted reuse
-6631 >first : accepted usermove
-6631 >first : accepted analyze
-6631 >first : accepted ping
-6631 >first : accepted setboard
-6631 >first : accepted level
-6631 >first : accepted variants
-6631 >first : accepted name
-6631 >first : accepted myname
-6631 >first : accepted done
-6634 <first : Getting all moves for ROOK at a1
-6634 <first : Getting all moves for KNIGHT at b1
-6634 <first : Getting all moves for BISHOP at c1
-6634 <first : Getting all moves for QUEEN at d1
-6634 <first : Getting all moves for KING at e1
-6634 <first : Getting all moves for BISHOP at f1
-6634 <first : Getting all moves for KNIGHT at g1
-6634 <first : Getting all moves for ROOK at h1
-6634 <first : Getting all moves for PAWN at a2
-6634 <first : Getting all moves for PAWN at b2
-6634 <first : Getting all moves for PAWN at c2
-6634 <first : Getting all moves for PAWN at d2
-6634 <first : Getting all moves for PAWN at e2
-6634 <first : Getting all moves for PAWN at f2
-6634 <first : Getting all moves for PAWN at g2
-6634 <first : Getting all moves for PAWN at h2
-6635 <first : move d2d4
-8518 >first : time 30097
-8518 >first : otim 30011
+4096 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+4096 >first : accepted done
+4096 >first : accepted sigint
+4096 >first : accepted sigterm
+4096 >first : accepted san
+4096 >first : accepted reuse
+4096 >first : accepted usermove
+4096 >first : accepted analyze
+4096 >first : accepted ping
+4096 >first : accepted setboard
+4096 >first : accepted level
+4096 >first : accepted variants
+4096 >first : accepted name
+4096 >first : accepted myname
+4096 >first : accepted done
+4101 <first : Getting all moves for ROOK at a1
+4101 <first : Getting all moves for KNIGHT at b1
+4101 <first : Getting all moves for BISHOP at c1
+4101 <first : Getting all moves for QUEEN at d1
+4101 <first : Getting all moves for KING at e1
+4101 <first : Getting all moves for BISHOP at f1
+4101 <first : Getting all moves for KNIGHT at g1
+4101 <first : Getting all moves for ROOK at h1
+4101 <first : Getting all moves for PAWN at a2
+4101 <first : Getting all moves for PAWN at b2
+4101 <first : Getting all moves for PAWN at c2
+4101 <first : Getting all moves for PAWN at d2
+4101 <first : Getting all moves for PAWN at e2
+4102 <first : Getting all moves for PAWN at f2
+4102 <first : Getting all moves for PAWN at g2
+4102 <first : Getting all moves for PAWN at h2
+4102 <first : is normal : true
+4103 <first : src type : PAWN
+4103 <first : src side: WHITE
+4103 <first : condition: BLACK
+4103 <first : ### positions in enpassant check
+4103 <first : 2
+4103 <first : 4
+4103 <first : 4
+4103 <first : 4
+4103 <first : check en passant result: true
+4103 <first : move d2d4
+6378 >first : time 29999
+6378 >first : otim 29772
 book hit = (NULL)
-8518 >first : usermove 8518 >first : c7c5
-8519 <first : Getting all moves for ROOK at a1
-8519 <first : Getting all moves for KNIGHT at b1
-8519 <first : Getting all moves for BISHOP at c1
-8519 <first : Getting all moves for QUEEN at d1
-8519 <first : Getting all moves for KING at e1
-8519 <first : Getting all moves for BISHOP at f1
-8519 <first : Getting all moves for KNIGHT at g1
-8519 <first : Getting all moves for ROOK at h1
-8519 <first : Getting all moves for PAWN at a2
-8520 <first : Getting all moves for PAWN at b2
-8520 <first : Getting all moves for PAWN at c2
-8520 <first : Getting all moves for PAWN at d4
-8520 <first : Getting all moves for PAWN at e2
-8520 <first : Getting all moves for PAWN at f2
-8520 <first : Getting all moves for PAWN at g2
-8520 <first : Getting all moves for PAWN at h2
-8520 <first : move c1e3
-10061 >first : time 30297
-10061 >first : otim 30057
+6378 >first : usermove 6378 >first : b8a6
+6379 <first : is normal : true
+6379 <first : src type : KNIGHT
+6379 <first : src side: BLACK
+6379 <first : condition: BLACK
+6379 <first : ### positions in enpassant check
+6379 <first : 8
+6379 <first : 2
+6379 <first : 6
+6379 <first : 1
+6379 <first : check en passant result: false
+6379 <first : Getting all moves for ROOK at a1
+6379 <first : Getting all moves for KNIGHT at b1
+6379 <first : Getting all moves for BISHOP at c1
+6379 <first : Getting all moves for QUEEN at d1
+6379 <first : Getting all moves for KING at e1
+6379 <first : Getting all moves for BISHOP at f1
+6379 <first : Getting all moves for KNIGHT at g1
+6379 <first : Getting all moves for ROOK at h1
+6380 <first : Getting all moves for PAWN at a2
+6380 <first : Getting all moves for PAWN at b2
+6380 <first : Getting all moves for PAWN at c2
+6380 <first : Getting all moves for PAWN at d4
+6380 <first : Getting all moves for PAWN at e2
+6380 <first : Getting all moves for PAWN at f2
+6380 <first : Getting all moves for PAWN at g2
+6380 <first : Getting all moves for PAWN at h2
+6380 <first : is normal : true
+6380 <first : src type : PAWN
+6380 <first : src side: WHITE
+6380 <first : condition: BLACK
+6380 <first : ### positions in enpassant check
+6380 <first : 2
+6380 <first : 7
+6380 <first : 3
+6380 <first : 7
+6380 <first : check en passant result: false
+6380 <first : move g2g3
+8294 >first : time 29998
+8294 >first : otim 29581
 book hit = (NULL)
-10061 >first : usermove 10061 >first : d7d6
-10064 <first : Getting all moves for ROOK at a1
-10064 <first : Getting all moves for KNIGHT at b1
-10064 <first : Getting all moves for BISHOP at e3
-10064 <first : Getting all moves for QUEEN at d1
-10064 <first : Getting all moves for KING at e1
-10064 <first : Getting all moves for BISHOP at f1
-10064 <first : Getting all moves for KNIGHT at g1
-10064 <first : Getting all moves for ROOK at h1
-10064 <first : Getting all moves for PAWN at a2
-10064 <first : Getting all moves for PAWN at b2
-10064 <first : Getting all moves for PAWN at c2
-10064 <first : Getting all moves for PAWN at d4
-10064 <first : Getting all moves for PAWN at e2
-10064 <first : Getting all moves for PAWN at f2
-10064 <first : Getting all moves for PAWN at g2
-10064 <first : Getting all moves for PAWN at h2
-10064 <first : move c2c4
-11266 >first : time 30496
-11266 >first : otim 30137
+8294 >first : usermove 8294 >first : a6b4
+8295 <first : is normal : true
+8295 <first : src type : KNIGHT
+8295 <first : src side: BLACK
+8295 <first : condition: BLACK
+8295 <first : ### positions in enpassant check
+8295 <first : 6
+8295 <first : 1
+8295 <first : 4
+8295 <first : 2
+8295 <first : check en passant result: false
+8295 <first : Getting all moves for ROOK at a1
+8295 <first : Getting all moves for KNIGHT at b1
+8295 <first : Getting all moves for BISHOP at c1
+8295 <first : Getting all moves for QUEEN at d1
+8295 <first : Getting all moves for KING at e1
+8295 <first : Getting all moves for BISHOP at f1
+8295 <first : Getting all moves for KNIGHT at g1
+8296 <first : Getting all moves for ROOK at h1
+8296 <first : Getting all moves for PAWN at a2
+8296 <first : Getting all moves for PAWN at b2
+8296 <first : Getting all moves for PAWN at c2
+8296 <first : Getting all moves for PAWN at d4
+8296 <first : Getting all moves for PAWN at e2
+8296 <first : Getting all moves for PAWN at f2
+8296 <first : Getting all moves for PAWN at g3
+8296 <first : Getting all moves for PAWN at h2
+8296 <first : is normal : true
+8296 <first : src type : BISHOP
+8296 <first : src side: WHITE
+8296 <first : condition: BLACK
+8296 <first : ### positions in enpassant check
+8296 <first : 1
+8296 <first : 3
+8296 <first : 3
+8296 <first : 5
+8296 <first : check en passant result: false
+8296 <first : move c1e3
+9366 >first : time 29998
+9366 >first : otim 29474
 book hit = (NULL)
-11266 >first : usermove 11266 >first : b7b5
-11267 <first : Getting all moves for ROOK at a1
-11267 <first : Getting all moves for KNIGHT at b1
-11267 <first : Getting all moves for BISHOP at e3
-11267 <first : Getting all moves for QUEEN at d1
-11267 <first : Getting all moves for KING at e1
-11267 <first : Getting all moves for BISHOP at f1
-11268 <first : Getting all moves for KNIGHT at g1
-11268 <first : Getting all moves for ROOK at h1
-11268 <first : Getting all moves for PAWN at a2
-11268 <first : Getting all moves for PAWN at b2
-11268 <first : Getting all moves for PAWN at c4
-11268 <first : Getting all moves for PAWN at d4
-11268 <first : Getting all moves for PAWN at e2
-11268 <first : Getting all moves for PAWN at f2
-11268 <first : Getting all moves for PAWN at g2
-11268 <first : Getting all moves for PAWN at h2
-11268 <first : move d1a4
-13821 >first : time 30696
-13821 >first : otim 30082
+9366 >first : usermove 9366 >first : b4c6
+9370 <first : is normal : true
+9370 <first : src type : KNIGHT
+9370 <first : src side: BLACK
+9370 <first : condition: BLACK
+9370 <first : ### positions in enpassant check
+9370 <first : 4
+9370 <first : 2
+9370 <first : 6
+9370 <first : 3
+9370 <first : check en passant result: false
+9370 <first : Getting all moves for ROOK at a1
+9370 <first : Getting all moves for KNIGHT at b1
+9370 <first : Getting all moves for BISHOP at e3
+9370 <first : Getting all moves for QUEEN at d1
+9370 <first : Getting all moves for KING at e1
+9370 <first : Getting all moves for BISHOP at f1
+9370 <first : Getting all moves for KNIGHT at g1
+9370 <first : Getting all moves for ROOK at h1
+9370 <first : Getting all moves for PAWN at a2
+9370 <first : Getting all moves for PAWN at b2
+9370 <first : Getting all moves for PAWN at c2
+9370 <first : Getting all moves for PAWN at d4
+9370 <first : Getting all moves for PAWN at e2
+9370 <first : Getting all moves for PAWN at f2
+9370 <first : Getting all moves for PAWN at g3
+9370 <first : Getting all moves for PAWN at h2
+9370 <first : is normal : true
+9370 <first : src type : PAWN
+9370 <first : src side: WHITE
+9370 <first : condition: BLACK
+9370 <first : ### positions in enpassant check
+9370 <first : 2
+9370 <first : 1
+9370 <first : 3
+9370 <first : 1
+9370 <first : check en passant result: false
+9370 <first : move a2a3
+10080 >first : time 29998
+10080 >first : otim 29403
 book hit = (NULL)
-13821 >first : usermove 13821 >first : b5a4
-13822 <first : Getting all moves for ROOK at a1
-13822 <first : Getting all moves for KNIGHT at b1
-13822 <first : Getting all moves for BISHOP at e3
-13822 <first : Getting all moves for KING at e1
-13822 <first : Getting all moves for BISHOP at f1
-13822 <first : Getting all moves for KNIGHT at g1
-13822 <first : Getting all moves for ROOK at h1
-13822 <first : Getting all moves for PAWN at a2
-13822 <first : Getting all moves for PAWN at b2
-13822 <first : Getting all moves for PAWN at c4
-13822 <first : Getting all moves for PAWN at d4
-13822 <first : Getting all moves for PAWN at e2
-13822 <first : Getting all moves for PAWN at f2
-13823 <first : Getting all moves for PAWN at g2
-13823 <first : Getting all moves for PAWN at h2
-13823 <first : move b1d2
-15226 >first : time 30896
-15226 >first : otim 30142
+10080 >first : usermove 10080 >first : c6d4
+10082 <first : is normal : true
+10082 <first : src type : KNIGHT
+10082 <first : src side: BLACK
+10082 <first : condition: BLACK
+10082 <first : ### positions in enpassant check
+10082 <first : 6
+10082 <first : 3
+10082 <first : 4
+10082 <first : 4
+10082 <first : check en passant result: false
+10082 <first : Getting all moves for ROOK at a1
+10082 <first : Getting all moves for KNIGHT at b1
+10082 <first : Getting all moves for BISHOP at e3
+10082 <first : Getting all moves for QUEEN at d1
+10082 <first : Getting all moves for KING at e1
+10082 <first : Getting all moves for BISHOP at f1
+10082 <first : Getting all moves for KNIGHT at g1
+10082 <first : Getting all moves for ROOK at h1
+10082 <first : Getting all moves for PAWN at a3
+10082 <first : Getting all moves for PAWN at b2
+10082 <first : Getting all moves for PAWN at c2
+10082 <first : Getting all moves for PAWN at e2
+10082 <first : Getting all moves for PAWN at f2
+10082 <first : Getting all moves for PAWN at g3
+10082 <first : Getting all moves for PAWN at h2
+10082 <first : is normal : true
+10082 <first : src type : PAWN
+10082 <first : src side: WHITE
+10082 <first : condition: BLACK
+10082 <first : ### positions in enpassant check
+10082 <first : 3
+10082 <first : 7
+10082 <first : 4
+10082 <first : 7
+10082 <first : check en passant result: false
+10082 <first : move g3g4
+11218 >first : time 29998
+11218 >first : otim 29289
 book hit = (NULL)
-15226 >first : usermove 15226 >first : a4a3
-15228 <first : Getting all moves for ROOK at a1
-15228 <first : Getting all moves for KNIGHT at d2
-15228 <first : Getting all moves for BISHOP at e3
-15228 <first : Getting all moves for KING at e1
-15228 <first : Getting all moves for BISHOP at f1
-15228 <first : Getting all moves for KNIGHT at g1
-15228 <first : Getting all moves for ROOK at h1
-15228 <first : Getting all moves for PAWN at a2
-15228 <first : Getting all moves for PAWN at b2
-15228 <first : Getting all moves for PAWN at c4
-15228 <first : Getting all moves for PAWN at d4
-15228 <first : Getting all moves for PAWN at e2
-15228 <first : Getting all moves for PAWN at f2
-15228 <first : Getting all moves for PAWN at g2
-15228 <first : Getting all moves for PAWN at h2
-15228 <first : move g1h3
-16091 >first : time 31095
-16091 >first : otim 30255
+11218 >first : usermove 11218 >first : d4e6
+11220 <first : is normal : true
+11220 <first : src type : KNIGHT
+11220 <first : src side: BLACK
+11220 <first : condition: BLACK
+11220 <first : ### positions in enpassant check
+11220 <first : 4
+11220 <first : 4
+11220 <first : 6
+11220 <first : 5
+11220 <first : check en passant result: false
+11220 <first : Getting all moves for ROOK at a1
+11220 <first : Getting all moves for KNIGHT at b1
+11220 <first : Getting all moves for BISHOP at e3
+11220 <first : Getting all moves for QUEEN at d1
+11220 <first : Getting all moves for KING at e1
+11220 <first : Getting all moves for BISHOP at f1
+11220 <first : Getting all moves for KNIGHT at g1
+11220 <first : Getting all moves for ROOK at h1
+11220 <first : Getting all moves for PAWN at a3
+11220 <first : Getting all moves for PAWN at b2
+11220 <first : Getting all moves for PAWN at c2
+11220 <first : Getting all moves for PAWN at e2
+11220 <first : Getting all moves for PAWN at f2
+11220 <first : Getting all moves for PAWN at g4
+11220 <first : Getting all moves for PAWN at h2
+11220 <first : is normal : true
+11220 <first : src type : QUEEN
+11220 <first : src side: WHITE
+11220 <first : condition: BLACK
+11220 <first : ### positions in enpassant check
+11220 <first : 1
+11220 <first : 4
+11220 <first : 3
+11220 <first : 4
+11220 <first : check en passant result: false
+11220 <first : move d1d3
+12338 >first : time 29997
+12338 >first : otim 29177
 book hit = (NULL)
-16091 >first : usermove 16091 >first : a3b2
-16092 <first : Getting all moves for ROOK at a1
-16092 <first : Getting all moves for KNIGHT at d2
-16092 <first : Getting all moves for BISHOP at e3
-16092 <first : Getting all moves for KING at e1
-16092 <first : Getting all moves for BISHOP at f1
-16092 <first : Getting all moves for KNIGHT at h3
-16092 <first : Getting all moves for ROOK at h1
-16092 <first : Getting all moves for PAWN at a2
-16092 <first : Getting all moves for PAWN at c4
-16092 <first : Getting all moves for PAWN at d4
-16092 <first : Getting all moves for PAWN at e2
-16092 <first : Getting all moves for PAWN at f2
-16092 <first : Getting all moves for PAWN at g2
-16092 <first : Getting all moves for PAWN at h2
-16092 <first : move a1d1
-17786 >first : time 31295
-17786 >first : otim 30286
+12338 >first : usermove 12338 >first : e6d4
+12340 <first : is normal : true
+12340 <first : src type : KNIGHT
+12340 <first : src side: BLACK
+12340 <first : condition: BLACK
+12340 <first : ### positions in enpassant check
+12340 <first : 6
+12340 <first : 5
+12340 <first : 4
+12340 <first : 4
+12340 <first : check en passant result: false
+12340 <first : Getting all moves for ROOK at a1
+12340 <first : Getting all moves for KNIGHT at b1
+12340 <first : Getting all moves for BISHOP at e3
+12340 <first : Getting all moves for QUEEN at d3
+12340 <first : Getting all moves for KING at e1
+12340 <first : Getting all moves for BISHOP at f1
+12340 <first : Getting all moves for KNIGHT at g1
+12340 <first : Getting all moves for ROOK at h1
+12340 <first : Getting all moves for PAWN at a3
+12340 <first : Getting all moves for PAWN at b2
+12340 <first : Getting all moves for PAWN at c2
+12340 <first : Getting all moves for PAWN at e2
+12340 <first : Getting all moves for PAWN at f2
+12340 <first : Getting all moves for PAWN at g4
+12340 <first : Getting all moves for PAWN at h2
+12340 <first : is normal : true
+12340 <first : src type : PAWN
+12340 <first : src side: WHITE
+12340 <first : condition: BLACK
+12340 <first : ### positions in enpassant check
+12340 <first : 2
+12340 <first : 8
+12340 <first : 4
+12340 <first : 8
+12340 <first : check en passant result: true
+12340 <first : move h2h4
+13300 >first : time 29997
+13300 >first : otim 29081
 book hit = (NULL)
-17786 >first : usermove 17786 >first : d6d5
-17787 <first : Getting all moves for ROOK at d1
-17787 <first : Getting all moves for KNIGHT at d2
-17787 <first : Getting all moves for BISHOP at e3
-17787 <first : Getting all moves for KING at e1
-17787 <first : Getting all moves for BISHOP at f1
-17787 <first : Getting all moves for KNIGHT at h3
-17787 <first : Getting all moves for ROOK at h1
-17787 <first : Getting all moves for PAWN at a2
-17787 <first : Getting all moves for PAWN at c4
-17787 <first : Getting all moves for PAWN at d4
-17787 <first : Getting all moves for PAWN at e2
-17787 <first : Getting all moves for PAWN at f2
-17787 <first : Getting all moves for PAWN at g2
-17787 <first : Getting all moves for PAWN at h2
-17787 <first : move c4d5
-19990 >first : time 31495
-19990 >first : otim 30266
+13300 >first : usermove 13300 >first : d4f5
+13302 <first : is normal : true
+13302 <first : src type : KNIGHT
+13302 <first : src side: BLACK
+13302 <first : condition: BLACK
+13302 <first : ### positions in enpassant check
+13302 <first : 4
+13302 <first : 4
+13302 <first : 5
+13302 <first : 6
+13302 <first : check en passant result: false
+13302 <first : Getting all moves for ROOK at a1
+13302 <first : Getting all moves for KNIGHT at b1
+13302 <first : Getting all moves for BISHOP at e3
+13302 <first : Getting all moves for QUEEN at d3
+13302 <first : Getting all moves for KING at e1
+13302 <first : Getting all moves for BISHOP at f1
+13302 <first : Getting all moves for KNIGHT at g1
+13302 <first : Getting all moves for ROOK at h1
+13302 <first : Getting all moves for PAWN at a3
+13302 <first : Getting all moves for PAWN at b2
+13302 <first : Getting all moves for PAWN at c2
+13302 <first : Getting all moves for PAWN at e2
+13302 <first : Getting all moves for PAWN at f2
+13302 <first : Getting all moves for PAWN at g4
+13302 <first : Getting all moves for PAWN at h4
+13302 <first : is normal : true
+13302 <first : src type : PAWN
+13302 <first : src side: WHITE
+13302 <first : condition: BLACK
+13302 <first : ### positions in enpassant check
+13302 <first : 2
+13302 <first : 2
+13302 <first : 4
+13302 <first : 2
+13302 <first : check en passant result: true
+13302 <first : move b2b4
+15744 >first : time 29997
+15744 >first : otim 28837
 book hit = (NULL)
-19990 >first : usermove 19990 >first : e7e6
-19992 <first : Getting all moves for ROOK at d1
-19992 <first : Getting all moves for KNIGHT at d2
-19992 <first : Getting all moves for BISHOP at e3
-19992 <first : Getting all moves for KING at e1
-19992 <first : Getting all moves for BISHOP at f1
-19992 <first : Getting all moves for KNIGHT at h3
-19992 <first : Getting all moves for ROOK at h1
-19992 <first : Getting all moves for PAWN at a2
-19992 <first : Getting all moves for PAWN at d5
-19992 <first : Getting all moves for PAWN at d4
-19992 <first : Getting all moves for PAWN at e2
-19992 <first : Getting all moves for PAWN at f2
-19992 <first : Getting all moves for PAWN at g2
-19992 <first : Getting all moves for PAWN at h2
-19992 <first : move d2b1
-20560 >first : time 31695
-20560 >first : otim 30409
+15744 >first : usermove 15744 >first : f5d6
+15746 <first : is normal : true
+15746 <first : src type : KNIGHT
+15746 <first : src side: BLACK
+15746 <first : condition: BLACK
+15746 <first : ### positions in enpassant check
+15746 <first : 5
+15746 <first : 6
+15746 <first : 6
+15746 <first : 4
+15746 <first : check en passant result: false
+15746 <first : Getting all moves for ROOK at a1
+15746 <first : Getting all moves for KNIGHT at b1
+15746 <first : Getting all moves for BISHOP at e3
+15746 <first : Getting all moves for QUEEN at d3
+15746 <first : Getting all moves for KING at e1
+15746 <first : Getting all moves for BISHOP at f1
+15746 <first : Getting all moves for KNIGHT at g1
+15746 <first : Getting all moves for ROOK at h1
+15746 <first : Getting all moves for PAWN at a3
+15746 <first : Getting all moves for PAWN at b4
+15746 <first : Getting all moves for PAWN at c2
+15746 <first : Getting all moves for PAWN at e2
+15746 <first : Getting all moves for PAWN at f2
+15746 <first : Getting all moves for PAWN at g4
+15746 <first : Getting all moves for PAWN at h4
+15746 <first : is normal : true
+15746 <first : src type : BISHOP
+15746 <first : src side: WHITE
+15746 <first : condition: BLACK
+15746 <first : ### positions in enpassant check
+15746 <first : 3
+15746 <first : 5
+15746 <first : 5
+15746 <first : 7
+15746 <first : check en passant result: false
+15746 <first : move e3g5
+48268 >first : time 29997
+48268 >first : otim 25585
 book hit = (NULL)
-20560 >first : usermove 20561 >first : e6d5
-20565 <first : Getting all moves for ROOK at d1
-20565 <first : Getting all moves for KNIGHT at b1
-20565 <first : Getting all moves for BISHOP at e3
-20565 <first : Getting all moves for KING at e1
-20565 <first : Getting all moves for BISHOP at f1
-20565 <first : Getting all moves for KNIGHT at h3
-20565 <first : Getting all moves for ROOK at h1
-20565 <first : Getting all moves for PAWN at a2
-20565 <first : Getting all moves for PAWN at d4
-20565 <first : Getting all moves for PAWN at e2
-20565 <first : Getting all moves for PAWN at f2
-20565 <first : Getting all moves for PAWN at g2
-20565 <first : Getting all moves for PAWN at h2
-20565 <first : move f2f4
-21888 >first : time 31895
-21888 >first : otim 30477
+48268 >first : usermove 48268 >first : d6e4
+48272 <first : is normal : true
+48272 <first : src type : KNIGHT
+48272 <first : src side: BLACK
+48272 <first : condition: BLACK
+48272 <first : ### positions in enpassant check
+48272 <first : 6
+48272 <first : 4
+48272 <first : 4
+48272 <first : 5
+48272 <first : check en passant result: false
+48272 <first : Getting all moves for ROOK at a1
+48272 <first : Getting all moves for KNIGHT at b1
+48272 <first : Getting all moves for BISHOP at g5
+48272 <first : Getting all moves for QUEEN at d3
+48272 <first : Getting all moves for KING at e1
+48272 <first : Getting all moves for BISHOP at f1
+48272 <first : Getting all moves for KNIGHT at g1
+48272 <first : Getting all moves for ROOK at h1
+48272 <first : Getting all moves for PAWN at a3
+48272 <first : Getting all moves for PAWN at b4
+48272 <first : Getting all moves for PAWN at c2
+48272 <first : Getting all moves for PAWN at e2
+48272 <first : Getting all moves for PAWN at f2
+48272 <first : Getting all moves for PAWN at g4
+48272 <first : Getting all moves for PAWN at h4
+48272 <first : is normal : true
+48272 <first : src type : BISHOP
+48272 <first : src side: WHITE
+48272 <first : condition: BLACK
+48272 <first : ### positions in enpassant check
+48272 <first : 5
+48272 <first : 7
+48272 <first : 1
+48272 <first : 3
+48272 <first : check en passant result: false
+48272 <first : move g5c1
+50296 >first : time 29996
+50296 >first : otim 25382
 book hit = (NULL)
-21888 >first : usermove 21888 >first : f7f6
-21889 <first : Getting all moves for ROOK at d1
-21889 <first : Getting all moves for KNIGHT at b1
-21889 <first : Getting all moves for BISHOP at e3
-21889 <first : Getting all moves for KING at e1
-21889 <first : Getting all moves for BISHOP at f1
-21889 <first : Getting all moves for KNIGHT at h3
-21889 <first : Getting all moves for ROOK at h1
-21889 <first : Getting all moves for PAWN at a2
-21889 <first : Getting all moves for PAWN at d4
-21889 <first : Getting all moves for PAWN at e2
-21889 <first : Getting all moves for PAWN at f4
-21889 <first : Getting all moves for PAWN at g2
-21889 <first : Getting all moves for PAWN at h2
-21889 <first : move b1c3
-23127 >first : time 32094
-23127 >first : otim 30553
+50296 >first : usermove 50296 >first : e4d6
+50298 <first : is normal : true
+50298 <first : src type : KNIGHT
+50298 <first : src side: BLACK
+50298 <first : condition: BLACK
+50298 <first : ### positions in enpassant check
+50298 <first : 4
+50298 <first : 5
+50298 <first : 6
+50298 <first : 4
+50298 <first : check en passant result: false
+50298 <first : Getting all moves for ROOK at a1
+50298 <first : Getting all moves for KNIGHT at b1
+50298 <first : Getting all moves for BISHOP at c1
+50298 <first : Getting all moves for QUEEN at d3
+50298 <first : Getting all moves for KING at e1
+50298 <first : Getting all moves for BISHOP at f1
+50298 <first : Getting all moves for KNIGHT at g1
+50298 <first : Getting all moves for ROOK at h1
+50298 <first : Getting all moves for PAWN at a3
+50298 <first : Getting all moves for PAWN at b4
+50298 <first : Getting all moves for PAWN at c2
+50298 <first : Getting all moves for PAWN at e2
+50298 <first : Getting all moves for PAWN at f2
+50298 <first : Getting all moves for PAWN at g4
+50298 <first : Getting all moves for PAWN at h4
+50298 <first : is normal : true
+50298 <first : src type : QUEEN
+50298 <first : src side: WHITE
+50298 <first : condition: BLACK
+50298 <first : ### positions in enpassant check
+50298 <first : 3
+50298 <first : 4
+50298 <first : 3
+50298 <first : 5
+50298 <first : check en passant result: false
+50298 <first : move d3e3
+51368 >first : time 29996
+51368 >first : otim 25275
 book hit = (NULL)
-23127 >first : usermove 23127 >first : f6f5
-23129 <first : Getting all moves for ROOK at d1
-23130 <first : Getting all moves for KNIGHT at c3
-23130 <first : Getting all moves for BISHOP at e3
-23130 <first : Getting all moves for KING at e1
-23130 <first : Getting all moves for BISHOP at f1
-23130 <first : Getting all moves for KNIGHT at h3
-23130 <first : Getting all moves for ROOK at h1
-23130 <first : Getting all moves for PAWN at a2
-23130 <first : Getting all moves for PAWN at d4
-23130 <first : Getting all moves for PAWN at e2
-23130 <first : Getting all moves for PAWN at f4
-23130 <first : Getting all moves for PAWN at g2
-23130 <first : Getting all moves for PAWN at h2
-23130 <first : move c3a4
-24571 >first : time 32294
-24571 >first : otim 30609
+51368 >first : usermove 51368 >first : d6b5
+51369 <first : is normal : true
+51369 <first : src type : KNIGHT
+51369 <first : src side: BLACK
+51369 <first : condition: BLACK
+51369 <first : ### positions in enpassant check
+51369 <first : 6
+51369 <first : 4
+51369 <first : 5
+51369 <first : 2
+51369 <first : check en passant result: false
+51369 <first : Getting all moves for ROOK at a1
+51369 <first : Getting all moves for KNIGHT at b1
+51369 <first : Getting all moves for BISHOP at c1
+51369 <first : Getting all moves for QUEEN at e3
+51369 <first : Getting all moves for KING at e1
+51369 <first : Getting all moves for BISHOP at f1
+51369 <first : Getting all moves for KNIGHT at g1
+51369 <first : Getting all moves for ROOK at h1
+51369 <first : Getting all moves for PAWN at a3
+51369 <first : Getting all moves for PAWN at b4
+51369 <first : Getting all moves for PAWN at c2
+51369 <first : Getting all moves for PAWN at e2
+51369 <first : Getting all moves for PAWN at f2
+51369 <first : Getting all moves for PAWN at g4
+51369 <first : Getting all moves for PAWN at h4
+51369 <first : is normal : true
+51369 <first : src type : QUEEN
+51369 <first : src side: WHITE
+51369 <first : condition: BLACK
+51369 <first : ### positions in enpassant check
+51369 <first : 3
+51369 <first : 5
+51369 <first : 3
+51369 <first : 2
+51369 <first : check en passant result: false
+51369 <first : move e3b3
+53396 >first : time 29996
+53396 >first : otim 25073
 book hit = (NULL)
-24571 >first : usermove 24571 >first : a7a5
-24572 <first : Getting all moves for ROOK at d1
-24572 <first : Getting all moves for KNIGHT at a4
-24572 <first : Getting all moves for BISHOP at e3
-24572 <first : Getting all moves for KING at e1
-24572 <first : Getting all moves for BISHOP at f1
-24572 <first : Getting all moves for KNIGHT at h3
-24572 <first : Getting all moves for ROOK at h1
-24572 <first : Getting all moves for PAWN at a2
-24572 <first : Getting all moves for PAWN at d4
-24572 <first : Getting all moves for PAWN at e2
-24572 <first : Getting all moves for PAWN at f4
-24572 <first : Getting all moves for PAWN at g2
-24572 <first : Getting all moves for PAWN at h2
-24572 <first : move g2g3
-25974 >first : time 32494
-25974 >first : otim 30669
+53396 >first : usermove 53396 >first : b5d6
+53399 <first : is normal : true
+53399 <first : src type : KNIGHT
+53399 <first : src side: BLACK
+53399 <first : condition: BLACK
+53399 <first : ### positions in enpassant check
+53399 <first : 5
+53399 <first : 2
+53399 <first : 6
+53399 <first : 4
+53399 <first : check en passant result: false
+53399 <first : Getting all moves for ROOK at a1
+53399 <first : Getting all moves for KNIGHT at b1
+53399 <first : Getting all moves for BISHOP at c1
+53399 <first : Getting all moves for QUEEN at b3
+53399 <first : Getting all moves for KING at e1
+53399 <first : Getting all moves for BISHOP at f1
+53399 <first : Getting all moves for KNIGHT at g1
+53399 <first : Getting all moves for ROOK at h1
+53399 <first : Getting all moves for PAWN at a3
+53399 <first : Getting all moves for PAWN at b4
+53399 <first : Getting all moves for PAWN at c2
+53399 <first : Getting all moves for PAWN at e2
+53399 <first : Getting all moves for PAWN at f2
+53399 <first : Getting all moves for PAWN at g4
+53399 <first : Getting all moves for PAWN at h4
+53399 <first : is normal : true
+53399 <first : src type : QUEEN
+53399 <first : src side: WHITE
+53399 <first : condition: BLACK
+53399 <first : ### positions in enpassant check
+53399 <first : 3
+53399 <first : 2
+53399 <first : 4
+53399 <first : 1
+53399 <first : check en passant result: false
+53399 <first : move b3a4
+55310 >first : time 29996
+55310 >first : otim 24882
 book hit = (NULL)
-25974 >first : usermove 25974 >first : g7g6
-25975 <first : Getting all moves for ROOK at d1
-25975 <first : Getting all moves for KNIGHT at a4
-25975 <first : Getting all moves for BISHOP at e3
-25975 <first : Getting all moves for KING at e1
-25975 <first : Getting all moves for BISHOP at f1
-25975 <first : Getting all moves for KNIGHT at h3
-25975 <first : Getting all moves for ROOK at h1
-25975 <first : Getting all moves for PAWN at a2
-25975 <first : Getting all moves for PAWN at d4
-25975 <first : Getting all moves for PAWN at e2
-25975 <first : Getting all moves for PAWN at f4
-25975 <first : Getting all moves for PAWN at g3
-25975 <first : Getting all moves for PAWN at h2
-25975 <first : move e3d2
-26775 >first : time 32694
-26775 >first : otim 30789
+55310 >first : usermove 55310 >first : d6c4
+55312 <first : is normal : true
+55312 <first : src type : KNIGHT
+55312 <first : src side: BLACK
+55312 <first : condition: BLACK
+55312 <first : ### positions in enpassant check
+55312 <first : 6
+55312 <first : 4
+55312 <first : 4
+55312 <first : 3
+55312 <first : check en passant result: false
+55312 <first : Getting all moves for ROOK at a1
+55312 <first : Getting all moves for KNIGHT at b1
+55312 <first : Getting all moves for BISHOP at c1
+55312 <first : Getting all moves for QUEEN at a4
+55312 <first : Getting all moves for KING at e1
+55312 <first : Getting all moves for BISHOP at f1
+55312 <first : Getting all moves for KNIGHT at g1
+55312 <first : Getting all moves for ROOK at h1
+55312 <first : Getting all moves for PAWN at a3
+55312 <first : Getting all moves for PAWN at b4
+55312 <first : Getting all moves for PAWN at c2
+55312 <first : Getting all moves for PAWN at e2
+55312 <first : Getting all moves for PAWN at f2
+55312 <first : Getting all moves for PAWN at g4
+55312 <first : Getting all moves for PAWN at h4
+55312 <first : is normal : true
+55312 <first : src type : PAWN
+55312 <first : src side: WHITE
+55312 <first : condition: BLACK
+55312 <first : ### positions in enpassant check
+55312 <first : 2
+55312 <first : 6
+55312 <first : 3
+55312 <first : 6
+55312 <first : check en passant result: false
+55312 <first : move f2f3
+56888 >first : time 29996
+56888 >first : otim 24724
 book hit = (NULL)
-26775 >first : usermove 26775 >first : g6g5
-26778 <first : Getting all moves for ROOK at d1
-26778 <first : Getting all moves for KNIGHT at a4
-26778 <first : Getting all moves for BISHOP at d2
-26778 <first : Getting all moves for KING at e1
-26778 <first : Getting all moves for BISHOP at f1
-26778 <first : Getting all moves for KNIGHT at h3
-26778 <first : Getting all moves for ROOK at h1
-26778 <first : Getting all moves for PAWN at a2
-26778 <first : Getting all moves for PAWN at d4
-26778 <first : Getting all moves for PAWN at e2
-26778 <first : Getting all moves for PAWN at f4
-26778 <first : Getting all moves for PAWN at g3
-26778 <first : Getting all moves for PAWN at h2
-26778 <first : move h3g5
-28411 >first : time 32894
-28411 >first : otim 30825
+56888 >first : usermove 56888 >first : c4d6
+56890 <first : is normal : true
+56890 <first : src type : KNIGHT
+56890 <first : src side: BLACK
+56890 <first : condition: BLACK
+56890 <first : ### positions in enpassant check
+56890 <first : 4
+56890 <first : 3
+56890 <first : 6
+56890 <first : 4
+56890 <first : check en passant result: false
+56890 <first : Getting all moves for ROOK at a1
+56890 <first : Getting all moves for KNIGHT at b1
+56890 <first : Getting all moves for BISHOP at c1
+56890 <first : Getting all moves for QUEEN at a4
+56890 <first : Getting all moves for KING at e1
+56890 <first : Getting all moves for BISHOP at f1
+56890 <first : Getting all moves for KNIGHT at g1
+56890 <first : Getting all moves for ROOK at h1
+56890 <first : Getting all moves for PAWN at a3
+56890 <first : Getting all moves for PAWN at b4
+56890 <first : Getting all moves for PAWN at c2
+56890 <first : Getting all moves for PAWN at e2
+56890 <first : Getting all moves for PAWN at f3
+56890 <first : Getting all moves for PAWN at g4
+56890 <first : Getting all moves for PAWN at h4
+56890 <first : is normal : true
+56890 <first : src type : PAWN
+56890 <first : src side: WHITE
+56890 <first : condition: BLACK
+56890 <first : ### positions in enpassant check
+56890 <first : 2
+56890 <first : 5
+56890 <first : 3
+56890 <first : 5
+56890 <first : check en passant result: false
+56890 <first : move e2e3
+57712 >first : time 29995
+57712 >first : otim 24642
 book hit = (NULL)
-28411 >first : usermove 28411 >first : g8e7
-28412 <first : Getting all moves for ROOK at d1
-28412 <first : Getting all moves for KNIGHT at a4
-28412 <first : Getting all moves for BISHOP at d2
-28412 <first : Getting all moves for KING at e1
-28412 <first : Getting all moves for BISHOP at f1
-28412 <first : Getting all moves for KNIGHT at g5
-28412 <first : Getting all moves for ROOK at h1
-28412 <first : Getting all moves for PAWN at a2
-28412 <first : Getting all moves for PAWN at d4
-28412 <first : Getting all moves for PAWN at e2
-28412 <first : Getting all moves for PAWN at f4
-28412 <first : Getting all moves for PAWN at g3
-28412 <first : Getting all moves for PAWN at h2
-28412 <first : move d2a5
-30608 >first : time 33093
-30608 >first : otim 30806
+57712 >first : usermove 57712 >first : d6e4
+57715 <first : is normal : true
+57715 <first : src type : KNIGHT
+57715 <first : src side: BLACK
+57715 <first : condition: BLACK
+57715 <first : ### positions in enpassant check
+57715 <first : 6
+57715 <first : 4
+57715 <first : 4
+57715 <first : 5
+57715 <first : check en passant result: false
+57715 <first : Getting all moves for ROOK at a1
+57715 <first : Getting all moves for KNIGHT at b1
+57715 <first : Getting all moves for BISHOP at c1
+57715 <first : Getting all moves for QUEEN at a4
+57715 <first : Getting all moves for KING at e1
+57715 <first : Getting all moves for BISHOP at f1
+57715 <first : Getting all moves for KNIGHT at g1
+57715 <first : Getting all moves for ROOK at h1
+57715 <first : Getting all moves for PAWN at a3
+57715 <first : Getting all moves for PAWN at b4
+57715 <first : Getting all moves for PAWN at c2
+57715 <first : Getting all moves for PAWN at e3
+57715 <first : Getting all moves for PAWN at f3
+57715 <first : Getting all moves for PAWN at g4
+57715 <first : Getting all moves for PAWN at h4
+57715 <first : is normal : true
+57715 <first : src type : KNIGHT
+57715 <first : src side: WHITE
+57715 <first : condition: BLACK
+57715 <first : ### positions in enpassant check
+57715 <first : 1
+57715 <first : 7
+57715 <first : 3
+57715 <first : 8
+57715 <first : check en passant result: false
+57715 <first : move g1h3
+58818 >first : time 29995
+58818 >first : otim 24532
 book hit = (NULL)
-30608 >first : usermove 30608 >first : e7g6
-30609 <first : Getting all moves for ROOK at d1
-30609 <first : Getting all moves for KNIGHT at a4
-30609 <first : Getting all moves for BISHOP at a5
-30609 <first : Getting all moves for KING at e1
-30609 <first : Getting all moves for BISHOP at f1
-30609 <first : Getting all moves for KNIGHT at g5
-30609 <first : Getting all moves for ROOK at h1
-30609 <first : Getting all moves for PAWN at a2
-30609 <first : Getting all moves for PAWN at d4
-30609 <first : Getting all moves for PAWN at e2
-30609 <first : Getting all moves for PAWN at f4
-30609 <first : Getting all moves for PAWN at g3
-30609 <first : Getting all moves for PAWN at h2
-30609 <first : move a5b4
-32368 >first : time 33293
-32368 >first : otim 30830
+58818 >first : usermove 58818 >first : e4d6
+58821 <first : is normal : true
+58821 <first : src type : KNIGHT
+58821 <first : src side: BLACK
+58821 <first : condition: BLACK
+58821 <first : ### positions in enpassant check
+58821 <first : 4
+58821 <first : 5
+58821 <first : 6
+58821 <first : 4
+58821 <first : check en passant result: false
+58821 <first : Getting all moves for ROOK at a1
+58821 <first : Getting all moves for KNIGHT at b1
+58821 <first : Getting all moves for BISHOP at c1
+58821 <first : Getting all moves for QUEEN at a4
+58821 <first : Getting all moves for KING at e1
+58821 <first : Getting all moves for BISHOP at f1
+58821 <first : Getting all moves for KNIGHT at h3
+58821 <first : Getting all moves for ROOK at h1
+58821 <first : Getting all moves for PAWN at a3
+58821 <first : Getting all moves for PAWN at b4
+58821 <first : Getting all moves for PAWN at c2
+58821 <first : Getting all moves for PAWN at e3
+58821 <first : Getting all moves for PAWN at f3
+58821 <first : Getting all moves for PAWN at g4
+58821 <first : Getting all moves for PAWN at h4
+58821 <first : is normal : true
+58821 <first : src type : PAWN
+58821 <first : src side: WHITE
+58821 <first : condition: BLACK
+58821 <first : ### positions in enpassant check
+58821 <first : 3
+58821 <first : 5
+58821 <first : 4
+58821 <first : 5
+58821 <first : check en passant result: false
+58821 <first : move e3e4
+59780 >first : time 29995
+59780 >first : otim 24436
 book hit = (NULL)
-32368 >first : usermove 32368 >first : g6f4
-32371 <first : Getting all moves for ROOK at d1
-32371 <first : Getting all moves for KNIGHT at a4
-32371 <first : Getting all moves for BISHOP at b4
-32371 <first : Getting all moves for KING at e1
-32371 <first : Getting all moves for BISHOP at f1
-32371 <first : Getting all moves for KNIGHT at g5
-32371 <first : Getting all moves for ROOK at h1
-32371 <first : Getting all moves for PAWN at a2
-32371 <first : Getting all moves for PAWN at d4
-32371 <first : Getting all moves for PAWN at e2
-32371 <first : Getting all moves for PAWN at g3
-32371 <first : Getting all moves for PAWN at h2
-32371 <first : move a4c5
-34054 >first : time 33493
-34054 >first : otim 30862
+59780 >first : usermove 59780 >first : d6e4
+59781 <first : is normal : true
+59782 <first : src type : KNIGHT
+59782 <first : src side: BLACK
+59782 <first : condition: BLACK
+59782 <first : ### positions in enpassant check
+59782 <first : 6
+59782 <first : 4
+59782 <first : 4
+59782 <first : 5
+59782 <first : check en passant result: false
+59782 <first : Getting all moves for ROOK at a1
+59782 <first : Getting all moves for KNIGHT at b1
+59782 <first : Getting all moves for BISHOP at c1
+59782 <first : Getting all moves for QUEEN at a4
+59782 <first : Getting all moves for KING at e1
+59782 <first : Getting all moves for BISHOP at f1
+59782 <first : Getting all moves for KNIGHT at h3
+59782 <first : Getting all moves for ROOK at h1
+59782 <first : Getting all moves for PAWN at a3
+59782 <first : Getting all moves for PAWN at b4
+59782 <first : Getting all moves for PAWN at c2
+59782 <first : Getting all moves for PAWN at f3
+59782 <first : Getting all moves for PAWN at g4
+59782 <first : Getting all moves for PAWN at h4
+59782 <first : is normal : true
+59782 <first : src type : BISHOP
+59782 <first : src side: WHITE
+59782 <first : condition: BLACK
+59782 <first : ### positions in enpassant check
+59782 <first : 1
+59782 <first : 6
+59782 <first : 5
+59782 <first : 2
+59782 <first : check en passant result: false
+59782 <first : move f1b5
+61007 >first : time 29995
+61007 >first : otim 24313
 book hit = (NULL)
-34054 >first : usermove 34054 >first : f4e2
-34055 <first : Getting all moves for ROOK at d1
-34055 <first : Getting all moves for KNIGHT at c5
-34055 <first : Getting all moves for BISHOP at b4
-34055 <first : Getting all moves for KING at e1
-34055 <first : Getting all moves for BISHOP at f1
-34055 <first : Getting all moves for KNIGHT at g5
-34055 <first : Getting all moves for ROOK at h1
-34055 <first : Getting all moves for PAWN at a2
-34055 <first : Getting all moves for PAWN at d4
-34055 <first : Getting all moves for PAWN at g3
-34055 <first : Getting all moves for PAWN at h2
-34055 <first : move c5e4
-35714 >first : time 33693
-35714 >first : otim 30896
+61007 >first : usermove 61007 >first : e4c5
+61010 <first : is normal : true
+61010 <first : src type : KNIGHT
+61010 <first : src side: BLACK
+61010 <first : condition: BLACK
+61010 <first : ### positions in enpassant check
+61010 <first : 4
+61010 <first : 5
+61010 <first : 5
+61010 <first : 3
+61010 <first : check en passant result: false
+61010 <first : Getting all moves for ROOK at a1
+61010 <first : Getting all moves for KNIGHT at b1
+61010 <first : Getting all moves for BISHOP at c1
+61010 <first : Getting all moves for QUEEN at a4
+61010 <first : Getting all moves for KING at e1
+61010 <first : Getting all moves for BISHOP at b5
+61010 <first : Getting all moves for KNIGHT at h3
+61010 <first : Getting all moves for ROOK at h1
+61010 <first : Getting all moves for PAWN at a3
+61010 <first : Getting all moves for PAWN at b4
+61010 <first : Getting all moves for PAWN at c2
+61010 <first : Getting all moves for PAWN at f3
+61010 <first : Getting all moves for PAWN at g4
+61010 <first : Getting all moves for PAWN at h4
+61010 <first : is normal : true
+61010 <first : src type : KNIGHT
+61010 <first : src side: WHITE
+61011 <first : condition: BLACK
+61011 <first : ### positions in enpassant check
+61011 <first : 3
+61011 <first : 8
+61011 <first : 1
+61011 <first : 7
+61011 <first : check en passant result: false
+61011 <first : move h3g1
+62294 >first : time 29994
+62294 >first : otim 24185
 book hit = (NULL)
-35714 >first : usermove 35714 >first : e2d4
-35715 <first : Getting all moves for ROOK at d1
-35715 <first : Getting all moves for KNIGHT at e4
-35715 <first : Getting all moves for BISHOP at b4
-35715 <first : Getting all moves for KING at e1
-35715 <first : Getting all moves for BISHOP at f1
-35715 <first : Getting all moves for KNIGHT at g5
-35715 <first : Getting all moves for ROOK at h1
-35715 <first : Getting all moves for PAWN at a2
-35715 <first : Getting all moves for PAWN at g3
-35715 <first : Getting all moves for PAWN at h2
-35715 <first : move e4f6
-42210 >first : time 33893
-42210 >first : otim 30446
+62294 >first : usermove 62294 >first : c5e6
+62295 <first : is normal : true
+62295 <first : src type : KNIGHT
+62295 <first : src side: BLACK
+62295 <first : condition: BLACK
+62295 <first : ### positions in enpassant check
+62295 <first : 5
+62295 <first : 3
+62295 <first : 6
+62295 <first : 5
+62295 <first : check en passant result: false
+62295 <first : Getting all moves for ROOK at a1
+62295 <first : Getting all moves for KNIGHT at b1
+62295 <first : Getting all moves for BISHOP at c1
+62295 <first : Getting all moves for QUEEN at a4
+62295 <first : Getting all moves for KING at e1
+62295 <first : Getting all moves for BISHOP at b5
+62295 <first : Getting all moves for KNIGHT at g1
+62295 <first : Getting all moves for ROOK at h1
+62295 <first : Getting all moves for PAWN at a3
+62295 <first : Getting all moves for PAWN at b4
+62295 <first : Getting all moves for PAWN at c2
+62295 <first : Getting all moves for PAWN at f3
+62295 <first : Getting all moves for PAWN at g4
+62295 <first : Getting all moves for PAWN at h4
+62295 <first : is normal : true
+62295 <first : src type : BISHOP
+62295 <first : src side: WHITE
+62295 <first : condition: BLACK
+62295 <first : ### positions in enpassant check
+62295 <first : 5
+62295 <first : 2
+62295 <first : 6
+62295 <first : 1
+62295 <first : check en passant result: false
+62295 <first : move b5a6
+63624 >first : time 29994
+63624 >first : otim 24052
 book hit = (NULL)
-42210 >first : usermove 42210 >first : d8f6
-42212 <first : Getting all moves for ROOK at d1
-42212 <first : Getting all moves for BISHOP at b4
-42212 <first : Getting all moves for KING at e1
-42212 <first : Getting all moves for BISHOP at f1
-42212 <first : Getting all moves for KNIGHT at g5
-42212 <first : Getting all moves for ROOK at h1
-42212 <first : Getting all moves for PAWN at a2
-42212 <first : Getting all moves for PAWN at g3
-42212 <first : Getting all moves for PAWN at h2
-42212 <first : move h2h4
-45432 >first : time 34092
-45433 >first : otim 30324
+63624 >first : usermove 63624 >first : e6c5
+63625 <first : is normal : true
+63625 <first : src type : KNIGHT
+63625 <first : src side: BLACK
+63625 <first : condition: BLACK
+63625 <first : ### positions in enpassant check
+63625 <first : 6
+63625 <first : 5
+63625 <first : 5
+63625 <first : 3
+63625 <first : check en passant result: false
+63625 <first : Getting all moves for ROOK at a1
+63625 <first : Getting all moves for KNIGHT at b1
+63625 <first : Getting all moves for BISHOP at c1
+63625 <first : Getting all moves for QUEEN at a4
+63625 <first : Getting all moves for KING at e1
+63625 <first : Getting all moves for BISHOP at a6
+63625 <first : Getting all moves for KNIGHT at g1
+63625 <first : Getting all moves for ROOK at h1
+63625 <first : Getting all moves for PAWN at a3
+63625 <first : Getting all moves for PAWN at b4
+63625 <first : Getting all moves for PAWN at c2
+63625 <first : Getting all moves for PAWN at f3
+63625 <first : Getting all moves for PAWN at g4
+63625 <first : Getting all moves for PAWN at h4
+63625 <first : is normal : true
+63625 <first : src type : KNIGHT
+63625 <first : src side: WHITE
+63625 <first : condition: BLACK
+63625 <first : ### positions in enpassant check
+63625 <first : 1
+63625 <first : 2
+63625 <first : 3
+63625 <first : 3
+63625 <first : check en passant result: false
+63625 <first : move b1c3
+64746 >first : time 29994
+64746 >first : otim 23940
 book hit = (NULL)
-45433 >first : usermove 45433 >first : h7h6
-45433 <first : Getting all moves for ROOK at d1
-45433 <first : Getting all moves for BISHOP at b4
-45433 <first : Getting all moves for KING at e1
-45433 <first : Getting all moves for BISHOP at f1
-45433 <first : Getting all moves for KNIGHT at g5
-45433 <first : Getting all moves for ROOK at h1
-45433 <first : Getting all moves for PAWN at a2
-45433 <first : Getting all moves for PAWN at g3
-45433 <first : Getting all moves for PAWN at h4
-45433 <first : move a2a3
-46726 >first : time 34292
-46726 >first : otim 30395
+64746 >first : usermove 64746 >first : c5a4
+64749 <first : is normal : true
+64749 <first : src type : KNIGHT
+64749 <first : src side: BLACK
+64749 <first : condition: BLACK
+64749 <first : ### positions in enpassant check
+64749 <first : 5
+64749 <first : 3
+64749 <first : 4
+64749 <first : 1
+64749 <first : check en passant result: false
+64749 <first : Getting all moves for ROOK at a1
+64749 <first : Getting all moves for KNIGHT at c3
+64749 <first : Getting all moves for BISHOP at c1
+64749 <first : Getting all moves for KING at e1
+64749 <first : Getting all moves for BISHOP at a6
+64749 <first : Getting all moves for KNIGHT at g1
+64749 <first : Getting all moves for ROOK at h1
+64749 <first : Getting all moves for PAWN at a3
+64749 <first : Getting all moves for PAWN at b4
+64749 <first : Getting all moves for PAWN at c2
+64749 <first : Getting all moves for PAWN at f3
+64749 <first : Getting all moves for PAWN at g4
+64749 <first : Getting all moves for PAWN at h4
+64749 <first : is normal : true
+64749 <first : src type : BISHOP
+64749 <first : src side: WHITE
+64749 <first : condition: BLACK
+64749 <first : ### positions in enpassant check
+64749 <first : 6
+64749 <first : 1
+64749 <first : 1
+64749 <first : 6
+64749 <first : check en passant result: false
+64749 <first : move a6f1
+66284 >first : time 29994
+66284 >first : otim 23786
 book hit = (NULL)
-46726 >first : usermove 46726 >first : h6h5
-46727 <first : Getting all moves for ROOK at d1
-46727 <first : Getting all moves for BISHOP at b4
-46727 <first : Getting all moves for KING at e1
-46727 <first : Getting all moves for BISHOP at f1
-46727 <first : Getting all moves for KNIGHT at g5
-46727 <first : Getting all moves for ROOK at h1
-46727 <first : Getting all moves for PAWN at a3
-46727 <first : Getting all moves for PAWN at g3
-46727 <first : Getting all moves for PAWN at h4
-46727 <first : move b4e7
-49999 >first : time 34492
-49999 >first : otim 30268
+66284 >first : usermove 66284 >first : a4c5
+66285 <first : is normal : true
+66285 <first : src type : KNIGHT
+66285 <first : src side: BLACK
+66285 <first : condition: BLACK
+66285 <first : ### positions in enpassant check
+66285 <first : 4
+66285 <first : 1
+66285 <first : 5
+66285 <first : 3
+66285 <first : check en passant result: false
+66285 <first : Getting all moves for ROOK at a1
+66285 <first : Getting all moves for KNIGHT at c3
+66285 <first : Getting all moves for BISHOP at c1
+66285 <first : Getting all moves for KING at e1
+66285 <first : Getting all moves for BISHOP at f1
+66285 <first : Getting all moves for KNIGHT at g1
+66285 <first : Getting all moves for ROOK at h1
+66285 <first : Getting all moves for PAWN at a3
+66285 <first : Getting all moves for PAWN at b4
+66285 <first : Getting all moves for PAWN at c2
+66285 <first : Getting all moves for PAWN at f3
+66285 <first : Getting all moves for PAWN at g4
+66285 <first : Getting all moves for PAWN at h4
+66285 <first : is normal : true
+66285 <first : src type : KNIGHT
+66285 <first : src side: WHITE
+66285 <first : condition: BLACK
+66285 <first : ### positions in enpassant check
+66285 <first : 3
+66285 <first : 3
+66285 <first : 5
+66285 <first : 4
+66285 <first : check en passant result: false
+66285 <first : move c3d5
+67358 >first : time 29994
+67358 >first : otim 23679
 book hit = (NULL)
-49999 >first : usermove 49999 >first : f8e7
-50003 <first : Getting all moves for ROOK at d1
-50003 <first : Getting all moves for KING at e1
-50003 <first : Getting all moves for BISHOP at f1
-50003 <first : Getting all moves for KNIGHT at g5
-50003 <first : Getting all moves for ROOK at h1
-50003 <first : Getting all moves for PAWN at a3
-50003 <first : Getting all moves for PAWN at g3
-50003 <first : Getting all moves for PAWN at h4
-50003 <first : move g5h3
-54111 >first : time 34692
-54111 >first : otim 30057
+67358 >first : usermove 67358 >first : c5e4
+67360 <first : is normal : true
+67360 <first : src type : KNIGHT
+67360 <first : src side: BLACK
+67360 <first : condition: BLACK
+67360 <first : ### positions in enpassant check
+67360 <first : 5
+67360 <first : 3
+67360 <first : 4
+67360 <first : 5
+67360 <first : check en passant result: false
+67360 <first : Getting all moves for ROOK at a1
+67360 <first : Getting all moves for KNIGHT at d5
+67360 <first : Getting all moves for BISHOP at c1
+67360 <first : Getting all moves for KING at e1
+67360 <first : Getting all moves for BISHOP at f1
+67360 <first : Getting all moves for KNIGHT at g1
+67360 <first : Getting all moves for ROOK at h1
+67360 <first : Getting all moves for PAWN at a3
+67360 <first : Getting all moves for PAWN at b4
+67360 <first : Getting all moves for PAWN at c2
+67360 <first : Getting all moves for PAWN at f3
+67360 <first : Getting all moves for PAWN at g4
+67360 <first : Getting all moves for PAWN at h4
+67360 <first : is normal : true
+67360 <first : src type : BISHOP
+67360 <first : src side: WHITE
+67360 <first : condition: BLACK
+67360 <first : ### positions in enpassant check
+67360 <first : 1
+67360 <first : 3
+67360 <first : 5
+67360 <first : 7
+67360 <first : check en passant result: false
+67360 <first : move c1g5
+68512 >first : time 29993
+68512 >first : otim 23564
 book hit = (NULL)
-54111 >first : usermove 54111 >first : f5f4
-54112 <first : Getting all moves for ROOK at d1
-54112 <first : Getting all moves for KING at e1
-54112 <first : Getting all moves for BISHOP at f1
-54112 <first : Getting all moves for KNIGHT at h3
-54112 <first : Getting all moves for ROOK at h1
-54112 <first : Getting all moves for PAWN at a3
-54112 <first : Getting all moves for PAWN at g3
-54112 <first : Getting all moves for PAWN at h4
-54112 <first : move d1c1
-54823 >first : time 34892
-54823 >first : otim 30186
+68512 >first : usermove 68512 >first : e4f6
+68515 <first : is normal : true
+68515 <first : src type : KNIGHT
+68515 <first : src side: BLACK
+68515 <first : condition: BLACK
+68515 <first : ### positions in enpassant check
+68515 <first : 4
+68515 <first : 5
+68515 <first : 6
+68515 <first : 6
+68515 <first : check en passant result: false
+68515 <first : Getting all moves for ROOK at a1
+68515 <first : Getting all moves for KNIGHT at d5
+68515 <first : Getting all moves for BISHOP at g5
+68515 <first : Getting all moves for KING at e1
+68515 <first : Getting all moves for BISHOP at f1
+68515 <first : Getting all moves for KNIGHT at g1
+68515 <first : Getting all moves for ROOK at h1
+68515 <first : Getting all moves for PAWN at a3
+68515 <first : Getting all moves for PAWN at b4
+68515 <first : Getting all moves for PAWN at c2
+68515 <first : Getting all moves for PAWN at f3
+68515 <first : Getting all moves for PAWN at g4
+68515 <first : Getting all moves for PAWN at h4
+68515 <first : is normal : true
+68515 <first : src type : KING
+68515 <first : src side: WHITE
+68515 <first : condition: BLACK
+68515 <first : ### positions in enpassant check
+68515 <first : 1
+68515 <first : 5
+68515 <first : 1
+68515 <first : 4
+68515 <first : check en passant result: false
+68515 <first : move e1d1
+69312 >first : time 29993
+69312 >first : otim 23484
 book hit = (NULL)
-54823 >first : usermove 54823 >first : f4g3
-54824 <first : Getting all moves for ROOK at c1
-54824 <first : Getting all moves for KING at e1
-54824 <first : Getting all moves for BISHOP at f1
-54824 <first : Getting all moves for KNIGHT at h3
-54824 <first : Getting all moves for ROOK at h1
-54824 <first : Getting all moves for PAWN at a3
-54824 <first : Getting all moves for PAWN at h4
-54824 <first : move c1b1
-57050 >first : time 35091
-57050 >first : otim 30163
+69312 >first : usermove 69312 >first : f6d5
+69313 <first : is normal : true
+69313 <first : src type : KNIGHT
+69313 <first : src side: BLACK
+69313 <first : condition: BLACK
+69313 <first : ### positions in enpassant check
+69313 <first : 6
+69313 <first : 6
+69313 <first : 5
+69313 <first : 4
+69313 <first : check en passant result: false
+69313 <first : Getting all moves for ROOK at a1
+69313 <first : Getting all moves for BISHOP at g5
+69313 <first : Getting all moves for KING at d1
+69313 <first : Getting all moves for BISHOP at f1
+69313 <first : Getting all moves for KNIGHT at g1
+69313 <first : Getting all moves for ROOK at h1
+69313 <first : Getting all moves for PAWN at a3
+69313 <first : Getting all moves for PAWN at b4
+69313 <first : Getting all moves for PAWN at c2
+69313 <first : Getting all moves for PAWN at f3
+69313 <first : Getting all moves for PAWN at g4
+69313 <first : Getting all moves for PAWN at h4
+69314 <first : is normal : true
+69314 <first : src type : KING
+69314 <first : src side: WHITE
+69314 <first : condition: BLACK
+69314 <first : ### positions in enpassant check
+69314 <first : 1
+69314 <first : 4
+69314 <first : 1
+69314 <first : 5
+69314 <first : check en passant result: false
+69314 <first : move d1e1
+70986 >first : time 29993
+70986 >first : otim 23317
 book hit = (NULL)
-57050 >first : usermove 57050 >first : d4b3
-57053 <first : Getting all moves for ROOK at b1
-57053 <first : Getting all moves for KING at e1
-57053 <first : Getting all moves for BISHOP at f1
-57053 <first : Getting all moves for KNIGHT at h3
-57053 <first : Getting all moves for ROOK at h1
-57053 <first : Getting all moves for PAWN at a3
-57053 <first : Getting all moves for PAWN at h4
-57053 <first : move f1g2
-63563 >first : time 35291
-63563 >first : otim 29712
+70986 >first : usermove 70986 >first : d5e3
+70988 <first : is normal : true
+70988 <first : src type : KNIGHT
+70988 <first : src side: BLACK
+70988 <first : condition: BLACK
+70988 <first : ### positions in enpassant check
+70988 <first : 5
+70988 <first : 4
+70988 <first : 3
+70988 <first : 5
+70988 <first : check en passant result: false
+70988 <first : Getting all moves for ROOK at a1
+70988 <first : Getting all moves for BISHOP at g5
+70988 <first : Getting all moves for KING at e1
+70988 <first : Getting all moves for BISHOP at f1
+70988 <first : Getting all moves for KNIGHT at g1
+70988 <first : Getting all moves for ROOK at h1
+70988 <first : Getting all moves for PAWN at a3
+70988 <first : Getting all moves for PAWN at b4
+70988 <first : Getting all moves for PAWN at c2
+70988 <first : Getting all moves for PAWN at f3
+70988 <first : Getting all moves for PAWN at g4
+70988 <first : Getting all moves for PAWN at h4
+70988 <first : is normal : true
+70988 <first : src type : ROOK
+70988 <first : src side: WHITE
+70988 <first : condition: BLACK
+70988 <first : ### positions in enpassant check
+70988 <first : 1
+70988 <first : 8
+70988 <first : 2
+70988 <first : 8
+70988 <first : check en passant result: false
+70988 <first : move h1h2
+72348 >first : time 29993
+72348 >first : otim 23181
 book hit = (NULL)
-63563 >first : usermove 63563 >first : e7a3
-63565 <first : Getting all moves for ROOK at b1
-63565 <first : Getting all moves for KING at e1
-63565 <first : Getting all moves for BISHOP at g2
-63565 <first : Getting all moves for KNIGHT at h3
-63565 <first : Getting all moves for ROOK at h1
-63565 <first : Getting all moves for PAWN at h4
-63565 <first : move h3f2
-68089 >first : time 35491
-68089 >first : otim 29460
+72348 >first : usermove 72348 >first : e3d5
+72351 <first : is normal : true
+72351 <first : src type : KNIGHT
+72351 <first : src side: BLACK
+72351 <first : condition: BLACK
+72351 <first : ### positions in enpassant check
+72351 <first : 3
+72351 <first : 5
+72351 <first : 5
+72351 <first : 4
+72351 <first : check en passant result: false
+72351 <first : Getting all moves for ROOK at a1
+72351 <first : Getting all moves for BISHOP at g5
+72351 <first : Getting all moves for KING at e1
+72351 <first : Getting all moves for BISHOP at f1
+72351 <first : Getting all moves for KNIGHT at g1
+72351 <first : Getting all moves for ROOK at h2
+72351 <first : Getting all moves for PAWN at a3
+72351 <first : Getting all moves for PAWN at b4
+72351 <first : Getting all moves for PAWN at c2
+72351 <first : Getting all moves for PAWN at f3
+72351 <first : Getting all moves for PAWN at g4
+72351 <first : Getting all moves for PAWN at h4
+72351 <first : is normal : true
+72351 <first : src type : BISHOP
+72351 <first : src side: WHITE
+72351 <first : condition: BLACK
+72351 <first : ### positions in enpassant check
+72351 <first : 1
+72351 <first : 6
+72351 <first : 2
+72351 <first : 5
+72351 <first : check en passant result: false
+72351 <first : move f1e2
+73878 >first : time 29992
+73878 >first : otim 23028
 book hit = (NULL)
-68089 >first : usermove 68089 >first : b8c6
-68090 <first : Getting all moves for ROOK at b1
-68090 <first : Getting all moves for KING at e1
-68090 <first : Getting all moves for BISHOP at g2
-68090 <first : Getting all moves for KNIGHT at f2
-68090 <first : Getting all moves for ROOK at h1
-68090 <first : Getting all moves for PAWN at h4
-68090 <first : move e1e2
-69455 >first : time 35691
-69455 >first : otim 29524
+73878 >first : usermove 73878 >first : d5c3
+73880 <first : is normal : true
+73880 <first : src type : KNIGHT
+73880 <first : src side: BLACK
+73880 <first : condition: BLACK
+73880 <first : ### positions in enpassant check
+73880 <first : 5
+73880 <first : 4
+73880 <first : 3
+73880 <first : 3
+73880 <first : check en passant result: false
+73880 <first : Getting all moves for ROOK at a1
+73880 <first : Getting all moves for BISHOP at g5
+73880 <first : Getting all moves for KING at e1
+73880 <first : Getting all moves for BISHOP at e2
+73880 <first : Getting all moves for KNIGHT at g1
+73880 <first : Getting all moves for ROOK at h2
+73880 <first : Getting all moves for PAWN at a3
+73880 <first : Getting all moves for PAWN at b4
+73880 <first : Getting all moves for PAWN at c2
+73880 <first : Getting all moves for PAWN at f3
+73880 <first : Getting all moves for PAWN at g4
+73880 <first : Getting all moves for PAWN at h4
+73880 <first : is normal : true
+73880 <first : src type : BISHOP
+73880 <first : src side: WHITE
+73880 <first : condition: BLACK
+73880 <first : ### positions in enpassant check
+73880 <first : 5
+73880 <first : 7
+73880 <first : 4
+73880 <first : 6
+73880 <first : check en passant result: false
+73880 <first : move g5f4
+75016 >first : time 29992
+75016 >first : otim 22915
 book hit = (NULL)
-69455 >first : usermove 69455 >first : c6d4
-69457 <first : Getting all moves for ROOK at b1
-69457 <first : Getting all moves for KING at e2
-69457 <first : Getting all moves for BISHOP at g2
-69457 <first : Getting all moves for KNIGHT at f2
-69457 <first : Getting all moves for ROOK at h1
-69457 <first : Getting all moves for PAWN at h4
-69457 <first : move f2e4
-Reset(1, 1) from gameMode 1
-recognized 'crazyhouse' (-1) as variant crazyhouse
-GameEnds(0, (null), 2)
-75528 >first : quit
-shuffleOpenings = 0
-StartChildProcess (dir=".") make run
-75537 >first : xboard
-protover 2
-75537 >first : new
-random
-75537 >first : variant crazyhouse
-75537 >first : level 0 5 2
-75537 >first : post
-75537 >first : hard
-75539 <first : make[1]: Entering directory '/home/n0tm3/Programare/An 2/Sem 2/PA/proiect-pa-2023-holy-veriks'
-75539 <first : javac ./main/*.java
-75725 >first : name n0tm3
-75725 >first : black
-75725 >first : time 30000
-75725 >first : otim 30000
-75725 >first : white
+75016 >first : usermove 75016 >first : c3d5
+75018 <first : is normal : true
+75018 <first : src type : KNIGHT
+75018 <first : src side: BLACK
+75018 <first : condition: BLACK
+75018 <first : ### positions in enpassant check
+75018 <first : 3
+75018 <first : 3
+75018 <first : 5
+75018 <first : 4
+75018 <first : check en passant result: false
+75018 <first : Getting all moves for ROOK at a1
+75018 <first : Getting all moves for BISHOP at f4
+75018 <first : Getting all moves for KING at e1
+75018 <first : Getting all moves for BISHOP at e2
+75018 <first : Getting all moves for KNIGHT at g1
+75018 <first : Getting all moves for ROOK at h2
+75018 <first : Getting all moves for PAWN at a3
+75018 <first : Getting all moves for PAWN at b4
+75018 <first : Getting all moves for PAWN at c2
+75018 <first : Getting all moves for PAWN at f3
+75018 <first : Getting all moves for PAWN at g4
+75018 <first : Getting all moves for PAWN at h4
+75018 <first : is normal : true
+75018 <first : src type : BISHOP
+75018 <first : src side: WHITE
+75018 <first : condition: BLACK
+75018 <first : ### positions in enpassant check
+75018 <first : 4
+75018 <first : 6
+75018 <first : 5
+75018 <first : 7
+75018 <first : check en passant result: false
+75018 <first : move f4g5
+76282 >first : time 29992
+76282 >first : otim 22788
 book hit = (NULL)
-75725 >first : go
-nps: w=-1, b=-1
-76028 <first : javac ./pieces/*.java
-76461 <first : java main/Main.java
-76855 <first : 
-76855 <first : Got xboard command
-76858 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-76858 >first : accepted done
-76858 >first : accepted sigint
-76858 >first : accepted sigterm
-76858 >first : accepted san
-76858 >first : accepted reuse
-76858 >first : accepted usermove
-76858 >first : accepted analyze
-76858 >first : accepted ping
-76858 >first : accepted setboard
-76858 >first : accepted level
-76858 >first : accepted variants
-76858 >first : accepted name
-76858 >first : accepted myname
-76858 >first : accepted done
-76860 <first : Getting all moves for ROOK at a1
-76860 <first : Getting all moves for KNIGHT at b1
-76861 <first : Getting all moves for BISHOP at c1
-76861 <first : Getting all moves for QUEEN at d1
-76861 <first : Getting all moves for KING at e1
-76861 <first : Getting all moves for BISHOP at f1
-76861 <first : Getting all moves for KNIGHT at g1
-76861 <first : Getting all moves for ROOK at h1
-76861 <first : Getting all moves for PAWN at a2
-76861 <first : Getting all moves for PAWN at b2
-76861 <first : Getting all moves for PAWN at c2
-76861 <first : Getting all moves for PAWN at d2
-76861 <first : Getting all moves for PAWN at e2
-76861 <first : Getting all moves for PAWN at f2
-76861 <first : Getting all moves for PAWN at g2
-76861 <first : Getting all moves for PAWN at h2
-76861 <first : move b2b4
-77814 >first : time 30086
-77814 >first : otim 30104
+76282 >first : usermove 76282 >first : d5f6
+76285 <first : is normal : true
+76285 <first : src type : KNIGHT
+76285 <first : src side: BLACK
+76285 <first : condition: BLACK
+76285 <first : ### positions in enpassant check
+76285 <first : 5
+76285 <first : 4
+76285 <first : 6
+76285 <first : 6
+76285 <first : check en passant result: false
+76285 <first : Getting all moves for ROOK at a1
+76285 <first : Getting all moves for BISHOP at g5
+76285 <first : Getting all moves for KING at e1
+76285 <first : Getting all moves for BISHOP at e2
+76285 <first : Getting all moves for KNIGHT at g1
+76285 <first : Getting all moves for ROOK at h2
+76285 <first : Getting all moves for PAWN at a3
+76285 <first : Getting all moves for PAWN at b4
+76285 <first : Getting all moves for PAWN at c2
+76285 <first : Getting all moves for PAWN at f3
+76285 <first : Getting all moves for PAWN at g4
+76285 <first : Getting all moves for PAWN at h4
+76285 <first : is normal : true
+76285 <first : src type : BISHOP
+76285 <first : src side: WHITE
+76285 <first : condition: BLACK
+76285 <first : ### positions in enpassant check
+76285 <first : 5
+76285 <first : 7
+76285 <first : 4
+76285 <first : 6
+76285 <first : check en passant result: false
+76285 <first : move g5f4
+77298 >first : time 29992
+77298 >first : otim 22687
 book hit = (NULL)
-77814 >first : usermove 77814 >first : d7d6
-77816 <first : Getting all moves for ROOK at a1
-77816 <first : Getting all moves for KNIGHT at b1
-77816 <first : Getting all moves for BISHOP at c1
-77816 <first : Getting all moves for QUEEN at d1
-77816 <first : Getting all moves for KING at e1
-77816 <first : Getting all moves for BISHOP at f1
-77816 <first : Getting all moves for KNIGHT at g1
-77816 <first : Getting all moves for ROOK at h1
-77816 <first : Getting all moves for PAWN at a2
-77816 <first : Getting all moves for PAWN at b4
-77816 <first : Getting all moves for PAWN at c2
-77816 <first : Getting all moves for PAWN at d2
-77816 <first : Getting all moves for PAWN at e2
-77816 <first : Getting all moves for PAWN at f2
-77816 <first : Getting all moves for PAWN at g2
-77816 <first : Getting all moves for PAWN at h2
-77816 <first : move g2g4
-78528 >first : time 30286
-78528 >first : otim 30233
+77298 >first : usermove 77298 >first : f6d5
+77299 <first : is normal : true
+77299 <first : src type : KNIGHT
+77299 <first : src side: BLACK
+77299 <first : condition: BLACK
+77299 <first : ### positions in enpassant check
+77299 <first : 6
+77299 <first : 6
+77299 <first : 5
+77299 <first : 4
+77299 <first : check en passant result: false
+77299 <first : Getting all moves for ROOK at a1
+77299 <first : Getting all moves for BISHOP at f4
+77299 <first : Getting all moves for KING at e1
+77299 <first : Getting all moves for BISHOP at e2
+77299 <first : Getting all moves for KNIGHT at g1
+77299 <first : Getting all moves for ROOK at h2
+77299 <first : Getting all moves for PAWN at a3
+77299 <first : Getting all moves for PAWN at b4
+77299 <first : Getting all moves for PAWN at c2
+77299 <first : Getting all moves for PAWN at f3
+77299 <first : Getting all moves for PAWN at g4
+77299 <first : Getting all moves for PAWN at h4
+77299 <first : is normal : true
+77299 <first : src type : BISHOP
+77300 <first : src side: WHITE
+77300 <first : condition: BLACK
+77300 <first : ### positions in enpassant check
+77300 <first : 2
+77300 <first : 5
+77300 <first : 6
+77300 <first : 1
+77300 <first : check en passant result: false
+77300 <first : move e2a6
+78204 >first : time 29992
+78204 >first : otim 22597
 book hit = (NULL)
-78528 >first : usermove 78528 >first : d6d5
-78529 <first : Getting all moves for ROOK at a1
-78529 <first : Getting all moves for KNIGHT at b1
-78529 <first : Getting all moves for BISHOP at c1
-78529 <first : Getting all moves for QUEEN at d1
-78529 <first : Getting all moves for KING at e1
-78529 <first : Getting all moves for BISHOP at f1
-78529 <first : Getting all moves for KNIGHT at g1
-78529 <first : Getting all moves for ROOK at h1
-78530 <first : Getting all moves for PAWN at a2
-78530 <first : Getting all moves for PAWN at b4
-78530 <first : Getting all moves for PAWN at c2
-78530 <first : Getting all moves for PAWN at d2
-78530 <first : Getting all moves for PAWN at e2
-78530 <first : Getting all moves for PAWN at f2
-78530 <first : Getting all moves for PAWN at g4
-78530 <first : Getting all moves for PAWN at h2
-78530 <first : move b1a3
-79873 >first : time 30486
-79873 >first : otim 30299
+78204 >first : usermove 78204 >first : d5f4
+78206 <first : is normal : true
+78206 <first : src type : KNIGHT
+78206 <first : src side: BLACK
+78206 <first : condition: BLACK
+78206 <first : ### positions in enpassant check
+78206 <first : 5
+78206 <first : 4
+78206 <first : 4
+78206 <first : 6
+78206 <first : check en passant result: false
+78206 <first : Getting all moves for ROOK at a1
+78206 <first : Getting all moves for KING at e1
+78206 <first : Getting all moves for BISHOP at a6
+78206 <first : Getting all moves for KNIGHT at g1
+78206 <first : Getting all moves for ROOK at h2
+78206 <first : Getting all moves for PAWN at a3
+78206 <first : Getting all moves for PAWN at b4
+78206 <first : Getting all moves for PAWN at c2
+78206 <first : Getting all moves for PAWN at f3
+78206 <first : Getting all moves for PAWN at g4
+78206 <first : Getting all moves for PAWN at h4
+78206 <first : is normal : true
+78206 <first : src type : BISHOP
+78206 <first : src side: WHITE
+78206 <first : condition: BLACK
+78206 <first : ### positions in enpassant check
+78206 <first : 6
+78206 <first : 1
+78206 <first : 4
+78206 <first : 3
+78206 <first : check en passant result: false
+78206 <first : move a6c4
+79094 >first : time 29991
+79094 >first : otim 22508
 book hit = (NULL)
-79873 >first : usermove 79873 >first : a7a6
-79874 <first : Getting all moves for ROOK at a1
-79874 <first : Getting all moves for KNIGHT at a3
-79874 <first : Getting all moves for BISHOP at c1
-79874 <first : Getting all moves for QUEEN at d1
-79874 <first : Getting all moves for KING at e1
-79874 <first : Getting all moves for BISHOP at f1
-79874 <first : Getting all moves for KNIGHT at g1
-79874 <first : Getting all moves for ROOK at h1
-79874 <first : Getting all moves for PAWN at a2
-79874 <first : Getting all moves for PAWN at b4
-79874 <first : Getting all moves for PAWN at c2
-79874 <first : Getting all moves for PAWN at d2
-79874 <first : Getting all moves for PAWN at e2
-79874 <first : Getting all moves for PAWN at f2
-79874 <first : Getting all moves for PAWN at g4
-79874 <first : Getting all moves for PAWN at h2
-79874 <first : move g4g5
-80421 >first : time 30685
-80421 >first : otim 30444
+79094 >first : usermove 79094 >first : f4e6
+79098 <first : is normal : true
+79098 <first : src type : KNIGHT
+79098 <first : src side: BLACK
+79098 <first : condition: BLACK
+79098 <first : ### positions in enpassant check
+79098 <first : 4
+79098 <first : 6
+79098 <first : 6
+79098 <first : 5
+79098 <first : check en passant result: false
+79098 <first : Getting all moves for ROOK at a1
+79098 <first : Getting all moves for KING at e1
+79098 <first : Getting all moves for BISHOP at c4
+79098 <first : Getting all moves for KNIGHT at g1
+79098 <first : Getting all moves for ROOK at h2
+79098 <first : Getting all moves for PAWN at a3
+79098 <first : Getting all moves for PAWN at b4
+79098 <first : Getting all moves for PAWN at c2
+79098 <first : Getting all moves for PAWN at f3
+79098 <first : Getting all moves for PAWN at g4
+79098 <first : Getting all moves for PAWN at h4
+79098 <first : is normal : true
+79098 <first : src type : PAWN
+79098 <first : src side: WHITE
+79098 <first : condition: BLACK
+79098 <first : ### positions in enpassant check
+79098 <first : 4
+79098 <first : 8
+79098 <first : 5
+79098 <first : 8
+79098 <first : check en passant result: false
+79098 <first : move h4h5
+95208 >first : time 29991
+95208 >first : otim 20897
 book hit = (NULL)
-80421 >first : usermove 80421 >first : a6a5
-80422 <first : Getting all moves for ROOK at a1
-80422 <first : Getting all moves for KNIGHT at a3
-80422 <first : Getting all moves for BISHOP at c1
-80422 <first : Getting all moves for QUEEN at d1
-80422 <first : Getting all moves for KING at e1
-80422 <first : Getting all moves for BISHOP at f1
-80422 <first : Getting all moves for KNIGHT at g1
-80422 <first : Getting all moves for ROOK at h1
-80422 <first : Getting all moves for PAWN at a2
-80422 <first : Getting all moves for PAWN at b4
-80422 <first : Getting all moves for PAWN at c2
-80423 <first : Getting all moves for PAWN at d2
-80423 <first : Getting all moves for PAWN at e2
-80423 <first : Getting all moves for PAWN at f2
-80423 <first : Getting all moves for PAWN at g5
-80423 <first : Getting all moves for PAWN at h2
-80423 <first : move e2e4
-80983 >first : time 30885
-80983 >first : otim 30588
+95208 >first : usermove 95208 >first : e6f4
+95209 <first : is normal : true
+95210 <first : src type : KNIGHT
+95210 <first : src side: BLACK
+95210 <first : condition: BLACK
+95210 <first : ### positions in enpassant check
+95210 <first : 6
+95210 <first : 5
+95210 <first : 4
+95210 <first : 6
+95210 <first : check en passant result: false
+95210 <first : Getting all moves for ROOK at a1
+95210 <first : Getting all moves for KING at e1
+95210 <first : Getting all moves for BISHOP at c4
+95210 <first : Getting all moves for KNIGHT at g1
+95210 <first : Getting all moves for ROOK at h2
+95210 <first : Getting all moves for PAWN at a3
+95210 <first : Getting all moves for PAWN at b4
+95210 <first : Getting all moves for PAWN at c2
+95210 <first : Getting all moves for PAWN at f3
+95210 <first : Getting all moves for PAWN at g4
+95210 <first : Getting all moves for PAWN at h5
+95210 <first : is normal : true
+95210 <first : src type : ROOK
+95210 <first : src side: WHITE
+95210 <first : condition: BLACK
+95210 <first : ### positions in enpassant check
+95210 <first : 2
+95210 <first : 8
+95210 <first : 2
+95210 <first : 6
+95210 <first : check en passant result: false
+95210 <first : move h2f2
+96264 >first : time 29991
+96264 >first : otim 20791
 book hit = (NULL)
-80983 >first : usermove 80983 >first : a5b4
-80985 <first : Getting all moves for ROOK at a1
-80985 <first : Getting all moves for KNIGHT at a3
-80985 <first : Getting all moves for BISHOP at c1
-80985 <first : Getting all moves for QUEEN at d1
-80985 <first : Getting all moves for KING at e1
-80985 <first : Getting all moves for BISHOP at f1
-80985 <first : Getting all moves for KNIGHT at g1
-80985 <first : Getting all moves for ROOK at h1
-80985 <first : Getting all moves for PAWN at a2
-80985 <first : Getting all moves for PAWN at c2
-80985 <first : Getting all moves for PAWN at d2
-80985 <first : Getting all moves for PAWN at e4
-80985 <first : Getting all moves for PAWN at f2
-80985 <first : Getting all moves for PAWN at g5
-80985 <first : Getting all moves for PAWN at h2
-80985 <first : move g1h3
-82347 >first : time 31085
-82347 >first : otim 30652
+96264 >first : usermove 96264 >first : f4h5
+96266 <first : is normal : true
+96266 <first : src type : KNIGHT
+96266 <first : src side: BLACK
+96266 <first : condition: BLACK
+96266 <first : ### positions in enpassant check
+96266 <first : 4
+96266 <first : 6
+96266 <first : 5
+96266 <first : 8
+96266 <first : check en passant result: false
+96266 <first : Getting all moves for ROOK at a1
+96266 <first : Getting all moves for KING at e1
+96266 <first : Getting all moves for BISHOP at c4
+96266 <first : Getting all moves for KNIGHT at g1
+96266 <first : Getting all moves for ROOK at f2
+96266 <first : Getting all moves for PAWN at a3
+96266 <first : Getting all moves for PAWN at b4
+96267 <first : Getting all moves for PAWN at c2
+96267 <first : Getting all moves for PAWN at f3
+96267 <first : Getting all moves for PAWN at g4
+96267 <first : is normal : true
+96267 <first : src type : BISHOP
+96267 <first : src side: WHITE
+96267 <first : condition: BLACK
+96267 <first : ### positions in enpassant check
+96267 <first : 4
+96267 <first : 3
+96267 <first : 1
+96267 <first : 6
+96267 <first : check en passant result: false
+96267 <first : move c4f1
+97194 >first : time 29990
+97194 >first : otim 20699
 book hit = (NULL)
-82347 >first : usermove 82347 >first : d5d4
-82349 <first : Getting all moves for ROOK at a1
-82349 <first : Getting all moves for KNIGHT at a3
-82349 <first : Getting all moves for BISHOP at c1
-82349 <first : Getting all moves for QUEEN at d1
-82349 <first : Getting all moves for KING at e1
-82349 <first : Getting all moves for BISHOP at f1
-82349 <first : Getting all moves for KNIGHT at h3
-82349 <first : Getting all moves for ROOK at h1
-82349 <first : Getting all moves for PAWN at a2
-82349 <first : Getting all moves for PAWN at c2
-82349 <first : Getting all moves for PAWN at d2
-82349 <first : Getting all moves for PAWN at e4
-82349 <first : Getting all moves for PAWN at f2
-82349 <first : Getting all moves for PAWN at g5
-82349 <first : Getting all moves for PAWN at h2
-82349 <first : move e1e2
-83533 >first : time 31285
-83533 >first : otim 30734
+97194 >first : usermove 97194 >first : h5f6
+97198 <first : is normal : true
+97198 <first : src type : KNIGHT
+97198 <first : src side: BLACK
+97198 <first : condition: BLACK
+97198 <first : ### positions in enpassant check
+97198 <first : 5
+97198 <first : 8
+97198 <first : 6
+97198 <first : 6
+97198 <first : check en passant result: false
+97198 <first : Getting all moves for ROOK at a1
+97198 <first : Getting all moves for KING at e1
+97198 <first : Getting all moves for BISHOP at f1
+97198 <first : Getting all moves for KNIGHT at g1
+97198 <first : Getting all moves for ROOK at f2
+97198 <first : Getting all moves for PAWN at a3
+97198 <first : Getting all moves for PAWN at b4
+97198 <first : Getting all moves for PAWN at c2
+97198 <first : Getting all moves for PAWN at f3
+97198 <first : Getting all moves for PAWN at g4
+97198 <first : is normal : true
+97198 <first : src type : BISHOP
+97198 <first : src side: WHITE
+97198 <first : condition: BLACK
+97198 <first : ### positions in enpassant check
+97198 <first : 1
+97198 <first : 6
+97198 <first : 3
+97198 <first : 4
+97198 <first : check en passant result: false
+97198 <first : move f1d3
+97946 >first : time 29990
+97947 >first : otim 20624
 book hit = (NULL)
-83533 >first : usermove 83533 >first : f7f6
-83533 <first : Getting all moves for ROOK at a1
-83533 <first : Getting all moves for KNIGHT at a3
-83533 <first : Getting all moves for BISHOP at c1
-83533 <first : Getting all moves for QUEEN at d1
-83533 <first : Getting all moves for KING at e2
-83533 <first : Getting all moves for BISHOP at f1
-83533 <first : Getting all moves for KNIGHT at h3
-83533 <first : Getting all moves for ROOK at h1
-83533 <first : Getting all moves for PAWN at a2
-83533 <first : Getting all moves for PAWN at c2
-83533 <first : Getting all moves for PAWN at d2
-83533 <first : Getting all moves for PAWN at e4
-83533 <first : Getting all moves for PAWN at f2
-83533 <first : Getting all moves for PAWN at g5
-83533 <first : Getting all moves for PAWN at h2
-83534 <first : move e4e5
-84354 >first : time 31485
-84354 >first : otim 30852
+97947 >first : usermove 97947 >first : f6d5
+97948 <first : is normal : true
+97948 <first : src type : KNIGHT
+97948 <first : src side: BLACK
+97948 <first : condition: BLACK
+97948 <first : ### positions in enpassant check
+97948 <first : 6
+97948 <first : 6
+97948 <first : 5
+97948 <first : 4
+97948 <first : check en passant result: false
+97948 <first : Getting all moves for ROOK at a1
+97948 <first : Getting all moves for KING at e1
+97948 <first : Getting all moves for BISHOP at d3
+97948 <first : Getting all moves for KNIGHT at g1
+97948 <first : Getting all moves for ROOK at f2
+97948 <first : Getting all moves for PAWN at a3
+97948 <first : Getting all moves for PAWN at b4
+97948 <first : Getting all moves for PAWN at c2
+97948 <first : Getting all moves for PAWN at f3
+97948 <first : Getting all moves for PAWN at g4
+97948 <first : is normal : true
+97948 <first : src type : PAWN
+97948 <first : src side: WHITE
+97948 <first : condition: BLACK
+97948 <first : ### positions in enpassant check
+97948 <first : 3
+97948 <first : 6
+97948 <first : 4
+97948 <first : 6
+97948 <first : check en passant result: false
+97948 <first : move f3f4
+99806 >first : time 29990
+99807 >first : otim 20438
 book hit = (NULL)
-84354 >first : usermove 84354 >first : f6e5
-84355 <first : Getting all moves for ROOK at a1
-84355 <first : Getting all moves for KNIGHT at a3
-84355 <first : Getting all moves for BISHOP at c1
-84355 <first : Getting all moves for QUEEN at d1
-84355 <first : Getting all moves for KING at e2
-84355 <first : Getting all moves for BISHOP at f1
-84355 <first : Getting all moves for KNIGHT at h3
-84355 <first : Getting all moves for ROOK at h1
-84355 <first : Getting all moves for PAWN at a2
-84355 <first : Getting all moves for PAWN at c2
-84355 <first : Getting all moves for PAWN at d2
-84355 <first : Getting all moves for PAWN at f2
-84355 <first : Getting all moves for PAWN at g5
-84355 <first : Getting all moves for PAWN at h2
-84355 <first : move c2c3
-85463 >first : time 31684
-85463 >first : otim 30941
+99807 >first : usermove 99807 >first : d5f4
+99808 <first : is normal : true
+99808 <first : src type : KNIGHT
+99808 <first : src side: BLACK
+99808 <first : condition: BLACK
+99808 <first : ### positions in enpassant check
+99808 <first : 5
+99808 <first : 4
+99808 <first : 4
+99808 <first : 6
+99808 <first : check en passant result: false
+99808 <first : Getting all moves for ROOK at a1
+99808 <first : Getting all moves for KING at e1
+99808 <first : Getting all moves for BISHOP at d3
+99808 <first : Getting all moves for KNIGHT at g1
+99808 <first : Getting all moves for ROOK at f2
+99808 <first : Getting all moves for PAWN at a3
+99808 <first : Getting all moves for PAWN at b4
+99808 <first : Getting all moves for PAWN at c2
+99808 <first : Getting all moves for PAWN at g4
+99808 <first : is normal : true
+99808 <first : src type : BISHOP
+99808 <first : src side: WHITE
+99808 <first : condition: BLACK
+99808 <first : ### positions in enpassant check
+99808 <first : 3
+99808 <first : 4
+99808 <first : 5
+99808 <first : 6
+99808 <first : check en passant result: false
+99808 <first : move d3f5
+100990 >first : time 29990
+100990 >first : otim 20320
 book hit = (NULL)
-85463 >first : usermove 85463 >first : d4c3
-85466 <first : Getting all moves for ROOK at a1
-85466 <first : Getting all moves for KNIGHT at a3
-85466 <first : Getting all moves for BISHOP at c1
-85466 <first : Getting all moves for QUEEN at d1
-85466 <first : Getting all moves for KING at e2
-85466 <first : Getting all moves for BISHOP at f1
-85466 <first : Getting all moves for KNIGHT at h3
-85466 <first : Getting all moves for ROOK at h1
-85466 <first : Getting all moves for PAWN at a2
-85466 <first : Getting all moves for PAWN at d2
-85466 <first : Getting all moves for PAWN at f2
-85466 <first : Getting all moves for PAWN at g5
-85466 <first : Getting all moves for PAWN at h2
-85466 <first : move f2f3
-86316 >first : time 31884
-86316 >first : otim 31056
+100990 >first : usermove 100990 >first : f4d5
+100994 <first : is normal : true
+100994 <first : src type : KNIGHT
+100994 <first : src side: BLACK
+100994 <first : condition: BLACK
+100994 <first : ### positions in enpassant check
+100994 <first : 4
+100994 <first : 6
+100994 <first : 5
+100994 <first : 4
+100994 <first : check en passant result: false
+100994 <first : Getting all moves for ROOK at a1
+100994 <first : Getting all moves for KING at e1
+100994 <first : Getting all moves for BISHOP at f5
+100994 <first : Getting all moves for KNIGHT at g1
+100994 <first : Getting all moves for ROOK at f2
+100994 <first : Getting all moves for PAWN at a3
+100994 <first : Getting all moves for PAWN at b4
+100994 <first : Getting all moves for PAWN at c2
+100994 <first : Getting all moves for PAWN at g4
+100994 <first : is normal : true
+100994 <first : src type : KNIGHT
+100994 <first : src side: WHITE
+100994 <first : condition: BLACK
+100994 <first : ### positions in enpassant check
+100994 <first : 1
+100994 <first : 7
+100994 <first : 3
+100994 <first : 8
+100994 <first : check en passant result: false
+100994 <first : move g1h3
+102040 >first : time 59989
+102040 >first : otim 50215
 book hit = (NULL)
-86316 >first : usermove 86316 >first : e5e4
-86316 <first : Getting all moves for ROOK at a1
-86316 <first : Getting all moves for KNIGHT at a3
-86316 <first : Getting all moves for BISHOP at c1
-86317 <first : Getting all moves for QUEEN at d1
-86317 <first : Getting all moves for KING at e2
-86317 <first : Getting all moves for BISHOP at f1
-86317 <first : Getting all moves for KNIGHT at h3
-86317 <first : Getting all moves for ROOK at h1
-86317 <first : Getting all moves for PAWN at a2
-86317 <first : Getting all moves for PAWN at d2
-86317 <first : Getting all moves for PAWN at f3
-86317 <first : Getting all moves for PAWN at g5
-86317 <first : Getting all moves for PAWN at h2
-86317 <first : move e2f2
-86866 >first : time 32084
-86866 >first : otim 31201
+102040 >first : usermove 102040 >first : d5b6
+102042 <first : is normal : true
+102042 <first : src type : KNIGHT
+102042 <first : src side: BLACK
+102042 <first : condition: BLACK
+102042 <first : ### positions in enpassant check
+102042 <first : 5
+102042 <first : 4
+102042 <first : 6
+102042 <first : 2
+102042 <first : check en passant result: false
+102042 <first : Getting all moves for ROOK at a1
+102042 <first : Getting all moves for KING at e1
+102042 <first : Getting all moves for BISHOP at f5
+102042 <first : Getting all moves for KNIGHT at h3
+102042 <first : Getting all moves for ROOK at f2
+102042 <first : Getting all moves for PAWN at a3
+102043 <first : Getting all moves for PAWN at b4
+102043 <first : Getting all moves for PAWN at c2
+102043 <first : Getting all moves for PAWN at g4
+102043 <first : is normal : true
+102043 <first : src type : BISHOP
+102043 <first : src side: WHITE
+102043 <first : condition: BLACK
+102043 <first : ### positions in enpassant check
+102043 <first : 5
+102043 <first : 6
+102043 <first : 6
+102043 <first : 5
+102043 <first : check en passant result: false
+102043 <first : move f5e6
+103130 >first : time 59989
+103130 >first : otim 50107
 book hit = (NULL)
-86866 >first : usermove 86866 >first : e4f3
-86867 <first : Getting all moves for ROOK at a1
-86867 <first : Getting all moves for KNIGHT at a3
-86867 <first : Getting all moves for BISHOP at c1
-86867 <first : Getting all moves for QUEEN at d1
-86867 <first : Getting all moves for KING at f2
-86867 <first : Getting all moves for BISHOP at f1
-86867 <first : Getting all moves for KNIGHT at h3
-86867 <first : Getting all moves for ROOK at h1
-86867 <first : Getting all moves for PAWN at a2
-86867 <first : Getting all moves for PAWN at d2
-86867 <first : Getting all moves for PAWN at g5
-86867 <first : Getting all moves for PAWN at h2
-86867 <first : move d1e2
-89358 >first : time 32284
-89358 >first : otim 31152
+103130 >first : usermove 103130 >first : b6c4
+103132 <first : is normal : true
+103132 <first : src type : KNIGHT
+103132 <first : src side: BLACK
+103132 <first : condition: BLACK
+103132 <first : ### positions in enpassant check
+103132 <first : 6
+103132 <first : 2
+103132 <first : 4
+103132 <first : 3
+103132 <first : check en passant result: false
+103132 <first : Getting all moves for ROOK at a1
+103132 <first : Getting all moves for KING at e1
+103132 <first : Getting all moves for BISHOP at e6
+103132 <first : Getting all moves for KNIGHT at h3
+103132 <first : Getting all moves for ROOK at f2
+103132 <first : Getting all moves for PAWN at a3
+103132 <first : Getting all moves for PAWN at b4
+103132 <first : Getting all moves for PAWN at c2
+103132 <first : Getting all moves for PAWN at g4
+103132 <first : is normal : true
+103132 <first : src type : KING
+103132 <first : src side: WHITE
+103132 <first : condition: BLACK
+103132 <first : ### positions in enpassant check
+103132 <first : 1
+103132 <first : 5
+103132 <first : 1
+103132 <first : 4
+103132 <first : check en passant result: false
+103132 <first : move e1d1
+104042 >first : time 59989
+104042 >first : otim 50016
 book hit = (NULL)
-89358 >first : usermove 89358 >first : f3e2
-89360 <first : Getting all moves for ROOK at a1
-89360 <first : Getting all moves for KNIGHT at a3
-89360 <first : Getting all moves for BISHOP at c1
-89360 <first : Getting all moves for KING at f2
-89360 <first : Getting all moves for BISHOP at f1
-89360 <first : Getting all moves for KNIGHT at h3
-89360 <first : Getting all moves for ROOK at h1
-89360 <first : Getting all moves for PAWN at a2
-89360 <first : Getting all moves for PAWN at d2
-89360 <first : Getting all moves for PAWN at g5
-89360 <first : Getting all moves for PAWN at h2
-89360 <first : move d2d4
-91681 >first : time 32484
-91681 >first : otim 31120
+104042 >first : usermove 104042 >first : c4e5
+104045 <first : is normal : true
+104045 <first : src type : KNIGHT
+104045 <first : src side: BLACK
+104045 <first : condition: BLACK
+104045 <first : ### positions in enpassant check
+104045 <first : 4
+104045 <first : 3
+104045 <first : 5
+104045 <first : 5
+104045 <first : check en passant result: false
+104045 <first : Getting all moves for ROOK at a1
+104045 <first : Getting all moves for KING at d1
+104045 <first : Getting all moves for BISHOP at e6
+104045 <first : Getting all moves for KNIGHT at h3
+104045 <first : Getting all moves for ROOK at f2
+104045 <first : Getting all moves for PAWN at a3
+104045 <first : Getting all moves for PAWN at b4
+104045 <first : Getting all moves for PAWN at c2
+104045 <first : Getting all moves for PAWN at g4
+104045 <first : is normal : true
+104045 <first : src type : BISHOP
+104045 <first : src side: WHITE
+104045 <first : condition: BLACK
+104045 <first : ### positions in enpassant check
+104045 <first : 6
+104045 <first : 5
+104045 <first : 4
+104045 <first : 3
+104045 <first : check en passant result: false
+104045 <first : move e6c4
+105708 >first : time 59988
+105708 >first : otim 49849
 book hit = (NULL)
-91681 >first : usermove 91681 >first : e7e6
-91682 <first : Getting all moves for ROOK at a1
-91682 <first : Getting all moves for KNIGHT at a3
-91682 <first : Getting all moves for BISHOP at c1
-91682 <first : Getting all moves for KING at f2
-91682 <first : Getting all moves for BISHOP at f1
-91682 <first : Getting all moves for KNIGHT at h3
-91682 <first : Getting all moves for ROOK at h1
-91682 <first : Getting all moves for PAWN at a2
-91682 <first : Getting all moves for PAWN at d4
-91682 <first : Getting all moves for PAWN at g5
-91682 <first : Getting all moves for PAWN at h2
-91682 <first : move f2g2
-92629 >first : time 32684
-92629 >first : otim 31225
+105708 >first : usermove 105708 >first : e5c6
+105710 <first : is normal : true
+105710 <first : src type : KNIGHT
+105710 <first : src side: BLACK
+105710 <first : condition: BLACK
+105710 <first : ### positions in enpassant check
+105710 <first : 5
+105710 <first : 5
+105710 <first : 6
+105710 <first : 3
+105710 <first : check en passant result: false
+105710 <first : Getting all moves for ROOK at a1
+105710 <first : Getting all moves for KING at d1
+105710 <first : Getting all moves for BISHOP at c4
+105710 <first : Getting all moves for KNIGHT at h3
+105710 <first : Getting all moves for ROOK at f2
+105710 <first : Getting all moves for PAWN at a3
+105710 <first : Getting all moves for PAWN at b4
+105710 <first : Getting all moves for PAWN at c2
+105710 <first : Getting all moves for PAWN at g4
+105710 <first : is normal : true
+105710 <first : src type : KNIGHT
+105710 <first : src side: WHITE
+105710 <first : condition: BLACK
+105710 <first : ### positions in enpassant check
+105710 <first : 3
+105710 <first : 8
+105710 <first : 4
+105710 <first : 6
+105710 <first : check en passant result: false
+105710 <first : move h3f4
+106878 >first : time 59988
+106878 >first : otim 49732
 book hit = (NULL)
-92629 >first : usermove 92629 >first : e6e5
-92630 <first : Getting all moves for ROOK at a1
-92630 <first : Getting all moves for KNIGHT at a3
-92630 <first : Getting all moves for BISHOP at c1
-92630 <first : Getting all moves for KING at g2
-92630 <first : Getting all moves for BISHOP at f1
-92630 <first : Getting all moves for KNIGHT at h3
-92630 <first : Getting all moves for ROOK at h1
-92630 <first : Getting all moves for PAWN at a2
-92630 <first : Getting all moves for PAWN at d4
-92630 <first : Getting all moves for PAWN at g5
-92630 <first : Getting all moves for PAWN at h2
-92630 <first : move c1e3
-93035 >first : time 32884
-93035 >first : otim 31385
+106878 >first : usermove 106878 >first : c6e5
+106879 <first : is normal : true
+106879 <first : src type : KNIGHT
+106879 <first : src side: BLACK
+106880 <first : condition: BLACK
+106880 <first : ### positions in enpassant check
+106880 <first : 6
+106880 <first : 3
+106880 <first : 5
+106880 <first : 5
+106880 <first : check en passant result: false
+106880 <first : Getting all moves for ROOK at a1
+106880 <first : Getting all moves for KING at d1
+106880 <first : Getting all moves for BISHOP at c4
+106880 <first : Getting all moves for KNIGHT at f4
+106880 <first : Getting all moves for ROOK at f2
+106880 <first : Getting all moves for PAWN at a3
+106880 <first : Getting all moves for PAWN at b4
+106880 <first : Getting all moves for PAWN at c2
+106880 <first : Getting all moves for PAWN at g4
+106880 <first : is normal : true
+106880 <first : src type : PAWN
+106880 <first : src side: WHITE
+106880 <first : condition: BLACK
+106880 <first : ### positions in enpassant check
+106880 <first : 4
+106880 <first : 7
+106880 <first : 5
+106880 <first : 7
+106880 <first : check en passant result: false
+106880 <first : move g4g5
+128663 >first : time 59988
+128663 >first : otim 47554
 book hit = (NULL)
-93035 >first : usermove 93035 >first : e5d4
-93037 <first : Getting all moves for ROOK at a1
-93037 <first : Getting all moves for KNIGHT at a3
-93037 <first : Getting all moves for BISHOP at e3
-93037 <first : Getting all moves for KING at g2
-93037 <first : Getting all moves for BISHOP at f1
-93037 <first : Getting all moves for KNIGHT at h3
-93037 <first : Getting all moves for ROOK at h1
-93037 <first : Getting all moves for PAWN at a2
-93037 <first : Getting all moves for PAWN at g5
-93037 <first : Getting all moves for PAWN at h2
-93037 <first : move e3c1
-94917 >first : time 33083
-94917 >first : otim 31397
-book hit = (NULL)
-94917 >first : usermove 94917 >first : b7b6
-94918 <first : Getting all moves for ROOK at a1
-94918 <first : Getting all moves for KNIGHT at a3
-94918 <first : Getting all moves for BISHOP at c1
-94918 <first : Getting all moves for KING at g2
-94918 <first : Getting all moves for BISHOP at f1
-94918 <first : Getting all moves for KNIGHT at h3
-94918 <first : Getting all moves for ROOK at h1
-94918 <first : Getting all moves for PAWN at a2
-94918 <first : Getting all moves for PAWN at g5
-94918 <first : Getting all moves for PAWN at h2
-94918 <first : move a1b1
-95471 >first : time 33283
-95471 >first : otim 31541
-book hit = (NULL)
-95471 >first : usermove 95471 >first : b6b5
-95472 <first : Getting all moves for ROOK at b1
-95472 <first : Getting all moves for KNIGHT at a3
-95472 <first : Getting all moves for BISHOP at c1
-95472 <first : Getting all moves for KING at g2
-95472 <first : Getting all moves for BISHOP at f1
-95472 <first : Getting all moves for KNIGHT at h3
-95472 <first : Getting all moves for ROOK at h1
-95472 <first : Getting all moves for PAWN at a2
-95472 <first : Getting all moves for PAWN at g5
-95472 <first : Getting all moves for PAWN at h2
-95472 <first : move f1e2
-97201 >first : time 33483
-97201 >first : otim 31568
-book hit = (NULL)
-97201 >first : usermove 97201 >first : d4d3
-97203 <first : Getting all moves for ROOK at b1
-97203 <first : Getting all moves for KNIGHT at a3
-97203 <first : Getting all moves for BISHOP at c1
-97203 <first : Getting all moves for KING at g2
-97203 <first : Getting all moves for BISHOP at e2
-97203 <first : Getting all moves for KNIGHT at h3
-97203 <first : Getting all moves for ROOK at h1
-97203 <first : Getting all moves for PAWN at a2
-97203 <first : Getting all moves for PAWN at g5
-97203 <first : Getting all moves for PAWN at h2
-97203 <first : move a3b5
-97743 >first : time 33683
-97743 >first : otim 31714
-book hit = (NULL)
-97743 >first : usermove 97743 >first : d3e2
-97744 <first : Getting all moves for ROOK at b1
-97744 <first : Getting all moves for KNIGHT at b5
-97744 <first : Getting all moves for BISHOP at c1
-97744 <first : Getting all moves for KING at g2
-97744 <first : Getting all moves for KNIGHT at h3
-97744 <first : Getting all moves for ROOK at h1
-97744 <first : Getting all moves for PAWN at a2
-97744 <first : Getting all moves for PAWN at g5
-97744 <first : Getting all moves for PAWN at h2
-97744 <first : move c1b2
-98846 >first : time 33883
-98846 >first : otim 31804
-book hit = (NULL)
-98846 >first : usermove 98846 >first : c3b2
-98846 <first : Getting all moves for ROOK at b1
-98846 <first : Getting all moves for KNIGHT at b5
-98846 <first : Getting all moves for KING at g2
-98846 <first : Getting all moves for KNIGHT at h3
-98846 <first : Getting all moves for ROOK at h1
-98846 <first : Getting all moves for PAWN at a2
-98847 <first : Getting all moves for PAWN at g5
-98847 <first : Getting all moves for PAWN at h2
-98847 <first : move b1d1
-100081 >first : time 34083
-100081 >first : otim 31881
-book hit = (NULL)
-100081 >first : usermove 100081 >first : e2d1q
-100083 <first : Getting all moves for KNIGHT at b5
-100083 <first : Getting all moves for KING at g2
-100083 <first : Getting all moves for KNIGHT at h3
-100083 <first : Getting all moves for ROOK at h1
-100083 <first : Getting all moves for PAWN at a2
-100083 <first : Getting all moves for PAWN at g5
-100083 <first : Getting all moves for PAWN at h2
-100083 <first : move h3f4
-107667 >first : time 34282
-107667 >first : otim 31322
-book hit = (NULL)
-107667 >first : usermove 107667 >first : f8c5
-107669 <first : Getting all moves for KNIGHT at b5
-107669 <first : Getting all moves for KING at g2
-107669 <first : Getting all moves for KNIGHT at f4
-107669 <first : Getting all moves for ROOK at h1
-107669 <first : Getting all moves for PAWN at a2
-107669 <first : Getting all moves for PAWN at g5
-107669 <first : Getting all moves for PAWN at h2
-107670 <first : move g2f2
+128663 >first : usermove 128663 >first : h7h5
+128665 <first : is normal : true
+128665 <first : src type : PAWN
+128665 <first : src side: BLACK
+128665 <first : condition: BLACK
+128665 <first : ### positions in enpassant check
+128665 <first : 7
+128665 <first : 8
+128665 <first : 5
+128665 <first : 8
+128665 <first : check en passant result: true
+128665 <first : ### positions in enpassant check
+128665 <first : 7
+128665 <first : 8
+128665 <first : 5
+128665 <first : 8
+128665 <first : ###################### Tried to do enPassant #####################
+128665 <first : LeftPAWN
+128665 <first : Found pawn on the left side
+128665 <first : >>> Updated board for enPassant <<<
+128665 <first : is normal : true
+128665 <first : src type : PAWN
+128665 <first : src side: WHITE
+128665 <first : condition: BLACK
+128665 <first : ### positions in enpassant check
+128665 <first : 5
+128665 <first : 7
+128665 <first : 6
+128665 <first : 8
+128665 <first : check en passant result: false
+128665 <first : move g5h6
 GameEnds(29, xboard exit, 2)
-149222 >first : result * {xboard exit}
-149222 >first : quit
+131915 >first : result * {xboard exit}
+131915 >first : quit
