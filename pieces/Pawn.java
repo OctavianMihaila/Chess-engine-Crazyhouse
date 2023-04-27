@@ -2,8 +2,6 @@ package pieces;
 
 import main.*;
 
-import java.util.ArrayList;
-
 public class Pawn extends Piece {
 	public static final int[][] moveDirections = {{1, 0}, {2, 0}};
 	public static final int[][] captureDirections = {{1, 1}, {1, -1}};
@@ -38,6 +36,13 @@ public class Pawn extends Piece {
 		// Can move only forward 1 square or 2 if moving from starting position
 		return verticalDist == 1 || (x == 2 && verticalDist == 2);
 	}
+
+	public Move performEnPassant(Piece[][] board, int xDestLastMove, int yDestLastMove, String sourceNewMove, String destinationNewMove) {
+		// Moving pawn to do en passant and removing the enemy's pawn.
+		board[xDestLastMove][yDestLastMove] = null;
+		return Move.moveTo(sourceNewMove, destinationNewMove);
+	}
+
 
 	@Override
 	public int[][] getMoveDirections() {

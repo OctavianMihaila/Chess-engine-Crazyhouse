@@ -10,412 +10,570 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-156 >first : xboard
+109 >first : xboard
 protover 2
-159 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
-159 <first : javac ./main/*.java
-829 <first : javac ./pieces/*.java
-1411 <first : java main/Main.java
-1928 <first : 
-1928 <first : Got xboard command
-1932 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-1932 >first : accepted done
-1933 >first : accepted sigint
-1933 >first : accepted sigterm
-1933 >first : accepted san
-1933 >first : accepted reuse
-1933 >first : accepted usermove
-1933 >first : accepted analyze
-1933 >first : accepted ping
-1933 >first : accepted setboard
-1933 >first : accepted level
-1933 >first : accepted variants
-1933 >first : accepted name
-1933 >first : accepted myname
-1933 >first : accepted done
+112 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+112 <first : javac ./main/*.java
+745 <first : javac ./pieces/*.java
+1321 <first : java main/Main.java
+1584 >first : black
+1584 >first : time 30000
+1584 >first : otim 30000
+1584 >first : white
+book hit = (NULL)
+1585 >first : go
+nps: w=-1, b=-1
+1828 <first : 
+1828 <first : Got xboard command
+1833 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+Interrupting first
+1833 >first : accepted done
+1834 >first : accepted sigint
+1834 >first : accepted sigterm
+1834 >first : accepted san
+1834 >first : accepted reuse
+1834 >first : accepted usermove
+1834 >first : accepted analyze
+1834 >first : accepted ping
+1834 >first : accepted setboard
+1834 >first : accepted level
+1834 >first : accepted variants
+1834 >first : accepted name
+1834 >first : accepted myname
+1834 >first : accepted done
 recognized 'crazyhouse' (-1) as variant crazyhouse
-Reset(1, 0) from gameMode 0
+Reset(1, 0) from gameMode 1
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-1934 >first : quit
+1835 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-1982 >first : xboard
+1884 >first : xboard
 protover 2
-1982 >first : new
+1884 >first : new
 random
-1982 >first : variant crazyhouse
-1982 >first : level 40 5 0
-1982 >first : post
-1982 >first : hard
-1984 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
-1984 <first : javac ./main/*.java
-2707 <first : javac ./pieces/*.java
-3287 <first : java main/Main.java
-3811 <first : 
-3811 <first : Got xboard command
-3816 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-3816 >first : accepted done
-3816 >first : accepted sigint
-3816 >first : accepted sigterm
-3816 >first : accepted san
-3816 >first : accepted reuse
-3816 >first : accepted usermove
-3816 >first : accepted analyze
-3816 >first : accepted ping
-3816 >first : accepted setboard
-3816 >first : accepted level
-3816 >first : accepted variants
-3816 >first : accepted name
-3816 >first : accepted myname
-3816 >first : accepted done
-11809 >first : name octavian
-11809 >first : black
-11809 >first : time 30000
-11809 >first : otim 30000
-11809 >first : white
+1884 >first : variant crazyhouse
+1884 >first : level 40 5 0
+1884 >first : post
+1884 >first : hard
+1887 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+1887 <first : javac ./main/*.java
+2532 <first : javac ./pieces/*.java
+2652 >first : name octavian
+2652 >first : black
+2652 >first : time 30000
+2652 >first : otim 30000
+2653 >first : white
 book hit = (NULL)
-11809 >first : go
+2653 >first : go
 nps: w=-1, b=-1
-11813 <first : Getting all moves for ROOK at a1
-11814 <first : Getting all moves for KNIGHT at b1
-11814 <first : Getting all moves for BISHOP at c1
-11814 <first : Getting all moves for QUEEN at d1
-11814 <first : Getting all moves for KING at e1
-11814 <first : Getting all moves for BISHOP at f1
-11814 <first : Getting all moves for KNIGHT at g1
-11814 <first : Getting all moves for ROOK at h1
-11814 <first : Getting all moves for PAWN at a2
-11814 <first : Getting all moves for PAWN at b2
-11814 <first : Getting all moves for PAWN at c2
-11814 <first : Getting all moves for PAWN at d2
-11814 <first : Getting all moves for PAWN at e2
-11814 <first : Getting all moves for PAWN at f2
-11814 <first : Getting all moves for PAWN at g2
-11815 <first : Getting all moves for PAWN at h2
-11815 <first : move h2h4
-14457 >first : time 29999
-14457 >first : otim 29735
+3092 <first : java main/Main.java
+3580 <first : 
+3580 <first : Got xboard command
+3585 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+3585 >first : accepted done
+3585 >first : accepted sigint
+3585 >first : accepted sigterm
+3585 >first : accepted san
+3585 >first : accepted reuse
+3585 >first : accepted usermove
+3585 >first : accepted analyze
+3585 >first : accepted ping
+3585 >first : accepted setboard
+3585 >first : accepted level
+3585 >first : accepted variants
+3585 >first : accepted name
+3585 >first : accepted myname
+3585 >first : accepted done
+3588 <first : Getting all moves for ROOK at a1
+3588 <first : Getting all moves for KNIGHT at b1
+3589 <first : Getting all moves for BISHOP at c1
+3589 <first : Getting all moves for QUEEN at d1
+3589 <first : Getting all moves for KING at e1
+3589 <first : Getting all moves for BISHOP at f1
+3589 <first : Getting all moves for KNIGHT at g1
+3589 <first : Getting all moves for ROOK at h1
+3589 <first : Getting all moves for PAWN at a2
+3589 <first : Getting all moves for PAWN at b2
+3589 <first : Getting all moves for PAWN at c2
+3589 <first : Getting all moves for PAWN at d2
+3589 <first : Getting all moves for PAWN at e2
+3589 <first : Getting all moves for PAWN at f2
+3589 <first : Getting all moves for PAWN at g2
+3589 <first : Getting all moves for PAWN at h2
+3590 <first : move d2d3
+5377 >first : time 29906
+5377 >first : otim 29821
 book hit = (NULL)
-14457 >first : usermove 14457 >first : b8a6
-14458 <first : Getting all moves for ROOK at a1
-14458 <first : Getting all moves for KNIGHT at b1
-14458 <first : Getting all moves for BISHOP at c1
-14458 <first : Getting all moves for QUEEN at d1
-14458 <first : Getting all moves for KING at e1
-14458 <first : Getting all moves for BISHOP at f1
-14458 <first : Getting all moves for KNIGHT at g1
-14458 <first : Getting all moves for ROOK at h1
-14458 <first : Getting all moves for PAWN at a2
-14458 <first : Getting all moves for PAWN at b2
-14458 <first : Getting all moves for PAWN at c2
-14458 <first : Getting all moves for PAWN at d2
-14458 <first : Getting all moves for PAWN at e2
-14458 <first : Getting all moves for PAWN at f2
-14458 <first : Getting all moves for PAWN at g2
-14458 <first : Getting all moves for PAWN at h4
-14460 <first : move g1f3
-15408 >first : time 29999
-15408 >first : otim 29641
+5377 >first : usermove 5377 >first : b8a6
+5379 <first : Getting all moves for ROOK at a1
+5379 <first : Getting all moves for KNIGHT at b1
+5379 <first : Getting all moves for BISHOP at c1
+5380 <first : Getting all moves for QUEEN at d1
+5380 <first : Getting all moves for KING at e1
+5380 <first : Getting all moves for BISHOP at f1
+5380 <first : Getting all moves for KNIGHT at g1
+5380 <first : Getting all moves for ROOK at h1
+5380 <first : Getting all moves for PAWN at a2
+5380 <first : Getting all moves for PAWN at b2
+5380 <first : Getting all moves for PAWN at c2
+5380 <first : Getting all moves for PAWN at d3
+5380 <first : Getting all moves for PAWN at e2
+5380 <first : Getting all moves for PAWN at f2
+5380 <first : Getting all moves for PAWN at g2
+5380 <first : Getting all moves for PAWN at h2
+5380 <first : move c2c3
+6643 >first : time 29906
+6643 >first : otim 29695
 book hit = (NULL)
-15408 >first : usermove 15408 >first : a6b8
-15410 <first : Getting all moves for ROOK at a1
-15410 <first : Getting all moves for KNIGHT at b1
-15410 <first : Getting all moves for BISHOP at c1
-15410 <first : Getting all moves for QUEEN at d1
-15410 <first : Getting all moves for KING at e1
-15410 <first : Getting all moves for BISHOP at f1
-15410 <first : Getting all moves for KNIGHT at f3
-15410 <first : Getting all moves for ROOK at h1
-15410 <first : Getting all moves for PAWN at a2
-15410 <first : Getting all moves for PAWN at b2
-15410 <first : Getting all moves for PAWN at c2
-15410 <first : Getting all moves for PAWN at d2
-15410 <first : Getting all moves for PAWN at e2
-15411 <first : Getting all moves for PAWN at f2
-15411 <first : Getting all moves for PAWN at g2
-15411 <first : Getting all moves for PAWN at h4
-15411 <first : move d2d4
-16051 >first : time 29998
-16051 >first : otim 29577
+6643 >first : usermove 6643 >first : a6c5
+6645 <first : Getting all moves for ROOK at a1
+6645 <first : Getting all moves for KNIGHT at b1
+6645 <first : Getting all moves for BISHOP at c1
+6645 <first : Getting all moves for QUEEN at d1
+6645 <first : Getting all moves for KING at e1
+6645 <first : Getting all moves for BISHOP at f1
+6645 <first : Getting all moves for KNIGHT at g1
+6645 <first : Getting all moves for ROOK at h1
+6645 <first : Getting all moves for PAWN at a2
+6645 <first : Getting all moves for PAWN at b2
+6645 <first : Getting all moves for PAWN at c3
+6645 <first : Getting all moves for PAWN at d3
+6645 <first : Getting all moves for PAWN at e2
+6645 <first : Getting all moves for PAWN at f2
+6645 <first : Getting all moves for PAWN at g2
+6645 <first : Getting all moves for PAWN at h2
+6645 <first : move d1b3
+7837 >first : time 29905
+7837 >first : otim 29575
 book hit = (NULL)
-16051 >first : usermove 16051 >first : b8a6
-16056 <first : Getting all moves for ROOK at a1
-16056 <first : Getting all moves for KNIGHT at b1
-16056 <first : Getting all moves for BISHOP at c1
-16056 <first : Getting all moves for QUEEN at d1
-16056 <first : Getting all moves for KING at e1
-16056 <first : Getting all moves for BISHOP at f1
-16056 <first : Getting all moves for KNIGHT at f3
-16056 <first : Getting all moves for ROOK at h1
-16056 <first : Getting all moves for PAWN at a2
-16056 <first : Getting all moves for PAWN at b2
-16056 <first : Getting all moves for PAWN at c2
-16056 <first : Getting all moves for PAWN at d4
-16056 <first : Getting all moves for PAWN at e2
-16056 <first : Getting all moves for PAWN at f2
-16056 <first : Getting all moves for PAWN at g2
-16056 <first : Getting all moves for PAWN at h4
-16056 <first : move b1c3
-16667 >first : time 29998
-16667 >first : otim 29516
+7837 >first : usermove 7837 >first : c5e6
+7844 <first : Getting all moves for ROOK at a1
+7844 <first : Getting all moves for KNIGHT at b1
+7844 <first : Getting all moves for BISHOP at c1
+7844 <first : Getting all moves for QUEEN at b3
+7844 <first : Getting all moves for KING at e1
+7844 <first : Getting all moves for BISHOP at f1
+7844 <first : Getting all moves for KNIGHT at g1
+7844 <first : Getting all moves for ROOK at h1
+7844 <first : Getting all moves for PAWN at a2
+7844 <first : Getting all moves for PAWN at b2
+7844 <first : Getting all moves for PAWN at c3
+7844 <first : Getting all moves for PAWN at d3
+7844 <first : Getting all moves for PAWN at e2
+7844 <first : Getting all moves for PAWN at f2
+7844 <first : Getting all moves for PAWN at g2
+7844 <first : Getting all moves for PAWN at h2
+7844 <first : move b3b6
+9335 >first : time 29905
+9335 >first : otim 29426
 book hit = (NULL)
-16667 >first : usermove 16667 >first : a6b8
-16668 <first : Getting all moves for ROOK at a1
-16668 <first : Getting all moves for KNIGHT at c3
-16668 <first : Getting all moves for BISHOP at c1
-16668 <first : Getting all moves for QUEEN at d1
-16668 <first : Getting all moves for KING at e1
-16668 <first : Getting all moves for BISHOP at f1
-16668 <first : Getting all moves for KNIGHT at f3
-16669 <first : Getting all moves for ROOK at h1
-16669 <first : Getting all moves for PAWN at a2
-16669 <first : Getting all moves for PAWN at b2
-16670 <first : Getting all moves for PAWN at c2
-16670 <first : Getting all moves for PAWN at d4
-16670 <first : Getting all moves for PAWN at e2
-16670 <first : Getting all moves for PAWN at f2
-16670 <first : Getting all moves for PAWN at g2
-16670 <first : Getting all moves for PAWN at h4
-16670 <first : move c3e4
-17453 >first : time 29997
-17453 >first : otim 29438
+9335 >first : usermove 9335 >first : e6c5
+9337 <first : Getting all moves for ROOK at a1
+9337 <first : Getting all moves for KNIGHT at b1
+9337 <first : Getting all moves for BISHOP at c1
+9337 <first : Getting all moves for QUEEN at b6
+9337 <first : Getting all moves for KING at e1
+9337 <first : Getting all moves for BISHOP at f1
+9337 <first : Getting all moves for KNIGHT at g1
+9337 <first : Getting all moves for ROOK at h1
+9337 <first : Getting all moves for PAWN at a2
+9337 <first : Getting all moves for PAWN at b2
+9337 <first : Getting all moves for PAWN at c3
+9337 <first : Getting all moves for PAWN at d3
+9337 <first : Getting all moves for PAWN at e2
+9337 <first : Getting all moves for PAWN at f2
+9337 <first : Getting all moves for PAWN at g2
+9337 <first : Getting all moves for PAWN at h2
+9337 <first : move b6b3
+10327 >first : time 29904
+10327 >first : otim 29327
 book hit = (NULL)
-17453 >first : usermove 17453 >first : b8c6
-17454 <first : Getting all moves for ROOK at a1
-17455 <first : Getting all moves for KNIGHT at e4
-17455 <first : Getting all moves for BISHOP at c1
-17455 <first : Getting all moves for QUEEN at d1
-17455 <first : Getting all moves for KING at e1
-17455 <first : Getting all moves for BISHOP at f1
-17455 <first : Getting all moves for KNIGHT at f3
-17455 <first : Getting all moves for ROOK at h1
-17456 <first : Getting all moves for PAWN at a2
-17456 <first : Getting all moves for PAWN at b2
-17456 <first : Getting all moves for PAWN at c2
-17456 <first : Getting all moves for PAWN at d4
-17456 <first : Getting all moves for PAWN at e2
-17456 <first : Getting all moves for PAWN at f2
-17456 <first : Getting all moves for PAWN at g2
-17456 <first : Getting all moves for PAWN at h4
-17456 <first : move f3g1
-18508 >first : time 29997
-18508 >first : otim 29332
+10327 >first : usermove 10327 >first : c5e6
+10330 <first : Getting all moves for ROOK at a1
+10330 <first : Getting all moves for KNIGHT at b1
+10330 <first : Getting all moves for BISHOP at c1
+10330 <first : Getting all moves for QUEEN at b3
+10330 <first : Getting all moves for KING at e1
+10330 <first : Getting all moves for BISHOP at f1
+10330 <first : Getting all moves for KNIGHT at g1
+10330 <first : Getting all moves for ROOK at h1
+10330 <first : Getting all moves for PAWN at a2
+10330 <first : Getting all moves for PAWN at b2
+10330 <first : Getting all moves for PAWN at c3
+10330 <first : Getting all moves for PAWN at d3
+10330 <first : Getting all moves for PAWN at e2
+10330 <first : Getting all moves for PAWN at f2
+10330 <first : Getting all moves for PAWN at g2
+10330 <first : Getting all moves for PAWN at h2
+10330 <first : move b3b5
+11217 >first : time 29904
+11217 >first : otim 29239
 book hit = (NULL)
-18509 >first : usermove 18509 >first : c6b8
-18513 <first : Getting all moves for ROOK at a1
-18513 <first : Getting all moves for KNIGHT at e4
-18513 <first : Getting all moves for BISHOP at c1
-18513 <first : Getting all moves for QUEEN at d1
-18513 <first : Getting all moves for KING at e1
-18514 <first : Getting all moves for BISHOP at f1
-18514 <first : Getting all moves for KNIGHT at g1
-18514 <first : Getting all moves for ROOK at h1
-18514 <first : Getting all moves for PAWN at a2
-18514 <first : Getting all moves for PAWN at b2
-18514 <first : Getting all moves for PAWN at c2
-18514 <first : Getting all moves for PAWN at d4
-18514 <first : Getting all moves for PAWN at e2
-18514 <first : Getting all moves for PAWN at f2
-18514 <first : Getting all moves for PAWN at g2
-18514 <first : Getting all moves for PAWN at h4
-18514 <first : move e4f6
-22635 >first : time 29996
-22635 >first : otim 28920
+11217 >first : usermove 11217 >first : e6c5
+11225 <first : Getting all moves for ROOK at a1
+11225 <first : Getting all moves for KNIGHT at b1
+11225 <first : Getting all moves for BISHOP at c1
+11225 <first : Getting all moves for QUEEN at b5
+11225 <first : Getting all moves for KING at e1
+11225 <first : Getting all moves for BISHOP at f1
+11225 <first : Getting all moves for KNIGHT at g1
+11225 <first : Getting all moves for ROOK at h1
+11225 <first : Getting all moves for PAWN at a2
+11225 <first : Getting all moves for PAWN at b2
+11225 <first : Getting all moves for PAWN at c3
+11225 <first : Getting all moves for PAWN at d3
+11225 <first : Getting all moves for PAWN at e2
+11225 <first : Getting all moves for PAWN at f2
+11225 <first : Getting all moves for PAWN at g2
+11225 <first : Getting all moves for PAWN at h2
+11225 <first : move b5c4
+12219 >first : time 29903
+12219 >first : otim 29139
 book hit = (NULL)
-22635 >first : usermove 22635 >first : g7f6
-22639 <first : ### positions in enpassant check
-22639 <first : 7
-22639 <first : 7
-22639 <first : 6
-22639 <first : 6
-22639 <first : Getting all moves for ROOK at a1
-22639 <first : Getting all moves for BISHOP at c1
-22639 <first : Getting all moves for QUEEN at d1
-22639 <first : Getting all moves for KING at e1
-22639 <first : Getting all moves for BISHOP at f1
-22639 <first : Getting all moves for KNIGHT at g1
-22639 <first : Getting all moves for ROOK at h1
-22639 <first : Getting all moves for PAWN at a2
-22639 <first : Getting all moves for PAWN at b2
-22639 <first : Getting all moves for PAWN at c2
-22639 <first : Getting all moves for PAWN at d4
-22639 <first : Getting all moves for PAWN at e2
-22639 <first : Getting all moves for PAWN at f2
-22639 <first : Getting all moves for PAWN at g2
-22639 <first : Getting all moves for PAWN at h4
-22639 <first : move g1h3
-23940 >first : time 29996
-23941 >first : otim 28790
+12219 >first : usermove 12219 >first : c5e6
+12222 <first : Getting all moves for ROOK at a1
+12222 <first : Getting all moves for KNIGHT at b1
+12222 <first : Getting all moves for BISHOP at c1
+12222 <first : Getting all moves for QUEEN at c4
+12222 <first : Getting all moves for KING at e1
+12222 <first : Getting all moves for BISHOP at f1
+12222 <first : Getting all moves for KNIGHT at g1
+12222 <first : Getting all moves for ROOK at h1
+12222 <first : Getting all moves for PAWN at a2
+12222 <first : Getting all moves for PAWN at b2
+12222 <first : Getting all moves for PAWN at c3
+12222 <first : Getting all moves for PAWN at d3
+12222 <first : Getting all moves for PAWN at e2
+12222 <first : Getting all moves for PAWN at f2
+12222 <first : Getting all moves for PAWN at g2
+12222 <first : Getting all moves for PAWN at h2
+12222 <first : move h2h4
+13973 >first : time 29903
+13973 >first : otim 28964
 book hit = (NULL)
-23941 >first : usermove 23941 >first : b8a6
-23943 <first : Getting all moves for ROOK at a1
-23943 <first : Getting all moves for BISHOP at c1
-23943 <first : Getting all moves for QUEEN at d1
-23943 <first : Getting all moves for KING at e1
-23943 <first : Getting all moves for BISHOP at f1
-23943 <first : Getting all moves for KNIGHT at h3
-23943 <first : Getting all moves for ROOK at h1
-23943 <first : Getting all moves for PAWN at a2
-23943 <first : Getting all moves for PAWN at b2
-23943 <first : Getting all moves for PAWN at c2
-23943 <first : Getting all moves for PAWN at d4
-23943 <first : Getting all moves for PAWN at e2
-23943 <first : Getting all moves for PAWN at f2
-23943 <first : Getting all moves for PAWN at g2
-23943 <first : Getting all moves for PAWN at h4
-23943 <first : move c1e3
-24773 >first : time 29995
-24773 >first : otim 28707
+13973 >first : usermove 13973 >first : e6f4
+13975 <first : Getting all moves for ROOK at a1
+13975 <first : Getting all moves for KNIGHT at b1
+13975 <first : Getting all moves for BISHOP at c1
+13975 <first : Getting all moves for QUEEN at c4
+13975 <first : Getting all moves for KING at e1
+13975 <first : Getting all moves for BISHOP at f1
+13975 <first : Getting all moves for KNIGHT at g1
+13975 <first : Getting all moves for ROOK at h1
+13975 <first : Getting all moves for PAWN at a2
+13975 <first : Getting all moves for PAWN at b2
+13975 <first : Getting all moves for PAWN at c3
+13975 <first : Getting all moves for PAWN at d3
+13975 <first : Getting all moves for PAWN at e2
+13975 <first : Getting all moves for PAWN at f2
+13975 <first : Getting all moves for PAWN at g2
+13975 <first : Getting all moves for PAWN at h4
+13975 <first : move h1h3
+15143 >first : time 29903
+15143 >first : otim 28847
 book hit = (NULL)
-24773 >first : usermove 24773 >first : a6b8
-24777 <first : Getting all moves for ROOK at a1
-24777 <first : Getting all moves for BISHOP at e3
-24777 <first : Getting all moves for QUEEN at d1
-24777 <first : Getting all moves for KING at e1
-24777 <first : Getting all moves for BISHOP at f1
-24777 <first : Getting all moves for KNIGHT at h3
-24777 <first : Getting all moves for ROOK at h1
-24777 <first : Getting all moves for PAWN at a2
-24777 <first : Getting all moves for PAWN at b2
-24777 <first : Getting all moves for PAWN at c2
-24777 <first : Getting all moves for PAWN at d4
-24777 <first : Getting all moves for PAWN at e2
-24777 <first : Getting all moves for PAWN at f2
-24777 <first : Getting all moves for PAWN at g2
-24777 <first : Getting all moves for PAWN at h4
-24777 <first : move h1g1
-25287 >first : time 29995
-25287 >first : otim 28656
+15143 >first : usermove 15143 >first : f4d5
+15151 <first : Getting all moves for ROOK at a1
+15152 <first : Getting all moves for KNIGHT at b1
+15152 <first : Getting all moves for BISHOP at c1
+15152 <first : Getting all moves for QUEEN at c4
+15152 <first : Getting all moves for KING at e1
+15152 <first : Getting all moves for BISHOP at f1
+15152 <first : Getting all moves for KNIGHT at g1
+15152 <first : Getting all moves for ROOK at h3
+15152 <first : Getting all moves for PAWN at a2
+15152 <first : Getting all moves for PAWN at b2
+15152 <first : Getting all moves for PAWN at c3
+15152 <first : Getting all moves for PAWN at d3
+15152 <first : Getting all moves for PAWN at e2
+15152 <first : Getting all moves for PAWN at f2
+15152 <first : Getting all moves for PAWN at g2
+15152 <first : Getting all moves for PAWN at h4
+15152 <first : move h3g3
+16375 >first : time 29902
+16375 >first : otim 28725
 book hit = (NULL)
-25287 >first : usermove 25287 >first : b8a6
-25289 <first : Getting all moves for ROOK at a1
-25289 <first : Getting all moves for BISHOP at e3
-25289 <first : Getting all moves for QUEEN at d1
-25289 <first : Getting all moves for KING at e1
-25289 <first : Getting all moves for BISHOP at f1
-25289 <first : Getting all moves for KNIGHT at h3
-25289 <first : Getting all moves for ROOK at g1
-25289 <first : Getting all moves for PAWN at a2
-25289 <first : Getting all moves for PAWN at b2
-25289 <first : Getting all moves for PAWN at c2
-25289 <first : Getting all moves for PAWN at d4
-25289 <first : Getting all moves for PAWN at e2
-25289 <first : Getting all moves for PAWN at f2
-25289 <first : Getting all moves for PAWN at g2
-25289 <first : Getting all moves for PAWN at h4
-25289 <first : move f2f3
-25887 >first : time 29995
-25887 >first : otim 28597
+16375 >first : usermove 16375 >first : d5b6
+16378 <first : Getting all moves for ROOK at a1
+16378 <first : Getting all moves for KNIGHT at b1
+16378 <first : Getting all moves for BISHOP at c1
+16378 <first : Getting all moves for QUEEN at c4
+16378 <first : Getting all moves for KING at e1
+16378 <first : Getting all moves for BISHOP at f1
+16378 <first : Getting all moves for KNIGHT at g1
+16378 <first : Getting all moves for ROOK at g3
+16378 <first : Getting all moves for PAWN at a2
+16378 <first : Getting all moves for PAWN at b2
+16378 <first : Getting all moves for PAWN at c3
+16378 <first : Getting all moves for PAWN at d3
+16378 <first : Getting all moves for PAWN at e2
+16378 <first : Getting all moves for PAWN at f2
+16378 <first : Getting all moves for PAWN at g2
+16378 <first : Getting all moves for PAWN at h4
+16378 <first : move b1a3
+17273 >first : time 29902
+17273 >first : otim 28635
 book hit = (NULL)
-25887 >first : usermove 25887 >first : a6b8
-25889 <first : Getting all moves for ROOK at a1
-25889 <first : Getting all moves for BISHOP at e3
-25889 <first : Getting all moves for QUEEN at d1
-25889 <first : Getting all moves for KING at e1
-25889 <first : Getting all moves for BISHOP at f1
-25889 <first : Getting all moves for KNIGHT at h3
-25889 <first : Getting all moves for ROOK at g1
-25889 <first : Getting all moves for PAWN at a2
-25889 <first : Getting all moves for PAWN at b2
-25889 <first : Getting all moves for PAWN at c2
-25889 <first : Getting all moves for PAWN at d4
-25889 <first : Getting all moves for PAWN at e2
-25889 <first : Getting all moves for PAWN at f3
-25889 <first : Getting all moves for PAWN at g2
-25889 <first : Getting all moves for PAWN at h4
-25889 <first : move a1b1
-26409 >first : time 29994
-26409 >first : otim 28545
+17273 >first : usermove 17273 >first : b6a4
+17275 <first : Getting all moves for ROOK at a1
+17275 <first : Getting all moves for KNIGHT at a3
+17275 <first : Getting all moves for BISHOP at c1
+17275 <first : Getting all moves for QUEEN at c4
+17276 <first : Getting all moves for KING at e1
+17276 <first : Getting all moves for BISHOP at f1
+17276 <first : Getting all moves for KNIGHT at g1
+17276 <first : Getting all moves for ROOK at g3
+17276 <first : Getting all moves for PAWN at a2
+17276 <first : Getting all moves for PAWN at b2
+17276 <first : Getting all moves for PAWN at c3
+17276 <first : Getting all moves for PAWN at d3
+17276 <first : Getting all moves for PAWN at e2
+17276 <first : Getting all moves for PAWN at f2
+17276 <first : Getting all moves for PAWN at g2
+17276 <first : Getting all moves for PAWN at h4
+17276 <first : move e2e4
+18179 >first : time 29901
+18179 >first : otim 28545
 book hit = (NULL)
-26409 >first : usermove 26409 >first : b8a6
-26414 <first : Getting all moves for ROOK at b1
-26414 <first : Getting all moves for BISHOP at e3
-26414 <first : Getting all moves for QUEEN at d1
-26414 <first : Getting all moves for KING at e1
-26414 <first : Getting all moves for BISHOP at f1
-26414 <first : Getting all moves for KNIGHT at h3
-26414 <first : Getting all moves for ROOK at g1
-26414 <first : Getting all moves for PAWN at a2
-26414 <first : Getting all moves for PAWN at b2
-26414 <first : Getting all moves for PAWN at c2
-26414 <first : Getting all moves for PAWN at d4
-26414 <first : Getting all moves for PAWN at e2
-26414 <first : Getting all moves for PAWN at f3
-26414 <first : Getting all moves for PAWN at g2
-26414 <first : Getting all moves for PAWN at h4
-26414 <first : move e3d2
-26977 >first : time 29994
-26977 >first : otim 28488
+18179 >first : usermove 18179 >first : a4c5
+18187 <first : Getting all moves for ROOK at a1
+18187 <first : Getting all moves for KNIGHT at a3
+18187 <first : Getting all moves for BISHOP at c1
+18187 <first : Getting all moves for QUEEN at c4
+18187 <first : Getting all moves for KING at e1
+18187 <first : Getting all moves for BISHOP at f1
+18187 <first : Getting all moves for KNIGHT at g1
+18187 <first : Getting all moves for ROOK at g3
+18187 <first : Getting all moves for PAWN at a2
+18187 <first : Getting all moves for PAWN at b2
+18187 <first : Getting all moves for PAWN at c3
+18187 <first : Getting all moves for PAWN at d3
+18187 <first : Getting all moves for PAWN at e4
+18187 <first : Getting all moves for PAWN at f2
+18187 <first : Getting all moves for PAWN at g2
+18187 <first : Getting all moves for PAWN at h4
+18187 <first : move a3b1
+19805 >first : time 29901
+19805 >first : otim 28383
 book hit = (NULL)
-26977 >first : usermove 26977 >first : a6b8
-26979 <first : Getting all moves for ROOK at b1
-26979 <first : Getting all moves for BISHOP at d2
-26979 <first : Getting all moves for QUEEN at d1
-26979 <first : Getting all moves for KING at e1
-26979 <first : Getting all moves for BISHOP at f1
-26979 <first : Getting all moves for KNIGHT at h3
-26979 <first : Getting all moves for ROOK at g1
-26979 <first : Getting all moves for PAWN at a2
-26979 <first : Getting all moves for PAWN at b2
-26979 <first : Getting all moves for PAWN at c2
-26979 <first : Getting all moves for PAWN at d4
-26979 <first : Getting all moves for PAWN at e2
-26979 <first : Getting all moves for PAWN at f3
-26979 <first : Getting all moves for PAWN at g2
-26979 <first : Getting all moves for PAWN at h4
-26979 <first : move b1a1
-28515 >first : time 29994
-28515 >first : otim 28335
+19805 >first : usermove 19805 >first : c5b3
+19808 <first : Getting all moves for ROOK at a1
+19808 <first : Getting all moves for KNIGHT at b1
+19808 <first : Getting all moves for BISHOP at c1
+19808 <first : Getting all moves for QUEEN at c4
+19808 <first : Getting all moves for KING at e1
+19808 <first : Getting all moves for BISHOP at f1
+19808 <first : Getting all moves for KNIGHT at g1
+19809 <first : Getting all moves for ROOK at g3
+19809 <first : Getting all moves for PAWN at a2
+19809 <first : Getting all moves for PAWN at b2
+19809 <first : Getting all moves for PAWN at c3
+19809 <first : Getting all moves for PAWN at d3
+19809 <first : Getting all moves for PAWN at e4
+19809 <first : Getting all moves for PAWN at f2
+19809 <first : Getting all moves for PAWN at g2
+19809 <first : Getting all moves for PAWN at h4
+19809 <first : move g3g4
+21061 >first : time 29900
+21061 >first : otim 28258
 book hit = (NULL)
-28515 >first : usermove 28515 >first : b8a6
-28516 <first : Getting all moves for ROOK at a1
-28516 <first : Getting all moves for BISHOP at d2
-28516 <first : Getting all moves for QUEEN at d1
-28516 <first : Getting all moves for KING at e1
-28516 <first : Getting all moves for BISHOP at f1
-28516 <first : Getting all moves for KNIGHT at h3
-28516 <first : Getting all moves for ROOK at g1
-28516 <first : Getting all moves for PAWN at a2
-28516 <first : Getting all moves for PAWN at b2
-28516 <first : Getting all moves for PAWN at c2
-28516 <first : Getting all moves for PAWN at d4
-28516 <first : Getting all moves for PAWN at e2
-28516 <first : Getting all moves for PAWN at f3
-28516 <first : Getting all moves for PAWN at g2
-28517 <first : Getting all moves for PAWN at h4
-28517 <first : move e2e4
-29123 >first : time 29993
-29123 >first : otim 28274
+21061 >first : usermove 21061 >first : b3a5
+21064 <first : Getting all moves for ROOK at a1
+21064 <first : Getting all moves for KNIGHT at b1
+21064 <first : Getting all moves for BISHOP at c1
+21064 <first : Getting all moves for QUEEN at c4
+21064 <first : Getting all moves for KING at e1
+21064 <first : Getting all moves for BISHOP at f1
+21064 <first : Getting all moves for KNIGHT at g1
+21064 <first : Getting all moves for ROOK at g4
+21064 <first : Getting all moves for PAWN at a2
+21064 <first : Getting all moves for PAWN at b2
+21064 <first : Getting all moves for PAWN at c3
+21064 <first : Getting all moves for PAWN at d3
+21064 <first : Getting all moves for PAWN at e4
+21064 <first : Getting all moves for PAWN at f2
+21064 <first : Getting all moves for PAWN at g2
+21064 <first : Getting all moves for PAWN at h4
+21064 <first : move c1f4
+22135 >first : time 29900
+22135 >first : otim 28151
 book hit = (NULL)
-29123 >first : usermove 29123 >first : a6b8
-29127 <first : Getting all moves for ROOK at a1
-29127 <first : Getting all moves for BISHOP at d2
-29127 <first : Getting all moves for QUEEN at d1
-29127 <first : Getting all moves for KING at e1
-29127 <first : Getting all moves for BISHOP at f1
-29127 <first : Getting all moves for KNIGHT at h3
-29127 <first : Getting all moves for ROOK at g1
-29127 <first : Getting all moves for PAWN at a2
-29127 <first : Getting all moves for PAWN at b2
-29127 <first : Getting all moves for PAWN at c2
-29127 <first : Getting all moves for PAWN at d4
-29127 <first : Getting all moves for PAWN at e4
-29127 <first : Getting all moves for PAWN at f3
-29127 <first : Getting all moves for PAWN at g2
-29127 <first : Getting all moves for PAWN at h4
-29127 <first : move d4d5
-30516 >first : time 29993
-30516 >first : otim 28135
+22135 >first : usermove 22135 >first : a5c6
+22142 <first : Getting all moves for ROOK at a1
+22142 <first : Getting all moves for KNIGHT at b1
+22142 <first : Getting all moves for BISHOP at f4
+22142 <first : Getting all moves for QUEEN at c4
+22142 <first : Getting all moves for KING at e1
+22142 <first : Getting all moves for BISHOP at f1
+22142 <first : Getting all moves for KNIGHT at g1
+22142 <first : Getting all moves for ROOK at g4
+22142 <first : Getting all moves for PAWN at a2
+22142 <first : Getting all moves for PAWN at b2
+22142 <first : Getting all moves for PAWN at c3
+22142 <first : Getting all moves for PAWN at d3
+22142 <first : Getting all moves for PAWN at e4
+22142 <first : Getting all moves for PAWN at f2
+22142 <first : Getting all moves for PAWN at g2
+22142 <first : Getting all moves for PAWN at h4
+22142 <first : move g4g5
+23121 >first : time 29899
+23121 >first : otim 28053
 book hit = (NULL)
-30516 >first : usermove 30516 >first : c7c5
-30518 <first : ### positions in enpassant check
-30518 <first : 7
-30518 <first : 3
-30518 <first : 5
-30518 <first : 3
-30518 <first : Performing en passant move from right
-30518 <first : move d5c6
+23121 >first : usermove 23121 >first : c6d4
+23123 <first : Getting all moves for ROOK at a1
+23123 <first : Getting all moves for KNIGHT at b1
+23123 <first : Getting all moves for BISHOP at f4
+23123 <first : Getting all moves for QUEEN at c4
+23123 <first : Getting all moves for KING at e1
+23123 <first : Getting all moves for BISHOP at f1
+23123 <first : Getting all moves for KNIGHT at g1
+23123 <first : Getting all moves for ROOK at g5
+23123 <first : Getting all moves for PAWN at a2
+23123 <first : Getting all moves for PAWN at b2
+23123 <first : Getting all moves for PAWN at c3
+23123 <first : Getting all moves for PAWN at d3
+23123 <first : Getting all moves for PAWN at e4
+23123 <first : Getting all moves for PAWN at f2
+23123 <first : Getting all moves for PAWN at g2
+23123 <first : Getting all moves for PAWN at h4
+23123 <first : move b2b4
+25115 >first : time 29899
+25115 >first : otim 27854
+book hit = (NULL)
+25115 >first : usermove 25115 >first : d4e6
+25120 <first : Getting all moves for ROOK at a1
+25120 <first : Getting all moves for KNIGHT at b1
+25120 <first : Getting all moves for BISHOP at f4
+25120 <first : Getting all moves for QUEEN at c4
+25120 <first : Getting all moves for KING at e1
+25120 <first : Getting all moves for BISHOP at f1
+25120 <first : Getting all moves for KNIGHT at g1
+25120 <first : Getting all moves for ROOK at g5
+25120 <first : Getting all moves for PAWN at a2
+25120 <first : Getting all moves for PAWN at b4
+25120 <first : Getting all moves for PAWN at c3
+25120 <first : Getting all moves for PAWN at d3
+25120 <first : Getting all moves for PAWN at e4
+25120 <first : Getting all moves for PAWN at f2
+25120 <first : Getting all moves for PAWN at g2
+25120 <first : Getting all moves for PAWN at h4
+25120 <first : move c4e6
+30683 >first : time 29898
+30683 >first : otim 27298
+book hit = (NULL)
+30683 >first : usermove 30683 >first : g8f6
+30689 <first : Getting all moves for ROOK at a1
+30689 <first : Getting all moves for KNIGHT at b1
+30689 <first : Getting all moves for BISHOP at f4
+30689 <first : Getting all moves for QUEEN at e6
+30689 <first : Getting all moves for KING at e1
+30689 <first : Getting all moves for BISHOP at f1
+30689 <first : Getting all moves for KNIGHT at g1
+30689 <first : Getting all moves for ROOK at g5
+30689 <first : Getting all moves for PAWN at a2
+30689 <first : Getting all moves for PAWN at b4
+30689 <first : Getting all moves for PAWN at c3
+30689 <first : Getting all moves for PAWN at d3
+30689 <first : Getting all moves for PAWN at e4
+30689 <first : Getting all moves for PAWN at f2
+30689 <first : Getting all moves for PAWN at g2
+30689 <first : Getting all moves for PAWN at h4
+30689 <first : move g5g6
+31877 >first : time 29898
+31877 >first : otim 27179
+book hit = (NULL)
+31877 >first : usermove 31877 >first : f6d5
+31879 <first : Getting all moves for ROOK at a1
+31879 <first : Getting all moves for KNIGHT at b1
+31879 <first : Getting all moves for BISHOP at f4
+31879 <first : Getting all moves for QUEEN at e6
+31880 <first : Getting all moves for KING at e1
+31880 <first : Getting all moves for BISHOP at f1
+31880 <first : Getting all moves for KNIGHT at g1
+31880 <first : Getting all moves for ROOK at g6
+31880 <first : Getting all moves for PAWN at a2
+31880 <first : Getting all moves for PAWN at b4
+31880 <first : Getting all moves for PAWN at c3
+31880 <first : Getting all moves for PAWN at d3
+31880 <first : Getting all moves for PAWN at e4
+31880 <first : Getting all moves for PAWN at f2
+31880 <first : Getting all moves for PAWN at g2
+31880 <first : Getting all moves for PAWN at h4
+31880 <first : move e6c6
+33197 >first : time 29897
+33197 >first : otim 27047
+book hit = (NULL)
+33197 >first : usermove 33197 >first : d5b6
+33200 <first : Getting all moves for ROOK at a1
+33200 <first : Getting all moves for KNIGHT at b1
+33200 <first : Getting all moves for BISHOP at f4
+33200 <first : Getting all moves for QUEEN at c6
+33200 <first : Getting all moves for KING at e1
+33200 <first : Getting all moves for BISHOP at f1
+33200 <first : Getting all moves for KNIGHT at g1
+33200 <first : Getting all moves for ROOK at g6
+33200 <first : Getting all moves for PAWN at a2
+33200 <first : Getting all moves for PAWN at b4
+33200 <first : Getting all moves for PAWN at c3
+33200 <first : Getting all moves for PAWN at d3
+33200 <first : Getting all moves for PAWN at e4
+33200 <first : Getting all moves for PAWN at f2
+33200 <first : Getting all moves for PAWN at g2
+33200 <first : Getting all moves for PAWN at h4
+33200 <first : move f4g3
+34695 >first : time 29897
+34695 >first : otim 26898
+book hit = (NULL)
+34695 >first : usermove 34695 >first : b6a4
+34702 <first : Getting all moves for ROOK at a1
+34702 <first : Getting all moves for KNIGHT at b1
+34702 <first : Getting all moves for BISHOP at g3
+34702 <first : Getting all moves for QUEEN at c6
+34702 <first : Getting all moves for KING at e1
+34702 <first : Getting all moves for BISHOP at f1
+34702 <first : Getting all moves for KNIGHT at g1
+34702 <first : Getting all moves for ROOK at g6
+34702 <first : Getting all moves for PAWN at a2
+34702 <first : Getting all moves for PAWN at b4
+34702 <first : Getting all moves for PAWN at c3
+34702 <first : Getting all moves for PAWN at d3
+34702 <first : Getting all moves for PAWN at e4
+34702 <first : Getting all moves for PAWN at f2
+34702 <first : Getting all moves for PAWN at g2
+34702 <first : Getting all moves for PAWN at h4
+34702 <first : move e1d1
+35721 >first : time 29896
+35721 >first : otim 26796
+book hit = (NULL)
+35721 >first : usermove 35721 >first : a4c5
+35723 <first : Getting all moves for ROOK at a1
+35723 <first : Getting all moves for KNIGHT at b1
+35723 <first : Getting all moves for BISHOP at g3
+35723 <first : Getting all moves for QUEEN at c6
+35723 <first : Getting all moves for KING at d1
+35723 <first : Getting all moves for BISHOP at f1
+35723 <first : Getting all moves for KNIGHT at g1
+35723 <first : Getting all moves for ROOK at g6
+35723 <first : Getting all moves for PAWN at a2
+35723 <first : Getting all moves for PAWN at b4
+35723 <first : Getting all moves for PAWN at c3
+35723 <first : Getting all moves for PAWN at d3
+35723 <first : Getting all moves for PAWN at e4
+35723 <first : Getting all moves for PAWN at f2
+35723 <first : Getting all moves for PAWN at g2
+35723 <first : Getting all moves for PAWN at h4
+35724 <first : move e4e5
+39823 >first : time 29896
+39823 >first : otim 26386
+book hit = (NULL)
+39823 >first : usermove 39823 >first : f7f5
+39825 <first : ### positions in enpassant check
+39825 <first : 7
+39825 <first : 6
+39825 <first : 5
+39825 <first : 6
+39825 <first : move e5f6
 GameEnds(29, xboard exit, 2)
-33674 >first : result * {xboard exit}
-33674 >first : quit
+44802 >first : result * {xboard exit}
+44828 >first : quit

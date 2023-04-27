@@ -2,7 +2,6 @@ package main;
 
 import pieces.*;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -151,21 +150,16 @@ public class Board {
 			String sourceNewMove = null;
 			String destinationNewMove = Piece.getDstString(xDestLastMove + 1, yDestLastMove);
 
-			// Looking for a pawn that can do en passant.
-			if (board[xDestLastMove][yDestLastMove - 1] != null
-					&& board[xDestLastMove][yDestLastMove - 1].getType() == PieceType.PAWN) {
-				sourceNewMove = board[xDestLastMove][yDestLastMove - 1].getSrcString();
-				System.out.println("Performing en passant move from left");
-			} else if (board[xDestLastMove][yDestLastMove + 1] != null
-					&& board[xDestLastMove][yDestLastMove + 1].getType() == PieceType.PAWN) {
-				sourceNewMove = board[xDestLastMove][yDestLastMove + 1].getSrcString();
-				System.out.println("Performing en passant move from right");
-			}
+			Piece leftPiece = board[xDestLastMove][yDestLastMove - 1];
+			Piece rightPiece = board[xDestLastMove][yDestLastMove + 1];
 
-			if (sourceNewMove != null) {
-				// Moving pawn to do en passant and removing the enemy's pawn.
-				board[xDestLastMove][yDestLastMove] = null;
-				return Move.moveTo(sourceNewMove, destinationNewMove);
+			// Looking for a pawn that can do en passant.
+			if (leftPiece != null && leftPiece.getType() == PieceType.PAWN) {
+				sourceNewMove = leftPiece.getSrcString();
+				return ((Pawn)leftPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
+			} else if (rightPiece != null && rightPiece.getType() == PieceType.PAWN) {
+				sourceNewMove = rightPiece.getSrcString();
+				return ((Pawn)rightPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
 			}
 		}
 
