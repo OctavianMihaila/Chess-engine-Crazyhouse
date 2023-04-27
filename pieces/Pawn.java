@@ -13,9 +13,14 @@ public class Pawn extends Piece {
 	}
 
 	@Override
-	public boolean clearPath(Board board, int xDest, int yDest) {
+	public boolean validPath(Board board, int xDest, int yDest) {
 		if (x == 2 && side == PlaySide.WHITE) return board.getPiece(x + 1, y) == null;
 		if (x == 7 && side == PlaySide.BLACK) return board.getPiece(x - 1, y) == null;
+		return true;
+	}
+
+	@Override
+	public boolean validPathIgnoring(Board board, int xDest, int yDest, Piece piece) {
 		return true;
 	}
 

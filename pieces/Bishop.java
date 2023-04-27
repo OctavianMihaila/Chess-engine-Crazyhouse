@@ -12,20 +12,6 @@ public class Bishop extends Piece {
 	}
 
 	@Override
-	public boolean clearPath(Board board, int xDest, int yDest) {
-		int verticalDist = xDest - x;
-		int horizontalDist = yDest - y;
-		int xDir = (int) Math.signum(verticalDist);
-		int yDir = (int) Math.signum(horizontalDist);
-
-		for (int i = 1; i < Math.abs(verticalDist); i++) {
-			if (board.getPiece(x + i * xDir, y + i * yDir) != null) return false;
-		}
-
-		return true;
-	}
-
-	@Override
 	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
 

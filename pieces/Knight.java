@@ -12,7 +12,12 @@ public class Knight extends Piece {
 	}
 
 	@Override
-	public boolean clearPath(Board board, int xDest, int yDest) {
+	public boolean validPath(Board board, int xDest, int yDest) {
+		return true;
+	}
+
+	@Override
+	public boolean validPathIgnoring(Board board, int xDest, int yDest, Piece piece) {
 		return true;
 	}
 

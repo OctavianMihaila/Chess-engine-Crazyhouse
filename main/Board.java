@@ -121,10 +121,9 @@ public class Board {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
 		// Check if king is in check
-		System.out.println("Checking if the king can be captured at" + king.getSrcString());
+		System.out.println("Checking if the king can be captured at " + king.getSrcString());
 		for (Piece piece : blacks) {
 			if (piece.canCapture(this, king.x, king.y)) {
-//				setPiece(null, king.x, king.y);
 				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
 				allPossibleMoves.addAll(king.getAllMoves(this));
 				if (allPossibleMoves.size() == 0) return Move.resign();
@@ -132,7 +131,6 @@ public class Board {
 				int index = rand.nextInt(allPossibleMoves.size());
 
 				return allPossibleMoves.get(index);
-//				setPiece(king, move.getDestinationX(), move.getDestinationY());return allPossibleMoves.get(index);
 			}
 		}
 
