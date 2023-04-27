@@ -1,10 +1,8 @@
 package pieces;
 
-import main.Move;
+import main.Board;
 import main.PieceType;
 import main.PlaySide;
-
-import java.util.ArrayList;
 
 public class King extends Piece {
 	public static final int[][] moveDirections = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
@@ -14,45 +12,39 @@ public class King extends Piece {
 	}
 
 	@Override
-	public boolean clearPath(Piece[][] board, int xDest, int yDest) {
-		return validMove(board, xDest, yDest);
+	public boolean clearPath(Board board, int xDest, int yDest) {
+		return true;
 	}
 
-	// TODO Implement additional checks for check
 	@Override
-	public boolean validMove(Piece[][] board, int xDest, int yDest) {
+	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
 		int verticalDist = xDest - x;
 		int horizontalDist = yDest - y;
 
 		// Cant move if trying to move more than 2 in any direction
-		if (Math.abs(verticalDist) > 1 && Math.abs(horizontalDist) > 1) return false;
+		if (Math.abs(verticalDist) > 1 || Math.abs(horizontalDist) > 1) return false;
+
+		// Check if the move doesn't produce check
+		if (!isSafe(board, xDest, yDest)) return false;
+
 		// Cant move if it's not moving
-		return verticalDist == 0 || horizontalDist == 0;
+		return verticalDist != 0 || horizontalDist != 0;
 	}
 
-	public boolean isSafe(Piece[][] board, int xDest, int yDest) {
-		for (int i = 0; i < moveDirections.length; i++) {
-			for (int j = 0; j < moveDirections[i].length; j++) {
-				if(validMove(board, i, j) && !willBeCaptured(board, xDest, yDest, i, j)) {
-					return true;
-				}
-			}
+	public boolean isSafe(Board board, int xDest, int yDest) {
+		// Cant move to a position where is a piece
+		if (board.getPiece(xDest, yDest) != null && board.getPiece(xDest, yDest).side == side) return false;
+
+		// Check if the move doesn't produce check by checking if the king is in check after the move
+		for (Piece piece : board.getOpposites(side)) {
+			if (piece.getType() == PieceType.KING) continue;
+
+			// If the piece can capture the king after the move, the move is invalid
+			if (piece.validCapture(board, xDest, yDest) && piece.clearPath(board, xDest, yDest)) return false;
 		}
-		return false;
+		return true;
 	}
-
-//	private boolean willBeCaptured(Piece[][] board, int x, int y, int xDest, int yDest) {
-//		Piece temp = board[xDest][yDest];
-//		board[xDest][yDest] = board[x][y];
-//		board[x][y] = null;
-//
-//		for(int[] dir : moveDirections) {
-//			int i = xDest + dir[0];
-//			int j = yDest + dir[1];
-//			if(onTable(i, j) && board[i][j] != null && board[i][j].playSide() != playSide() && board[i][j])
-//		}
-//	}
 
 	@Override
 	public int[][] getMoveDirections() {

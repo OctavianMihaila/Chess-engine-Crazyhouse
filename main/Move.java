@@ -40,6 +40,22 @@ public class Move {
         this.replacement = Optional.ofNullable(replacement);
     }
 
+    public int getSourceX() {
+        return this.source.get().charAt(1) - '0';
+    }
+
+    public int getSourceY() {
+        return this.source.get().charAt(0) - 'a' + 1;
+    }
+
+    public int getDestinationX() {
+        return this.destination.get().charAt(1) - '0';
+    }
+
+    public int getDestinationY() {
+        return this.destination.get().charAt(0) - 'a' + 1;
+    }
+
     /**
         Translates a move from opponent's perspective to engine's perspective
      */

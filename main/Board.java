@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Board {
-	private Piece[][] board;
-	private boolean imBlack;
+	private final Piece[][] board;
+
 	private ArrayList<Piece> whites = new ArrayList<Piece>();
 	private ArrayList<Piece> blacks = new ArrayList<Piece>();
 	private ArrayList<Piece> whiteCaptures = new ArrayList<Piece>();
@@ -50,6 +50,7 @@ public class Board {
 
 		// Setting up the kings
 		board[1][5] = new King(PlaySide.WHITE, PieceType.KING, 1, 5);
+		king = board[1][5];
 		board[8][5] = new King(PlaySide.BLACK, PieceType.KING, 8, 5);
 
 		// Setting up the pieces
@@ -66,6 +67,14 @@ public class Board {
 		}
 	}
 
+	public ArrayList<Piece> getWhites() {
+		return whites;
+	}
+
+	public ArrayList<Piece> getBlacks() {
+		return blacks;
+	}
+
 	public Piece[][] getBoard() {
 		return board;
 	}
@@ -74,10 +83,8 @@ public class Board {
 		return board[x][y];
 	}
 
-	public Piece getPiece(String source) {
-		int x = source.charAt(0) - 'a' + 1;
-		int y = Integer.parseInt(source.substring(1, 2));
-		return board[x][y];
+	public void setPiece(Piece piece, int x, int y) {
+		board[x][y] = piece;
 	}
 
 	public void registerMove(Move move) {
@@ -113,8 +120,24 @@ public class Board {
 	public Move getRandMove() {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
+		// Check if king is in check
+		System.out.println("Checking if the king can be captured at" + king.getSrcString());
+		for (Piece piece : blacks) {
+			if (piece.canCapture(this, king.x, king.y)) {
+//				setPiece(null, king.x, king.y);
+				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
+				allPossibleMoves.addAll(king.getAllMoves(this));
+				if (allPossibleMoves.size() == 0) return Move.resign();
+				Random rand = new Random(System.currentTimeMillis());
+				int index = rand.nextInt(allPossibleMoves.size());
+
+				return allPossibleMoves.get(index);
+//				setPiece(king, move.getDestinationX(), move.getDestinationY());return allPossibleMoves.get(index);
+			}
+		}
+
 		for (Piece piece : whites) {
-			ArrayList<Move> move = piece.getAllMoves(board);
+			ArrayList<Move> move = piece.getAllMoves(this);
 			if (move == null || move.size() == 0) continue;
 			allPossibleMoves.addAll(move);
 		}
@@ -127,6 +150,11 @@ public class Board {
 		Random rand = new Random(System.currentTimeMillis());
 		int index = rand.nextInt(allPossibleMoves.size());
 		return allPossibleMoves.get(index);
+	}
+
+	public ArrayList<Piece> getOpposites(PlaySide side) {
+		if (side == PlaySide.WHITE) return blacks;
+		return whites;
 	}
 }
 

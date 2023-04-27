@@ -1,5 +1,6 @@
 package pieces;
 
+import main.Board;
 import main.Move;
 import main.PieceType;
 import main.PlaySide;
@@ -7,8 +8,6 @@ import main.PlaySide;
 import java.util.ArrayList;
 
 public abstract class Piece {
-	public static final int[][] moveDirections = {{0}};
-	public static final int maxMoves = 1;
 	public boolean captured = false;
 	public PlaySide side;
 	private final PieceType type;
@@ -38,27 +37,34 @@ public abstract class Piece {
 		return x >= 1 && x <= 8 && y >= 1 && y <= 8;
 	}
 
-	public abstract boolean clearPath(Piece[][] board, int xDest, int yDest);
+	public abstract boolean clearPath(Board board, int xDest, int yDest);
 
-	public abstract boolean validMove(Piece[][] board, int xDest, int yDest);
+	public abstract boolean validMove(Board board, int xDest, int yDest);
+	public boolean validCapture(Board board, int xDest, int yDest) {
+		return validMove(board, xDest, yDest);
+	}
 
 	public abstract int[][] getMoveDirections();
 	public abstract int[][] getCaptureDirections();
 	public abstract int getMaxMoves();
 
 	// Standard function for checking if a piece can move to a destination
-	public boolean canMove(Piece[][] board, int xDest, int yDest) {
+	public boolean canMove(Board board, int xDest, int yDest) {
+		if (!validMove(board, xDest, yDest)) return false;
 		if (!clearPath(board, xDest, yDest)) return false;
-		return board[xDest][yDest] == null;
+		Piece piece = board.getPiece(xDest, yDest);
+		return piece == null;
 	}
 
 	// Standard function for checking if a piece can capture a piece at a destination
-	public boolean canCapture(Piece[][] board, int xDest, int yDest) {
+	public boolean canCapture(Board board, int xDest, int yDest) {
+		if (!validCapture(board, xDest, yDest)) return false;
 		if (!clearPath(board, xDest, yDest)) return false;
-		return board[xDest][yDest] != null && board[xDest][yDest].side != side;
+		Piece piece = board.getPiece(xDest, yDest);
+		return piece != null && piece.side != side;
 	}
 
-	public ArrayList<Move> getPossibleCaptures(Piece[][] board) {
+	public ArrayList<Move> getPossibleCaptures(Board board) {
 		ArrayList<Move> moves = new ArrayList<>();
 
 		for (int[] moveDir : getCaptureDirections()) {
@@ -74,7 +80,7 @@ public abstract class Piece {
 		return moves;
 	}
 
-	public ArrayList<Move> getPossibleMoves(Piece[][] board) {
+	public ArrayList<Move> getPossibleMoves(Board board) {
 		ArrayList<Move> moves = new ArrayList<>();
 
 		for (int[] moveDir : getMoveDirections()) {
@@ -90,8 +96,7 @@ public abstract class Piece {
 		return moves;
 	}
 
-	public ArrayList<Move> getAllMoves(Piece[][] board) {
-		System.out.println("Getting all moves for " + type + " at " + getSrcString());
+	public ArrayList<Move> getAllMoves(Board board) {
 		ArrayList<Move> moves = new ArrayList<>();
 		moves.addAll(getPossibleMoves(board));
 		moves.addAll(getPossibleCaptures(board));

@@ -1,10 +1,8 @@
 package pieces;
 
-import main.Move;
+import main.Board;
 import main.PieceType;
 import main.PlaySide;
-
-import java.util.ArrayList;
 
 public class Bishop extends Piece {
 	public static final int[][] moveDirections = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
@@ -14,23 +12,21 @@ public class Bishop extends Piece {
 	}
 
 	@Override
-	public boolean clearPath(Piece[][] board, int xDest, int yDest) {
-		if (!validMove(board, xDest, yDest)) return false;
-
+	public boolean clearPath(Board board, int xDest, int yDest) {
 		int verticalDist = xDest - x;
 		int horizontalDist = yDest - y;
-		int xDir = verticalDist > 0 ? 1 : -1;
-		int yDir = horizontalDist > 0 ? 1 : -1;
+		int xDir = (int) Math.signum(verticalDist);
+		int yDir = (int) Math.signum(horizontalDist);
 
 		for (int i = 1; i < Math.abs(verticalDist); i++) {
-			if (board[x + i * xDir][y + i * yDir] != null) return false;
+			if (board.getPiece(x + i * xDir, y + i * yDir) != null) return false;
 		}
 
 		return true;
 	}
 
 	@Override
-	public boolean validMove(Piece[][] board, int xDest, int yDest) {
+	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
 
 		int verticalDist = xDest - x;
