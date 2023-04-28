@@ -3,237 +3,210 @@ package main;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+
 public class Main {
-    private static PlaySide sideToMove;
-    private static PlaySide engineSide;
+	private static PlaySide sideToMove;
+	private static PlaySide engineSide;
 
-    public static PlaySide getEngineSide() {
-        return engineSide;
-    }
+	public static PlaySide getEngineSide() {
+		return engineSide;
+	}
 
-    private static void toggleSideToMove() {
-        sideToMove = switch (sideToMove) {
-            case BLACK -> PlaySide.WHITE;
-            case WHITE -> PlaySide.BLACK;
-            default -> PlaySide.NONE;
-        };
-    }
+	private static void toggleSideToMove() {
+		sideToMove = switch (sideToMove) {
+			case BLACK -> PlaySide.WHITE;
+			case WHITE -> PlaySide.BLACK;
+			default -> PlaySide.NONE;
+		};
+	}
 
-    private static String constructFeaturesPayload() {
-        return    "feature"
-                + " done=0"
-                + " sigint=0"
-                + " sigterm=0"
-                + " san=0"
-                + " reuse=0"
-                + " usermove=1"
-                + " analyze=0"
-                + " ping=0"
-                + " setboard=0"
-                + " level=0"
-                + " variants=\"crazyhouse\""
-                + " name=\"" + Bot.getBotName()
-                + "\" myname=\"" + Bot.getBotName()
-                + "\" done=1";
-    }
+	private static String constructFeaturesPayload() {
+		return "feature"
+				+ " done=0"
+				+ " sigint=0"
+				+ " sigterm=0"
+				+ " san=0"
+				+ " reuse=0"
+				+ " usermove=1"
+				+ " analyze=0"
+				+ " ping=0"
+				+ " setboard=0"
+				+ " level=0"
+				+ " variants=\"crazyhouse\""
+				+ " name=\"" + Bot.getBotName()
+				+ "\" myname=\"" + Bot.getBotName()
+				+ "\" done=1";
+	}
 
-    private static String serializeMove(Move move) {
-        if (move.isNormal())
-            return move.getSource().orElse("") + move.getDestination().orElse("");
-        else if (move.isPromotion() && move.getReplacement().isPresent()) {
-            String pieceCode = switch (move.getReplacement().get()) {
-                case BISHOP -> "b";
-                case KNIGHT -> "n";
-                case ROOK -> "r";
-                case QUEEN -> "q";
-                default -> "";
-            };
-            return move.getSource().orElse("") + move.getDestination().orElse("") + pieceCode;
-        } else if (move.isDropIn() && move.getReplacement().isPresent()) {
-            String pieceCode = switch (move.getReplacement().get()) {
-                case BISHOP -> "B";
-                case KNIGHT -> "N";
-                case ROOK -> "R";
-                case QUEEN -> "Q";
-                case PAWN -> "P";
-                default -> "";
-            };
-            return pieceCode + "@" + move.getDestination();
-        } else {
-            return "resign";
-        }
-    }
+	private static class EngineComponents {
+		private enum EngineState {
+			HANDSHAKE_DONE, RECV_NEW, PLAYING, FORCE_MODE
+		}
 
-    private static Move deserializeMove(String s) {
-        if (s.charAt(1) == '@') {
-            /* Drop-in */
+		public Bot bot;
+		private EngineState state;
+		private final Scanner scanner;
+		private String bufferedCmd;
+		private boolean isStarted;
 
-            PieceType piece = switch (s.charAt(0)) {
-                case 'P' -> PieceType.PAWN;
-                case 'R' -> PieceType.ROOK;
-                case 'B' -> PieceType.BISHOP;
-                case 'N' -> PieceType.KNIGHT;
-                case 'Q' -> PieceType.QUEEN;
-                case 'K' -> PieceType.KING; /* This is an illegal move */
-                default -> null;
-            };
+		public EngineComponents() {
+			this.bot = new Bot();
+			this.state = null;
+			this.scanner = new Scanner(System.in);
+			this.bufferedCmd = null;
+			this.isStarted = false;
+		}
 
-            return Move.dropIn(s.substring(2, 4), piece);
-        } else if (s.length() == 5) {
-            /* Pawn promotion */
-            PieceType piece = switch (s.charAt(4)) {
-                case 'p' -> PieceType.PAWN; /* This is an illegal move */
-                case 'r' -> PieceType.ROOK;
-                case 'b' -> PieceType.BISHOP;
-                case 'n' -> PieceType.KNIGHT;
-                case 'q' -> PieceType.QUEEN;
-                case 'k' -> PieceType.KING; /* This is an illegal move */
-                default -> null;
-            };
+		private void newGame() {
+			bot = new Bot();
+			state = EngineState.RECV_NEW;
+			System.out.println("Setting engine side to NONE");
+			engineSide = PlaySide.NONE;
+			sideToMove = PlaySide.WHITE;
+			this.isStarted = false;
+		}
 
-            return Move.promote(s.substring(0, 2), s.substring(2, 4), piece);
-        }
+		private void enterForceMode() {
+			state = EngineState.FORCE_MODE;
+		}
 
-        /* Normal move/capture/castle/en passant */
-        return Move.moveTo(s.substring(0, 2), s.substring(2, 4));
-    }
+		private void leaveForceMode() {
+			/* Called upon receiving "go" */
+			state = EngineState.PLAYING;
 
-    private static class EngineComponents {
-        private enum EngineState {
-            HANDSHAKE_DONE, RECV_NEW, PLAYING, FORCE_MODE
-        }
+			System.out.println("Calculate move because of leave force mode isStart: " + isStarted);
+			if (!isStarted) {
+				isStarted = true;
+				System.out.println("Setting engine side to sideToMove: " + sideToMove);
+				engineSide = sideToMove;
+			}
 
-        public Bot bot;
-        private EngineState state;
-        private final Scanner scanner;
-        private String bufferedCmd;
-        private boolean isStarted;
+			/* Make next move (go is issued when it's the bot's turn) */
+			System.out.println("Calculate move because of leave force mode isStart: " + isStarted + " sideToMove: " + getEngineSide());
+			Move nextMove = bot.calculateNextMove(engineSide);
+			emitMove(nextMove);
 
-        public EngineComponents() {
-            this.bot = new Bot();
-            this.state = null;
-            this.scanner = new Scanner(System.in);
-            this.bufferedCmd = null;
-            this.isStarted = false;
-        }
+			toggleSideToMove();
+		}
 
-        private void newGame() {
-            bot = new Bot();
-            state = EngineState.RECV_NEW;
-            engineSide = PlaySide.NONE;
-            sideToMove = PlaySide.WHITE;
-            this.isStarted = false;
-        }
+		private void processIncomingMove(Move move) {
+			switch (state) {
+				case RECV_NEW -> {
+					state = EngineState.PLAYING;
 
-        private void enterForceMode() {
-            state = EngineState.FORCE_MODE;
-        }
+					bot.recordMove(move, sideToMove);
+					toggleSideToMove();
+					engineSide = sideToMove;
 
-        private void leaveForceMode() {
-//            System.out.println(">>> Leaving force mode <<<");
-            /* Called upon receiving "go" */
-            state = EngineState.PLAYING;
+					if (sideToMove == PlaySide.WHITE) {
+						Move response = bot.calculateNextMove(engineSide);
+						emitMove(response);
+						toggleSideToMove();
+					}
+				}
+				case FORCE_MODE -> {
+					/* Record move for side to move in internal structures */
+					bot.recordMove(move, sideToMove);
+					toggleSideToMove();
+				}
+				case PLAYING -> {
+					bot.recordMove(move, sideToMove);
+					toggleSideToMove();
 
-            if (!isStarted) {
-                isStarted = true;
-                engineSide = sideToMove;
-            }
+					Move response = bot.calculateNextMove(engineSide);
+					emitMove(response);
+					toggleSideToMove();
+				}
+				default -> System.err.println("[WARNING]: Unexpected move received (prior to new command)");
+			}
+		}
 
-            /* Make next move (go is issued when it's the bot's turn) */
-            Move nextMove = bot.calculateNextMove();
-            emitMove(nextMove);
+		private void emitMove(Move move) {
+			if (move.isDropIn() || move.isNormal() || move.isPromotion())
+				System.out.print("move ");
+			System.out.println(Move.serializeMove(move));
+		}
 
-            toggleSideToMove();
-        }
+		public void performHandshake() {
+			/* Await start command ("xboard") */
+			String command = scanner.nextLine();
+			if (!command.equals("xboard")) {
+				System.err.println("PROTOCOL ERROR: EXPECTED XBOARD");
+				System.exit(-1);
+			}
+			System.out.print("\n");
 
-        private void processIncomingMove(Move move) {
-            switch (state) {
-                case RECV_NEW, FORCE_MODE -> {
-//                    System.out.println(">>> Current State: " + state + " <<<");
-                    /* Record move for side to move in internal structures */
-                    bot.recordMove(move, sideToMove);
-                    toggleSideToMove();
-                }
-                case PLAYING -> {
-//                    System.out.println(">>> Current State: " + state + " <<<");
-                    bot.recordMove(move, sideToMove);
-                    toggleSideToMove();
+			command = scanner.nextLine();
+			if (!command.equals("protover 2")) {
+				System.err.println("PROTOCOL ERROR: PROTOVER != 2 OR UNEXPECTED CMD");
+				System.exit(-1);
+			}
 
-                    Move response = bot.calculateNextMove();
-                    emitMove(response);
-                    toggleSideToMove();
-                }
-                default -> System.err.println("[WARNING]: Unexpected move received (prior to new command)");
-            }
-        }
+			/* Respond with features */
+			String features = constructFeaturesPayload();
+			System.out.println(features);
 
-        private void emitMove(Move move) {
-            if (move.isDropIn() || move.isNormal() || move.isPromotion())
-                System.out.print("move ");
-            System.out.println(serializeMove(move));
-        }
+			/* Receive and discard boilerplate commands */
+			while (true) {
+				command = scanner.nextLine();
+				if (command.equals("new") || command.equals("force")
+						|| command.equals("go") || command.equals("quit")) {
+					bufferedCmd = command;
+					System.out.println("Break because of " + command);
+					break;
+				}
+			}
 
-        public void performHandshake() {
-            /* Await start command ("xboard") */
-            String command = scanner.nextLine();
-            assert command.equals("xboard");
-            System.out.print("\n");
+			state = EngineState.HANDSHAKE_DONE;
+		}
 
-            System.out.println("Got xboard command");
+		public void executeOneCommand() {
+			String nextCmd;
 
-            command = scanner.nextLine();
-            assert command.startsWith("protover");
+			if (bufferedCmd != null) {
+				nextCmd = bufferedCmd;
+				bufferedCmd = null;
+			} else {
+				nextCmd = scanner.nextLine();
+			}
 
-            /* Respond with features */
-            String features = constructFeaturesPayload();
-            System.out.println(features);
+			StringTokenizer tokenizer = new StringTokenizer(nextCmd);
+			String command = tokenizer.nextToken();
 
-            /* Receive and discard boilerplate commands */
-            while (true) {
-                command = scanner.nextLine();
-                if (command.equals("new") || command.equals("force")
-                        || command.equals("go") || command.equals("quit")) {
-                    bufferedCmd = command;
-                    break;
-                }
-            }
+			switch (command) {
+				case "quit" -> System.exit(0);
+				case "new" -> newGame();
+				case "force" -> enterForceMode();
+				case "go" -> leaveForceMode();
+				case "usermove" -> {
+					Move incomingMove = Move.deserializeMove(tokenizer.nextToken());
+					processIncomingMove(incomingMove);
+				}
+				// Debug commands
+				case "hint" -> System.out.println("askuser command Insert debug command");
+				case "command" -> parseCommands(tokenizer.nextToken());
+			}
+		}
 
-            state = EngineState.HANDSHAKE_DONE;
-        }
+		private void parseCommands(String command) {
+			switch (command) {
+				case "boardw" -> DebugTools.printBoardPretty(bot.board.getBoard(), true);
+				case "boardb" -> DebugTools.printBoardPretty(bot.board.getBoard(), false);
+			}
+			if (command.startsWith("eval")) {
 
-        public void executeOneCommand() {
-            String nextCmd;
+			}
 
-            if (bufferedCmd != null) {
-                nextCmd = bufferedCmd;
-                bufferedCmd = null;
-            } else {
-                nextCmd = scanner.nextLine();
-            }
+		}
+	}
 
-            StringTokenizer tokenizer = new StringTokenizer(nextCmd);
-            String command = tokenizer.nextToken();
+	public static void main(String[] args) {
+		EngineComponents engine = new EngineComponents();
+		engine.performHandshake();
 
-            switch (command) {
-                case "quit" -> System.exit(0);
-                case "new" -> newGame();
-                case "force" -> enterForceMode();
-                case "go" -> leaveForceMode();
-                case "usermove" -> {
-                    Move incomingMove = deserializeMove(tokenizer.nextToken());
-                    processIncomingMove(incomingMove);
-                }
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        EngineComponents engine = new EngineComponents();
-        engine.performHandshake();
-
-        while (true) {
-            /* Fetch and execute next command */
-            engine.executeOneCommand();
-        }
-    }
+		while (true) {
+			/* Fetch and execute next command */
+			engine.executeOneCommand();
+		}
+	}
 }

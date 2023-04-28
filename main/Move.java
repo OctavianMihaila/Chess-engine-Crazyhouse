@@ -70,28 +70,6 @@ public class Move {
     }
 
     /**
-        Translates a move from opponent's perspective to engine's perspective
-     */
-    public void translateMove() {
-        if (source.isPresent() && destination.isPresent()) {
-            String translatedSource = translatePosition(source.get());
-            String translatedDest = translatePosition(destination.get());
-            source = Optional.of(translatedSource);
-            destination = Optional.of(translatedDest);
-        }
-    }
-
-    private String translatePosition(String pos) {
-        int row = pos.charAt(1) - '0';
-        int col = pos.charAt(0) - 'a';
-        int translatedRow = 9 - row;
-//        int translatedCol = 9 - col;
-        return "" + (char)('a' + col) + translatedRow;
-    }
-
-
-
-    /**
      * Checks whether the move is an usual move/capture
      * @return true if move is NOT a drop-in or promotion, false otherwise
      */
@@ -154,5 +132,66 @@ public class Move {
 
     public static Move resign() {
         return new Move(null, null, null);
+    }
+
+    public static String serializeMove(Move move) {
+        if (move.isNormal())
+            return move.getSource().orElse("") + move.getDestination().orElse("");
+        else if (move.isPromotion() && move.getReplacement().isPresent()) {
+            String pieceCode = switch (move.getReplacement().get()) {
+                case BISHOP -> "b";
+                case KNIGHT -> "n";
+                case ROOK -> "r";
+                case QUEEN -> "q";
+                default -> "";
+            };
+            return move.getSource().orElse("") + move.getDestination().orElse("") + pieceCode;
+        } else if (move.isDropIn() && move.getReplacement().isPresent()) {
+            String pieceCode = switch (move.getReplacement().get()) {
+                case BISHOP -> "B";
+                case KNIGHT -> "N";
+                case ROOK -> "R";
+                case QUEEN -> "Q";
+                case PAWN -> "P";
+                default -> "";
+            };
+            return pieceCode + "@" + move.getDestination();
+        } else {
+            return "resign";
+        }
+    }
+
+    public static Move deserializeMove(String s) {
+        if (s.charAt(1) == '@') {
+            /* Drop-in */
+
+            PieceType piece = switch (s.charAt(0)) {
+                case 'P' -> PieceType.PAWN;
+                case 'R' -> PieceType.ROOK;
+                case 'B' -> PieceType.BISHOP;
+                case 'N' -> PieceType.KNIGHT;
+                case 'Q' -> PieceType.QUEEN;
+                case 'K' -> PieceType.KING; /* This is an illegal move */
+                default -> null;
+            };
+
+            return Move.dropIn(s.substring(2, 4), piece);
+        } else if (s.length() == 5) {
+            /* Pawn promotion */
+            PieceType piece = switch (s.charAt(4)) {
+                case 'p' -> PieceType.PAWN; /* This is an illegal move */
+                case 'r' -> PieceType.ROOK;
+                case 'b' -> PieceType.BISHOP;
+                case 'n' -> PieceType.KNIGHT;
+                case 'q' -> PieceType.QUEEN;
+                case 'k' -> PieceType.KING; /* This is an illegal move */
+                default -> null;
+            };
+
+            return Move.promote(s.substring(0, 2), s.substring(2, 4), piece);
+        }
+
+        /* Normal move/capture/castle/en passant */
+        return Move.moveTo(s.substring(0, 2), s.substring(2, 4));
     }
 }

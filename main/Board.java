@@ -13,7 +13,7 @@ public class Board {
 	private final ArrayList<Piece> whiteCaptures = new ArrayList<>();
 	private final ArrayList<Piece> blacksCaptures = new ArrayList<>();
 	private final Piece whiteKing;
-
+	private final Piece blackKing;
 
 	public Board() {
 		board = new Piece[9][9];
@@ -52,6 +52,7 @@ public class Board {
 		board[1][5] = new King(PlaySide.WHITE, 1, 5);
 		whiteKing = board[1][5];
 		board[8][5] = new King(PlaySide.BLACK, 8, 5);
+		blackKing = board[8][5];
 
 		// Setting up the pieces
 		for (int i = 1; i <= 8; i++) {
@@ -65,6 +66,26 @@ public class Board {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Getter for the king of the same color as the player
+	 * @param side the side of the table
+	 * @return the king
+	 */
+	public Piece getSameKing(PlaySide side) {
+		if (side == PlaySide.WHITE) return whiteKing;
+		return blackKing;
+	}
+
+	/**
+	 * Getter for the king of the opposite color as the player
+	 * @param side the side of the table
+	 * @return the king
+	 */
+	public Piece getOppositeKing(PlaySide side) {
+		if (side == PlaySide.WHITE) return blackKing;
+		return whiteKing;
 	}
 
 	/**
@@ -89,7 +110,6 @@ public class Board {
 
 	/**
 	 * Getter for the board
-	 * @deprecated If you need to update the board use the getters and setters instead
 	 * @return the board
 	 */
 	public Piece[][] getBoard() {
@@ -174,19 +194,24 @@ public class Board {
 	 * Chooses a random move, but prioritize captures first
 	 * @return a random move
 	 */
-	public Move aggressiveMode() {
+	public Move aggressiveMode(PlaySide side) {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
+		// Setting up my pieces and the other player pieces
+		ArrayList<Piece> mine = getSame(side);
+		ArrayList<Piece> theirs = getOpposites(side);
+		Piece myKing = getSameKing(side);
+
 		// Check if king is in check
-		System.out.println("Checking if the king can be captured at " + whiteKing.getSrcString());
-		for (Piece piece : blacks) {
-			if (piece.canCapture(this, whiteKing.x, whiteKing.y)) {
+		System.out.println("Checking if the king can be captured at " + myKing.getSrcString());
+		for (Piece piece : theirs) {
+			if (piece.canCapture(this, myKing.x, myKing.y)) {
 				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
-				allPossibleMoves.addAll(whiteKing.getPossibleCaptures(this));
+				allPossibleMoves.addAll(myKing.getPossibleCaptures(this));
 				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 				// TODO make other pieces capture the problem piece
-				allPossibleMoves.addAll(whiteKing.getPossibleMoves(this));
+				allPossibleMoves.addAll(myKing.getPossibleMoves(this));
 				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 				return Move.resign();
@@ -194,11 +219,11 @@ public class Board {
 		}
 
 		// First generate all captures and choose one if there are valid captures
-		for (Piece piece : whites) allPossibleMoves.addAll(piece.getPossibleCaptures(this));
+		for (Piece piece : mine) allPossibleMoves.addAll(piece.getPossibleCaptures(this));
 		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 		// If no captures are valid, generate all moves and choose one
-		for (Piece piece : whites) allPossibleMoves.addAll(piece.getPossibleMoves(this));
+		for (Piece piece : mine) allPossibleMoves.addAll(piece.getPossibleMoves(this));
 		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 		// If no moves are valid, resign, for now

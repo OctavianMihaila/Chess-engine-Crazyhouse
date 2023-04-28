@@ -192,11 +192,13 @@ public abstract class Piece {
 	public ArrayList<Move> getPossibleCaptures(Board board) {
 		ArrayList<Move> moves = new ArrayList<>();
 
+		Piece myKing = board.getSameKing(side);
 		for (int[] moveDir : getCaptureDirections()) {
 			for (int i = 1; i <= getMaxMoves(); i++) {
 				int xDest = x + i * moveDir[0];
 				int yDest = y + i * moveDir[1];
 				if (canCapture(board, xDest, yDest)) {
+					if (myKing != null && !validPathIgnoring(board, xDest, yDest, myKing)) continue;
 					moves.add(Move.moveTo(getSrcString(), getDstString(xDest, yDest)));
 				}
 			}
@@ -214,11 +216,13 @@ public abstract class Piece {
 	public ArrayList<Move> getPossibleMoves(Board board) {
 		ArrayList<Move> moves = new ArrayList<>();
 
+		Piece myKing = board.getSameKing(side);
 		for (int[] moveDir : getMoveDirections()) {
 			for (int i = 1; i <= getMaxMoves(); i++) {
 				int xDest = x + i * moveDir[0];
 				int yDest = y + i * moveDir[1];
 				if (canMove(board, xDest, yDest)) {
+					if (myKing != null && !validPathIgnoring(board, xDest, yDest, myKing)) continue;
 					moves.add(Move.moveTo(getSrcString(), getDstString(xDest, yDest)));
 				}
 			}

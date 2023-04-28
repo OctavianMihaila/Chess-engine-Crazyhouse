@@ -25,6 +25,11 @@ public class King extends Piece {
 	}
 
 	@Override
+	public boolean validCapture(Board board, int xDest, int yDest) {
+		return validPath(board, xDest, yDest);
+	}
+
+	@Override
 	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
 
@@ -39,14 +44,14 @@ public class King extends Piece {
 	}
 
 	public boolean isSafe(Board board, int xDest, int yDest) {
+		if (!onTable(xDest, yDest)) return false;
 		// Cant move to a position where is a piece
 		if (board.getPiece(xDest, yDest) != null && board.getPiece(xDest, yDest).side == side) return false;
 
 		System.out.println("Checking if the move doesn't produce check at " + getDstString(xDest, yDest));
 		// Check if the move doesn't produce check by checking if the king is in check after the move
 		for (Piece piece : board.getOpposites(side)) {
-			if (piece.getType() == PieceType.KING) continue;
-
+			if (piece.getType() == PieceType.KING && piece.validMove(board, xDest, yDest)) return false;
 			// If the piece can capture the king after the move, the move is invalid
 			if (piece.validCapture(board, xDest, yDest) && piece.validPathIgnoring(board, xDest, yDest, this)) {
 				return false;
