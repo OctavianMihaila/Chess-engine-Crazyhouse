@@ -49,10 +49,8 @@ public class Bot {
      * @return your move
      */
     public Move calculateNextMove() {
-        Move move = board.getRandMove();
+        Move move = board.aggressiveMode();
         board.registerMove(move);
-//        System.out.println(" --- Table after bot move ---");
-//        DebugTools.printBoardPretty(board.getBoard(), true);
         return move;
     }
 

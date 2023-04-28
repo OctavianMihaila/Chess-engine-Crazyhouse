@@ -117,6 +117,52 @@ public class Board {
 		board[srcX][srcY] = null;
 	}
 
+	public Move chooseRandom(ArrayList<Move> moves) {
+		if (moves == null || moves.size() == 0) return null;
+		Random rand = new Random(System.currentTimeMillis());
+		int index = rand.nextInt(moves.size());
+		return moves.get(index);
+	}
+
+	/**
+	 * Chooses a random move, but prioritize captures first
+	 * @return a random move
+	 */
+	public Move aggressiveMode() {
+		ArrayList<Move> allPossibleMoves = new ArrayList<>();
+
+		// Check if king is in check
+		System.out.println("Checking if the king can be captured at " + king.getSrcString());
+		for (Piece piece : blacks) {
+			if (piece.canCapture(this, king.x, king.y)) {
+				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
+				allPossibleMoves.addAll(king.getPossibleCaptures(this));
+				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+				// TODO make other pieces capture the problem piece
+				allPossibleMoves.addAll(king.getPossibleMoves(this));
+				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+				return Move.resign();
+			}
+		}
+
+		// First generate all captures and choose one if there are valid captures
+		for (Piece piece : whites) allPossibleMoves.addAll(piece.getPossibleCaptures(this));
+		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+		// If no captures are valid, generate all moves and choose one
+		for (Piece piece : whites) allPossibleMoves.addAll(piece.getPossibleMoves(this));
+		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+		// If no moves are valid, resign, for now
+		return Move.resign();
+	}
+
+	/**
+	 * Chooses a random move, purely random
+	 * @return a purely random move
+	 */
 	public Move getRandMove() {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 

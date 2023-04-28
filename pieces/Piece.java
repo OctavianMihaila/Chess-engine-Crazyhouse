@@ -183,7 +183,7 @@ public abstract class Piece {
 	 * Gets all possible captures for the piece
 	 *
 	 * @param board the board to get the captures on
-	 * @return an ArrayList of all possible captures
+	 * @return an ArrayList of all possible moves, not including captures
 	 */
 	public ArrayList<Move> getPossibleMoves(Board board) {
 		ArrayList<Move> moves = new ArrayList<>();
