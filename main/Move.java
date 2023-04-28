@@ -1,5 +1,7 @@
 package main;
 
+import pieces.Piece;
+
 import java.util.Optional;
 
 public class Move {
@@ -14,14 +16,6 @@ public class Move {
 
     private boolean enablesEnPassant;
 
-    public void setEnablesEnPassant(boolean enablesEnPassant) {
-        this.enablesEnPassant = enablesEnPassant;
-    }
-
-    public boolean isEnablesEnPassant() {
-        return enablesEnPassant;
-    }
-
     /*
       Use the following 4 constructors for Pieces.main.Move:
       moveTo(src, dst), if emitting a standard move (advance, capture, castle)
@@ -29,6 +23,22 @@ public class Move {
       dropIn(dst, replace), if placing a captured piece
       resign(), if you want to resign
      */
+
+
+    private Move(String source, String destination, PieceType replacement) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+        this.enablesEnPassant = false;
+    }
+
+    public void setEnablesEnPassant(boolean enablesEnPassant) {
+        this.enablesEnPassant = enablesEnPassant;
+    }
+
+    public boolean isEnablesEnPassant() {
+        return enablesEnPassant;
+    }
 
     public Optional<String> getSource() {
         return source;
@@ -42,11 +52,21 @@ public class Move {
         return replacement;
     }
 
-    private Move(String source, String destination, PieceType replacement) {
-        this.source = Optional.ofNullable(source);
-        this.destination = Optional.ofNullable(destination);
-        this.replacement = Optional.ofNullable(replacement);
-        this.enablesEnPassant = false;
+
+    public int getSourceX() {
+        return this.source.get().charAt(1) - '0';
+    }
+
+    public int getSourceY() {
+        return this.source.get().charAt(0) - 'a' + 1;
+    }
+
+    public int getDestinationX() {
+        return this.destination.get().charAt(1) - '0';
+    }
+
+    public int getDestinationY() {
+        return this.destination.get().charAt(0) - 'a' + 1;
     }
 
     /**
@@ -66,22 +86,6 @@ public class Move {
         int col = pos.charAt(0) - 'a';
         int translatedRow = 9 - row;
         return "" + (char)('a' + col) + translatedRow;
-    }
-
-    public int getSourceX() {
-        return this.source.get().charAt(1) - '0';
-    }
-
-    public int getSourceY() {
-        return this.source.get().charAt(0) - 'a' + 1;
-    }
-
-    public int getDestinationX() {
-        return this.destination.get().charAt(1) - '0';
-    }
-
-    public int getDestinationY() {
-        return this.destination.get().charAt(0) - 'a' + 1;
     }
 
     /**

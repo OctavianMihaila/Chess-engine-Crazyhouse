@@ -65,6 +65,7 @@ public class Main {
     }
 
     private static Move deserializeMove(String s) {
+        System.out.println("Serializing move: " + s);
         if (s.charAt(1) == '@') {
             /* Drop-in */
 

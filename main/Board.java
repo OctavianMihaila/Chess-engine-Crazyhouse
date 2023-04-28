@@ -99,6 +99,24 @@ public class Board {
 		return false;
 	}
 
+	public boolean checkIfEnPassantCapture(int srcX, int srcY, int dstX, int dstY) {
+		// Normal capture
+		if (board[dstX][dstY] != null) {
+			return false;
+		}
+
+		Piece capturedPiece = board[dstX + 1][dstY];
+
+		// There is no pawn that can be captured with en passant (bot's pawn).
+		if (capturedPiece != null && capturedPiece.getType() == PieceType.PAWN
+				&& board[dstX + 1][dstY].side == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
 	public void registerMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
 //		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
@@ -114,12 +132,26 @@ public class Board {
 		Piece dstPiece = board[dstX][dstY];
 		if (srcPiece == null) return;
 
-		// Handle En Passant
-		if (move.isNormal() && srcPiece.getType() == PieceType.PAWN
-				&& srcPiece.side == (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
-				&& checkIfEnPassantIsEnabled(srcX, srcY, dstX, dstY)) {
-			move.setEnablesEnPassant(true);
+		// En passant
+		if (move.isNormal() && srcPiece.getType() == PieceType.PAWN) { // moved piece is a pawn
+			// Bot performs en passant.
+			if (srcPiece.side == (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
+					&& checkIfEnPassantIsEnabled(srcX, srcY, dstX, dstY)) {
+				move.setEnablesEnPassant(true);
+			}
+
+			// Bot receives en passant and updates its internal structures.
+			if (checkIfEnPassantCapture(srcX, srcY, dstX, dstY)) {
+				board[dstX + 1][dstY] = null; // Remove the captured pawn (with en passant).
+			}
 		}
+
+//		// Handle En Passant
+//		if (move.isNormal() && srcPiece.getType() == PieceType.PAWN
+//				&& srcPiece.side == (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
+//				&& checkIfEnPassantIsEnabled(srcX, srcY, dstX, dstY)) {
+//			move.setEnablesEnPassant(true);
+//		}
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
@@ -142,6 +174,7 @@ public class Board {
 	}
 
 	public Move getRandMove() {
+		DebugTools.printBoardPretty(board, false);
 		Move lastMove = Bot.getLastMove();
 
 		if (lastMove != null && lastMove.isEnablesEnPassant()) {
@@ -150,14 +183,23 @@ public class Board {
 			String sourceNewMove = null;
 			String destinationNewMove = Piece.getDstString(xDestLastMove + 1, yDestLastMove);
 
-			Piece leftPiece = board[xDestLastMove][yDestLastMove - 1];
-			Piece rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			Piece leftPiece = null;
+			Piece rightPiece = null;
+
+			if (yDestLastMove == 1) {
+				rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			} else if (yDestLastMove == 8) {
+				leftPiece = board[xDestLastMove][yDestLastMove - 1];
+			} else {
+				leftPiece = board[xDestLastMove][yDestLastMove - 1];
+				rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			}
 
 			// Looking for a pawn that can do en passant.
-			if (leftPiece != null && leftPiece.getType() == PieceType.PAWN) {
+			if (leftPiece != null && leftPiece.getType() == PieceType.PAWN && leftPiece.side == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
 				sourceNewMove = leftPiece.getSrcString();
 				return ((Pawn)leftPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
-			} else if (rightPiece != null && rightPiece.getType() == PieceType.PAWN) {
+			} else if (rightPiece != null && rightPiece.getType() == PieceType.PAWN && rightPiece.side == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
 				sourceNewMove = rightPiece.getSrcString();
 				return ((Pawn)rightPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
 			}
