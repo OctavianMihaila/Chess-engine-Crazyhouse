@@ -10,230 +10,314 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-115 >first : xboard
+117 >first : xboard
 protover 2
-117 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
-117 <first : javac ./main/*.java
-799 <first : javac ./pieces/*.java
-1194 >first : black
-1194 >first : time 30000
-1194 >first : otim 30000
-1194 >first : white
+120 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+120 <first : javac ./main/*.java
+875 <first : javac ./pieces/*.java
+1283 >first : black
+1283 >first : time 30000
+1283 >first : otim 30000
+1283 >first : white
 book hit = (NULL)
-1194 >first : go
+1284 >first : go
 nps: w=-1, b=-1
-1428 <first : java main/Main.java
-2000 <first : 
-2000 <first : Got xboard command
-2004 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+1504 <first : java main/Main.java
+2042 <first : 
+2042 <first : Got xboard command
+2047 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
 Interrupting first
-2004 >first : accepted done
-2004 >first : accepted sigint
-2004 >first : accepted sigterm
-2004 >first : accepted san
-2004 >first : accepted reuse
-2004 >first : accepted usermove
-2004 >first : accepted analyze
-2004 >first : accepted ping
-2005 >first : accepted setboard
-2005 >first : accepted level
-2005 >first : accepted variants
-2005 >first : accepted name
-2005 >first : accepted myname
-2005 >first : accepted done
+2047 >first : accepted done
+2047 >first : accepted sigint
+2047 >first : accepted sigterm
+2047 >first : accepted san
+2047 >first : accepted reuse
+2047 >first : accepted usermove
+2047 >first : accepted analyze
+2047 >first : accepted ping
+2047 >first : accepted setboard
+2047 >first : accepted level
+2047 >first : accepted variants
+2047 >first : accepted name
+2047 >first : accepted myname
+2047 >first : accepted done
 recognized 'crazyhouse' (-1) as variant crazyhouse
 Reset(1, 0) from gameMode 1
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-2006 >first : quit
+2049 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-2056 >first : xboard
+2102 >first : xboard
 protover 2
-2056 >first : new
+2102 >first : new
 random
-2056 >first : variant crazyhouse
-2056 >first : level 40 5 0
-2056 >first : post
-2056 >first : hard
-2060 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
-2060 <first : javac ./main/*.java
-2743 <first : javac ./pieces/*.java
-3374 <first : java main/Main.java
-3965 <first : 
-3965 <first : Got xboard command
-3971 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-3971 >first : accepted done
-3971 >first : accepted sigint
-3971 >first : accepted sigterm
-3971 >first : accepted san
-3971 >first : accepted reuse
-3971 >first : accepted usermove
-3971 >first : accepted analyze
-3971 >first : accepted ping
-3971 >first : accepted setboard
-3971 >first : accepted level
-3971 >first : accepted variants
-3971 >first : accepted name
-3971 >first : accepted myname
-3971 >first : accepted done
-4644 >first : name octavian
-4644 >first : black
-4644 >first : time 30000
-4644 >first : otim 30000
-4644 >first : white
+2102 >first : variant crazyhouse
+2102 >first : level 40 5 0
+2102 >first : post
+2102 >first : hard
+2105 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+2105 <first : javac ./main/*.java
+2812 <first : javac ./pieces/*.java
+3449 <first : java main/Main.java
+4033 <first : 
+4033 <first : Got xboard command
+4040 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+4040 >first : accepted done
+4040 >first : accepted sigint
+4040 >first : accepted sigterm
+4040 >first : accepted san
+4040 >first : accepted reuse
+4040 >first : accepted usermove
+4040 >first : accepted analyze
+4040 >first : accepted ping
+4040 >first : accepted setboard
+4040 >first : accepted level
+4040 >first : accepted variants
+4040 >first : accepted name
+4040 >first : accepted myname
+4041 >first : accepted done
+4567 >first : name octavian
+4567 >first : black
+4567 >first : time 30000
+4567 >first : otim 30000
+4567 >first : white
 book hit = (NULL)
-4644 >first : go
+4567 >first : go
 nps: w=-1, b=-1
-4648 <first : Checking if the king can be captured ate1
-4649 <first : move b1c3
-5959 >first : time 29999
-5960 >first : otim 29869
+4571 <first : Checking if the king can be captured ate1
+4572 <first : move g2g3
+6806 >first : time 29999
+6806 >first : otim 29776
 book hit = (NULL)
-5960 >first : usermove 5960 >first : d7d5
-5960 <first : Checking if the king can be captured ate1
-5961 <first : move a2a3
-6954 >first : time 29999
-6954 >first : otim 29769
+6806 >first : usermove 6806 >first : f7f5
+6806 <first : Checking if the king can be captured ate1
+6808 <first : move e2e3
+7862 >first : time 29999
+7862 >first : otim 29671
 book hit = (NULL)
-6954 >first : usermove 6954 >first : c7c5
-6954 <first : Checking if the king can be captured ate1
-6955 <first : move b2b3
-8764 >first : time 29999
-8764 >first : otim 29588
+7862 >first : usermove 7862 >first : c7c5
+7863 <first : Checking if the king can be captured ate1
+7863 <first : move d1g4
+9327 >first : time 29999
+9327 >first : otim 29525
 book hit = (NULL)
-8764 >first : usermove 8764 >first : d5d4
-8766 <first : Checking if the king can be captured ate1
-8766 <first : move c3d5
-11456 >first : time 29999
-11456 >first : otim 29319
+9327 >first : usermove 9327 >first : a7a5
+9330 <first : Checking if the king can be captured ate1
+9330 <first : move g4h5
+14440 >first : time 29998
+14440 >first : otim 29014
 book hit = (NULL)
-11456 >first : usermove 11456 >first : b7b6
-11457 <first : Checking if the king can be captured ate1
-11457 <first : move h2h4
-14354 >first : time 29998
-14354 >first : otim 29030
+14440 >first : usermove 14440 >first : g7g6
+14440 <first : Checking if the king can be captured ate1
+14441 <first : move h5e2
+21152 >first : time 29998
+21152 >first : otim 28343
 book hit = (NULL)
-14354 >first : usermove 14354 >first : f7f5
-14355 <first : Checking if the king can be captured ate1
-14355 <first : move d5c7
-16614 >first : time 29998
-16614 >first : otim 28804
+21152 >first : usermove 21152 >first : b8c6
+21153 <first : Checking if the king can be captured ate1
+21153 <first : move h2h4
+22530 >first : time 29998
+22530 >first : otim 28205
 book hit = (NULL)
-16614 >first : usermove 16614 >first : d8c7
-16616 <first : Checking if the king can be captured ate1
-16616 <first : move a1a2
-20130 >first : time 29998
-20130 >first : otim 28452
+22530 >first : usermove 22530 >first : c6d4
+22533 <first : Checking if the king can be captured ate1
+22533 <first : move f1h3
+23860 >first : time 29998
+23860 >first : otim 28072
 book hit = (NULL)
-20130 >first : usermove 20130 >first : f5f4
-20130 <first : Checking if the king can be captured ate1
-20131 <first : move h4h5
-21307 >first : time 29998
-21307 >first : otim 28335
+23860 >first : usermove 23860 >first : d4b3
+23861 <first : Checking if the king can be captured ate1
+23861 <first : move h1h2
+24886 >first : time 29998
+24886 >first : otim 27970
 book hit = (NULL)
-21307 >first : usermove 21307 >first : g7g5
-21308 <first : Checking if the king can be captured ate1
-21309 <first : move h5g6
-23432 >first : time 29998
-23432 >first : otim 28122
+24886 >first : usermove 24886 >first : b3c1
+24888 <first : Checking if the king can be captured ate1
+24888 <first : move g1f3
+25830 >first : time 29997
+25830 >first : otim 27876
 book hit = (NULL)
-23432 >first : usermove 23432 >first : c7e5
-23435 <first : Checking if the king can be captured ate1
-23435 <first : move h1h4
-25115 >first : time 29998
-25115 >first : otim 27955
+25830 >first : usermove 25830 >first : c1d3
+25833 <first : Checking if the king can be captured ate1
+25833 <first : King is in chess because of d3 KNIGHT
+25833 <first : move e1f1
+27232 >first : time 29997
+27232 >first : otim 27736
 book hit = (NULL)
-25115 >first : usermove 25115 >first : e5e2
-25116 <first : Checking if the king can be captured ate1
-25116 <first : King is in chess because of e2 QUEEN
-25116 <first : move e1e2
-27918 >first : time 29997
-27918 >first : otim 27674
+27232 >first : usermove 27232 >first : d3b2
+27233 <first : Checking if the king can be captured atf1
+27233 <first : move a2a3
+28218 >first : time 29997
+28218 >first : otim 27637
 book hit = (NULL)
-27918 >first : usermove 27918 >first : c8g4
-27920 <first : Checking if the king can be captured ate2
-27920 <first : King is in chess because of g4 BISHOP
-27920 <first : move e2d3
-29912 >first : time 29997
-29912 >first : otim 27475
+28218 >first : usermove 28218 >first : b2c4
+28219 <first : Checking if the king can be captured atf1
+28219 <first : move f1g1
+28866 >first : time 29997
+28866 >first : otim 27573
 book hit = (NULL)
-29912 >first : usermove 29912 >first : g4f5
-29916 <first : Checking if the king can be captured atd3
-29916 <first : King is in chess because of f5 BISHOP
-29916 <first : move d3e2
-30688 >first : time 29997
-30688 >first : otim 27398
+28866 >first : usermove 28866 >first : c4d2
+28869 <first : Checking if the king can be captured atg1
+28869 <first : move h3f5
+29708 >first : time 29996
+29708 >first : otim 27489
 book hit = (NULL)
-30688 >first : usermove 30688 >first : f5g4
-30690 <first : Checking if the king can be captured ate2
-30690 <first : King is in chess because of g4 BISHOP
-30690 <first : move e2d3
-31402 >first : time 29997
-31402 >first : otim 27327
+29708 >first : usermove 29708 >first : d2f3
+29710 <first : Checking if the king can be captured atg1
+29710 <first : King is in chess because of f3 KNIGHT
+29710 <first : move g1g2
+31614 >first : time 29996
+31614 >first : otim 27298
 book hit = (NULL)
-31402 >first : usermove 31402 >first : g4f5
-31404 <first : Checking if the king can be captured atd3
-31404 <first : King is in chess because of f5 BISHOP
-31404 <first : move d3e2
-32082 >first : time 29996
-32082 >first : otim 27259
+31614 >first : usermove 31614 >first : f3d4
+31616 <first : Checking if the king can be captured atg2
+31616 <first : move e2c4
+33922 >first : time 29996
+33922 >first : otim 27068
 book hit = (NULL)
-32082 >first : usermove 32082 >first : f5g4
-32086 <first : Checking if the king can be captured ate2
-32086 <first : King is in chess because of g4 BISHOP
-32086 <first : move e2e1
-33716 >first : time 29996
-33716 >first : otim 27096
+33922 >first : usermove 33922 >first : d4f5
+33925 <first : Checking if the king can be captured atg2
+33925 <first : move g2h1
+35404 >first : time 29996
+35404 >first : otim 26920
 book hit = (NULL)
-33716 >first : usermove 33716 >first : g4e2
-33718 <first : Checking if the king can be captured ate1
-33718 <first : move g6h7
-37074 >first : time 29996
-37074 >first : otim 26760
+35404 >first : usermove 35404 >first : f5d6
+35405 <first : Checking if the king can be captured ath1
+35405 <first : move b1d2
+35956 >first : time 29996
+35956 >first : otim 26865
 book hit = (NULL)
-37074 >first : usermove 37074 >first : d4d3
-37075 <first : Checking if the king can be captured ate1
-37075 <first : move a3a4
-40158 >first : time 29996
-40158 >first : otim 26452
+35956 >first : usermove 35956 >first : d6c4
+35957 <first : Checking if the king can be captured ath1
+35958 <first : move c2c3
+36604 >first : time 29995
+36604 >first : otim 26800
 book hit = (NULL)
-40158 >first : usermove 40158 >first : b8c6
-40161 <first : Checking if the king can be captured ate1
-40161 <first : move f2f3
-41110 >first : time 29995
-41110 >first : otim 26357
+36604 >first : usermove 36604 >first : c4d2
+36608 <first : Checking if the king can be captured ath1
+36608 <first : move a1f1
+39328 >first : time 29995
+39328 >first : otim 26528
 book hit = (NULL)
-41110 >first : usermove 41110 >first : c6d4
-41112 <first : Checking if the king can be captured ate1
-41112 <first : move c1b2
-42072 >first : time 29995
-42072 >first : otim 26261
+39328 >first : usermove 39328 >first : d2e4
+39329 <first : Checking if the king can be captured ath1
+39330 <first : move f1c1
+40066 >first : time 29995
+40066 >first : otim 26454
 book hit = (NULL)
-42072 >first : usermove 42072 >first : d4f3
-42074 <first : Checking if the king can be captured ate1
-42074 <first : King is in chess because of f3 KNIGHT
-42074 <first : move e1f2
-45116 >first : time 29995
-45116 >first : otim 25957
+40066 >first : usermove 40066 >first : e4f2
+40068 <first : Checking if the king can be captured ath1
+40068 <first : King is in chess because of f2 KNIGHT
+40068 <first : move h1g1
+41090 >first : time 29995
+41090 >first : otim 26352
 book hit = (NULL)
-45116 >first : usermove 45116 >first : f8h6
-45119 <first : Checking if the king can be captured atf2
-45119 <first : move c2c4
-46110 >first : time 29995
-46110 >first : otim 25858
+41090 >first : usermove 41090 >first : f2g4
+41093 <first : Checking if the king can be captured atg1
+41094 <first : move c3c4
+60068 >first : time 29994
+60068 >first : otim 24455
 book hit = (NULL)
-46110 >first : usermove 46110 >first : h6g5
-46111 <first : Checking if the king can be captured atf2
-46111 <first : move a2a1
-46694 >first : time 29995
-46694 >first : otim 25800
+60068 >first : usermove 60068 >first : g4h2
+60070 <first : Checking if the king can be captured atg1
+60070 <first : move g1h1
+61510 >first : time 29994
+61510 >first : otim 24311
 book hit = (NULL)
-46694 >first : usermove 46694 >first : g5h4
-46695 <first : Checking if the king can be captured atf2
-46695 <first : King is in chess because of h4 BISHOP
-46695 <first : resign
-GameEnds(27, White resigns, 1)
-46695 >first : result 0-1 {White resigns}
-46695 >first : quit
-GameEnds(27, White resigns, 2)
+61510 >first : usermove 61510 >first : h2f3
+61511 <first : Checking if the king can be captured ath1
+61511 <first : move h4h5
+69272 >first : time 29994
+69272 >first : otim 23535
+book hit = (NULL)
+69272 >first : usermove 69272 >first : g6h5
+69275 <first : Checking if the king can be captured ath1
+69275 <first : move c1g1
+73718 >first : time 29994
+73718 >first : otim 23090
+book hit = (NULL)
+73718 >first : usermove 73718 >first : f3g1
+73720 <first : Checking if the king can be captured ath1
+73720 <first : move h1g1
+77170 >first : time 29993
+77170 >first : otim 22745
+book hit = (NULL)
+77170 >first : usermove 77170 >first : a8b8
+77171 <first : Checking if the king can be captured atg1
+77171 <first : move e3e4
+78716 >first : time 29993
+78716 >first : otim 22591
+book hit = (NULL)
+78716 >first : usermove 78716 >first : b8a8
+78719 <first : Checking if the king can be captured atg1
+78719 <first : move g1g2
+79694 >first : time 29993
+79694 >first : otim 22493
+book hit = (NULL)
+79694 >first : usermove 79694 >first : a8b8
+79695 <first : Checking if the king can be captured atg2
+79695 <first : move g2f2
+80662 >first : time 29993
+80662 >first : otim 22397
+book hit = (NULL)
+80662 >first : usermove 80662 >first : b8a8
+80663 <first : Checking if the king can be captured atf2
+80663 <first : move f2e1
+81312 >first : time 29993
+81312 >first : otim 22332
+book hit = (NULL)
+81312 >first : usermove 81312 >first : a8b8
+81314 <first : Checking if the king can be captured ate1
+81314 <first : move e1f1
+81880 >first : time 29993
+81880 >first : otim 22275
+book hit = (NULL)
+81880 >first : usermove 81880 >first : b8a8
+81881 <first : Checking if the king can be captured atf1
+81881 <first : move f1g1
+82666 >first : time 29993
+82666 >first : otim 22197
+book hit = (NULL)
+82666 >first : usermove 82666 >first : a8b8
+82667 <first : Checking if the king can be captured atg1
+82667 <first : move g1g2
+83748 >first : time 29992
+83748 >first : otim 22089
+book hit = (NULL)
+83748 >first : usermove 83748 >first : b8a8
+83750 <first : Checking if the king can be captured atg2
+83750 <first : move g2h2
+84516 >first : time 29992
+84516 >first : otim 22012
+book hit = (NULL)
+84516 >first : usermove 84516 >first : a8b8
+84517 <first : Checking if the king can be captured ath2
+84517 <first : move h2h1
+85270 >first : time 29992
+85270 >first : otim 21937
+book hit = (NULL)
+85270 >first : usermove 85270 >first : b8a8
+85271 <first : Checking if the king can be captured ath1
+85271 <first : move h1h2
+85918 >first : time 29992
+85918 >first : otim 21872
+book hit = (NULL)
+85918 >first : usermove 85918 >first : a8b8
+85920 <first : Checking if the king can be captured ath2
+85920 <first : move h2g2
+87264 >first : time 29992
+87264 >first : otim 21738
+book hit = (NULL)
+87264 >first : usermove 87264 >first : b8a8
+87265 <first : Checking if the king can be captured atg2
+87265 <first : move e4e5
+88922 >first : time 29992
+88922 >first : otim 21572
+book hit = (NULL)
+88922 >first : usermove 88922 >first : d7d5
+88923 <first : Checking if the king can be captured atg2
+88923 <first : move e5d6
+GameEnds(29, xboard exit, 2)
+91029 >first : result * {xboard exit}
+91029 >first : quit
