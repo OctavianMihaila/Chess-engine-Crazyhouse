@@ -13,6 +13,7 @@ public class Move {
     /* main.Piece to promote a pawn advancing to last row, or
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
+    private final int score;
 
     /*
       Use the following 4 constructors for Pieces.main.Move:
@@ -34,10 +35,22 @@ public class Move {
         return replacement;
     }
 
+    public int getScore() {
+        return score;
+    }
+
     private Move(String source, String destination, PieceType replacement) {
         this.source = Optional.ofNullable(source);
         this.destination = Optional.ofNullable(destination);
         this.replacement = Optional.ofNullable(replacement);
+        this.score = 0;
+    }
+
+    private Move(String source, String destination, PieceType replacement, int score) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+        this.score = score;
     }
 
     public int getSourceX() {

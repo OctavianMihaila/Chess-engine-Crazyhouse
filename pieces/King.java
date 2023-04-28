@@ -5,10 +5,17 @@ import main.PieceType;
 import main.PlaySide;
 
 public class King extends Piece {
+	private boolean moved = false;
 	public static final int[][] moveDirections = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
 	public King(PlaySide side, int x, int y) {
-		super(side, PieceType.KING, x, y);
+		super(side, PieceType.KING, x, y, 10);
+	}
+
+	@Override
+	public void updatePosition(int x, int y) {
+		moved = true;
+		super.updatePosition(x, y);
 	}
 
 	@Override

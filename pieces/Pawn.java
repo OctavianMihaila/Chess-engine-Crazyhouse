@@ -9,7 +9,7 @@ public class Pawn extends Piece {
 	public static final int[][] blackCaptureDirections = {{-1, 1}, {-1, -1}};
 
 	public Pawn(PlaySide side, int x, int y) {
-		super(side, PieceType.PAWN, x, y);
+		super(side, PieceType.PAWN, x, y, 1);
 	}
 
 	@Override

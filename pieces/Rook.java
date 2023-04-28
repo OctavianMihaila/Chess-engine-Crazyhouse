@@ -8,7 +8,7 @@ public class Rook extends Piece {
 	public static final int[][] moveDirections = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
 	public Rook(PlaySide side, int x, int y) {
-		super(side, PieceType.ROOK, x, y);
+		super(side, PieceType.ROOK, x, y, 2);
 	}
 
 	@Override
