@@ -8,8 +8,8 @@ public class Pawn extends Piece {
 	public static final int[][] whiteCaptureDirections = {{1, 1}, {1, -1}};
 	public static final int[][] blackCaptureDirections = {{-1, 1}, {-1, -1}};
 
-	public Pawn(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Pawn(PlaySide side, int x, int y) {
+		super(side, PieceType.PAWN, x, y);
 	}
 
 	@Override

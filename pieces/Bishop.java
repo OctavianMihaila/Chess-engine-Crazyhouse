@@ -7,8 +7,8 @@ import main.PlaySide;
 public class Bishop extends Piece {
 	public static final int[][] moveDirections = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
-	public Bishop(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Bishop(PlaySide side, int x, int y) {
+		super(side, PieceType.BISHOP, x, y);
 	}
 
 	@Override

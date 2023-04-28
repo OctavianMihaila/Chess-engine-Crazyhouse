@@ -7,8 +7,8 @@ import main.PlaySide;
 public class Knight extends Piece {
 	public static final int[][] moveDirections = {{2, 1}, {2, -1}, {-2, 1}, {-2, -1}, {1, 2}, {-1, 2}, {1, -2}, {-1, -2}};
 
-	public Knight(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Knight(PlaySide side, int x, int y) {
+		super(side, PieceType.KNIGHT, x, y);
 	}
 
 	@Override

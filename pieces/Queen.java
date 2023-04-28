@@ -7,8 +7,8 @@ import main.PlaySide;
 public class Queen extends Piece {
 	public static final int[][] moveDirections = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
-	public Queen(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Queen(PlaySide side, int x, int y) {
+		super(side, PieceType.QUEEN, x, y);
 	}
 
 	@Override

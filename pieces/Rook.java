@@ -7,8 +7,8 @@ import main.PlaySide;
 public class Rook extends Piece {
 	public static final int[][] moveDirections = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-	public Rook(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Rook(PlaySide side, int x, int y) {
+		super(side, PieceType.ROOK, x, y);
 	}
 
 	@Override
