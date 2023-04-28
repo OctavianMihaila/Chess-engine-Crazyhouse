@@ -8,14 +8,19 @@ public class Pawn extends Piece {
 	public static final int[][] whiteCaptureDirections = {{1, 1}, {1, -1}};
 	public static final int[][] blackCaptureDirections = {{-1, 1}, {-1, -1}};
 
-	public Pawn(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Pawn(PlaySide side, int x, int y) {
+		super(side, PieceType.PAWN, x, y, 1);
 	}
 
 	@Override
-	public boolean clearPath(Board board, int xDest, int yDest) {
+	public boolean validPath(Board board, int xDest, int yDest) {
 		if (x == 2 && side == PlaySide.WHITE) return board.getPiece(x + 1, y) == null;
 		if (x == 7 && side == PlaySide.BLACK) return board.getPiece(x - 1, y) == null;
+		return true;
+	}
+
+	@Override
+	public boolean validPathIgnoring(Board board, int xDest, int yDest, Piece piece) {
 		return true;
 	}
 

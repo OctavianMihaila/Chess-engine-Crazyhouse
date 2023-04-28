@@ -7,22 +7,8 @@ import main.PlaySide;
 public class Bishop extends Piece {
 	public static final int[][] moveDirections = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
-	public Bishop(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
-	}
-
-	@Override
-	public boolean clearPath(Board board, int xDest, int yDest) {
-		int verticalDist = xDest - x;
-		int horizontalDist = yDest - y;
-		int xDir = (int) Math.signum(verticalDist);
-		int yDir = (int) Math.signum(horizontalDist);
-
-		for (int i = 1; i < Math.abs(verticalDist); i++) {
-			if (board.getPiece(x + i * xDir, y + i * yDir) != null) return false;
-		}
-
-		return true;
+	public Bishop(PlaySide side, int x, int y) {
+		super(side, PieceType.BISHOP, x, y, 2);
 	}
 
 	@Override

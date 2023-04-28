@@ -13,12 +13,14 @@ public class Move {
     /* main.Piece to promote a pawn advancing to last row, or
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
+    private final int score;
 
     private boolean enablesEnPassant;
 
     public void setEnablesEnPassant(boolean enablesEnPassant) {
         this.enablesEnPassant = enablesEnPassant;
     }
+
 
     /*
       Use the following 4 constructors for Pieces.main.Move:
@@ -27,12 +29,6 @@ public class Move {
       dropIn(dst, replace), if placing a captured piece
       resign(), if you want to resign
      */
-
-    private Move(String source, String destination, PieceType replacement) {
-        this.source = Optional.ofNullable(source);
-        this.destination = Optional.ofNullable(destination);
-        this.replacement = Optional.ofNullable(replacement);
-    }
 
     public Optional<String> getSource() {
         return source;
@@ -44,6 +40,24 @@ public class Move {
 
     public Optional<PieceType> getReplacement() {
         return replacement;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    private Move(String source, String destination, PieceType replacement) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+        this.score = 0;
+    }
+
+    private Move(String source, String destination, PieceType replacement, int score) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+        this.score = score;
     }
 
     public int getSourceX() {
@@ -65,17 +79,10 @@ public class Move {
     /**
         Translates a move from opponent's perspective to engine's perspective
      */
-    private String translatePosition(String pos) {
-        int row = pos.charAt(1) - '0';
-        int col = pos.charAt(0) - 'a';
-        int translatedRow = 9 - row;
-//        int translatedCol = 9 - col;
-        return "" + (char)('a' + col) + translatedRow;
-    }
-
     public boolean isEnablesEnPassant() {
         return enablesEnPassant;
     }
+
 
     /**
      * Checks whether the move is an usual move/capture

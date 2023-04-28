@@ -7,12 +7,17 @@ import main.PlaySide;
 public class Knight extends Piece {
 	public static final int[][] moveDirections = {{2, 1}, {2, -1}, {-2, 1}, {-2, -1}, {1, 2}, {-1, 2}, {1, -2}, {-1, -2}};
 
-	public Knight(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Knight(PlaySide side, int x, int y) {
+		super(side, PieceType.KNIGHT, x, y, 3);
 	}
 
 	@Override
-	public boolean clearPath(Board board, int xDest, int yDest) {
+	public boolean validPath(Board board, int xDest, int yDest) {
+		return true;
+	}
+
+	@Override
+	public boolean validPathIgnoring(Board board, int xDest, int yDest, Piece piece) {
 		return true;
 	}
 

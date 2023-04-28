@@ -10,50 +10,50 @@ public class Board {
 
 	private boolean imBlack;
 
-	private ArrayList<Piece> whites = new ArrayList<Piece>();
-	private ArrayList<Piece> blacks = new ArrayList<Piece>();
-	private ArrayList<Piece> whiteCaptures = new ArrayList<Piece>();
-	private ArrayList<Piece> blacksCaptures = new ArrayList<Piece>();
-	private Piece king;
+	private final ArrayList<Piece> whites = new ArrayList<>();
+	private final ArrayList<Piece> blacks = new ArrayList<>();
+	private final ArrayList<Piece> whiteCaptures = new ArrayList<>();
+	private final ArrayList<Piece> blacksCaptures = new ArrayList<>();
+	private final Piece whiteKing;
 
 
 	public Board() {
 		board = new Piece[9][9];
 		// Setting up the pawns
 		for (int i = 1; i <= 8; i++) {
-			board[2][i] = new Pawn(PlaySide.WHITE, PieceType.PAWN, 2, i);
+			board[2][i] = new Pawn(PlaySide.WHITE, 2, i);
 		}
 
 		for (int i = 1; i <= 8; i++) {
-			board[7][i] = new Pawn(PlaySide.BLACK, PieceType.PAWN, 7, i);
+			board[7][i] = new Pawn(PlaySide.BLACK, 7, i);
 		}
 
 		// Setting up the rooks
-		board[1][1] = new Rook(PlaySide.WHITE, PieceType.ROOK, 1, 1);
-		board[1][8] = new Rook(PlaySide.WHITE, PieceType.ROOK, 1, 8);
-		board[8][1] = new Rook(PlaySide.BLACK, PieceType.ROOK, 8, 1);
-		board[8][8] = new Rook(PlaySide.BLACK, PieceType.ROOK, 8, 8);
+		board[1][1] = new Rook(PlaySide.WHITE, 1, 1);
+		board[1][8] = new Rook(PlaySide.WHITE, 1, 8);
+		board[8][1] = new Rook(PlaySide.BLACK, 8, 1);
+		board[8][8] = new Rook(PlaySide.BLACK, 8, 8);
 
 		// Setting up the knights
-		board[1][2] = new Knight(PlaySide.WHITE, PieceType.KNIGHT, 1, 2);
-		board[1][7] = new Knight(PlaySide.WHITE, PieceType.KNIGHT, 1, 7);
-		board[8][2] = new Knight(PlaySide.BLACK, PieceType.KNIGHT, 8, 2);
-		board[8][7] = new Knight(PlaySide.BLACK, PieceType.KNIGHT, 8, 7);
+		board[1][2] = new Knight(PlaySide.WHITE, 1, 2);
+		board[1][7] = new Knight(PlaySide.WHITE, 1, 7);
+		board[8][2] = new Knight(PlaySide.BLACK, 8, 2);
+		board[8][7] = new Knight(PlaySide.BLACK, 8, 7);
 
 		// Setting up the bishops
-		board[1][3] = new Bishop(PlaySide.WHITE, PieceType.BISHOP, 1, 3);
-		board[1][6] = new Bishop(PlaySide.WHITE, PieceType.BISHOP, 1, 6);
-		board[8][3] = new Bishop(PlaySide.BLACK, PieceType.BISHOP, 8, 3);
-		board[8][6] = new Bishop(PlaySide.BLACK, PieceType.BISHOP, 8, 6);
+		board[1][3] = new Bishop(PlaySide.WHITE, 1, 3);
+		board[1][6] = new Bishop(PlaySide.WHITE, 1, 6);
+		board[8][3] = new Bishop(PlaySide.BLACK, 8, 3);
+		board[8][6] = new Bishop(PlaySide.BLACK, 8, 6);
 
 		// Setting up the queens
-		board[1][4] = new Queen(PlaySide.WHITE, PieceType.QUEEN, 1, 4);
-		board[8][4] = new Queen(PlaySide.BLACK, PieceType.QUEEN, 8, 4);
+		board[1][4] = new Queen(PlaySide.WHITE, 1, 4);
+		board[8][4] = new Queen(PlaySide.BLACK, 8, 4);
 
 		// Setting up the kings
-		board[1][5] = new King(PlaySide.WHITE, PieceType.KING, 1, 5);
-		king = board[1][5];
-		board[8][5] = new King(PlaySide.BLACK, PieceType.KING, 8, 5);
+		board[1][5] = new King(PlaySide.WHITE, 1, 5);
+		whiteKing = board[1][5];
+		board[8][5] = new King(PlaySide.BLACK, 8, 5);
 
 		// Setting up the pieces
 		for (int i = 1; i <= 8; i++) {
@@ -69,24 +69,55 @@ public class Board {
 		}
 	}
 
-	public ArrayList<Piece> getWhites() {
-		return whites;
+	/**
+	 * Getter for pieces of the same player
+	 * @param side the side of the player requesting the pieces
+	 * @return pieces of the player
+	 */
+	public ArrayList<Piece> getSame(PlaySide side) {
+		if (side == PlaySide.WHITE) return whites;
+		return blacks;
 	}
 
-	public ArrayList<Piece> getBlacks() {
-		return blacks;
+	/**
+	 * Getter for pieces of the opposite player
+	 * @param side the side of the player requesting the opposite pieces
+	 * @return pieces of the opposite player
+	 */
+	public ArrayList<Piece> getOpposites(PlaySide side) {
+		if (side == PlaySide.WHITE) return blacks;
+		return whites;
 	}
 
 	public Piece[][] getBoard() {
 		return board;
 	}
 
+	/**
+	 * Getter for a piece on the table
+	 * @param x vertical coordinate on table
+	 * @param y horizontal coordinate on table
+	 * @return piece at the position
+	 */
 	public Piece getPiece(int x, int y) {
 		return board[x][y];
 	}
 
-	public void setPiece(Piece piece, int x, int y) {
+	/**
+	 * Setter for a piece on the table. Also updates the piece internal location.
+	 * Can return null if the position is empty.
+	 * @param piece the piece to set on the table
+	 * @param x vertical coordinate on table
+	 * @param y horizontal coordinate on table
+	 * @return the piece that was on the table before putting current piece
+	 */
+	public Piece setPiece(Piece piece, int x, int y) {
+		if (piece == null) return null;
+		Piece current = board[x][y];
 		board[x][y] = piece;
+		piece.x = x;
+		piece.y = y;
+		return current;
 	}
 
 	public boolean checkIfEnPassantIsEnabled(int srcX, int srcY, int dstX, int dstY) {
@@ -123,17 +154,16 @@ public class Board {
 		}
 	}
 
+	/**
+	 * Registers a move and also update the internals of the board
+	 * @param move the move to register
+	 */
 	public void registerMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
-//		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
-//		int srcX = move.getSource().get().charAt(1) - '0';
-//		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
-//		int dstX = move.getDestination().get().charAt(1) - '0';
-		int srcX = move.getSourceX();
-		int srcY = move.getSourceY();
-		int dstX = move.getDestinationX();
-		int dstY = move.getDestinationY();
-
+		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
+		int srcX = move.getSource().get().charAt(1) - '0';
+		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
+		int dstX = move.getDestination().get().charAt(1) - '0';
 		Piece srcPiece = board[srcX][srcY];
 		Piece dstPiece = board[dstX][dstY];
 		if (srcPiece == null) return;
@@ -148,15 +178,16 @@ public class Board {
 
 			// Bot receives en passant and updates its internal structures.
 			if (checkIfEnPassantCapture(srcX, srcY, dstX, dstY)) {
-				if (dstPiece.side == PlaySide.BLACK) {
-					blacks.remove(board[dstX + 1][dstY]);
-					whiteCaptures.add(board[dstX + 1][dstY]);
-				} else if (dstPiece.side == PlaySide.WHITE) {
-					whites.remove(board[dstX + 1][dstY]);
-					blacksCaptures.add(board[dstX + 1][dstY]);
+				Piece capturedPiece = board[dstX + 1][dstY];
+				if (capturedPiece.side == PlaySide.BLACK) {
+					blacks.remove(capturedPiece);
+					whiteCaptures.add(capturedPiece);
+				} else if (capturedPiece.side == PlaySide.WHITE) {
+					whites.remove(capturedPiece);
+					blacksCaptures.add(capturedPiece);
 				}
 
-				board[dstX + 1][dstY] = null; // Remove the captured pawn (with en passant).
+				capturedPiece = null; // Remove the captured pawn (with en passant).
 			}
 		}
 
@@ -170,6 +201,7 @@ public class Board {
 				blacksCaptures.add(dstPiece);
 				whites.remove(dstPiece);
 			}
+			// Mark capture location
 			dstPiece.captured = true;
 			dstPiece.x = dstPiece.y = -1;
 		}
@@ -215,21 +247,38 @@ public class Board {
 		return null;
 	}
 
+	/**
+	 * Randomly selects a move from an ArrayList
+	 * @param moves list of moves
+	 * @return a random move if list is not null and has members, null otherwise
+	 */
+	public Move chooseRandom(ArrayList<Move> moves) {
+		if (moves == null || moves.size() == 0) return null;
+		Random rand = new Random(System.currentTimeMillis());
+		int index = rand.nextInt(moves.size());
+		return moves.get(index);
+	}
 
-	public Move getRandMove() {
+	/**
+	 * Chooses a random move, but prioritize captures first
+	 * @return a random move
+	 */
+	public Move aggressiveMode() {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
 		// Check if king is in check
-		System.out.println("Checking if the king can be captured at" + king.getSrcString());
+		System.out.println("Checking if the king can be captured at " + whiteKing.getSrcString());
 		for (Piece piece : blacks) {
-			if (piece.canCapture(this, king.x, king.y)) {
+			if (piece.canCapture(this, whiteKing.x, whiteKing.y)) {
 				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
-				allPossibleMoves.addAll(king.getAllMoves(this));
-				if (allPossibleMoves.size() == 0) return Move.resign();
-				Random rand = new Random(System.currentTimeMillis());
-				int index = rand.nextInt(allPossibleMoves.size());
+				allPossibleMoves.addAll(whiteKing.getPossibleCaptures(this));
+				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
-				return allPossibleMoves.get(index);
+				// TODO make other pieces capture the problem piece
+				allPossibleMoves.addAll(whiteKing.getPossibleMoves(this));
+				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+				return Move.resign();
 			}
 		}
 
@@ -237,6 +286,39 @@ public class Board {
 		Move enPassantMove = generateEnPassantMove();
 		if (enPassantMove != null) {
 			return enPassantMove;
+		}
+
+		// First generate all captures and choose one if there are valid captures
+		for (Piece piece : whites) allPossibleMoves.addAll(piece.getPossibleCaptures(this));
+		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+		// If no captures are valid, generate all moves and choose one
+		for (Piece piece : whites) allPossibleMoves.addAll(piece.getPossibleMoves(this));
+		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+		// If no moves are valid, resign, for now
+		return Move.resign();
+	}
+
+	/**
+	 * Chooses a random move, purely random
+	 * @return a purely random move
+	 */
+	public Move getRandMove() {
+		ArrayList<Move> allPossibleMoves = new ArrayList<>();
+
+		// Check if king is in check
+		System.out.println("Checking if the king can be captured at " + whiteKing.getSrcString());
+		for (Piece piece : blacks) {
+			if (piece.canCapture(this, whiteKing.x, whiteKing.y)) {
+				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
+				allPossibleMoves.addAll(whiteKing.getAllMoves(this));
+				if (allPossibleMoves.size() == 0) return Move.resign();
+				Random rand = new Random(System.currentTimeMillis());
+				int index = rand.nextInt(allPossibleMoves.size());
+
+				return allPossibleMoves.get(index);
+			}
 		}
 
 		for (Piece piece : whites) {
@@ -253,11 +335,6 @@ public class Board {
 		Random rand = new Random(System.currentTimeMillis());
 		int index = rand.nextInt(allPossibleMoves.size());
 		return allPossibleMoves.get(index);
-	}
-
-	public ArrayList<Piece> getOpposites(PlaySide side) {
-		if (side == PlaySide.WHITE) return blacks;
-		return whites;
 	}
 }
 

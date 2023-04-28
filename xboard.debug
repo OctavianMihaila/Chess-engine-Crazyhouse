@@ -10,314 +10,1303 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-117 >first : xboard
+130 >first : xboard
 protover 2
-120 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
-120 <first : javac ./main/*.java
-875 <first : javac ./pieces/*.java
-1283 >first : black
-1283 >first : time 30000
-1283 >first : otim 30000
-1283 >first : white
-book hit = (NULL)
-1284 >first : go
-nps: w=-1, b=-1
-1504 <first : java main/Main.java
-2042 <first : 
-2042 <first : Got xboard command
-2047 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-Interrupting first
-2047 >first : accepted done
-2047 >first : accepted sigint
-2047 >first : accepted sigterm
-2047 >first : accepted san
-2047 >first : accepted reuse
-2047 >first : accepted usermove
-2047 >first : accepted analyze
-2047 >first : accepted ping
-2047 >first : accepted setboard
-2047 >first : accepted level
-2047 >first : accepted variants
-2047 >first : accepted name
-2047 >first : accepted myname
-2047 >first : accepted done
+133 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+133 <first : javac ./main/*.java
+899 <first : javac ./pieces/*.java
+1552 <first : java main/Main.java
+2103 <first : 
+2103 <first : Got xboard command
+2109 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+2109 >first : accepted done
+2109 >first : accepted sigint
+2109 >first : accepted sigterm
+2109 >first : accepted san
+2109 >first : accepted reuse
+2109 >first : accepted usermove
+2109 >first : accepted analyze
+2109 >first : accepted ping
+2109 >first : accepted setboard
+2109 >first : accepted level
+2109 >first : accepted variants
+2109 >first : accepted name
+2109 >first : accepted myname
+2109 >first : accepted done
 recognized 'crazyhouse' (-1) as variant crazyhouse
-Reset(1, 0) from gameMode 1
+Reset(1, 0) from gameMode 0
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-2049 >first : quit
+2111 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-2102 >first : xboard
+2160 >first : xboard
 protover 2
-2102 >first : new
+2160 >first : new
 random
-2102 >first : variant crazyhouse
-2102 >first : level 40 5 0
-2102 >first : post
-2102 >first : hard
-2105 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
-2105 <first : javac ./main/*.java
-2812 <first : javac ./pieces/*.java
-3449 <first : java main/Main.java
-4033 <first : 
-4033 <first : Got xboard command
-4040 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-4040 >first : accepted done
-4040 >first : accepted sigint
-4040 >first : accepted sigterm
-4040 >first : accepted san
-4040 >first : accepted reuse
-4040 >first : accepted usermove
-4040 >first : accepted analyze
-4040 >first : accepted ping
-4040 >first : accepted setboard
-4040 >first : accepted level
-4040 >first : accepted variants
-4040 >first : accepted name
-4040 >first : accepted myname
+2160 >first : variant crazyhouse
+2160 >first : level 40 5 0
+2160 >first : post
+2160 >first : hard
+2164 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+2164 <first : javac ./main/*.java
+2880 <first : javac ./pieces/*.java
+3246 >first : force
+3476 <first : java main/Main.java
+4035 <first : 
+4035 <first : Got xboard command
+4041 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
 4041 >first : accepted done
-4567 >first : name octavian
-4567 >first : black
-4567 >first : time 30000
-4567 >first : otim 30000
-4567 >first : white
+4041 >first : accepted sigint
+4041 >first : accepted sigterm
+4041 >first : accepted san
+4041 >first : accepted reuse
+4041 >first : accepted usermove
+4041 >first : accepted analyze
+4041 >first : accepted ping
+4041 >first : accepted setboard
+4041 >first : accepted level
+4041 >first : accepted variants
+4041 >first : accepted name
+4041 >first : accepted myname
+4041 >first : accepted done
+6391 >first : usermove 6391 >first : e2e4
+14565 >first : usermove 14565 >first : d7d6
+31430 >first : usermove 31430 >first : g1e2
+59177 >first : usermove 59177 >first : d8d7
+64056 >first : usermove 64056 >first : h1g1
+73356 >first : usermove 73356 >first : g7g5
+74470 >first : usermove 74470 >first : g1h1
+75624 >first : usermove 75624 >first : b7b5
+77154 >first : usermove 77154 >first : h1g1
+78756 >first : usermove 78756 >first : b5b4
+80262 >first : usermove 80262 >first : g1h1
+81078 >first : usermove 81078 >first : g5g4
+82792 >first : usermove 82792 >first : h1g1
+90002 >first : usermove 90002 >first : d7f5
+91012 >first : usermove 91012 >first : g1h1
+91893 >first : usermove 91893 >first : f5e4
+93398 >first : usermove 93398 >first : h1g1
+94465 >first : usermove 94465 >first : e4e6
+95298 >first : usermove 95298 >first : g1h1
+96235 >first : usermove 96235 >first : e6d7
+97420 >first : usermove 97420 >first : h1g1
+138248 >first : usermove 138248 >first : e7e5
+139226 >first : usermove 139226 >first : g1h1
+140034 >first : usermove 140034 >first : e5e4
+140932 >first : usermove 140932 >first : h1g1
+163380 >first : usermove 163380 >first : d6d5
+164766 >first : usermove 164766 >first : g1h1
+165769 >first : usermove 165769 >first : f7f5
+167130 >first : usermove 167130 >first : h1g1
+168115 >first : usermove 168115 >first : h7h5
+168940 >first : usermove 168940 >first : g1h1
+170150 >first : usermove 170150 >first : c7c5
+173370 >first : usermove 173370 >first : h1g1
+177561 >first : usermove 177561 >first : a7a5
+191924 >first : name octavian
+191924 >first : black
+191924 >first : time 30000
+191924 >first : otim 30000
+191924 >first : white
 book hit = (NULL)
-4567 >first : go
+191924 >first : go
 nps: w=-1, b=-1
-4571 <first : Checking if the king can be captured ate1
-4572 <first : move g2g3
-6806 >first : time 29999
-6806 >first : otim 29776
+191929 <first : Checking if the king can be captured at e1
+191931 <first : move g2g3
+202272 >first : time 29999
+202272 >first : otim 28965
 book hit = (NULL)
-6806 >first : usermove 6806 >first : f7f5
-6806 <first : Checking if the king can be captured ate1
-6808 <first : move e2e3
-7862 >first : time 29999
-7862 >first : otim 29671
+202272 >first : usermove 202272 >first : d7d8
+202274 <first : Checking if the king can be captured at e1
+202274 <first : move f1g2
+261871 >first : time 29999
+261871 >first : otim 23006
 book hit = (NULL)
-7862 >first : usermove 7862 >first : c7c5
-7863 <first : Checking if the king can be captured ate1
-7863 <first : move d1g4
-9327 >first : time 29999
-9327 >first : otim 29525
+261871 >first : usermove 261871 >first : b8d7
+261872 <first : Checking if the king can be captured at e1
+261872 <first : Checking if the move doesn't produce check at f1
+261872 <first : move g2e4
+263017 >first : time 29999
+263017 >first : otim 22891
 book hit = (NULL)
-9327 >first : usermove 9327 >first : a7a5
-9330 <first : Checking if the king can be captured ate1
-9330 <first : move g4h5
-14440 >first : time 29998
-14440 >first : otim 29014
+263017 >first : usermove 263017 >first : d7b8
+263019 <first : Checking if the king can be captured at e1
+263019 <first : Checking if the move doesn't produce check at f1
+263019 <first : move e4d5
+266429 >first : time 29998
+266429 >first : otim 22550
 book hit = (NULL)
-14440 >first : usermove 14440 >first : g7g6
-14440 <first : Checking if the king can be captured ate1
-14441 <first : move h5e2
-21152 >first : time 29998
-21152 >first : otim 28343
+266429 >first : usermove 266429 >first : c8b7
+266433 <first : Checking if the king can be captured at e1
+266433 <first : Checking if the move doesn't produce check at f1
+266433 <first : move d5g8
+272671 >first : time 29998
+272671 >first : otim 21926
 book hit = (NULL)
-21152 >first : usermove 21152 >first : b8c6
-21153 <first : Checking if the king can be captured ate1
-21153 <first : move h2h4
-22530 >first : time 29998
-22530 >first : otim 28205
+272671 >first : usermove 272671 >first : h8g8
+272673 <first : Checking if the king can be captured at e1
+272673 <first : Checking if the move doesn't produce check at f1
+272673 <first : Checking if the move doesn't produce check at f1
+272673 <first : move e2d4
+275659 >first : time 29998
+275659 >first : otim 21628
 book hit = (NULL)
-22530 >first : usermove 22530 >first : c6d4
-22533 <first : Checking if the king can be captured ate1
-22533 <first : move f1h3
-23860 >first : time 29998
-23860 >first : otim 28072
+275659 >first : usermove 275659 >first : b8c6
+275661 <first : Checking if the king can be captured at e1
+275661 <first : Checking if the move doesn't produce check at e2
+275661 <first : Checking if the move doesn't produce check at f1
+275661 <first : move d1g4
+276267 >first : time 29998
+276267 >first : otim 21567
 book hit = (NULL)
-23860 >first : usermove 23860 >first : d4b3
-23861 <first : Checking if the king can be captured ate1
-23861 <first : move h1h2
-24886 >first : time 29998
-24886 >first : otim 27970
+276267 >first : usermove 276267 >first : c6d4
+276270 <first : Checking if the king can be captured at e1
+276270 <first : Checking if the move doesn't produce check at e2
+276270 <first : Checking if the move doesn't produce check at f1
+276270 <first : Checking if the move doesn't produce check at d1
+276270 <first : move g4d4
+277909 >first : time 29997
+277910 >first : otim 21403
 book hit = (NULL)
-24886 >first : usermove 24886 >first : b3c1
-24888 <first : Checking if the king can be captured ate1
-24888 <first : move g1f3
-25830 >first : time 29997
-25830 >first : otim 27876
+277910 >first : usermove 277910 >first : d8d4
+277914 <first : Checking if the king can be captured at e1
+277914 <first : Checking if the move doesn't produce check at e2
+277914 <first : Checking if the move doesn't produce check at f1
+277914 <first : Checking if the move doesn't produce check at d1
+277914 <first : Checking if the move doesn't produce check at e2
+277914 <first : Checking if the move doesn't produce check at f1
+277914 <first : Checking if the move doesn't produce check at d1
+277914 <first : move g1h1
+285930 >first : time 29997
+285930 >first : otim 20602
 book hit = (NULL)
-25830 >first : usermove 25830 >first : c1d3
-25833 <first : Checking if the king can be captured ate1
-25833 <first : King is in chess because of d3 KNIGHT
-25833 <first : move e1f1
-27232 >first : time 29997
-27232 >first : otim 27736
+285930 >first : usermove 285930 >first : d4e4
+285932 <first : Checking if the king can be captured at e1
+285932 <first : King is in chess because of e4 QUEEN
+285932 <first : Checking if the move doesn't produce check at e2
+285932 <first : Checking if the move doesn't produce check at f1
+285932 <first : Checking if the move doesn't produce check at d1
+285932 <first : Checking if the move doesn't produce check at e2
+285932 <first : Checking if the move doesn't produce check at f1
+285932 <first : Checking if the move doesn't produce check at d1
+285932 <first : move e1d1
+286867 >first : time 29997
+286867 >first : otim 20508
 book hit = (NULL)
-27232 >first : usermove 27232 >first : d3b2
-27233 <first : Checking if the king can be captured atf1
-27233 <first : move a2a3
-28218 >first : time 29997
-28218 >first : otim 27637
+286867 >first : usermove 286867 >first : e4h1
+286871 <first : Checking if the king can be captured at d1
+286871 <first : King is in chess because of h1 QUEEN
+286871 <first : Checking if the move doesn't produce check at e1
+286871 <first : Checking if the move doesn't produce check at e2
+286871 <first : Checking if the move doesn't produce check at e1
+286871 <first : Checking if the move doesn't produce check at e2
+286871 <first : move d1e2
+290663 >first : time 29996
+290663 >first : otim 20129
 book hit = (NULL)
-28218 >first : usermove 28218 >first : b2c4
-28219 <first : Checking if the king can be captured atf1
-28219 <first : move f1g1
-28866 >first : time 29997
-28866 >first : otim 27573
+290663 >first : usermove 290663 >first : h1c1
+290666 <first : Checking if the king can be captured at e2
+290666 <first : Checking if the move doesn't produce check at e3
+290666 <first : Checking if the move doesn't produce check at e1
+290666 <first : Checking if the move doesn't produce check at f3
+290666 <first : Checking if the move doesn't produce check at d3
+290666 <first : Checking if the move doesn't produce check at f1
+290666 <first : Checking if the move doesn't produce check at d1
+290666 <first : Checking if the move doesn't produce check at e3
+290666 <first : Checking if the move doesn't produce check at e1
+290666 <first : Checking if the move doesn't produce check at f3
+290666 <first : Checking if the move doesn't produce check at d3
+290666 <first : Checking if the move doesn't produce check at f1
+290666 <first : Checking if the move doesn't produce check at d1
+290666 <first : move b1a3
+298401 >first : time 29996
+298401 >first : otim 19356
 book hit = (NULL)
-28866 >first : usermove 28866 >first : c4d2
-28869 <first : Checking if the king can be captured atg1
-28869 <first : move h3f5
-29708 >first : time 29996
-29708 >first : otim 27489
+298401 >first : usermove 298401 >first : b7a6
+298404 <first : Checking if the king can be captured at e2
+298404 <first : King is in chess because of a6 BISHOP
+298404 <first : Checking if the move doesn't produce check at e3
+298404 <first : Checking if the move doesn't produce check at e1
+298404 <first : Checking if the move doesn't produce check at f3
+298404 <first : Checking if the move doesn't produce check at d3
+298404 <first : Checking if the move doesn't produce check at f1
+298404 <first : Checking if the move doesn't produce check at d1
+298404 <first : Checking if the move doesn't produce check at e3
+298404 <first : Checking if the move doesn't produce check at e1
+298404 <first : Checking if the move doesn't produce check at f3
+298404 <first : Checking if the move doesn't produce check at d3
+298404 <first : Checking if the move doesn't produce check at f1
+298404 <first : Checking if the move doesn't produce check at d1
+298404 <first : move e2e3
+303779 >first : time 29995
+303779 >first : otim 18818
 book hit = (NULL)
-29708 >first : usermove 29708 >first : d2f3
-29710 <first : Checking if the king can be captured atg1
-29710 <first : King is in chess because of f3 KNIGHT
-29710 <first : move g1g2
-31614 >first : time 29996
-31614 >first : otim 27298
+303780 >first : usermove 303780 >first : c1a1
+303784 <first : Checking if the king can be captured at e3
+303784 <first : Checking if the move doesn't produce check at e4
+303784 <first : Checking if the move doesn't produce check at f3
+303784 <first : Checking if the move doesn't produce check at e2
+303784 <first : Checking if the move doesn't produce check at d3
+303784 <first : Checking if the move doesn't produce check at f4
+303784 <first : Checking if the move doesn't produce check at d4
+303784 <first : Checking if the move doesn't produce check at e4
+303784 <first : Checking if the move doesn't produce check at f3
+303784 <first : Checking if the move doesn't produce check at e2
+303784 <first : Checking if the move doesn't produce check at d3
+303784 <first : Checking if the move doesn't produce check at f4
+303784 <first : Checking if the move doesn't produce check at d4
+303784 <first : move b2b3
+306599 >first : time 29995
+306599 >first : otim 18537
 book hit = (NULL)
-31614 >first : usermove 31614 >first : f3d4
-31616 <first : Checking if the king can be captured atg2
-31616 <first : move e2c4
-33922 >first : time 29996
-33922 >first : otim 27068
+306599 >first : usermove 306599 >first : a1b2
+306600 <first : Checking if the king can be captured at e3
+306600 <first : Checking if the move doesn't produce check at e4
+306600 <first : Checking if the move doesn't produce check at f3
+306601 <first : Checking if the move doesn't produce check at e2
+306601 <first : Checking if the move doesn't produce check at d3
+306601 <first : Checking if the move doesn't produce check at f4
+306601 <first : Checking if the move doesn't produce check at d4
+306601 <first : Checking if the move doesn't produce check at e4
+306601 <first : Checking if the move doesn't produce check at f3
+306601 <first : Checking if the move doesn't produce check at e2
+306601 <first : Checking if the move doesn't produce check at d3
+306601 <first : Checking if the move doesn't produce check at f4
+306601 <first : Checking if the move doesn't produce check at d4
+306601 <first : move h2h3
+307441 >first : time 29995
+307441 >first : otim 18453
 book hit = (NULL)
-33922 >first : usermove 33922 >first : d4f5
-33925 <first : Checking if the king can be captured atg2
-33925 <first : move g2h1
-35404 >first : time 29996
-35404 >first : otim 26920
+307441 >first : usermove 307441 >first : b2a3
+307442 <first : Checking if the king can be captured at e3
+307442 <first : Checking if the move doesn't produce check at e4
+307442 <first : Checking if the move doesn't produce check at f3
+307442 <first : Checking if the move doesn't produce check at e2
+307442 <first : Checking if the move doesn't produce check at d3
+307442 <first : Checking if the move doesn't produce check at f4
+307442 <first : Checking if the move doesn't produce check at d4
+307442 <first : Checking if the move doesn't produce check at e4
+307442 <first : Checking if the move doesn't produce check at f3
+307442 <first : Checking if the move doesn't produce check at e2
+307442 <first : Checking if the move doesn't produce check at d3
+307442 <first : Checking if the move doesn't produce check at f4
+307442 <first : Checking if the move doesn't produce check at d4
+307442 <first : move h3h4
+317976 >first : time 29995
+317976 >first : otim 17399
 book hit = (NULL)
-35404 >first : usermove 35404 >first : f5d6
-35405 <first : Checking if the king can be captured ath1
-35405 <first : move b1d2
-35956 >first : time 29996
-35956 >first : otim 26865
+317976 >first : usermove 317976 >first : a3b3
+317979 <first : Checking if the king can be captured at e3
+317979 <first : King is in chess because of b3 QUEEN
+317979 <first : Checking if the move doesn't produce check at e4
+317979 <first : Checking if the move doesn't produce check at f3
+317979 <first : Checking if the move doesn't produce check at e2
+317979 <first : Checking if the move doesn't produce check at d3
+317979 <first : Checking if the move doesn't produce check at f4
+317979 <first : Checking if the move doesn't produce check at d4
+317979 <first : Checking if the move doesn't produce check at e4
+317979 <first : Checking if the move doesn't produce check at f3
+317979 <first : Checking if the move doesn't produce check at e2
+317979 <first : Checking if the move doesn't produce check at d3
+317979 <first : Checking if the move doesn't produce check at f4
+317979 <first : Checking if the move doesn't produce check at d4
+317979 <first : move e3f4
+334569 >first : time 29994
+334569 >first : otim 15740
 book hit = (NULL)
-35956 >first : usermove 35956 >first : d6c4
-35957 <first : Checking if the king can be captured ath1
-35958 <first : move c2c3
-36604 >first : time 29995
-36604 >first : otim 26800
+334569 >first : usermove 334569 >first : b3c4
+334571 <first : Checking if the king can be captured at f4
+334571 <first : King is in chess because of c4 QUEEN
+334571 <first : Checking if the move doesn't produce check at f5
+334571 <first : Checking if the move doesn't produce check at g4
+334571 <first : Checking if the move doesn't produce check at f3
+334571 <first : Checking if the move doesn't produce check at e4
+334571 <first : Checking if the move doesn't produce check at g5
+334571 <first : Checking if the move doesn't produce check at e5
+334571 <first : Checking if the move doesn't produce check at e3
+334571 <first : move f4f5
+338791 >first : time 29994
+338791 >first : otim 15318
 book hit = (NULL)
-36604 >first : usermove 36604 >first : c4d2
-36608 <first : Checking if the king can be captured ath1
-36608 <first : move a1f1
-39328 >first : time 29995
-39328 >first : otim 26528
+338791 >first : usermove 338791 >first : c4d5
+338793 <first : Checking if the king can be captured at f5
+338793 <first : King is in chess because of d5 QUEEN
+338793 <first : Checking if the move doesn't produce check at f6
+338793 <first : Checking if the move doesn't produce check at g5
+338793 <first : Checking if the move doesn't produce check at f4
+338793 <first : Checking if the move doesn't produce check at e5
+338793 <first : Checking if the move doesn't produce check at g6
+338793 <first : Checking if the move doesn't produce check at e6
+338793 <first : Checking if the move doesn't produce check at g4
+338793 <first : Checking if the move doesn't produce check at e4
+338793 <first : Checking if the move doesn't produce check at f6
+338793 <first : Checking if the move doesn't produce check at g5
+338793 <first : Checking if the move doesn't produce check at f4
+338793 <first : Checking if the move doesn't produce check at e5
+338793 <first : Checking if the move doesn't produce check at g6
+338793 <first : Checking if the move doesn't produce check at e6
+338793 <first : Checking if the move doesn't produce check at g4
+338793 <first : Checking if the move doesn't produce check at e4
+338793 <first : move f5f6
+342220 >first : time 29994
+342220 >first : otim 14976
 book hit = (NULL)
-39328 >first : usermove 39328 >first : d2e4
-39329 <first : Checking if the king can be captured ath1
-39330 <first : move f1c1
-40066 >first : time 29995
-40066 >first : otim 26454
+342220 >first : usermove 342220 >first : d5d8
+342223 <first : Checking if the king can be captured at f6
+342223 <first : King is in chess because of d8 QUEEN
+342223 <first : Checking if the move doesn't produce check at f7
+342223 <first : Checking if the move doesn't produce check at g6
+342223 <first : Checking if the move doesn't produce check at f5
+342223 <first : Checking if the move doesn't produce check at e6
+342223 <first : Checking if the move doesn't produce check at g7
+342223 <first : Checking if the move doesn't produce check at e7
+342223 <first : Checking if the move doesn't produce check at g5
+342223 <first : Checking if the move doesn't produce check at e5
+342223 <first : Checking if the move doesn't produce check at f7
+342223 <first : Checking if the move doesn't produce check at g6
+342223 <first : Checking if the move doesn't produce check at f5
+342223 <first : Checking if the move doesn't produce check at e6
+342223 <first : Checking if the move doesn't produce check at g7
+342223 <first : Checking if the move doesn't produce check at e7
+342223 <first : Checking if the move doesn't produce check at g5
+342223 <first : Checking if the move doesn't produce check at e5
+342223 <first : move f6f5
+343980 >first : time 29994
+343980 >first : otim 14800
 book hit = (NULL)
-40066 >first : usermove 40066 >first : e4f2
-40068 <first : Checking if the king can be captured ath1
-40068 <first : King is in chess because of f2 KNIGHT
-40068 <first : move h1g1
-41090 >first : time 29995
-41090 >first : otim 26352
+343980 >first : usermove 343980 >first : d8c8
+343982 <first : Checking if the king can be captured at f5
+343982 <first : King is in chess because of c8 QUEEN
+343982 <first : Checking if the move doesn't produce check at f6
+343982 <first : Checking if the move doesn't produce check at g5
+343982 <first : Checking if the move doesn't produce check at f4
+343982 <first : Checking if the move doesn't produce check at e5
+343982 <first : Checking if the move doesn't produce check at g6
+343982 <first : Checking if the move doesn't produce check at e6
+343982 <first : Checking if the move doesn't produce check at g4
+343982 <first : Checking if the move doesn't produce check at e4
+343982 <first : Checking if the move doesn't produce check at f6
+343982 <first : Checking if the move doesn't produce check at g5
+343982 <first : Checking if the move doesn't produce check at f4
+343982 <first : Checking if the move doesn't produce check at e5
+343982 <first : Checking if the move doesn't produce check at g6
+343982 <first : Checking if the move doesn't produce check at e6
+343982 <first : Checking if the move doesn't produce check at g4
+343982 <first : Checking if the move doesn't produce check at e4
+343982 <first : move f5e5
+345862 >first : time 29993
+345862 >first : otim 14612
 book hit = (NULL)
-41090 >first : usermove 41090 >first : f2g4
-41093 <first : Checking if the king can be captured atg1
-41094 <first : move c3c4
-60068 >first : time 29994
-60068 >first : otim 24455
+345862 >first : usermove 345862 >first : c8b8
+345864 <first : Checking if the king can be captured at e5
+345864 <first : King is in chess because of b8 QUEEN
+345864 <first : Checking if the move doesn't produce check at e6
+345864 <first : Checking if the move doesn't produce check at f5
+345864 <first : Checking if the move doesn't produce check at e4
+345864 <first : Checking if the move doesn't produce check at d5
+345864 <first : Checking if the move doesn't produce check at f6
+345864 <first : Checking if the move doesn't produce check at d6
+345864 <first : Checking if the move doesn't produce check at f4
+345864 <first : Checking if the move doesn't produce check at d4
+345864 <first : Checking if the move doesn't produce check at e6
+345864 <first : Checking if the move doesn't produce check at f5
+345864 <first : Checking if the move doesn't produce check at e4
+345864 <first : Checking if the move doesn't produce check at d5
+345864 <first : Checking if the move doesn't produce check at f6
+345864 <first : Checking if the move doesn't produce check at d6
+345864 <first : Checking if the move doesn't produce check at f4
+345864 <first : Checking if the move doesn't produce check at d4
+345864 <first : move e5e6
+347080 >first : time 29993
+347080 >first : otim 14490
 book hit = (NULL)
-60068 >first : usermove 60068 >first : g4h2
-60070 <first : Checking if the king can be captured atg1
-60070 <first : move g1h1
-61510 >first : time 29994
-61510 >first : otim 24311
+347080 >first : usermove 347080 >first : b8c8
+347083 <first : Checking if the king can be captured at e6
+347083 <first : King is in chess because of c8 QUEEN
+347083 <first : Checking if the move doesn't produce check at e7
+347083 <first : Checking if the move doesn't produce check at f6
+347083 <first : Checking if the move doesn't produce check at e5
+347083 <first : Checking if the move doesn't produce check at d6
+347083 <first : Checking if the move doesn't produce check at f7
+347083 <first : Checking if the move doesn't produce check at d7
+347083 <first : Checking if the move doesn't produce check at f5
+347083 <first : Checking if the move doesn't produce check at d5
+347083 <first : Checking if the move doesn't produce check at e7
+347083 <first : Checking if the move doesn't produce check at f6
+347083 <first : Checking if the move doesn't produce check at e5
+347083 <first : Checking if the move doesn't produce check at d6
+347083 <first : Checking if the move doesn't produce check at f7
+347083 <first : Checking if the move doesn't produce check at d7
+347083 <first : Checking if the move doesn't produce check at f5
+347083 <first : Checking if the move doesn't produce check at d5
+347083 <first : move e6f7
+Reset(1, 1) from gameMode 1
+recognized 'crazyhouse' (-1) as variant crazyhouse
+GameEnds(0, (null), 2)
+368231 >first : quit
+shuffleOpenings = 0
+StartChildProcess (dir=".") make run
+368240 >first : xboard
+protover 2
+368240 >first : new
+random
+368240 >first : variant crazyhouse
+368240 >first : level 40 5 0
+368240 >first : post
+368240 >first : hard
+368242 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+368242 <first : javac ./main/*.java
+368987 <first : javac ./pieces/*.java
+369646 <first : java main/Main.java
+369979 >first : force
+370223 <first : 
+370223 <first : Got xboard command
+370229 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+370229 >first : accepted done
+370229 >first : accepted sigint
+370229 >first : accepted sigterm
+370229 >first : accepted san
+370229 >first : accepted reuse
+370229 >first : accepted usermove
+370229 >first : accepted analyze
+370229 >first : accepted ping
+370229 >first : accepted setboard
+370229 >first : accepted level
+370229 >first : accepted variants
+370229 >first : accepted name
+370229 >first : accepted myname
+370229 >first : accepted done
+392922 >first : usermove 392922 >first : a2a4
+396126 >first : usermove 396126 >first : a7a6
+397320 >first : usermove 397320 >first : a4a5
+399500 >first : usermove 399500 >first : b7b5
+406796 >first : usermove 406797 >first : h2h4
+408440 >first : usermove 408440 >first : h7h6
+409320 >first : usermove 409321 >first : h4h5
+410858 >first : usermove 410858 >first : g7g5
+414992 >first : usermove 414992 >first : e2e3
+417186 >first : usermove 417186 >first : e7e6
+418172 >first : usermove 418172 >first : e3e4
+422194 >first : usermove 422194 >first : d7d6
+428000 >first : usermove 428000 >first : d2d4
+430716 >first : usermove 430717 >first : f7f6
+433240 >first : usermove 433240 >first : d4d5
+435003 >first : usermove 435003 >first : c7c5
+458657 >first : usermove 458657 >first : a1a2
+470217 >first : usermove 470217 >first : h8h7
+470764 >first : name octavian
+470764 >first : black
+470764 >first : time 30000
+470764 >first : otim 30000
+470764 >first : white
 book hit = (NULL)
-61510 >first : usermove 61510 >first : h2f3
-61511 <first : Checking if the king can be captured ath1
-61511 <first : move h4h5
-69272 >first : time 29994
-69272 >first : otim 23535
+470764 >first : go
+nps: w=-1, b=-1
+470768 <first : Checking if the king can be captured at e1
+470769 <first : Checking if the move doesn't produce check at e2
+470769 <first : Checking if the move doesn't produce check at d2
+470769 <first : move d5e6
+477557 >first : time 29999
+477557 >first : otim 29321
 book hit = (NULL)
-69272 >first : usermove 69272 >first : g6h5
-69275 <first : Checking if the king can be captured ath1
-69275 <first : move c1g1
-73718 >first : time 29994
-73718 >first : otim 23090
+477557 >first : usermove 477557 >first : c8b7
+477558 <first : Checking if the king can be captured at e1
+477559 <first : Checking if the move doesn't produce check at e2
+477559 <first : Checking if the move doesn't produce check at d2
+477559 <first : move c1g5
+479641 >first : time 29999
+479641 >first : otim 29113
 book hit = (NULL)
-73718 >first : usermove 73718 >first : f3g1
-73720 <first : Checking if the king can be captured ath1
-73720 <first : move h1g1
-77170 >first : time 29993
-77170 >first : otim 22745
+479641 >first : usermove 479641 >first : b7c6
+479645 <first : Checking if the king can be captured at e1
+479645 <first : Checking if the move doesn't produce check at e2
+479645 <first : Checking if the move doesn't produce check at d2
+479645 <first : move d1d6
+485431 >first : time 29999
+485431 >first : otim 28534
 book hit = (NULL)
-77170 >first : usermove 77170 >first : a8b8
-77171 <first : Checking if the king can be captured atg1
-77171 <first : move e3e4
-78716 >first : time 29993
-78716 >first : otim 22591
+485431 >first : usermove 485431 >first : c5c4
+485434 <first : Checking if the king can be captured at e1
+485434 <first : Checking if the move doesn't produce check at e2
+485434 <first : Checking if the move doesn't produce check at d1
+485434 <first : Checking if the move doesn't produce check at d2
+485434 <first : move d6d8
+487145 >first : time 29998
+487145 >first : otim 28363
 book hit = (NULL)
-78716 >first : usermove 78716 >first : b8a8
-78719 <first : Checking if the king can be captured atg1
-78719 <first : move g1g2
-79694 >first : time 29993
-79694 >first : otim 22493
+487145 >first : usermove 487145 >first : e8d8
+487147 <first : Checking if the king can be captured at e1
+487147 <first : Checking if the move doesn't produce check at e2
+487147 <first : Checking if the move doesn't produce check at d1
+487147 <first : Checking if the move doesn't produce check at d2
+487147 <first : move g5h6
+488675 >first : time 29998
+488675 >first : otim 28210
 book hit = (NULL)
-79694 >first : usermove 79694 >first : a8b8
-79695 <first : Checking if the king can be captured atg2
-79695 <first : move g2f2
-80662 >first : time 29993
-80662 >first : otim 22397
+488675 >first : usermove 488675 >first : h7h6
+488677 <first : Checking if the king can be captured at e1
+488677 <first : Checking if the move doesn't produce check at e2
+488677 <first : Checking if the move doesn't produce check at d1
+488677 <first : Checking if the move doesn't produce check at d2
+488677 <first : move f1c4
+490375 >first : time 29998
+490375 >first : otim 28040
 book hit = (NULL)
-80662 >first : usermove 80662 >first : b8a8
-80663 <first : Checking if the king can be captured atf2
-80663 <first : move f2e1
-81312 >first : time 29993
-81312 >first : otim 22332
+490375 >first : usermove 490375 >first : b5c4
+490379 <first : Checking if the king can be captured at e1
+490379 <first : Checking if the move doesn't produce check at e2
+490379 <first : Checking if the move doesn't produce check at f1
+490379 <first : Checking if the move doesn't produce check at d1
+490379 <first : Checking if the move doesn't produce check at d2
+490379 <first : Checking if the move doesn't produce check at e2
+490379 <first : Checking if the move doesn't produce check at f1
+490379 <first : Checking if the move doesn't produce check at d1
+490379 <first : Checking if the move doesn't produce check at d2
+490379 <first : move h1h4
+495717 >first : time 29997
+495717 >first : otim 27506
 book hit = (NULL)
-81312 >first : usermove 81312 >first : a8b8
-81314 <first : Checking if the king can be captured ate1
-81314 <first : move e1f1
-81880 >first : time 29993
-81880 >first : otim 22275
+495717 >first : usermove 495717 >first : h6h5
+495720 <first : Checking if the king can be captured at e1
+495720 <first : Checking if the move doesn't produce check at e2
+495720 <first : Checking if the move doesn't produce check at f1
+495720 <first : Checking if the move doesn't produce check at d1
+495720 <first : Checking if the move doesn't produce check at d2
+495720 <first : move h4h5
+505747 >first : time 29997
+505747 >first : otim 26504
 book hit = (NULL)
-81880 >first : usermove 81880 >first : b8a8
-81881 <first : Checking if the king can be captured atf1
-81881 <first : move f1g1
-82666 >first : time 29993
-82666 >first : otim 22197
+505747 >first : usermove 505747 >first : g8h6
+505748 <first : Checking if the king can be captured at e1
+505748 <first : Checking if the move doesn't produce check at e2
+505748 <first : Checking if the move doesn't produce check at f1
+505748 <first : Checking if the move doesn't produce check at d1
+505748 <first : Checking if the move doesn't produce check at d2
+505748 <first : move h5h6
+507429 >first : time 29997
+507429 >first : otim 26336
 book hit = (NULL)
-82666 >first : usermove 82666 >first : a8b8
-82667 <first : Checking if the king can be captured atg1
-82667 <first : move g1g2
-83748 >first : time 29992
-83748 >first : otim 22089
+507429 >first : usermove 507429 >first : f8h6
+507434 <first : Checking if the king can be captured at e1
+507434 <first : Checking if the move doesn't produce check at e2
+507434 <first : Checking if the move doesn't produce check at f1
+507434 <first : Checking if the move doesn't produce check at d1
+507434 <first : Checking if the move doesn't produce check at d2
+507434 <first : Checking if the move doesn't produce check at e2
+507434 <first : Checking if the move doesn't produce check at f1
+507434 <first : Checking if the move doesn't produce check at d1
+507434 <first : Checking if the move doesn't produce check at d2
+507434 <first : move e1f1
+515695 >first : time 29997
+515695 >first : otim 25510
 book hit = (NULL)
-83748 >first : usermove 83748 >first : b8a8
-83750 <first : Checking if the king can be captured atg2
-83750 <first : move g2h2
-84516 >first : time 29992
-84516 >first : otim 22012
+515695 >first : usermove 515695 >first : d8e7
+515697 <first : Checking if the king can be captured at f1
+515697 <first : Checking if the move doesn't produce check at e1
+515697 <first : Checking if the move doesn't produce check at e2
+515697 <first : Checking if the move doesn't produce check at e1
+515697 <first : Checking if the move doesn't produce check at e2
+515697 <first : move f2f4
+517577 >first : time 29996
+517577 >first : otim 25322
 book hit = (NULL)
-84516 >first : usermove 84516 >first : a8b8
-84517 <first : Checking if the king can be captured ath2
-84517 <first : move h2h1
-85270 >first : time 29992
-85270 >first : otim 21937
+517577 >first : usermove 517577 >first : e7e6
+517581 <first : Checking if the king can be captured at f1
+517581 <first : Checking if the move doesn't produce check at f2
+517581 <first : Checking if the move doesn't produce check at e1
+517581 <first : Checking if the move doesn't produce check at e2
+517581 <first : Checking if the move doesn't produce check at f2
+517581 <first : Checking if the move doesn't produce check at e1
+517581 <first : Checking if the move doesn't produce check at e2
+517581 <first : move b1c3
+521719 >first : time 29996
+521719 >first : otim 24908
 book hit = (NULL)
-85270 >first : usermove 85270 >first : b8a8
-85271 <first : Checking if the king can be captured ath1
-85271 <first : move h1h2
-85918 >first : time 29992
-85918 >first : otim 21872
+521719 >first : usermove 521719 >first : c6e4
+521723 <first : Checking if the king can be captured at f1
+521723 <first : Checking if the move doesn't produce check at f2
+521723 <first : Checking if the move doesn't produce check at e1
+521723 <first : Checking if the move doesn't produce check at e2
+521723 <first : move c3e4
+525069 >first : time 29996
+525069 >first : otim 24573
 book hit = (NULL)
-85918 >first : usermove 85918 >first : a8b8
-85920 <first : Checking if the king can be captured ath2
-85920 <first : move h2g2
-87264 >first : time 29992
-87264 >first : otim 21738
+525069 >first : usermove 525069 >first : h6f4
+525072 <first : Checking if the king can be captured at f1
+525072 <first : Checking if the move doesn't produce check at f2
+525072 <first : Checking if the move doesn't produce check at e1
+525072 <first : Checking if the move doesn't produce check at e2
+525072 <first : move e4f6
+526647 >first : time 29995
+526647 >first : otim 24416
 book hit = (NULL)
-87264 >first : usermove 87264 >first : b8a8
-87265 <first : Checking if the king can be captured atg2
-87265 <first : move e4e5
-88922 >first : time 29992
-88922 >first : otim 21572
+526647 >first : usermove 526647 >first : e6f6
+526650 <first : Checking if the king can be captured at f1
+526650 <first : Checking if the move doesn't produce check at f2
+526650 <first : Checking if the move doesn't produce check at e1
+526650 <first : Checking if the move doesn't produce check at e2
+526650 <first : Checking if the move doesn't produce check at f2
+526650 <first : Checking if the move doesn't produce check at e1
+526650 <first : Checking if the move doesn't produce check at e2
+526650 <first : move g1e2
+530259 >first : time 29995
+530259 >first : otim 24055
 book hit = (NULL)
-88922 >first : usermove 88922 >first : d7d5
-88923 <first : Checking if the king can be captured atg2
-88923 <first : move e5d6
+530259 >first : usermove 530259 >first : a8a7
+530262 <first : Checking if the king can be captured at f1
+530262 <first : Checking if the move doesn't produce check at f2
+530262 <first : Checking if the move doesn't produce check at g1
+530262 <first : Checking if the move doesn't produce check at e1
+530262 <first : move e2f4
+531813 >first : time 29995
+531813 >first : otim 23900
+book hit = (NULL)
+531813 >first : usermove 531813 >first : a7b7
+531817 <first : Checking if the king can be captured at f1
+531817 <first : Checking if the move doesn't produce check at f2
+531817 <first : Checking if the move doesn't produce check at g1
+531817 <first : Checking if the move doesn't produce check at e1
+531817 <first : Checking if the move doesn't produce check at e2
+531817 <first : Checking if the move doesn't produce check at f2
+531817 <first : Checking if the move doesn't produce check at g1
+531817 <first : Checking if the move doesn't produce check at e1
+531817 <first : Checking if the move doesn't produce check at e2
+531817 <first : move f4h3
+535771 >first : time 29994
+535771 >first : otim 23504
+book hit = (NULL)
+535771 >first : usermove 535771 >first : b7b5
+535775 <first : Checking if the king can be captured at f1
+535775 <first : Checking if the move doesn't produce check at f2
+535775 <first : Checking if the move doesn't produce check at g1
+535775 <first : Checking if the move doesn't produce check at e1
+535775 <first : Checking if the move doesn't produce check at e2
+535775 <first : Checking if the move doesn't produce check at f2
+535775 <first : Checking if the move doesn't produce check at g1
+535775 <first : Checking if the move doesn't produce check at e1
+535775 <first : Checking if the move doesn't produce check at e2
+535775 <first : move f1g1
+537533 >first : time 29994
+537533 >first : otim 23328
+book hit = (NULL)
+537533 >first : usermove 537533 >first : b5a5
+537538 <first : Checking if the king can be captured at g1
+537538 <first : Checking if the move doesn't produce check at h1
+537538 <first : Checking if the move doesn't produce check at f1
+537538 <first : Checking if the move doesn't produce check at h2
+537538 <first : Checking if the move doesn't produce check at f2
+537538 <first : move a2a5
+542476 >first : time 29993
+542476 >first : otim 22835
+book hit = (NULL)
+542476 >first : usermove 542476 >first : b8c6
+542477 <first : Checking if the king can be captured at g1
+542477 <first : Checking if the move doesn't produce check at h1
+542477 <first : Checking if the move doesn't produce check at f1
+542477 <first : Checking if the move doesn't produce check at h2
+542477 <first : Checking if the move doesn't produce check at f2
+542477 <first : move a5a6
+560159 >first : time 29993
+560159 >first : otim 21067
+book hit = (NULL)
+560159 >first : usermove 560159 >first : f6e6
+560161 <first : Checking if the king can be captured at g1
+560161 <first : Checking if the move doesn't produce check at h1
+560161 <first : Checking if the move doesn't produce check at f1
+560161 <first : Checking if the move doesn't produce check at h2
+560161 <first : Checking if the move doesn't produce check at f2
+560161 <first : move a6c6
+564925 >first : time 29993
+564925 >first : otim 20590
+book hit = (NULL)
+564925 >first : usermove 564925 >first : e6d5
+564929 <first : Checking if the king can be captured at g1
+564929 <first : Checking if the move doesn't produce check at h1
+564929 <first : Checking if the move doesn't produce check at f1
+564929 <first : Checking if the move doesn't produce check at h2
+564929 <first : Checking if the move doesn't produce check at f2
+564929 <first : move c6c4
+566160 >first : time 29993
+566161 >first : otim 20467
+book hit = (NULL)
+566161 >first : usermove 566161 >first : d5c4
+566163 <first : Checking if the king can be captured at g1
+566163 <first : Checking if the move doesn't produce check at h1
+566163 <first : Checking if the move doesn't produce check at f1
+566163 <first : Checking if the move doesn't produce check at h2
+566163 <first : Checking if the move doesn't produce check at f2
+566163 <first : Checking if the move doesn't produce check at h1
+566163 <first : Checking if the move doesn't produce check at f1
+566163 <first : Checking if the move doesn't produce check at h2
+566163 <first : Checking if the move doesn't produce check at f2
+566163 <first : move h3f2
+Reset(1, 1) from gameMode 1
+recognized 'crazyhouse' (-1) as variant crazyhouse
+GameEnds(0, (null), 2)
+571005 >first : quit
+shuffleOpenings = 0
+StartChildProcess (dir=".") make run
+571015 >first : xboard
+protover 2
+571015 >first : new
+random
+571015 >first : variant crazyhouse
+571015 >first : level 40 5 0
+571015 >first : post
+571015 >first : hard
+571017 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+571017 <first : javac ./main/*.java
+571346 >first : name octavian
+571346 >first : black
+571346 >first : time 30000
+571346 >first : otim 30000
+571346 >first : white
+book hit = (NULL)
+571346 >first : go
+nps: w=-1, b=-1
+571800 <first : javac ./pieces/*.java
+572466 <first : java main/Main.java
+573081 <first : 
+573081 <first : Got xboard command
+573088 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+573088 >first : accepted done
+573088 >first : accepted sigint
+573088 >first : accepted sigterm
+573088 >first : accepted san
+573088 >first : accepted reuse
+573088 >first : accepted usermove
+573088 >first : accepted analyze
+573088 >first : accepted ping
+573088 >first : accepted setboard
+573088 >first : accepted level
+573088 >first : accepted variants
+573088 >first : accepted name
+573088 >first : accepted myname
+573088 >first : accepted done
+573092 <first : Checking if the king can be captured at e1
+573093 <first : move g1h3
+582467 >first : time 29825
+582467 >first : otim 29062
+book hit = (NULL)
+582467 >first : usermove 582467 >first : a7a5
+582470 <first : Checking if the king can be captured at e1
+582470 <first : move e2e3
+583949 >first : time 29825
+583949 >first : otim 28914
+book hit = (NULL)
+583949 >first : usermove 583949 >first : a5a4
+583951 <first : Checking if the king can be captured at e1
+583951 <first : Checking if the move doesn't produce check at e2
+583951 <first : Checking if the move doesn't produce check at e2
+583951 <first : move f1b5
+585744 >first : time 29824
+585744 >first : otim 28735
+book hit = (NULL)
+585744 >first : usermove 585744 >first : c7c6
+585747 <first : Checking if the king can be captured at e1
+585747 <first : Checking if the move doesn't produce check at e2
+585747 <first : Checking if the move doesn't produce check at f1
+585747 <first : move b5a4
+Reset(1, 1) from gameMode 1
+recognized 'crazyhouse' (-1) as variant crazyhouse
+GameEnds(0, (null), 2)
+590520 >first : quit
+shuffleOpenings = 0
+StartChildProcess (dir=".") make run
+590532 >first : xboard
+protover 2
+590532 >first : new
+random
+590532 >first : variant crazyhouse
+590532 >first : level 40 5 0
+590532 >first : post
+590532 >first : hard
+590534 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+590534 <first : javac ./main/*.java
+590762 >first : name octavian
+590762 >first : black
+590762 >first : time 30000
+590762 >first : otim 30000
+590762 >first : white
+book hit = (NULL)
+590762 >first : go
+nps: w=-1, b=-1
+591265 <first : javac ./pieces/*.java
+591944 <first : java main/Main.java
+592523 <first : 
+592523 <first : Got xboard command
+592528 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+592528 >first : accepted done
+592528 >first : accepted sigint
+592528 >first : accepted sigterm
+592528 >first : accepted san
+592528 >first : accepted reuse
+592528 >first : accepted usermove
+592528 >first : accepted analyze
+592528 >first : accepted ping
+592528 >first : accepted setboard
+592528 >first : accepted level
+592528 >first : accepted variants
+592528 >first : accepted name
+592528 >first : accepted myname
+592528 >first : accepted done
+592531 <first : Checking if the king can be captured at e1
+592533 <first : move g1f3
+597290 >first : time 29823
+597290 >first : otim 29524
+book hit = (NULL)
+597290 >first : usermove 597290 >first : a7a5
+597292 <first : Checking if the king can be captured at e1
+597292 <first : move e2e4
+599766 >first : time 29822
+599766 >first : otim 29276
+book hit = (NULL)
+599766 >first : usermove 599766 >first : a5a4
+599767 <first : Checking if the king can be captured at e1
+599767 <first : Checking if the move doesn't produce check at e2
+599767 <first : Checking if the move doesn't produce check at e2
+599767 <first : move e4e5
+605422 >first : time 29822
+605422 >first : otim 28711
+book hit = (NULL)
+605422 >first : usermove 605422 >first : d7d5
+605424 <first : Checking if the king can be captured at e1
+605424 <first : move e5d6
+607575 >first : time 29822
+607575 >first : otim 28496
+book hit = (NULL)
+607575 >first : usermove 607575 >first : c7d6
+607578 <first : Checking if the king can be captured at e1
+607578 <first : Checking if the move doesn't produce check at e2
+607578 <first : Checking if the move doesn't produce check at e2
+607578 <first : move d1e2
+610436 >first : time 29822
+610436 >first : otim 28210
+book hit = (NULL)
+610436 >first : usermove 610436 >first : d6d5
+610437 <first : Checking if the king can be captured at e1
+610437 <first : Checking if the move doesn't produce check at d1
+610437 <first : move e2e7
+611870 >first : time 29822
+611870 >first : otim 28067
+book hit = (NULL)
+611870 >first : usermove 611870 >first : d8e7
+611873 <first : Checking if the king can be captured at e1
+611873 <first : King is in chess because of e7 QUEEN
+611873 <first : Checking if the move doesn't produce check at e2
+611873 <first : Checking if the move doesn't produce check at d1
+611873 <first : Checking if the move doesn't produce check at e2
+611873 <first : Checking if the move doesn't produce check at d1
+611873 <first : move e1d1
+612968 >first : time 29821
+612968 >first : otim 27957
+book hit = (NULL)
+612968 >first : usermove 612968 >first : d5d4
+612969 <first : Checking if the king can be captured at d1
+612969 <first : Checking if the move doesn't produce check at e1
+612969 <first : Checking if the move doesn't produce check at e2
+612969 <first : move f3d4
+617238 >first : time 29821
+617238 >first : otim 27530
+book hit = (NULL)
+617238 >first : usermove 617238 >first : e7e4
+617242 <first : Checking if the king can be captured at d1
+617242 <first : Checking if the move doesn't produce check at e1
+617242 <first : Checking if the move doesn't produce check at e2
+617242 <first : Checking if the move doesn't produce check at e1
+617242 <first : Checking if the move doesn't produce check at e2
+617242 <first : move g2g4
+618960 >first : time 29821
+618960 >first : otim 27359
+book hit = (NULL)
+618960 >first : usermove 618960 >first : e4d4
+618964 <first : Checking if the king can be captured at d1
+618964 <first : Checking if the move doesn't produce check at e1
+618964 <first : Checking if the move doesn't produce check at e2
+618964 <first : Checking if the move doesn't produce check at e1
+618964 <first : Checking if the move doesn't produce check at e2
+618964 <first : move f1b5
+626546 >first : time 29820
+626546 >first : otim 26600
+book hit = (NULL)
+626546 >first : usermove 626546 >first : e8e7
+626548 <first : Checking if the king can be captured at d1
+626548 <first : Checking if the move doesn't produce check at e1
+626548 <first : Checking if the move doesn't produce check at e2
+626548 <first : move b5a4
+628220 >first : time 29820
+628220 >first : otim 26433
+book hit = (NULL)
+628220 >first : usermove 628220 >first : d4a4
+628226 <first : Checking if the king can be captured at d1
+628226 <first : Checking if the move doesn't produce check at e1
+628226 <first : Checking if the move doesn't produce check at e2
+628226 <first : Checking if the move doesn't produce check at e1
+628226 <first : Checking if the move doesn't produce check at e2
+628226 <first : move h2h4
+633012 >first : time 29820
+633012 >first : otim 25955
+book hit = (NULL)
+633012 >first : usermove 633012 >first : b7b5
+633015 <first : Checking if the king can be captured at d1
+633015 <first : Checking if the move doesn't produce check at e1
+633015 <first : Checking if the move doesn't produce check at e2
+633015 <first : Checking if the move doesn't produce check at e1
+633015 <first : Checking if the move doesn't produce check at e2
+633015 <first : move g4g5
+634332 >first : time 29819
+634332 >first : otim 25823
+book hit = (NULL)
+634332 >first : usermove 634332 >first : b5b4
+634333 <first : Checking if the king can be captured at d1
+634333 <first : Checking if the move doesn't produce check at e1
+634333 <first : Checking if the move doesn't produce check at e2
+634333 <first : Checking if the move doesn't produce check at e1
+634333 <first : Checking if the move doesn't produce check at e2
+634333 <first : move d1e1
+636608 >first : time 29819
+636608 >first : otim 25595
+book hit = (NULL)
+636608 >first : usermove 636608 >first : f7f5
+636610 <first : Checking if the king can be captured at e1
+636610 <first : move g5f6
+638266 >first : time 29819
+638266 >first : otim 25430
+book hit = (NULL)
+638266 >first : usermove 638266 >first : g7f6
+638269 <first : Checking if the king can be captured at e1
+638269 <first : Checking if the move doesn't produce check at e2
+638269 <first : Checking if the move doesn't produce check at f1
+638269 <first : Checking if the move doesn't produce check at d1
+638269 <first : Checking if the move doesn't produce check at e2
+638269 <first : Checking if the move doesn't produce check at f1
+638269 <first : Checking if the move doesn't produce check at d1
+638269 <first : move f2f3
+640236 >first : time 29819
+640236 >first : otim 25233
+book hit = (NULL)
+640236 >first : usermove 640236 >first : g8h6
+640238 <first : Checking if the king can be captured at e1
+640238 <first : Checking if the move doesn't produce check at e2
+640238 <first : Checking if the move doesn't produce check at f1
+640238 <first : Checking if the move doesn't produce check at d1
+640238 <first : Checking if the move doesn't produce check at f2
+640238 <first : Checking if the move doesn't produce check at e2
+640238 <first : Checking if the move doesn't produce check at f1
+640238 <first : Checking if the move doesn't produce check at d1
+640238 <first : Checking if the move doesn't produce check at f2
+640238 <first : move h1g1
+645172 >first : time 29818
+645172 >first : otim 24740
+book hit = (NULL)
+645172 >first : usermove 645172 >first : a8a5
+645173 <first : Checking if the king can be captured at e1
+645173 <first : Checking if the move doesn't produce check at e2
+645173 <first : Checking if the move doesn't produce check at f1
+645173 <first : Checking if the move doesn't produce check at d1
+645173 <first : Checking if the move doesn't produce check at f2
+645173 <first : Checking if the move doesn't produce check at e2
+645173 <first : Checking if the move doesn't produce check at f1
+645173 <first : Checking if the move doesn't produce check at d1
+645173 <first : Checking if the move doesn't produce check at f2
+645173 <first : move g1g5
+647126 >first : time 29818
+647126 >first : otim 24544
+book hit = (NULL)
+647126 >first : usermove 647126 >first : a5g5
+647130 <first : Checking if the king can be captured at e1
+647130 <first : Checking if the move doesn't produce check at e2
+647130 <first : Checking if the move doesn't produce check at f1
+647130 <first : Checking if the move doesn't produce check at d1
+647130 <first : Checking if the move doesn't produce check at f2
+647130 <first : move h4g5
+648464 >first : time 29818
+648464 >first : otim 24411
+book hit = (NULL)
+648464 >first : usermove 648464 >first : f6g5
+648466 <first : Checking if the king can be captured at e1
+648466 <first : Checking if the move doesn't produce check at e2
+648466 <first : Checking if the move doesn't produce check at f1
+648466 <first : Checking if the move doesn't produce check at d1
+648466 <first : Checking if the move doesn't produce check at f2
+648466 <first : Checking if the move doesn't produce check at e2
+648466 <first : Checking if the move doesn't produce check at f1
+648466 <first : Checking if the move doesn't produce check at d1
+648466 <first : Checking if the move doesn't produce check at f2
+648466 <first : move e1f2
+652388 >first : time 29818
+652388 >first : otim 24019
+book hit = (NULL)
+652388 >first : usermove 652388 >first : h8g8
+652393 <first : Checking if the king can be captured at f2
+652393 <first : Checking if the move doesn't produce check at g2
+652393 <first : Checking if the move doesn't produce check at f1
+652393 <first : Checking if the move doesn't produce check at e2
+652393 <first : Checking if the move doesn't produce check at g3
+652393 <first : Checking if the move doesn't produce check at e3
+652393 <first : Checking if the move doesn't produce check at g1
+652393 <first : Checking if the move doesn't produce check at e1
+652393 <first : Checking if the move doesn't produce check at g2
+652393 <first : Checking if the move doesn't produce check at f1
+652393 <first : Checking if the move doesn't produce check at e2
+652393 <first : Checking if the move doesn't produce check at g3
+652393 <first : Checking if the move doesn't produce check at e3
+652393 <first : Checking if the move doesn't produce check at g1
+652393 <first : Checking if the move doesn't produce check at e1
+652393 <first : move f2e3
+653454 >first : time 29817
+653454 >first : otim 23913
+book hit = (NULL)
+653454 >first : usermove 653454 >first : g8g6
+653457 <first : Checking if the king can be captured at e3
+653457 <first : Checking if the move doesn't produce check at e4
+653457 <first : Checking if the move doesn't produce check at e2
+653457 <first : Checking if the move doesn't produce check at d3
+653457 <first : Checking if the move doesn't produce check at f4
+653457 <first : Checking if the move doesn't produce check at d4
+653457 <first : Checking if the move doesn't produce check at f2
+653457 <first : Checking if the move doesn't produce check at e4
+653457 <first : Checking if the move doesn't produce check at e2
+653457 <first : Checking if the move doesn't produce check at d3
+653457 <first : Checking if the move doesn't produce check at f4
+653457 <first : Checking if the move doesn't produce check at d4
+653457 <first : Checking if the move doesn't produce check at f2
+653457 <first : move f3f4
+654560 >first : time 29817
+654560 >first : otim 23802
+book hit = (NULL)
+654560 >first : usermove 654560 >first : g6e6
+654562 <first : Checking if the king can be captured at e3
+654562 <first : King is in chess because of e6 ROOK
+654562 <first : Checking if the move doesn't produce check at e4
+654562 <first : Checking if the move doesn't produce check at f3
+654562 <first : Checking if the move doesn't produce check at e2
+654562 <first : Checking if the move doesn't produce check at d3
+654562 <first : Checking if the move doesn't produce check at d4
+654562 <first : Checking if the move doesn't produce check at f2
+654562 <first : Checking if the move doesn't produce check at e4
+654562 <first : Checking if the move doesn't produce check at f3
+654562 <first : Checking if the move doesn't produce check at e2
+654562 <first : Checking if the move doesn't produce check at d3
+654562 <first : Checking if the move doesn't produce check at d4
+654562 <first : Checking if the move doesn't produce check at f2
+654562 <first : move e3d3
+656948 >first : time 29817
+656948 >first : otim 23564
+book hit = (NULL)
+656948 >first : usermove 656948 >first : e6c6
+656951 <first : Checking if the king can be captured at d3
+656951 <first : Checking if the move doesn't produce check at d4
+656951 <first : Checking if the move doesn't produce check at e3
+656951 <first : Checking if the move doesn't produce check at c3
+656951 <first : Checking if the move doesn't produce check at e4
+656951 <first : Checking if the move doesn't produce check at c4
+656951 <first : Checking if the move doesn't produce check at e2
+656951 <first : move f4g5
+662804 >first : time 29816
+662804 >first : otim 22979
+book hit = (NULL)
+662804 >first : usermove 662804 >first : f8g7
+662806 <first : Checking if the king can be captured at d3
+662806 <first : Checking if the move doesn't produce check at d4
+662806 <first : Checking if the move doesn't produce check at e3
+662806 <first : Checking if the move doesn't produce check at c3
+662806 <first : Checking if the move doesn't produce check at e4
+662806 <first : Checking if the move doesn't produce check at c4
+662806 <first : Checking if the move doesn't produce check at e2
+662806 <first : move g5h6
+664358 >first : time 29816
+664358 >first : otim 22823
+book hit = (NULL)
+664358 >first : usermove 664358 >first : g7h6
+664360 <first : Checking if the king can be captured at d3
+664360 <first : Checking if the move doesn't produce check at d4
+664360 <first : Checking if the move doesn't produce check at e3
+664360 <first : Checking if the move doesn't produce check at c3
+664360 <first : Checking if the move doesn't produce check at e4
+664360 <first : Checking if the move doesn't produce check at c4
+664360 <first : Checking if the move doesn't produce check at e2
+664360 <first : Checking if the move doesn't produce check at d4
+664360 <first : Checking if the move doesn't produce check at e3
+664360 <first : Checking if the move doesn't produce check at c3
+664360 <first : Checking if the move doesn't produce check at e4
+664360 <first : Checking if the move doesn't produce check at c4
+664360 <first : Checking if the move doesn't produce check at e2
+664360 <first : move a2a3
+665736 >first : time 29816
+665736 >first : otim 22686
+book hit = (NULL)
+665736 >first : usermove 665736 >first : h6g7
+665738 <first : Checking if the king can be captured at d3
+665738 <first : Checking if the move doesn't produce check at d4
+665738 <first : Checking if the move doesn't produce check at e3
+665738 <first : Checking if the move doesn't produce check at c3
+665738 <first : Checking if the move doesn't produce check at e4
+665738 <first : Checking if the move doesn't produce check at c4
+665738 <first : Checking if the move doesn't produce check at e2
+665738 <first : move a3b4
+Reset(1, 1) from gameMode 1
+recognized 'crazyhouse' (-1) as variant crazyhouse
+GameEnds(0, (null), 2)
+670014 >first : quit
+shuffleOpenings = 0
+StartChildProcess (dir=".") make run
+670026 >first : xboard
+protover 2
+670026 >first : new
+random
+670026 >first : variant crazyhouse
+670026 >first : level 40 5 0
+670026 >first : post
+670026 >first : hard
+670029 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/teme/proiect-pa-2023-holy-veriks'
+670029 <first : javac ./main/*.java
+670364 >first : name octavian
+670364 >first : black
+670364 >first : time 30000
+670364 >first : otim 30000
+670364 >first : white
+book hit = (NULL)
+670364 >first : go
+nps: w=-1, b=-1
+670726 <first : javac ./pieces/*.java
+671383 <first : java main/Main.java
+671992 <first : 
+671992 <first : Got xboard command
+671998 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+671998 >first : accepted done
+671998 >first : accepted sigint
+671998 >first : accepted sigterm
+671998 >first : accepted san
+671998 >first : accepted reuse
+671998 >first : accepted usermove
+671998 >first : accepted analyze
+671998 >first : accepted ping
+671998 >first : accepted setboard
+671998 >first : accepted level
+671998 >first : accepted variants
+671998 >first : accepted name
+671998 >first : accepted myname
+671998 >first : accepted done
+672002 <first : Checking if the king can be captured at e1
+672003 <first : move g1f3
+675568 >first : time 29836
+675568 >first : otim 29643
+book hit = (NULL)
+675568 >first : usermove 675568 >first : b7b5
+675570 <first : Checking if the king can be captured at e1
+675570 <first : move b2b3
+677514 >first : time 29835
+677514 >first : otim 29449
+book hit = (NULL)
+677514 >first : usermove 677514 >first : b5b4
+677515 <first : Checking if the king can be captured at e1
+677515 <first : move f3g1
+679310 >first : time 29835
+679310 >first : otim 29269
+book hit = (NULL)
+679310 >first : usermove 679310 >first : d7d5
+679313 <first : Checking if the king can be captured at e1
+679313 <first : move h2h3
+679990 >first : time 29835
+679990 >first : otim 29201
+book hit = (NULL)
+679990 >first : usermove 679990 >first : d5d4
+679991 <first : Checking if the king can be captured at e1
+679992 <first : move h1h2
+681872 >first : time 29835
+681872 >first : otim 29013
+book hit = (NULL)
+681872 >first : usermove 681872 >first : f7f5
+681874 <first : Checking if the king can be captured at e1
+681874 <first : move g2g3
+684324 >first : time 29835
+684324 >first : otim 28768
+book hit = (NULL)
+684324 >first : usermove 684324 >first : h7h5
+684327 <first : Checking if the king can be captured at e1
+684327 <first : move f1g2
+686190 >first : time 29834
+686190 >first : otim 28582
+book hit = (NULL)
+686190 >first : usermove 686190 >first : h8h6
+686192 <first : Checking if the king can be captured at e1
+686192 <first : Checking if the move doesn't produce check at f1
+686192 <first : move g2a8
+690900 >first : time 29834
+690900 >first : otim 28111
+book hit = (NULL)
+690900 >first : usermove 690900 >first : h6b6
+690902 <first : Checking if the king can be captured at e1
+690902 <first : Checking if the move doesn't produce check at f1
+690902 <first : Checking if the move doesn't produce check at f1
+690902 <first : move c2c3
+700570 >first : time 29834
+700570 >first : otim 27145
+book hit = (NULL)
+700570 >first : usermove 700570 >first : g8f6
+700572 <first : Checking if the king can be captured at e1
+700572 <first : Checking if the move doesn't produce check at f1
+700573 <first : move c3b4
+703854 >first : time 29834
+703854 >first : otim 26816
+book hit = (NULL)
+703854 >first : usermove 703854 >first : f6g4
+703857 <first : Checking if the king can be captured at e1
+703857 <first : Checking if the move doesn't produce check at f1
+703857 <first : move h3g4
+705418 >first : time 29833
+705418 >first : otim 26660
+book hit = (NULL)
+705418 >first : usermove 705418 >first : h5g4
+705421 <first : Checking if the king can be captured at e1
+705421 <first : Checking if the move doesn't produce check at f1
+705421 <first : Checking if the move doesn't produce check at f1
+705421 <first : move a2a3
+711530 >first : time 29833
+711530 >first : otim 26049
+book hit = (NULL)
+711530 >first : usermove 711530 >first : c7c5
+711533 <first : Checking if the king can be captured at e1
+711533 <first : Checking if the move doesn't produce check at f1
+711533 <first : move b4c5
+713236 >first : time 29833
+713236 >first : otim 25879
+book hit = (NULL)
+713236 >first : usermove 713236 >first : b6b5
+713239 <first : Checking if the king can be captured at e1
+713239 <first : Checking if the move doesn't produce check at f1
+713239 <first : Checking if the move doesn't produce check at f1
+713239 <first : move d2d3
+714510 >first : time 29832
+714510 >first : otim 25752
+book hit = (NULL)
+714510 >first : usermove 714510 >first : b5c5
+714513 <first : Checking if the king can be captured at e1
+714513 <first : Checking if the move doesn't produce check at f1
+714513 <first : Checking if the move doesn't produce check at d2
+714513 <first : Checking if the move doesn't produce check at f1
+714513 <first : Checking if the move doesn't produce check at d2
+714513 <first : move e2e4
+717994 >first : time 29832
+717994 >first : otim 25404
+book hit = (NULL)
+717994 >first : usermove 717994 >first : d4e3
+717998 <first : Checking if the king can be captured at e1
+717998 <first : Checking if the move doesn't produce check at e2
+717998 <first : Checking if the move doesn't produce check at f1
+717998 <first : Checking if the move doesn't produce check at d2
+717998 <first : move c1e3
+723491 >first : time 29832
+723491 >first : otim 24855
+book hit = (NULL)
+723491 >first : usermove 723491 >first : c5e5
+723495 <first : Checking if the king can be captured at e1
+723495 <first : Checking if the move doesn't produce check at e2
+723495 <first : Checking if the move doesn't produce check at f1
+723495 <first : Checking if the move doesn't produce check at d2
+723495 <first : move e3a7
 GameEnds(29, xboard exit, 2)
-91029 >first : result * {xboard exit}
-91029 >first : quit
+861373 >first : result * {xboard exit}
+861373 >first : quit
