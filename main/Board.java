@@ -8,6 +8,8 @@ import java.util.Random;
 public class Board {
 	private final Piece[][] board;
 
+	private boolean imBlack;
+
 	private ArrayList<Piece> whites = new ArrayList<Piece>();
 	private ArrayList<Piece> blacks = new ArrayList<Piece>();
 	private ArrayList<Piece> whiteCaptures = new ArrayList<Piece>();
@@ -87,15 +89,76 @@ public class Board {
 		board[x][y] = piece;
 	}
 
+	public boolean checkIfEnPassantIsEnabled(int srcX, int srcY, int dstX, int dstY) {
+		// Check if the pawn has moved before
+		if (srcX != 7 && srcX != 2) {
+			return false;
+		}
+
+		// Check if the pawn moved 2 squares forward
+		if (Math.abs(dstX - srcX) == 2 && dstY == srcY) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public boolean checkIfEnPassantCapture(int srcX, int srcY, int dstX, int dstY) {
+		// Normal capture
+		if (board[dstX][dstY] != null) {
+			return false;
+		}
+
+		Piece capturedPiece = board[dstX + 1][dstY];
+
+		// TODO: Solve problem with imBlack when the bot can play both sides.
+
+		// There is no pawn that can be captured with en passant (bot's pawn).
+		if (capturedPiece != null && capturedPiece.getType() == PieceType.PAWN
+				&& capturedPiece.side != (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
+				&& board[dstX + 1][dstY].side == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public void registerMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
-		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
-		int srcX = move.getSource().get().charAt(1) - '0';
-		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
-		int dstX = move.getDestination().get().charAt(1) - '0';
+//		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
+//		int srcX = move.getSource().get().charAt(1) - '0';
+//		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
+//		int dstX = move.getDestination().get().charAt(1) - '0';
+		int srcX = move.getSourceX();
+		int srcY = move.getSourceY();
+		int dstX = move.getDestinationX();
+		int dstY = move.getDestinationY();
+
 		Piece srcPiece = board[srcX][srcY];
 		Piece dstPiece = board[dstX][dstY];
 		if (srcPiece == null) return;
+
+		// En passant
+		if (move.isNormal() && srcPiece.getType() == PieceType.PAWN) { // moved piece is a pawn
+			// Bot performs en passant.
+			if (srcPiece.side == (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
+					&& checkIfEnPassantIsEnabled(srcX, srcY, dstX, dstY)) {
+				move.setEnablesEnPassant(true);
+			}
+
+			// Bot receives en passant and updates its internal structures.
+			if (checkIfEnPassantCapture(srcX, srcY, dstX, dstY)) {
+				if (dstPiece.side == PlaySide.BLACK) {
+					blacks.remove(board[dstX + 1][dstY]);
+					whiteCaptures.add(board[dstX + 1][dstY]);
+				} else if (dstPiece.side == PlaySide.WHITE) {
+					whites.remove(board[dstX + 1][dstY]);
+					blacksCaptures.add(board[dstX + 1][dstY]);
+				}
+
+				board[dstX + 1][dstY] = null; // Remove the captured pawn (with en passant).
+			}
+		}
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
@@ -117,6 +180,42 @@ public class Board {
 		board[srcX][srcY] = null;
 	}
 
+	public Move generateEnPassantMove() {
+		Move lastMove = Bot.getLastMove();
+
+		if (lastMove != null && lastMove.isEnablesEnPassant()) {
+			int xDestLastMove = lastMove.getDestinationX();
+			int yDestLastMove = lastMove.getDestinationY();
+			String sourceNewMove = null;
+			String destinationNewMove = Piece.getDstString(xDestLastMove + 1, yDestLastMove);
+
+			Piece leftPiece = null;
+			Piece rightPiece = null;
+
+			// Checking for pieces to the left and to the right of the pawn.
+			if (yDestLastMove == 1) {
+				rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			} else if (yDestLastMove == 8) {
+				leftPiece = board[xDestLastMove][yDestLastMove - 1];
+			} else {
+				leftPiece = board[xDestLastMove][yDestLastMove - 1];
+				rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			}
+
+			// Looking for a pawn that can do en passant.
+			if (leftPiece != null && leftPiece.getType() == PieceType.PAWN && leftPiece.side == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
+				sourceNewMove = leftPiece.getSrcString();
+				return ((Pawn)leftPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
+			} else if (rightPiece != null && rightPiece.getType() == PieceType.PAWN && rightPiece.side == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
+				sourceNewMove = rightPiece.getSrcString();
+				return ((Pawn)rightPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
+			}
+		}
+
+		return null;
+	}
+
+
 	public Move getRandMove() {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
@@ -124,7 +223,6 @@ public class Board {
 		System.out.println("Checking if the king can be captured at" + king.getSrcString());
 		for (Piece piece : blacks) {
 			if (piece.canCapture(this, king.x, king.y)) {
-//				setPiece(null, king.x, king.y);
 				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
 				allPossibleMoves.addAll(king.getAllMoves(this));
 				if (allPossibleMoves.size() == 0) return Move.resign();
@@ -132,8 +230,13 @@ public class Board {
 				int index = rand.nextInt(allPossibleMoves.size());
 
 				return allPossibleMoves.get(index);
-//				setPiece(king, move.getDestinationX(), move.getDestinationY());return allPossibleMoves.get(index);
 			}
+		}
+
+		// Checking if we can do an en passant attack.
+		Move enPassantMove = generateEnPassantMove();
+		if (enPassantMove != null) {
+			return enPassantMove;
 		}
 
 		for (Piece piece : whites) {

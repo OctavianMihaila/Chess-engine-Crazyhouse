@@ -14,6 +14,12 @@ public class Move {
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
 
+    private boolean enablesEnPassant;
+
+    public void setEnablesEnPassant(boolean enablesEnPassant) {
+        this.enablesEnPassant = enablesEnPassant;
+    }
+
     /*
       Use the following 4 constructors for Pieces.main.Move:
       moveTo(src, dst), if emitting a standard move (advance, capture, castle)
@@ -21,6 +27,12 @@ public class Move {
       dropIn(dst, replace), if placing a captured piece
       resign(), if you want to resign
      */
+
+    private Move(String source, String destination, PieceType replacement) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+    }
 
     public Optional<String> getSource() {
         return source;
@@ -32,12 +44,6 @@ public class Move {
 
     public Optional<PieceType> getReplacement() {
         return replacement;
-    }
-
-    private Move(String source, String destination, PieceType replacement) {
-        this.source = Optional.ofNullable(source);
-        this.destination = Optional.ofNullable(destination);
-        this.replacement = Optional.ofNullable(replacement);
     }
 
     public int getSourceX() {
@@ -59,15 +65,6 @@ public class Move {
     /**
         Translates a move from opponent's perspective to engine's perspective
      */
-    public void translateMove() {
-        if (source.isPresent() && destination.isPresent()) {
-            String translatedSource = translatePosition(source.get());
-            String translatedDest = translatePosition(destination.get());
-            source = Optional.of(translatedSource);
-            destination = Optional.of(translatedDest);
-        }
-    }
-
     private String translatePosition(String pos) {
         int row = pos.charAt(1) - '0';
         int col = pos.charAt(0) - 'a';
@@ -76,7 +73,9 @@ public class Move {
         return "" + (char)('a' + col) + translatedRow;
     }
 
-
+    public boolean isEnablesEnPassant() {
+        return enablesEnPassant;
+    }
 
     /**
      * Checks whether the move is an usual move/capture

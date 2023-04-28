@@ -20,23 +20,27 @@ public class Queen extends Piece {
 		if (horizontalDist == 0) {
 			int direction = verticalDist > 0 ? 1 : -1;
 			for (int i = 1; i < Math.abs(verticalDist); i++) {
-				if (board.getPiece(x + i * direction, y) != null) return false;
+				Piece piece = board.getPiece(x + i * direction, y);
+				if (piece != null && !(piece instanceof King)) return false;
 			}
 		} else if (verticalDist == 0) {
 			int direction = horizontalDist > 0 ? 1 : -1;
 			for (int i = 1; i < Math.abs(horizontalDist); i++) {
-				if (board.getPiece(x, y + i * direction) != null) return false;
+				Piece piece = board.getPiece(x, y + i * direction);
+				if (piece != null && !(piece instanceof King)) return false;
 			}
 		} else {
 			int verticalDirection = verticalDist > 0 ? 1 : -1;
 			int horizontalDirection = horizontalDist > 0 ? 1 : -1;
 			for (int i = 1; i < Math.abs(horizontalDist); i++) {
-				if (board.getPiece(x + i * verticalDirection, y + i * horizontalDirection) != null) return false;
+				Piece piece = board.getPiece(x + i * verticalDirection, y + i * horizontalDirection);
+				if (piece != null && !(piece instanceof King)) return false;
 			}
 		}
 
 		return true;
 	}
+
 
 	@Override
 	public boolean validMove(Board board, int xDest, int yDest) {
