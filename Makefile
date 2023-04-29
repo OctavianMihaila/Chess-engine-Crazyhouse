@@ -10,7 +10,7 @@ play:
 	@xboard -fcp "make run" -debug
 
 playbots:
-	xboard -fcp "make run" -scp "fairymax" -debug
+	xboard -fcp "make run" -scp "make run" -debug
 
 fullTest: clean build play
 

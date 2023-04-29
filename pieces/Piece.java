@@ -8,7 +8,6 @@ import main.PlaySide;
 import java.util.ArrayList;
 
 public abstract class Piece {
-	public boolean captured = false;
 	public PlaySide side;
 	private final PieceType type;
 	public int x;
@@ -110,28 +109,6 @@ public abstract class Piece {
 	}
 
 	/**
-	 * Checks if a path is clear between the piece and the destination, ignoring the piece passed in.
-	 * @param board the board to check the path on
-	 * @param xDest the vertical coordinate of the destination
-	 * @param yDest the horizontal coordinate of the destination
-	 * @param piece the piece to ignore
-	 * @return true if the path is clear, false otherwise
-	 */
-	public boolean validPathIgnoring(Board board, int xDest, int yDest, Piece piece) {
-		int verticalDist = xDest - x;
-		int horizontalDist = yDest - y;
-
-		int xDir = (int) Math.signum(verticalDist);
-		int yDir = (int) Math.signum(horizontalDist);
-		for (int i = 1; i < Math.max(Math.abs(horizontalDist), Math.abs(verticalDist)); i++) {
-			if (board.getPiece(x + i * xDir, y + i * yDir) != null && board.getPiece(x + i * xDir, y + i * yDir) != piece)
-				return false;
-		}
-
-		return true;
-	}
-
-	/**
 	 * Checks if a move is valid
 	 *
 	 * @param board the board to check the move on
@@ -198,8 +175,12 @@ public abstract class Piece {
 				int xDest = x + i * moveDir[0];
 				int yDest = y + i * moveDir[1];
 				if (canCapture(board, xDest, yDest)) {
-					if (myKing != null && !validPathIgnoring(board, xDest, yDest, myKing)) continue;
-					moves.add(Move.moveTo(getSrcString(), getDstString(xDest, yDest)));
+					Move potentialCapture = Move.moveTo(getSrcString(), getDstString(xDest, yDest));
+					// Simulate the capture and check if the king is in check
+					board.doMove(potentialCapture);
+					// Can do capture if king isn't in check
+					if (board.getAllCapturesOnPiece(myKing).isEmpty()) moves.add(potentialCapture);
+					board.undoMove();
 				}
 			}
 		}
@@ -222,8 +203,12 @@ public abstract class Piece {
 				int xDest = x + i * moveDir[0];
 				int yDest = y + i * moveDir[1];
 				if (canMove(board, xDest, yDest)) {
-					if (myKing != null && !validPathIgnoring(board, xDest, yDest, myKing)) continue;
-					moves.add(Move.moveTo(getSrcString(), getDstString(xDest, yDest)));
+					Move potentialMove = Move.moveTo(getSrcString(), getDstString(xDest, yDest));
+					// Simulate the move and check if the king is in check
+					board.doMove(potentialMove);
+					// Can do move if king isn't in check
+					if (board.getAllCapturesOnPiece(myKing).isEmpty()) moves.add(potentialMove);
+					board.undoMove();
 				}
 			}
 		}

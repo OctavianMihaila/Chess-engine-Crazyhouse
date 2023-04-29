@@ -17,11 +17,6 @@ public class Knight extends Piece {
 	}
 
 	@Override
-	public boolean validPathIgnoring(Board board, int xDest, int yDest, Piece piece) {
-		return true;
-	}
-
-	@Override
 	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
 

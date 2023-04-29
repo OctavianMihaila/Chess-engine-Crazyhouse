@@ -8,9 +8,9 @@ public class DebugTools {
 		int limitX = whiteDown ? 0 : 9;
 		int stepX = whiteDown ? -1 : 1;
 
-		int startY = whiteDown ? 8 : 1;
-		int limitY = whiteDown ? 0 : 9;
-		int stepY = whiteDown ? -1 : 1;
+		int startY = whiteDown ? 1 : 8;
+		int limitY = whiteDown ? 9 : 0;
+		int stepY = whiteDown ? 1 : -1;
 
 		for (int i = startX; i != limitX; i += stepX) {
 			for (int j = startY; j != limitY; j += stepY) {

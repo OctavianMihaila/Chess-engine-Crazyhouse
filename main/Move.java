@@ -13,6 +13,7 @@ public class Move {
     /* main.Piece to promote a pawn advancing to last row, or
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
+    private boolean isCapture = false;
     private final int score;
 
     /*
@@ -37,6 +38,14 @@ public class Move {
 
     public int getScore() {
         return score;
+    }
+
+    public void markCapture() {
+        this.isCapture = true;
+    }
+
+    public boolean isCapture() {
+        return this.isCapture;
     }
 
     private Move(String source, String destination, PieceType replacement) {

@@ -3,17 +3,27 @@ package main;
 import pieces.*;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
+import java.util.Stack;
 
 public class Board {
 	private final Piece[][] board;
 
-	private final ArrayList<Piece> whites = new ArrayList<>();
-	private final ArrayList<Piece> blacks = new ArrayList<>();
+	// Field for pieces on the table
+	private final ArrayList<Piece> whitePieces = new ArrayList<>();
+	private final ArrayList<Piece> blackPieces = new ArrayList<>();
 	private final ArrayList<Piece> whiteCaptures = new ArrayList<>();
-	private final ArrayList<Piece> blacksCaptures = new ArrayList<>();
+	private final ArrayList<Piece> blackCaptures = new ArrayList<>();
+
+	// Fields for ease of acces to kings
 	private final Piece whiteKing;
 	private final Piece blackKing;
+
+	// Fields for simulating and undoing moves
+	private final Stack<Move> simulatedMoves = new Stack<>();
+	private final Stack<Piece> simulatedWhiteCaptures = new Stack<>();
+	private final Stack<Piece> simulatedBlackCaptures = new Stack<>();
 
 	public Board() {
 		board = new Piece[9][9];
@@ -59,12 +69,80 @@ public class Board {
 			for (int j = 1; j <= 8; j++) {
 				if (board[i][j] != null) {
 					if (board[i][j].side == PlaySide.WHITE) {
-						whites.add(board[i][j]);
+						whitePieces.add(board[i][j]);
 					} else {
-						blacks.add(board[i][j]);
+						blackPieces.add(board[i][j]);
 					}
 				}
 			}
+		}
+	}
+
+	/**
+	 * Method used to register a move with the capability to undo the move
+	 * @param move the move to simulate
+	 */
+	public void doMove(Move move) {
+		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
+
+
+		int srcY = move.getSourceY();
+		int srcX = move.getSourceX();
+		int dstY = move.getDestinationY();
+		int dstX = move.getDestinationX();
+
+		Piece srcPiece = board[srcX][srcY];
+		Piece dstPiece = board[dstX][dstY];
+		if (srcPiece == null) return;
+		simulatedMoves.push(move);
+
+		// When destination is not null, it is a capture, simulate it and retain all the information
+		if (dstPiece != null) {
+			move.markCapture();
+			if (dstPiece.side == PlaySide.BLACK) {
+				simulatedWhiteCaptures.push(dstPiece);
+				blackPieces.remove(dstPiece);
+			} else if (dstPiece.side == PlaySide.WHITE) {
+				simulatedBlackCaptures.push(dstPiece);
+				whitePieces.remove(dstPiece);
+			}
+		}
+
+		srcPiece.updatePosition(dstX, dstY);
+		board[dstX][dstY] = srcPiece;
+		board[srcX][srcY] = null;
+	}
+
+	/**
+	 * Method used to undo last move
+	 */
+	public void undoMove() {
+		if (simulatedMoves.size() == 0) return;
+		Move lastMove = simulatedMoves.pop();
+		if (lastMove == null) return;
+
+		int srcY = lastMove.getSourceY();
+		int srcX = lastMove.getSourceX();
+		int dstY = lastMove.getDestinationY();
+		int dstX = lastMove.getDestinationX();
+
+		Piece movedPiece = board[dstX][dstY];
+		board[srcX][srcY] = movedPiece;
+		movedPiece.updatePosition(srcX, srcY);
+
+		// If the move was a capture we need to restore the captured piece
+		if (lastMove.isCapture()) {
+			Piece capturedPiece;
+			if (movedPiece.side == PlaySide.WHITE) {
+				capturedPiece = simulatedWhiteCaptures.pop();
+				blackPieces.add(capturedPiece);
+			} else {
+				capturedPiece = simulatedBlackCaptures.pop();
+				whitePieces.add(capturedPiece);
+			}
+			board[dstX][dstY] = capturedPiece;
+		} else {
+			board[dstX][dstY] = null;
 		}
 	}
 
@@ -94,8 +172,8 @@ public class Board {
 	 * @return pieces of the player
 	 */
 	public ArrayList<Piece> getSame(PlaySide side) {
-		if (side == PlaySide.WHITE) return whites;
-		return blacks;
+		if (side == PlaySide.WHITE) return whitePieces;
+		return blackPieces;
 	}
 
 	/**
@@ -104,12 +182,13 @@ public class Board {
 	 * @return pieces of the opposite player
 	 */
 	public ArrayList<Piece> getOpposites(PlaySide side) {
-		if (side == PlaySide.WHITE) return blacks;
-		return whites;
+		if (side == PlaySide.WHITE) return blackPieces;
+		return whitePieces;
 	}
 
 	/**
 	 * Getter for the board
+	 *
 	 * @return the board
 	 */
 	public Piece[][] getBoard() {
@@ -118,6 +197,7 @@ public class Board {
 
 	/**
 	 * Getter for a piece on the table
+	 *
 	 * @param x vertical coordinate on table
 	 * @param y horizontal coordinate on table
 	 * @return piece at the position
@@ -127,59 +207,49 @@ public class Board {
 	}
 
 	/**
-	 * Setter for a piece on the table. Also updates the piece internal location.
-	 * Can return null if the position is empty.
-	 * @param piece the piece to set on the table
-	 * @param x vertical coordinate on table
-	 * @param y horizontal coordinate on table
-	 * @return the piece that was on the table before putting current piece
-	 */
-	public Piece setPiece(Piece piece, int x, int y) {
-		if (piece == null) return null;
-		Piece current = board[x][y];
-		board[x][y] = piece;
-		piece.x = x;
-		piece.y = y;
-		return current;
-	}
-
-	/**
 	 * Registers a move and also update the internals of the board
+	 *
 	 * @param move the move to register
 	 */
 	public void registerMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
-		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
-		int srcX = move.getSource().get().charAt(1) - '0';
-		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
-		int dstX = move.getDestination().get().charAt(1) - '0';
+
+		int srcY = move.getSourceY();
+		int srcX = move.getSourceX();
+		int dstY = move.getDestinationY();
+		int dstX = move.getDestinationX();
+
 		Piece srcPiece = board[srcX][srcY];
 		Piece dstPiece = board[dstX][dstY];
 		if (srcPiece == null) return;
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
-			board[dstX][dstY] = srcPiece;
 			if (dstPiece.side == PlaySide.BLACK) {
 				whiteCaptures.add(dstPiece);
-				blacks.remove(dstPiece);
+				blackPieces.remove(dstPiece);
 			} else if (dstPiece.side == PlaySide.WHITE) {
-				blacksCaptures.add(dstPiece);
-				whites.remove(dstPiece);
+				blackCaptures.add(dstPiece);
+				whitePieces.remove(dstPiece);
 			}
+
 			// Mark capture location
-			dstPiece.captured = true;
-			dstPiece.x = dstPiece.y = -1;
+			dstPiece.updatePosition(-1, -1);
 		}
 
-		srcPiece.x = dstX;
-		srcPiece.y = dstY;
-		board[dstX][dstY] = srcPiece;
+		srcPiece.updatePosition(dstX, dstY);
+		if (move.isPromotion()) {
+			System.out.println("Promoted pawn at " + srcPiece.getSrcString() + " to queen");
+			board[dstX][dstY] = new Queen(srcPiece.side, dstX, dstY, true);
+		} else {
+			board[dstX][dstY] = srcPiece;
+		}
 		board[srcX][srcY] = null;
 	}
 
 	/**
 	 * Randomly selects a move from an ArrayList
+	 *
 	 * @param moves list of moves
 	 * @return a random move if list is not null and has members, null otherwise
 	 */
@@ -190,32 +260,53 @@ public class Board {
 		return moves.get(index);
 	}
 
+	public Piece getAttackingPiece(Piece target) {
+		for (Piece piece : getOpposites(target.side)) {
+			if (piece.canCapture(this, target.x, target.y)) return piece;
+		}
+		return null;
+	}
+
+	public ArrayList<Move> getAllCapturesOnPiece(Piece target) {
+		ArrayList<Move> moves = new ArrayList<>();
+		for (Piece piece : getOpposites(target.side)) {
+			if (piece.canCapture(this, target.x, target.y)) {
+				moves.add(Move.moveTo(piece.getSrcString(), target.getSrcString()));
+			}
+		}
+		return moves;
+	}
+
 	/**
 	 * Chooses a random move, but prioritize captures first
+	 *
 	 * @return a random move
 	 */
 	public Move aggressiveMode(PlaySide side) {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
 
+		if (whitePieces.size() == 1 && blackPieces.size() == 1) return Move.resign();
+
 		// Setting up my pieces and the other player pieces
 		ArrayList<Piece> mine = getSame(side);
-		ArrayList<Piece> theirs = getOpposites(side);
 		Piece myKing = getSameKing(side);
 
-		// Check if king is in check
-		System.out.println("Checking if the king can be captured at " + myKing.getSrcString());
-		for (Piece piece : theirs) {
-			if (piece.canCapture(this, myKing.x, myKing.y)) {
-				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
-				allPossibleMoves.addAll(myKing.getPossibleCaptures(this));
-				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+		// If king is in chess, try to capture the problem piece
+		Piece attackingPiece = getAttackingPiece(myKing);
+		if (attackingPiece != null) {
+			System.out.println("King is in chess because of " + attackingPiece.getSrcString() + " " + attackingPiece.getType());
 
-				// TODO make other pieces capture the problem piece
-				allPossibleMoves.addAll(myKing.getPossibleMoves(this));
-				if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+			allPossibleMoves.addAll(getAllCapturesOnPiece(attackingPiece));
+			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
-				return Move.resign();
-			}
+			allPossibleMoves.addAll(myKing.getPossibleCaptures(this));
+			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+			// TODO make other pieces capture the problem piece
+			allPossibleMoves.addAll(myKing.getPossibleMoves(this));
+			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+			return Move.resign();
 		}
 
 		// First generate all captures and choose one if there are valid captures
@@ -229,42 +320,4 @@ public class Board {
 		// If no moves are valid, resign, for now
 		return Move.resign();
 	}
-
-	/**
-	 * Chooses a random move, purely random
-	 * @return a purely random move
-	 */
-	public Move getRandMove() {
-		ArrayList<Move> allPossibleMoves = new ArrayList<>();
-
-		// Check if king is in check
-		System.out.println("Checking if the king can be captured at " + whiteKing.getSrcString());
-		for (Piece piece : blacks) {
-			if (piece.canCapture(this, whiteKing.x, whiteKing.y)) {
-				System.out.println("King is in chess because of " + piece.getSrcString() + " " + piece.getType());
-				allPossibleMoves.addAll(whiteKing.getAllMoves(this));
-				if (allPossibleMoves.size() == 0) return Move.resign();
-				Random rand = new Random(System.currentTimeMillis());
-				int index = rand.nextInt(allPossibleMoves.size());
-
-				return allPossibleMoves.get(index);
-			}
-		}
-
-		for (Piece piece : whites) {
-			ArrayList<Move> move = piece.getAllMoves(this);
-			if (move == null || move.size() == 0) continue;
-			allPossibleMoves.addAll(move);
-		}
-
-		if (allPossibleMoves.size() == 0) {
-			System.out.println("No moves found");
-			return Move.resign();
-		}
-
-		Random rand = new Random(System.currentTimeMillis());
-		int index = rand.nextInt(allPossibleMoves.size());
-		return allPossibleMoves.get(index);
-	}
 }
-

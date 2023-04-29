@@ -5,10 +5,17 @@ import main.PieceType;
 import main.PlaySide;
 
 public class Rook extends Piece {
+	private boolean moved = false;
 	public static final int[][] moveDirections = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
 	public Rook(PlaySide side, int x, int y) {
 		super(side, PieceType.ROOK, x, y, 2);
+	}
+
+	@Override
+	public void updatePosition(int x, int y) {
+		moved = true;
+		super.updatePosition(x, y);
 	}
 
 	@Override

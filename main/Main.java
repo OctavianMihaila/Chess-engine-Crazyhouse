@@ -60,7 +60,6 @@ public class Main {
 		private void newGame() {
 			bot = new Bot();
 			state = EngineState.RECV_NEW;
-			System.out.println("Setting engine side to NONE");
 			engineSide = PlaySide.NONE;
 			sideToMove = PlaySide.WHITE;
 			this.isStarted = false;
@@ -74,15 +73,12 @@ public class Main {
 			/* Called upon receiving "go" */
 			state = EngineState.PLAYING;
 
-			System.out.println("Calculate move because of leave force mode isStart: " + isStarted);
 			if (!isStarted) {
 				isStarted = true;
-				System.out.println("Setting engine side to sideToMove: " + sideToMove);
 				engineSide = sideToMove;
 			}
 
 			/* Make next move (go is issued when it's the bot's turn) */
-			System.out.println("Calculate move because of leave force mode isStart: " + isStarted + " sideToMove: " + getEngineSide());
 			Move nextMove = bot.calculateNextMove(engineSide);
 			emitMove(nextMove);
 
