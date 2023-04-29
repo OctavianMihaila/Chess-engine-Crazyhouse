@@ -10,193 +10,224 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-113 >first : xboard
+133 >first : xboard
 protover 2
-115 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_experimental/proiect-pa-2023-holy-veriks'
-1925 <first : 
-1930 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-1930 >first : accepted done
-1930 >first : accepted sigint
-1930 >first : accepted sigterm
-1930 >first : accepted san
-1930 >first : accepted reuse
-1930 >first : accepted usermove
-1930 >first : accepted analyze
-1930 >first : accepted ping
-1930 >first : accepted setboard
-1930 >first : accepted level
-1930 >first : accepted variants
-1930 >first : accepted name
-1930 >first : accepted myname
-1930 >first : accepted done
+136 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_experimental/proiect-pa-2023-holy-veriks'
+1715 >first : force
+2025 <first : 
+2031 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+2031 >first : accepted done
+2031 >first : accepted sigint
+2031 >first : accepted sigterm
+2031 >first : accepted san
+2031 >first : accepted reuse
+2031 >first : accepted usermove
+2031 >first : accepted analyze
+2031 >first : accepted ping
+2031 >first : accepted setboard
+2031 >first : accepted level
+2031 >first : accepted variants
+2031 >first : accepted name
+2031 >first : accepted myname
+2031 >first : accepted done
+2032 <first : Break because of force
 recognized 'crazyhouse' (-1) as variant crazyhouse
-Reset(1, 0) from gameMode 0
+Reset(1, 0) from gameMode 6
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-1931 >first : quit
+2033 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-1980 >first : xboard
+2080 >first : xboard
 protover 2
-1980 >first : new
+2080 >first : new
 random
-1980 >first : variant crazyhouse
-1980 >first : level 40 5 0
-1980 >first : post
-1980 >first : hard
-1983 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_experimental/proiect-pa-2023-holy-veriks'
-3259 >first : force
-3729 <first : 
-3734 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-3734 >first : accepted done
-3734 >first : accepted sigint
-3734 >first : accepted sigterm
-3734 >first : accepted san
-3734 >first : accepted reuse
-3734 >first : accepted usermove
-3734 >first : accepted analyze
-3734 >first : accepted ping
-3734 >first : accepted setboard
-3734 >first : accepted level
-3734 >first : accepted variants
-3734 >first : accepted name
-3734 >first : accepted myname
-3734 >first : accepted done
-3734 <first : Break because of new
-3735 <first : Setting engine side to NONE
-7185 >first : usermove 7185 >first : b1a3
-7187 <first : ### AFTER LAST MOVE ###
-7187 <first : Rw *  Bw Qw Kw Bw Nw Rw 
-7188 <first : Pw Pw Pw Pw Pw Pw Pw Pw 
-7188 <first : Nw *  *  *  *  *  *  *  
-7188 <first : *  *  *  *  *  *  *  *  
-7188 <first : *  *  *  *  *  *  *  *  
-7188 <first : *  *  *  *  *  *  *  *  
-7188 <first : Pb Pb Pb Pb Pb Pb Pb Pb 
-7188 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-14298 >first : usermove 14299 >first : d7d5
-14300 <first : ### AFTER LAST MOVE ###
-14300 <first : Rw *  Bw Qw Kw Bw Nw Rw 
-14300 <first : Pw Pw Pw Pw Pw Pw Pw Pw 
-14301 <first : Nw *  *  *  *  *  *  *  
-14301 <first : *  *  *  *  *  *  *  *  
-14301 <first : *  *  *  Pb *  *  *  *  
-14301 <first : *  *  *  *  *  *  *  *  
-14302 <first : Pb Pb Pb *  Pb Pb Pb Pb 
-14302 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-19362 >first : usermove 19362 >first : b2b4
-19363 <first : ### AFTER LAST MOVE ###
-19363 <first : Rw *  Bw Qw Kw Bw Nw Rw 
-19363 <first : Pw *  Pw Pw Pw Pw Pw Pw 
-19363 <first : Nw *  *  *  *  *  *  *  
-19363 <first : *  Pw *  *  *  *  *  *  
-19364 <first : *  *  *  Pb *  *  *  *  
-19364 <first : *  *  *  *  *  *  *  *  
-19364 <first : Pb Pb Pb *  Pb Pb Pb Pb 
-19364 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-21758 >first : usermove 21758 >first : h7h6
-21759 <first : ### AFTER LAST MOVE ###
-21759 <first : Rw *  Bw Qw Kw Bw Nw Rw 
-21759 <first : Pw *  Pw Pw Pw Pw Pw Pw 
-21759 <first : Nw *  *  *  *  *  *  *  
-21759 <first : *  Pw *  *  *  *  *  *  
-21759 <first : *  *  *  Pb *  *  *  *  
-21759 <first : *  *  *  *  *  *  *  Pb 
-21759 <first : Pb Pb Pb *  Pb Pb Pb *  
-21759 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-22734 >first : usermove 22734 >first : c2c4
-22735 <first : ### AFTER LAST MOVE ###
-22735 <first : Rw *  Bw Qw Kw Bw Nw Rw 
-22735 <first : Pw *  *  Pw Pw Pw Pw Pw 
-22735 <first : Nw *  *  *  *  *  *  *  
-22735 <first : *  Pw Pw *  *  *  *  *  
-22735 <first : *  *  *  Pb *  *  *  *  
-22735 <first : *  *  *  *  *  *  *  Pb 
-22735 <first : Pb Pb Pb *  Pb Pb Pb *  
-22735 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-23904 >first : usermove 23904 >first : h8h7
-23908 <first : ### AFTER LAST MOVE ###
-23908 <first : Rw *  Bw Qw Kw Bw Nw Rw 
-23908 <first : Pw *  *  Pw Pw Pw Pw Pw 
-23908 <first : Nw *  *  *  *  *  *  *  
-23908 <first : *  Pw Pw *  *  *  *  *  
-23908 <first : *  *  *  Pb *  *  *  *  
-23908 <first : *  *  *  *  *  *  *  Pb 
-23908 <first : Pb Pb Pb *  Pb Pb Pb Rb 
-23908 <first : Rb Nb Bb Qb Kb Bb Nb *  
-28734 >first : usermove 28734 >first : c1b2
-28736 <first : ### AFTER LAST MOVE ###
-28736 <first : Rw *  *  Qw Kw Bw Nw Rw 
-28736 <first : Pw Bw *  Pw Pw Pw Pw Pw 
-28736 <first : Nw *  *  *  *  *  *  *  
-28736 <first : *  Pw Pw *  *  *  *  *  
-28736 <first : *  *  *  Pb *  *  *  *  
-28736 <first : *  *  *  *  *  *  *  Pb 
-28736 <first : Pb Pb Pb *  Pb Pb Pb Rb 
-28736 <first : Rb Nb Bb Qb Kb Bb Nb *  
-29816 >first : usermove 29816 >first : h7h8
-29817 <first : ### AFTER LAST MOVE ###
-29818 <first : Rw *  *  Qw Kw Bw Nw Rw 
-29818 <first : Pw Bw *  Pw Pw Pw Pw Pw 
-29818 <first : Nw *  *  *  *  *  *  *  
-29818 <first : *  Pw Pw *  *  *  *  *  
-29818 <first : *  *  *  Pb *  *  *  *  
-29818 <first : *  *  *  *  *  *  *  Pb 
-29818 <first : Pb Pb Pb *  Pb Pb Pb *  
-29818 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-30890 >first : usermove 30890 >first : d1b3
-30892 <first : ### AFTER LAST MOVE ###
-30892 <first : Rw *  *  *  Kw Bw Nw Rw 
-30892 <first : Pw Bw *  Pw Pw Pw Pw Pw 
-30892 <first : Nw Qw *  *  *  *  *  *  
-30892 <first : *  Pw Pw *  *  *  *  *  
-30892 <first : *  *  *  Pb *  *  *  *  
-30892 <first : *  *  *  *  *  *  *  Pb 
-30892 <first : Pb Pb Pb *  Pb Pb Pb *  
-30892 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
-33638 >first : usermove 33638 >first : c8f5
-33640 <first : ### AFTER LAST MOVE ###
-33640 <first : Rw *  *  *  Kw Bw Nw Rw 
-33640 <first : Pw Bw *  Pw Pw Pw Pw Pw 
-33640 <first : Nw Qw *  *  *  *  *  *  
-33640 <first : *  Pw Pw *  *  *  *  *  
-33640 <first : *  *  *  Pb *  Bb *  *  
-33640 <first : *  *  *  *  *  *  *  Pb 
-33640 <first : Pb Pb Pb *  Pb Pb Pb *  
-33640 <first : Rb Nb *  Qb Kb Bb Nb Rb 
-39008 >first : name octavian
-39008 >first : black
-39008 >first : time 30000
-39009 >first : otim 30000
-39009 >first : white
+2080 >first : variant crazyhouse
+2080 >first : level 40 5 0
+2080 >first : post
+2080 >first : hard
+2083 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_experimental/proiect-pa-2023-holy-veriks'
+2569 >first : force
+3882 <first : 
+3888 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+3888 >first : accepted done
+3888 >first : accepted sigint
+3888 >first : accepted sigterm
+3888 >first : accepted san
+3889 >first : accepted reuse
+3889 >first : accepted usermove
+3889 >first : accepted analyze
+3889 >first : accepted ping
+3889 >first : accepted setboard
+3889 >first : accepted level
+3889 >first : accepted variants
+3889 >first : accepted name
+3889 >first : accepted myname
+3889 >first : accepted done
+3889 <first : Break because of new
+3889 <first : Setting engine side to NONE
+7843 >first : usermove 7843 >first : g1h3
+7845 <first : ### AFTER LAST MOVE ###
+7845 <first : Rw Nw Bw Qw Kw Bw *  Rw 
+7846 <first : Pw Pw Pw Pw Pw Pw Pw Pw 
+7846 <first : *  *  *  *  *  *  *  Nw 
+7846 <first : *  *  *  *  *  *  *  *  
+7846 <first : *  *  *  *  *  *  *  *  
+7846 <first : *  *  *  *  *  *  *  *  
+7846 <first : Pb Pb Pb Pb Pb Pb Pb Pb 
+7846 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+11640 >first : usermove 11640 >first : c7c5
+11641 <first : ### AFTER LAST MOVE ###
+11641 <first : Rw Nw Bw Qw Kw Bw *  Rw 
+11641 <first : Pw Pw Pw Pw Pw Pw Pw Pw 
+11641 <first : *  *  *  *  *  *  *  Nw 
+11641 <first : *  *  *  *  *  *  *  *  
+11641 <first : *  *  Pb *  *  *  *  *  
+11641 <first : *  *  *  *  *  *  *  *  
+11642 <first : Pb Pb *  Pb Pb Pb Pb Pb 
+11642 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+13410 >first : usermove 13410 >first : e2e4
+13412 <first : ### AFTER LAST MOVE ###
+13412 <first : Rw Nw Bw Qw Kw Bw *  Rw 
+13412 <first : Pw Pw Pw Pw *  Pw Pw Pw 
+13412 <first : *  *  *  *  *  *  *  Nw 
+13412 <first : *  *  *  *  Pw *  *  *  
+13412 <first : *  *  Pb *  *  *  *  *  
+13412 <first : *  *  *  *  *  *  *  *  
+13412 <first : Pb Pb *  Pb Pb Pb Pb Pb 
+13412 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+26765 >first : usermove 26765 >first : e7e5
+26766 <first : ### AFTER LAST MOVE ###
+26766 <first : Rw Nw Bw Qw Kw Bw *  Rw 
+26766 <first : Pw Pw Pw Pw *  Pw Pw Pw 
+26766 <first : *  *  *  *  *  *  *  Nw 
+26766 <first : *  *  *  *  Pw *  *  *  
+26766 <first : *  *  Pb *  Pb *  *  *  
+26766 <first : *  *  *  *  *  *  *  *  
+26767 <first : Pb Pb *  Pb *  Pb Pb Pb 
+26767 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+29617 >first : usermove 29617 >first : f1d3
+29618 <first : ### AFTER LAST MOVE ###
+29618 <first : Rw Nw Bw Qw Kw *  *  Rw 
+29618 <first : Pw Pw Pw Pw *  Pw Pw Pw 
+29618 <first : *  *  *  Bw *  *  *  Nw 
+29618 <first : *  *  *  *  Pw *  *  *  
+29618 <first : *  *  Pb *  Pb *  *  *  
+29618 <first : *  *  *  *  *  *  *  *  
+29618 <first : Pb Pb *  Pb *  Pb Pb Pb 
+29618 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+30299 >first : usermove 30299 >first : c5c4
+30302 <first : ### AFTER LAST MOVE ###
+30302 <first : Rw Nw Bw Qw Kw *  *  Rw 
+30302 <first : Pw Pw Pw Pw *  Pw Pw Pw 
+30302 <first : *  *  *  Bw *  *  *  Nw 
+30302 <first : *  *  Pb *  Pw *  *  *  
+30302 <first : *  *  *  *  Pb *  *  *  
+30302 <first : *  *  *  *  *  *  *  *  
+30302 <first : Pb Pb *  Pb *  Pb Pb Pb 
+30302 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+36546 >first : usermove 36546 >first : f2f3
+36547 <first : ### AFTER LAST MOVE ###
+36548 <first : Rw Nw Bw Qw Kw *  *  Rw 
+36548 <first : Pw Pw Pw Pw *  *  Pw Pw 
+36548 <first : *  *  *  Bw *  Pw *  Nw 
+36548 <first : *  *  Pb *  Pw *  *  *  
+36548 <first : *  *  *  *  Pb *  *  *  
+36548 <first : *  *  *  *  *  *  *  *  
+36548 <first : Pb Pb *  Pb *  Pb Pb Pb 
+36548 <first : Rb Nb Bb Qb Kb Bb Nb Rb 
+38439 >first : usermove 38439 >first : f8c5
+38441 <first : ### AFTER LAST MOVE ###
+38441 <first : Rw Nw Bw Qw Kw *  *  Rw 
+38441 <first : Pw Pw Pw Pw *  *  Pw Pw 
+38441 <first : *  *  *  Bw *  Pw *  Nw 
+38441 <first : *  *  Pb *  Pw *  *  *  
+38441 <first : *  *  Bb *  Pb *  *  *  
+38441 <first : *  *  *  *  *  *  *  *  
+38441 <first : Pb Pb *  Pb *  Pb Pb Pb 
+38441 <first : Rb Nb Bb Qb Kb *  Nb Rb 
+44762 >first : name octavian
+44762 >first : black
+44762 >first : time 30000
+44762 >first : otim 30000
+44762 >first : white
 book hit = (NULL)
-39009 >first : go
+44762 >first : go
 nps: w=-1, b=-1
-39011 <first : Calculate move because of leave force mode isStart: false
-39011 <first : Setting engine side to sideToMove: WHITE
-39015 <first : Calculate move because of leave force mode isStart: true sideToMove: WHITE
-39021 <first : Checking if the king can be captured at e1
-39021 <first : Checking if the move doesn't produce check at e1
-39021 <first : TRYNG TO CASTLE: short
-39021 <first : SIDE: WHITE
-39021 <first : @@@ There are pieces between rook and king (short) @@@
-39022 <first : TRYNG TO CASTLE: long
-39022 <first : SIDE: WHITE
-39026 <first : *** Searching blacks to see if any piece can capture at position: 1 4 ***
-39026 <first : Checking if the move doesn't produce check at d1
-39026 <first : Checking if the move doesn't produce check at d1
-39026 <first : Checking if the move doesn't produce check at d1
-39026 <first : Checking if the move doesn't produce check at d1
-39027 <first : ### AFTER LAST MOVE ###
-39027 <first : Rw *  *  *  Kw Bw Nw Rw 
-39027 <first : Pw *  *  Pw Pw Pw Pw Pw 
-39027 <first : Nw Qw *  *  *  *  *  *  
-39027 <first : *  Pw Pw *  *  *  *  *  
-39027 <first : *  *  *  Pb *  Bb *  *  
-39027 <first : *  *  *  *  *  *  *  Pb 
-39027 <first : Pb Pb Pb *  Pb Pb Bw *  
-39027 <first : Rb Nb *  Qb Kb Bb Nb Rb 
-39028 <first : move b2g7
+44764 <first : Calculate move because of leave force mode isStart: false
+44764 <first : Setting engine side to sideToMove: WHITE
+44767 <first : Calculate move because of leave force mode isStart: true sideToMove: WHITE
+44772 <first : Checking if the king can be captured at e1
+44773 <first : Checking if the move doesn't produce check at e1
+44773 <first : TRYNG TO CASTLE: short
+44773 <first : SIDE: WHITE
+44776 <first : *** Searching blacks to see if any piece can capture at position: 1 6 ***
+44776 <first : *** Searching blacks to see if any piece can capture at position: 1 7 ***
+44776 <first : *** Found piece that can capture at 1 7 ***
+44776 <first : @@@ Short castle is not possible(short) @@@
+44776 <first : TRYNG TO CASTLE: long
+44776 <first : SIDE: WHITE
+44777 <first : Checking if the move doesn't produce check at e2
+44777 <first : Checking if the move doesn't produce check at e2
+44777 <first : Checking if the move doesn't produce check at e2
+44777 <first : Checking if the move doesn't produce check at e2
+44777 <first : Checking if the move doesn't produce check at f1
+44777 <first : Checking if the move doesn't produce check at f1
+44777 <first : Checking if the move doesn't produce check at f1
+44777 <first : Checking if the move doesn't produce check at f1
+44777 <first : Checking if the move doesn't produce check at f2
+44777 <first : Checking if the move doesn't produce check at f2
+44778 <first : ### AFTER LAST MOVE ###
+44778 <first : Rw Nw Bw Qw Kw *  *  Rw 
+44778 <first : Pw Pw Pw Pw *  *  Pw Pw 
+44778 <first : *  *  *  *  *  Pw *  Nw 
+44778 <first : *  *  Bw *  Pw *  *  *  
+44778 <first : *  *  Bb *  Pb *  *  *  
+44778 <first : *  *  *  *  *  *  *  *  
+44778 <first : Pb Pb *  Pb *  Pb Pb Pb 
+44778 <first : Rb Nb Bb Qb Kb *  Nb Rb 
+44778 <first : move d3c4
+49039 >first : time 29998
+49039 >first : otim 29573
+book hit = (NULL)
+49039 >first : usermove 49039 >first : c5d6
+49043 <first : ### AFTER LAST MOVE ###
+49043 <first : Rw Nw Bw Qw Kw *  *  Rw 
+49043 <first : Pw Pw Pw Pw *  *  Pw Pw 
+49043 <first : *  *  *  *  *  Pw *  Nw 
+49043 <first : *  *  Bw *  Pw *  *  *  
+49043 <first : *  *  *  *  Pb *  *  *  
+49043 <first : *  *  *  Bb *  *  *  *  
+49043 <first : Pb Pb *  Pb *  Pb Pb Pb 
+49043 <first : Rb Nb Bb Qb Kb *  Nb Rb 
+49043 <first : Checking if the king can be captured at e1
+49043 <first : Checking if the move doesn't produce check at e1
+49043 <first : TRYNG TO CASTLE: short
+49043 <first : SIDE: WHITE
+49043 <first : *** Searching blacks to see if any piece can capture at position: 1 6 ***
+49043 <first : *** Searching blacks to see if any piece can capture at position: 1 7 ***
+49043 <first : @@@ Short castle is possible @@@
+49043 <first : @@@ CASTLE IS POSSIBLE @@@
+49043 <first : >>> CAN CASTLE SHORT
+49043 <first : ### Before SHORT CASTLING ###
+49043 <first : Rw Nw Bw Qw Kw *  *  Rw 
+49043 <first : Pw Pw Pw Pw *  *  Pw Pw 
+49043 <first : *  *  *  *  *  Pw *  Nw 
+49043 <first : *  *  Bw *  Pw *  *  *  
+49043 <first : *  *  *  *  Pb *  *  *  
+49043 <first : *  *  *  Bb *  *  *  *  
+49043 <first : Pb Pb *  Pb *  Pb Pb Pb 
+49043 <first : Rb Nb Bb Qb Kb *  Nb Rb 
+49043 <first : ### AFTER LAST MOVE ###
+49043 <first : Rw Nw Bw Qw *  Rw Kw *  
+49043 <first : Pw Pw Pw Pw *  *  Pw Pw 
+49043 <first : *  *  *  *  *  Pw *  Nw 
+49043 <first : *  *  Bw *  Pw *  *  *  
+49043 <first : *  *  *  *  Pb *  *  *  
+49043 <first : *  *  *  Bb *  *  *  *  
+49043 <first : Pb Pb *  Pb *  Pb Pb Pb 
+49043 <first : Rb Nb Bb Qb Kb *  Nb Rb 
+49043 <first : move e1g1
 GameEnds(29, xboard exit, 2)
-63596 >first : result * {xboard exit}
-63596 >first : quit
+122168 >first : result * {xboard exit}
+122168 >first : quit

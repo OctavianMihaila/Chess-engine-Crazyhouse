@@ -202,8 +202,8 @@ public class Board {
 					}
 
 					// Checking if positions between king and rook are safe
-					if (CheckIfPositionIsSafe(PlaySide.BLACK, 1, 6)
-							|| CheckIfPositionIsSafe(PlaySide.BLACK, 1, 7)) {
+					if (!CheckIfPositionIsSafe(PlaySide.BLACK, 1, 6)
+							|| !CheckIfPositionIsSafe(PlaySide.BLACK, 1, 7)) {
 						System.out.println("@@@ Short castle is not possible(short) @@@");
 						return false;
 					}
@@ -217,8 +217,8 @@ public class Board {
 					}
 
 					// Checking if positions between king and rook are safe
-					if (CheckIfPositionIsSafe(PlaySide.WHITE, 8, 6)
-							|| CheckIfPositionIsSafe(PlaySide.WHITE, 8, 7)) {
+					if (!CheckIfPositionIsSafe(PlaySide.WHITE, 8, 6)
+							|| !CheckIfPositionIsSafe(PlaySide.WHITE, 8, 7)) {
 						System.out.println("@@@ Short castle is not possible (long)@@@");
 						return false;
 					}
@@ -231,9 +231,9 @@ public class Board {
 					if (board[1][4] != null || board[1][3] != null || board[1][2] != null) return false;
 
 					// Checking if positions between king and rook are safe
-					if (CheckIfPositionIsSafe(PlaySide.BLACK, 1, 4)
-							|| CheckIfPositionIsSafe(PlaySide.BLACK, 1, 3)
-							|| CheckIfPositionIsSafe(PlaySide.BLACK, 1, 2)) {
+					if (!CheckIfPositionIsSafe(PlaySide.BLACK, 1, 4)
+							|| !CheckIfPositionIsSafe(PlaySide.BLACK, 1, 3)
+							|| !CheckIfPositionIsSafe(PlaySide.BLACK, 1, 2)) {
 						return false;
 					}
 
@@ -244,9 +244,9 @@ public class Board {
 					if (board[8][4] != null || board[8][3] != null || board[8][2] != null) return false;
 
 					// Checking if positions between king and rook are safe
-					if (CheckIfPositionIsSafe(PlaySide.WHITE, 8, 4)
-							|| CheckIfPositionIsSafe(PlaySide.WHITE, 8, 3)
-							|| CheckIfPositionIsSafe(PlaySide.WHITE, 8, 2)) {
+					if (!CheckIfPositionIsSafe(PlaySide.WHITE, 8, 4)
+							|| !CheckIfPositionIsSafe(PlaySide.WHITE, 8, 3)
+							|| !CheckIfPositionIsSafe(PlaySide.WHITE, 8, 2)) {
 						return false;
 					}
 
