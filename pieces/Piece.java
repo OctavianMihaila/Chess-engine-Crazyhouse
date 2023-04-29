@@ -56,6 +56,10 @@ public abstract class Piece {
 		return type;
 	}
 
+	public PlaySide getSide() {
+		return side;
+	}
+
 	/**
 	 * Getter for the location of the piece on the board
 	 *

@@ -14,6 +14,16 @@ public class Board {
 	private final ArrayList<Piece> blacksCaptures = new ArrayList<>();
 	private final Piece whiteKing;
 	private final Piece blackKing;
+	private static final int CASTLING_DISTANCE = 2;
+	private static final int SHORT_CASTLE_KING_DESTINATION_Y = 7;
+	private static final int LONG_CASTLE_KING_DESTINATION_Y = 3;
+	private static final int SHORT_CASTLE_ROOK_DESTINATION_Y = 6;
+	private static final int LONG_CASTLE_ROOK_DESTINATION_Y = 4;
+
+	private static final int SHORT_CASTLE_ROOK_ORIGIN_Y = 8;
+
+	private static final int LONG_CASTLE_ROOK_ORIGIN_Y = 1;
+
 
 	public Board() {
 		board = new Piece[9][9];
@@ -144,18 +154,165 @@ public class Board {
 	}
 
 	/**
+	 * Checks if a position is attack from one of the enemy pieces.
+	 */
+	public boolean CheckIfPositionIsSafe(PlaySide enemySide, int x, int y) {
+		switch (enemySide) {
+			case WHITE -> {
+				for (Piece piece : whites) {
+					if (piece.canMove(this, x, y)) {
+						return false;
+					}
+				}
+			}
+			case BLACK -> {
+				System.out.println("*** Searching blacks to see if any piece can capture at position: " + x + " " + y + " ***");
+				for (Piece piece : blacks) {
+					if (piece.canMove(this, x, y)) {
+						System.out.println("*** Found piece that can capture at " + x + " " + y + " ***");
+						return false;
+					}
+				}
+			}
+			default -> System.out.println("Unexpected enemy side received");
+		}
+
+		return true;
+	}
+
+	/**
+	 * rook and king must be on the same side.
+	 * @param castleType "short" or "long"
+	 */
+	public boolean canCastle(Rook rook, King king, String castleType) {
+		if (rook.getSide() != king.getSide()) return false;
+
+		// Can't castle if the king or the rook has moved
+		if (rook.isMoved() || king.isMoved()) return false;
+
+		System.out.println("TRYNG TO CASTLE: " +  castleType);
+		System.out.println("SIDE: " + king.getSide());
+		switch (castleType) {
+			case "short" -> {
+				if (king.getSide() == PlaySide.WHITE) {
+					// Check if there are pieces between the king and the rook
+					if (board[1][6] != null || board[1][7] != null) {
+						System.out.println("@@@ There are pieces between rook and king (short) @@@");
+						return false;
+					}
+
+					// Checking if positions between king and rook are safe
+					if (CheckIfPositionIsSafe(PlaySide.BLACK, 1, 6)
+							|| CheckIfPositionIsSafe(PlaySide.BLACK, 1, 7)) {
+						System.out.println("@@@ Short castle is not possible(short) @@@");
+						return false;
+					}
+					System.out.println("@@@ Short castle is possible @@@");
+
+				} else {
+					// Check if there are pieces between the king and the rook
+					if (board[8][6] != null || board[8][7] != null) {
+						System.out.println("@@@ There are pieces between rook and king (short) @@@");
+						return false;
+					}
+
+					// Checking if positions between king and rook are safe
+					if (CheckIfPositionIsSafe(PlaySide.WHITE, 8, 6)
+							|| CheckIfPositionIsSafe(PlaySide.WHITE, 8, 7)) {
+						System.out.println("@@@ Short castle is not possible (long)@@@");
+						return false;
+					}
+				}
+			}
+
+			case "long" -> {
+				if (king.getSide() == PlaySide.WHITE) {
+					// Check if there are pieces between the king and the rook
+					if (board[1][4] != null || board[1][3] != null || board[1][2] != null) return false;
+
+					// Checking if positions between king and rook are safe
+					if (CheckIfPositionIsSafe(PlaySide.BLACK, 1, 4)
+							|| CheckIfPositionIsSafe(PlaySide.BLACK, 1, 3)
+							|| CheckIfPositionIsSafe(PlaySide.BLACK, 1, 2)) {
+						return false;
+					}
+
+					System.out.println("@@@ Long castle is possible @@@");
+
+				} else {
+					// Check if there are pieces between the king and the rook
+					if (board[8][4] != null || board[8][3] != null || board[8][2] != null) return false;
+
+					// Checking if positions between king and rook are safe
+					if (CheckIfPositionIsSafe(PlaySide.WHITE, 8, 4)
+							|| CheckIfPositionIsSafe(PlaySide.WHITE, 8, 3)
+							|| CheckIfPositionIsSafe(PlaySide.WHITE, 8, 2)) {
+						return false;
+					}
+
+				}
+			}
+			default -> System.out.println("Unexpected castle type received");
+		}
+
+		System.out.println("@@@ CASTLE IS POSSIBLE @@@");
+
+		return true;
+	}
+
+	public void registerCastle(int srcX, int dstY) {
+		Piece rookToMove = null;
+
+		// Castle
+		if (dstY == SHORT_CASTLE_KING_DESTINATION_Y) {
+			System.out.println("### Before SHORT CASTLING ###");
+			DebugTools.printBoardPretty(board, false);
+
+			// Moving the rook
+			rookToMove = board[srcX][SHORT_CASTLE_ROOK_ORIGIN_Y];
+			rookToMove.y = SHORT_CASTLE_ROOK_DESTINATION_Y;
+			board[srcX][SHORT_CASTLE_ROOK_DESTINATION_Y] = board[srcX][SHORT_CASTLE_ROOK_ORIGIN_Y];
+			board[srcX][SHORT_CASTLE_ROOK_ORIGIN_Y] = null;
+		} else if (dstY == LONG_CASTLE_KING_DESTINATION_Y) {
+			System.out.println("### Before LONG CASTLING ###");
+			DebugTools.printBoardPretty(board, false);
+
+			// Moving the rook
+			rookToMove = board[srcX][LONG_CASTLE_ROOK_ORIGIN_Y];
+			rookToMove.y = LONG_CASTLE_ROOK_DESTINATION_Y;
+			board[srcX][LONG_CASTLE_ROOK_DESTINATION_Y] = board[srcX][LONG_CASTLE_ROOK_ORIGIN_Y];
+			board[srcX][LONG_CASTLE_ROOK_ORIGIN_Y] = null;
+		}
+	}
+
+
+	/**
 	 * Registers a move and also update the internals of the board
 	 * @param move the move to register
 	 */
 	public void registerMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
+
 		int srcY = move.getSource().get().charAt(0) - 'a' + 1;
 		int srcX = move.getSource().get().charAt(1) - '0';
 		int dstY = move.getDestination().get().charAt(0) - 'a' + 1;
 		int dstX = move.getDestination().get().charAt(1) - '0';
 		Piece srcPiece = board[srcX][srcY];
 		Piece dstPiece = board[dstX][dstY];
+
 		if (srcPiece == null) return;
+
+		if (srcPiece.getType() == PieceType.KING) {
+			((King)srcPiece).setMoved(true);
+
+			if (move.isCastle()) {
+				registerCastle(srcX, dstY);
+			}
+		}
+
+		if (srcPiece.getType() == PieceType.ROOK) {
+			((Rook)srcPiece).setMoved(true);
+		}
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
@@ -176,6 +333,9 @@ public class Board {
 		srcPiece.y = dstY;
 		board[dstX][dstY] = srcPiece;
 		board[srcX][srcY] = null;
+
+		System.out.println("### AFTER LAST MOVE ###");
+		DebugTools.printBoardPretty(board, false);
 	}
 
 	/**
@@ -218,6 +378,22 @@ public class Board {
 			}
 		}
 
+		// Castling
+		Piece shortCastleRook = board[1][8];
+		Piece longCastleRook = board[1][1];
+
+		if (shortCastleRook != null && shortCastleRook.getType() == PieceType.ROOK
+				&& canCastle((Rook)shortCastleRook, (King)whiteKing, "short")) { // short castle
+			System.out.println(">>> CAN CASTLE SHORT");
+			return Move.moveTo(whiteKing.getSrcString(),
+					Piece.getDstString(whiteKing.x, whiteKing.y + CASTLING_DISTANCE));
+		} else if (longCastleRook != null && longCastleRook.getType() == PieceType.ROOK
+				&& canCastle((Rook)longCastleRook, (King)whiteKing, "long")) { // long castle
+			System.out.println(">>> CAN CASTLE LONG");
+			return Move.moveTo(whiteKing.getSrcString(),
+					Piece.getDstString(whiteKing.x, whiteKing.y - CASTLING_DISTANCE));
+		}
+
 		// First generate all captures and choose one if there are valid captures
 		for (Piece piece : mine) allPossibleMoves.addAll(piece.getPossibleCaptures(this));
 		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
@@ -251,6 +427,21 @@ public class Board {
 			}
 		}
 
+//		Piece shortCastleRook = board[1][8];
+//		Piece longCastleRook = board[1][1];
+//
+//
+//		if (shortCastleRook != null && shortCastleRook.getType() == PieceType.ROOK
+//				&& canCastle((Rook)shortCastleRook, (King)whiteKing, "short")) { // short castle
+//
+//			return Move.moveTo(whiteKing.getSrcString(),
+//					Piece.getDstString(whiteKing.x, whiteKing.y + CASTLING_DISTANCE));
+//		} else if (longCastleRook != null && longCastleRook.getType() == PieceType.ROOK
+//				&& canCastle((Rook)longCastleRook, (King)whiteKing, "long")) { // long castle
+//
+//			return Move.moveTo(whiteKing.getSrcString(),
+//					Piece.getDstString(whiteKing.x, whiteKing.y - CASTLING_DISTANCE));
+//		}
 		for (Piece piece : whites) {
 			ArrayList<Move> move = piece.getAllMoves(this);
 			if (move == null || move.size() == 0) continue;

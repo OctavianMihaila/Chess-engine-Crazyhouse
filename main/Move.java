@@ -93,6 +93,10 @@ public class Move {
         return source.isEmpty() && destination.isPresent() && replacement.isPresent();
     }
 
+    public boolean isCastle() {
+        return source.isPresent() && destination.isPresent() && (Math.abs(getDestinationY() - getSourceY()) == 2);
+    }
+
     /**
      * Emit a move from src to dst. Validity is to be checked by engine (your implementation)
      * Positions are encoded as stated at beginning of file
