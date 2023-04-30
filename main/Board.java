@@ -200,7 +200,9 @@ public class Board {
 	}
 
 	public void setPiece(Piece piece, int x, int y) {
-
+		board[x][y] = piece;
+		if (piece == null) return;
+		piece.updatePosition(x, y);
 	}
 
 	/**
@@ -319,7 +321,7 @@ public class Board {
 			ArrayList<Piece> mySimulatedPieces = getSimulatedSame(side);
 			PieceType dropPieceType = move.getReplacement().get();
 			Piece chosen = null;
-			for (Piece p: myCaptures) {
+			for (Piece p : myCaptures) {
 				if (p.getType() == dropPieceType) {
 					// Save the piece because we cant modify the list that we are iterating over
 					chosen = p;
@@ -347,40 +349,41 @@ public class Board {
 		int dstY = move.getDestinationY();
 		int dstX = move.getDestinationX();
 
-		Piece srcPiece = board[srcX][srcY];
-		Piece dstPiece = board[dstX][dstY];
+		Piece srcPiece = getPiece(srcX, srcY);
+		Piece dstPiece = getPiece(dstX, dstY);
 		if (srcPiece == null) return;
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
+			// Get all lists of pieces
 			ArrayList<Piece> myCaptures = getSameCaptures(srcPiece.getSide());
 			ArrayList<Piece> oppositePieces = getOpposites(srcPiece.getSide());
 			ArrayList<Piece> simulatedOppositePieces = getSimulatedOpposites(srcPiece.getSide());
 
+			// Now begin removing the piece from the lists
 			oppositePieces.remove(dstPiece);
 			simulatedOppositePieces.remove(dstPiece);
 			if (dstPiece.getType() == PieceType.QUEEN && ((Queen) dstPiece).isPawn()) {
 				dstPiece = new Pawn(dstPiece.getSide(), -1, -1);
 			}
 
+			// Add the captured piece to the list of captures
 			myCaptures.add(dstPiece);
+
 			// Mark capture location
 			dstPiece.updatePosition(-1, -1);
 		}
 
-		srcPiece.updatePosition(dstX, dstY);
-
 		// Special moves
 		if (move.isPromotion() || (srcPiece.getType() == PieceType.PAWN && (srcPiece.getSide() == PlaySide.WHITE && dstX == 8 || srcPiece.getSide() == PlaySide.BLACK && dstX == 1))) {
-//			System.out.println("Promotion");
 			ArrayList<Piece> pieces = getSame(srcPiece.getSide());
 			pieces.remove(srcPiece);
-			board[dstX][dstY] = new Queen(srcPiece.getSide(), dstX, dstY, true);
+			setPiece(new Queen(srcPiece.getSide(), dstX, dstY, true), dstX, dstY);
 			pieces.add(board[dstX][dstY]);
 		} else {
-			board[dstX][dstY] = srcPiece;
+			setPiece(srcPiece, dstX, dstY);
 		}
-		board[srcX][srcY] = null;
+		setPiece(null, srcX, srcY);
 	}
 
 	/**
@@ -491,7 +494,7 @@ public class Board {
 	}
 
 	/**
-	 * Returns all possible captures on target piece
+	 * Returns all possible captures on target piece that do not result in the king being in check
 	 *
 	 * @param target the piece to be captured
 	 * @return all possible captures on target piece, empty list if no capture is possible
@@ -503,7 +506,6 @@ public class Board {
 		Piece myKing = getOppositeKing(target.getSide());
 		for (Piece piece : getOpposites(target.getSide())) {
 			if (piece.canCapture(this, target.getX(), target.getY())) {
-//				System.out.println("Piece " + piece + " can capture " + target + " maybe?");
 				Move potentialCapture = Move.moveTo(piece.getSrcString(), target.getSrcString());
 				// Simulate the capture and check if the king is in check
 				doMove(potentialCapture);
@@ -515,14 +517,17 @@ public class Board {
 		return moves;
 	}
 
-	public ArrayList<Move> getAllCheckBlockings(Piece target) {
+	/**
+	 * Returns all possible moves between an attacker and a target that can prevent a check
+	 * @param attacker the piece that is attacking
+	 * @param target the piece that is being attacked (mostly the king)
+	 * @return moves to prevent a capture from attacker to target
+	 */
+	public ArrayList<Move> getAllBlocksBetween(Piece attacker, Piece target) {
 		ArrayList<Move> moves = new ArrayList<>();
 
-		// My king is the opposite of the target
-		Piece myKing = getOppositeKing(target.getSide());
-
-		int verticalDist = myKing.getX() - target.getX();
-		int horizontalDist = myKing.getY() - target.getY();
+		int verticalDist = attacker.getX() - target.getX();
+		int horizontalDist = attacker.getY() - target.getY();
 		int xDir = (int) Math.signum(verticalDist);
 		int yDir = (int) Math.signum(horizontalDist);
 
@@ -532,16 +537,20 @@ public class Board {
 		for (int i = 1; i < Math.max(Math.abs(horizontalDist), Math.abs(verticalDist)); i++) {
 			int xPositionToBlock = target.getX() + i * xDir;
 			int yPositionToBlock = target.getY() + i * yDir;
-			if (getPiece(xPositionToBlock, yPositionToBlock) == null) {
-				String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
-				for (Piece piece : getSame(myKing.getSide())) {
-					if (piece.getType() != PieceType.KING && piece.canMove(this, xPositionToBlock, yPositionToBlock)) {
-						Move potentialMove = Move.moveTo(piece.getSrcString(), dstString);
-						// Simulate the capture and check if the king is in check
-						doMove(potentialMove);
 
+			// If the position is empty, we can try to block it
+			if (getPiece(xPositionToBlock, yPositionToBlock) == null) {
+				// Check if after the move of every target pieces, any of the attacker pieces can still attack the target
+				// and choose only the one that truly blocks the attack
+				for (Piece piece : getSame(target.getSide())) {
+					if (piece.getType() != PieceType.KING && piece.canMove(this, xPositionToBlock, yPositionToBlock)) {
+						String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
+						Move potentialMove = Move.moveTo(piece.getSrcString(), dstString);
+
+						// Simulate the capture and check if the target can be captured
+						doMove(potentialMove);
 						// Can do capture if king isn't in check
-						if (getCaptureOnSimulatedPiece(myKing) == null) moves.add(potentialMove);
+						if (getCaptureOnSimulatedPiece(target) == null) moves.add(potentialMove);
 						undoMove();
 					}
 				}
@@ -551,7 +560,7 @@ public class Board {
 		return moves;
 	}
 
-	public ArrayList<Move> getAllCheckBlockingsUsingDrop(Piece target) {
+	public ArrayList<Move> getAllBlocksUsingDropIns(Piece target) {
 		ArrayList<Move> moves = new ArrayList<>();
 		// My king is the opposite of the target
 		Piece myKing = getOppositeKing(target.getSide());
@@ -574,15 +583,30 @@ public class Board {
 				String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
 				for (Piece piece : (myKing.getSide() == PlaySide.WHITE) ? whiteCaptures : blackCaptures) {
 					if (piece.getType() != PieceType.KING) {
-						Move potentialMove =  Move.dropIn(dstString, piece.getType());
-						// Simulate the capture and check if the king is in check
-//						doMove(potentialMove);
-//
-//						// Can do capture if king isn't in check
-//						if (getCaptureOnSimulatedPiece(myKing) == null) moves.add(potentialMove);
-//						undoMove();
+						Move potentialMove = Move.dropIn(dstString, piece.getType());
+						moves.add(potentialMove); // TODO: If we implement drop undo, this should be modified.
+					}
+				}
+			}
+		}
 
-						moves.add(potentialMove); // TODO: If we implement drop undo, this should be deleted.
+		return moves;
+	}
+
+	/**
+	 * Returns all possible drop ins on a table
+	 * @param side the side which drops in
+	 * @return all possible drop ins on a table
+	 */
+	public ArrayList<Move> getAllDropIns(PlaySide side) {
+		ArrayList<Move> moves = new ArrayList<>();
+
+		for (Piece piece : getSameCaptures(side)) {
+			for (int i = 1; i <= 8; i++) {
+				for (int j = 1; j <= 8; j++) {
+					if (getPiece(i, j) == null) {
+						Move potentialMove = Move.dropIn(Piece.getDstString(i, j), piece.getType());
+						moves.add(potentialMove);
 					}
 				}
 			}
@@ -621,11 +645,12 @@ public class Board {
 			allPossibleMoves.addAll(myKing.getPossibleMoves(this));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
-			allPossibleMoves.addAll(getAllCheckBlockingsUsingDrop(attackingPiece));
+			// Priority 4 try to block the path of the attacking piece using drop in
+			allPossibleMoves.addAll(getAllBlocksUsingDropIns(attackingPiece));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
-			// Priority 4 try to block the path of the attacking piece
-			allPossibleMoves.addAll(getAllCheckBlockings(attackingPiece));
+			// Priority 5 try to block the path of the attacking piece using pieces from the board.
+			allPossibleMoves.addAll(getAllBlocksBetween(attackingPiece, myKing));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 			return Move.resign();
@@ -644,6 +669,9 @@ public class Board {
 //			return Move.moveTo(whiteKing.getSrcString(),
 //					Piece.getDstString(whiteKing.getX(), whiteKing.getY() - CASTLING_DISTANCE));
 //		}
+
+		allPossibleMoves.addAll(getAllDropIns(side));
+		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 		// First generate all captures and choose one if there are valid captures
 		for (Piece piece : mine) allPossibleMoves.addAll(piece.getPossibleCaptures(this));

@@ -12,8 +12,6 @@ play:
 playbots:
 	xboard -fcp "make run" -scp "make run" -debug
 
-fullTest: clean build play
-
 clean:
 	rm ./main/*.class
 	rm ./pieces/*.class
