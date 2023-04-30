@@ -22,7 +22,7 @@ public class Bot {
      * @param sideToMove side to move (either main.PlaySide.BLACK or main.PlaySide.WHITE)
      */
     public void recordMove(Move move, PlaySide sideToMove) {
-        board.registerMove(move);
+        board.registerMove(sideToMove, move);
         this.lastMove = move;
     }
 
@@ -32,7 +32,7 @@ public class Bot {
      */
     public Move calculateNextMove(PlaySide engineSide) {
         Move move = board.aggressiveMode(engineSide);
-        board.registerMove(move);
+        board.registerMove(engineSide, move);
         return move;
     }
 

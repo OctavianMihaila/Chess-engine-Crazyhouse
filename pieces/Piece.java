@@ -22,6 +22,10 @@ public abstract class Piece {
 		this.value = value;
 	}
 
+	public void setSide(PlaySide side) {
+		this.side = side;
+	}
+
 	public int getX() {
 		return x;
 	}

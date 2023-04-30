@@ -10,2518 +10,832 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-114 >first : xboard
+117 >first : xboard
 protover 2
-117 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_chess_blocking/proiect-pa-2023-holy-veriks'
-2132 <first : 
-2139 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-2139 >first : accepted done
-2139 >first : accepted sigint
-2139 >first : accepted sigterm
-2139 >first : accepted san
-2139 >first : accepted reuse
-2139 >first : accepted usermove
-2139 >first : accepted analyze
-2139 >first : accepted ping
-2139 >first : accepted setboard
-2139 >first : accepted level
-2139 >first : accepted variants
-2139 >first : accepted name
-2139 >first : accepted myname
-2139 >first : accepted done
+119 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_chess_blocking/proiect-pa-2023-holy-veriks'
+2118 <first : 
+2124 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+2124 >first : accepted done
+2124 >first : accepted sigint
+2124 >first : accepted sigterm
+2124 >first : accepted san
+2124 >first : accepted reuse
+2124 >first : accepted usermove
+2124 >first : accepted analyze
+2124 >first : accepted ping
+2124 >first : accepted setboard
+2124 >first : accepted level
+2124 >first : accepted variants
+2124 >first : accepted name
+2124 >first : accepted myname
+2124 >first : accepted done
 recognized 'crazyhouse' (-1) as variant crazyhouse
 Reset(1, 0) from gameMode 0
 recognized 'crazyhouse' (-1) as variant crazyhouse
 GameEnds(0, (null), 2)
-2141 >first : quit
+2125 >first : quit
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-2184 >first : xboard
+2168 >first : xboard
 protover 2
-2184 >first : new
+2168 >first : new
 random
-2184 >first : variant crazyhouse
-2184 >first : level 40 5 0
-2184 >first : post
-2184 >first : hard
-2188 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_chess_blocking/proiect-pa-2023-holy-veriks'
-4265 <first : 
-4271 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-4271 >first : accepted done
-4271 >first : accepted sigint
-4271 >first : accepted sigterm
-4271 >first : accepted san
-4271 >first : accepted reuse
-4271 >first : accepted usermove
-4271 >first : accepted analyze
-4271 >first : accepted ping
-4271 >first : accepted setboard
-4271 >first : accepted level
-4271 >first : accepted variants
-4271 >first : accepted name
-4271 >first : accepted myname
-4271 >first : accepted done
-4272 <first : Break because of new
-30354 >first : force
-31826 >first : usermove 31826 >first : c2c3
-33564 >first : usermove 33564 >first : d7d6
-34726 >first : usermove 34726 >first : d1a4
-36283 >first : name octavian
-36283 >first : white
-36283 >first : time 30000
-36283 >first : otim 30000
-36283 >first : black
-book hit = (NULL)
-36283 >first : go
+2168 >first : variant crazyhouse
+2168 >first : level 40 5 0
+2168 >first : post
+2168 >first : hard
+2171 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_chess_blocking/proiect-pa-2023-holy-veriks'
+4083 <first : 
+4089 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
+4089 >first : accepted done
+4089 >first : accepted sigint
+4089 >first : accepted sigterm
+4089 >first : accepted san
+4089 >first : accepted reuse
+4089 >first : accepted usermove
+4089 >first : accepted analyze
+4089 >first : accepted ping
+4089 >first : accepted setboard
+4089 >first : accepted level
+4089 >first : accepted variants
+4089 >first : accepted name
+4089 >first : accepted myname
+4089 >first : accepted done
+4090 <first : Break because of new
 nps: w=-1, b=-1
-36287 <first : Testing if king can move from e8 to a4
-36289 <first : Vertical dist: -4, horizontal dist: -4
-36289 <first : Testing if king can move from e8 to f8
-36289 <first : Vertical dist: 0, horizontal dist: 1
-36289 <first : Testing if king can move from e8 to e7
-36289 <first : Vertical dist: -1, horizontal dist: 0
-36289 <first : Testing if king can move from e8 to d8
-36289 <first : Vertical dist: 0, horizontal dist: -1
-36289 <first : Testing if king can move from e8 to f7
-36289 <first : Vertical dist: -1, horizontal dist: 1
-36290 <first : Testing if king can move from e8 to d7
-36290 <first : Vertical dist: -1, horizontal dist: -1
-36290 <first : Testing if king can move from e8 to f8
-36290 <first : Vertical dist: 0, horizontal dist: 1
-36290 <first : Testing if king can move from e8 to e7
-36290 <first : Vertical dist: -1, horizontal dist: 0
-36290 <first : Testing if king can move from e8 to d8
-36290 <first : Vertical dist: 0, horizontal dist: -1
-36290 <first : Testing if king can move from e8 to f7
-36290 <first : Vertical dist: -1, horizontal dist: 1
-36290 <first : Testing if king can move from e8 to d7
-36290 <first : Vertical dist: -1, horizontal dist: -1
-36290 <first : Conditions: 5 2
-36290 <first :  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking 5 2
-36290 <first : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>Destination: b5
-36290 <first : Conditions: 6 3
-36290 <first :  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking 6 3
-36290 <first : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>Destination: c6
-36290 <first : Piece TYPE: PAWN
-36290 <first : Testing if king can move from e1 to e8
-36290 <first : Vertical dist: 7, horizontal dist: 0
-36290 <first : Piece TYPE: KNIGHT
-36290 <first : Testing if king can move from e1 to e8
-36290 <first : Vertical dist: 7, horizontal dist: 0
-36290 <first : Conditions: 7 4
-36290 <first :  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking 7 4
-36290 <first : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>Destination: d7
-36291 <first : Piece TYPE: KNIGHT
-36291 <first : Testing if king can move from e1 to e8
-36291 <first : Vertical dist: 7, horizontal dist: 0
-36291 <first : Piece TYPE: BISHOP
-36291 <first : Testing if king can move from e1 to e8
-36291 <first : Vertical dist: 7, horizontal dist: 0
-36291 <first : Piece TYPE: QUEEN
-36291 <first : Testing if king can move from e1 to e8
-36291 <first : Vertical dist: 7, horizontal dist: 0
-36291 <first : move c7c6
-55618 >first : time 29999
-55618 >first : otim 28067
-book hit = (NULL)
-55618 >first : usermove 55618 >first : e2e3
-55620 <first : Testing if king can move from e1 to e8
-55620 <first : Vertical dist: 7, horizontal dist: 0
-55620 <first : Testing if king can move from e8 to f8
-55620 <first : Vertical dist: 0, horizontal dist: 1
-55620 <first : Testing if king can move from e8 to e7
-55620 <first : Vertical dist: -1, horizontal dist: 0
-55620 <first : Testing if king can move from e8 to d8
-55620 <first : Vertical dist: 0, horizontal dist: -1
-55620 <first : Testing if king can move from e8 to f7
-55620 <first : Vertical dist: -1, horizontal dist: 1
-55620 <first : Testing if king can move from e8 to d7
-55620 <first : Vertical dist: -1, horizontal dist: -1
-55620 <first : Testing if king can move from e1 to e8
-55620 <first : Vertical dist: 7, horizontal dist: 0
-55620 <first : Testing if king can move from e1 to e8
-55620 <first : Vertical dist: 7, horizontal dist: 0
-55620 <first : Testing if king can move from e1 to e8
-55620 <first : Vertical dist: 7, horizontal dist: 0
-55620 <first : Testing if king can move from e1 to e8
-55620 <first : Vertical dist: 7, horizontal dist: 0
-55620 <first : Testing if king can move from e1 to e8
-55620 <first : Vertical dist: 7, horizontal dist: 0
-55620 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e1 to e8
-55621 <first : Vertical dist: 7, horizontal dist: 0
-55621 <first : Testing if king can move from e8 to f8
-55621 <first : Vertical dist: 0, horizontal dist: 1
-55621 <first : Testing if king can move from e8 to e7
-55621 <first : Vertical dist: -1, horizontal dist: 0
-55621 <first : Testing if king can move from e8 to d8
-55621 <first : Vertical dist: 0, horizontal dist: -1
-55621 <first : Testing if king can move from e8 to f7
-55622 <first : Vertical dist: -1, horizontal dist: 1
-55622 <first : Testing if king can move from e8 to d7
-55622 <first : Vertical dist: -1, horizontal dist: -1
-55622 <first : Testing if king can move from e1 to d7
-55622 <first : Vertical dist: 6, horizontal dist: -1
-55622 <first : Testing if king can move from e1 to e8
-55622 <first : Vertical dist: 7, horizontal dist: 0
-55622 <first : Testing if king can move from e1 to e8
-55622 <first : Vertical dist: 7, horizontal dist: 0
-55622 <first : move c8h3
-61026 >first : time 29998
-61026 >first : otim 27526
-book hit = (NULL)
-61026 >first : usermove 61026 >first : a4c6
-61029 <first : Testing if king can move from e1 to e8
-61029 <first : Vertical dist: 7, horizontal dist: 0
-61029 <first : Testing if king can move from e1 to e8
-61029 <first : Vertical dist: 7, horizontal dist: 0
-61029 <first : Testing if king can move from e8 to c6
-61029 <first : Vertical dist: -2, horizontal dist: -2
-61029 <first : move b8c6
-63700 >first : time 29998
-63700 >first : otim 27259
-book hit = (NULL)
-63700 >first : usermove 63700 >first : f1b5
-63702 <first : Testing if king can move from e1 to e8
-63702 <first : Vertical dist: 7, horizontal dist: 0
-63702 <first : Testing if king can move from e1 to e8
-63702 <first : Vertical dist: 7, horizontal dist: 0
-63702 <first : Testing if king can move from e8 to f8
-63702 <first : Vertical dist: 0, horizontal dist: 1
-63702 <first : Testing if king can move from e8 to e7
-63702 <first : Vertical dist: -1, horizontal dist: 0
-63702 <first : Testing if king can move from e8 to d8
-63702 <first : Vertical dist: 0, horizontal dist: -1
-63702 <first : Testing if king can move from e8 to f7
-63702 <first : Vertical dist: -1, horizontal dist: 1
-63702 <first : Testing if king can move from e8 to d7
-63702 <first : Vertical dist: -1, horizontal dist: -1
-63702 <first : move h3g2
-73162 >first : time 29998
-73162 >first : otim 26313
-book hit = (NULL)
-73162 >first : usermove 73162 >first : d2d4
-73164 <first : Testing if king can move from e1 to e8
-73164 <first : Vertical dist: 7, horizontal dist: 0
-73164 <first : Testing if king can move from e1 to e8
-73164 <first : Vertical dist: 7, horizontal dist: 0
-73164 <first : Testing if king can move from e1 to e8
-73164 <first : Vertical dist: 7, horizontal dist: 0
-73164 <first : Testing if king can move from e8 to f8
-73164 <first : Vertical dist: 0, horizontal dist: 1
-73164 <first : Testing if king can move from e8 to e7
-73164 <first : Vertical dist: -1, horizontal dist: 0
-73164 <first : Testing if king can move from e8 to d8
-73164 <first : Vertical dist: 0, horizontal dist: -1
-73164 <first : Testing if king can move from e8 to f7
-73164 <first : Vertical dist: -1, horizontal dist: 1
-73164 <first : Testing if king can move from e8 to d7
-73164 <first : Vertical dist: -1, horizontal dist: -1
-73164 <first : move g2h1
-74002 >first : time 29998
-74002 >first : otim 26230
-book hit = (NULL)
-74002 >first : usermove 74002 >first : d4d5
-74004 <first : Testing if king can move from e1 to e8
-74004 <first : Vertical dist: 7, horizontal dist: 0
-74004 <first : Testing if king can move from e1 to e8
-74004 <first : Vertical dist: 7, horizontal dist: 0
-74004 <first : Testing if king can move from e8 to f8
-74004 <first : Vertical dist: 0, horizontal dist: 1
-74004 <first : Testing if king can move from e8 to e7
-74004 <first : Vertical dist: -1, horizontal dist: 0
-74004 <first : Testing if king can move from e8 to d8
-74004 <first : Vertical dist: 0, horizontal dist: -1
-74004 <first : Testing if king can move from e8 to f7
-74004 <first : Vertical dist: -1, horizontal dist: 1
-74004 <first : Testing if king can move from e8 to d7
-74004 <first : Vertical dist: -1, horizontal dist: -1
-74004 <first : move h1d5
-77102 >first : time 29997
-77102 >first : otim 25920
-book hit = (NULL)
-77102 >first : usermove 77102 >first : e3e4
-77104 <first : Testing if king can move from e1 to e8
-77104 <first : Vertical dist: 7, horizontal dist: 0
-77104 <first : Testing if king can move from e1 to e8
-77104 <first : Vertical dist: 7, horizontal dist: 0
-77104 <first : Testing if king can move from e1 to e8
-77104 <first : Vertical dist: 7, horizontal dist: 0
-77104 <first : Testing if king can move from e8 to f8
-77104 <first : Vertical dist: 0, horizontal dist: 1
-77104 <first : Testing if king can move from e8 to e7
-77104 <first : Vertical dist: -1, horizontal dist: 0
-77104 <first : Testing if king can move from e8 to d8
-77104 <first : Vertical dist: 0, horizontal dist: -1
-77104 <first : Testing if king can move from e8 to f7
-77104 <first : Vertical dist: -1, horizontal dist: 1
-77104 <first : Testing if king can move from e8 to d7
-77104 <first : Vertical dist: -1, horizontal dist: -1
-77104 <first : move d5e4
-84312 >first : time 29997
-84312 >first : otim 25199
-book hit = (NULL)
-84312 >first : usermove 84312 >first : b1a3
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e8 to f8
-84314 <first : Vertical dist: 0, horizontal dist: 1
-84314 <first : Testing if king can move from e8 to e7
-84314 <first : Vertical dist: -1, horizontal dist: 0
-84314 <first : Testing if king can move from e8 to d8
-84314 <first : Vertical dist: 0, horizontal dist: -1
-84314 <first : Testing if king can move from e8 to f7
-84314 <first : Vertical dist: -1, horizontal dist: 1
-84314 <first : Testing if king can move from e8 to d7
-84314 <first : Vertical dist: -1, horizontal dist: -1
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84314 <first : Testing if king can move from e1 to e8
-84314 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e8 to f8
-84315 <first : Vertical dist: 0, horizontal dist: 1
-84315 <first : Testing if king can move from e8 to e7
-84315 <first : Vertical dist: -1, horizontal dist: 0
-84315 <first : Testing if king can move from e8 to d8
-84315 <first : Vertical dist: 0, horizontal dist: -1
-84315 <first : Testing if king can move from e8 to f7
-84315 <first : Vertical dist: -1, horizontal dist: 1
-84315 <first : Testing if king can move from e8 to d7
-84315 <first : Vertical dist: -1, horizontal dist: -1
-84315 <first : Testing if king can move from e1 to d7
-84315 <first : Vertical dist: 6, horizontal dist: -1
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : Testing if king can move from e1 to e8
-84315 <first : Vertical dist: 7, horizontal dist: 0
-84315 <first : move e4h1
-85514 >first : time 29997
-85514 >first : otim 25079
-book hit = (NULL)
-85514 >first : usermove 85514 >first : a3c4
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e8 to f8
-85516 <first : Vertical dist: 0, horizontal dist: 1
-85516 <first : Testing if king can move from e8 to e7
-85516 <first : Vertical dist: -1, horizontal dist: 0
-85516 <first : Testing if king can move from e8 to d8
-85516 <first : Vertical dist: 0, horizontal dist: -1
-85516 <first : Testing if king can move from e8 to f7
-85516 <first : Vertical dist: -1, horizontal dist: 1
-85516 <first : Testing if king can move from e8 to d7
-85516 <first : Vertical dist: -1, horizontal dist: -1
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e1 to e8
-85516 <first : Vertical dist: 7, horizontal dist: 0
-85516 <first : Testing if king can move from e8 to f8
-85516 <first : Vertical dist: 0, horizontal dist: 1
-85516 <first : Testing if king can move from e8 to e7
-85516 <first : Vertical dist: -1, horizontal dist: 0
-85516 <first : Testing if king can move from e8 to d8
-85516 <first : Vertical dist: 0, horizontal dist: -1
-85516 <first : Testing if king can move from e8 to f7
-85516 <first : Vertical dist: -1, horizontal dist: 1
-85516 <first : Testing if king can move from e8 to d7
-85516 <first : Vertical dist: -1, horizontal dist: -1
-85516 <first : Testing if king can move from e1 to d7
-85517 <first : Vertical dist: 6, horizontal dist: -1
-85517 <first : Testing if king can move from e1 to e8
-85517 <first : Vertical dist: 7, horizontal dist: 0
-85517 <first : Testing if king can move from e1 to e8
-85517 <first : Vertical dist: 7, horizontal dist: 0
-85517 <first : move d8d7
-90137 >first : time 29997
-90137 >first : otim 24617
-book hit = (NULL)
-90137 >first : usermove 90137 >first : c4e5
-90139 <first : Testing if king can move from e1 to e8
-90139 <first : Vertical dist: 7, horizontal dist: 0
-90139 <first : Testing if king can move from e1 to e8
-90139 <first : Vertical dist: 7, horizontal dist: 0
-90139 <first : Testing if king can move from e1 to e8
-90139 <first : Vertical dist: 7, horizontal dist: 0
-90139 <first : Testing if king can move from e8 to f8
-90139 <first : Vertical dist: 0, horizontal dist: 1
-90139 <first : Testing if king can move from e8 to e7
-90139 <first : Vertical dist: -1, horizontal dist: 0
-90139 <first : Testing if king can move from e8 to d8
-90139 <first : Vertical dist: 0, horizontal dist: -1
-90139 <first : Testing if king can move from e8 to f7
-90139 <first : Vertical dist: -1, horizontal dist: 1
-90139 <first : Testing if king can move from e8 to d7
-90139 <first : Vertical dist: -1, horizontal dist: -1
-90139 <first : move d6e5
-92396 >first : time 29996
-92397 >first : otim 24391
-book hit = (NULL)
-92397 >first : usermove 92397 >first : g1f3
-92399 <first : Testing if king can move from e1 to e8
-92399 <first : Vertical dist: 7, horizontal dist: 0
-92399 <first : Testing if king can move from e1 to e8
-92399 <first : Vertical dist: 7, horizontal dist: 0
-92399 <first : Testing if king can move from e8 to f8
-92399 <first : Vertical dist: 0, horizontal dist: 1
-92399 <first : Testing if king can move from e8 to e7
-92399 <first : Vertical dist: -1, horizontal dist: 0
-92399 <first : Testing if king can move from e8 to d8
-92399 <first : Vertical dist: 0, horizontal dist: -1
-92399 <first : Testing if king can move from e8 to f7
-92399 <first : Vertical dist: -1, horizontal dist: 1
-92399 <first : Testing if king can move from e8 to d7
-92399 <first : Vertical dist: -1, horizontal dist: -1
-92399 <first : move h1f3
-109058 >first : time 29996
-109058 >first : otim 22725
-book hit = (NULL)
-109058 >first : usermove 109058 >first : b2b3
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e8 to f8
-109060 <first : Vertical dist: 0, horizontal dist: 1
-109060 <first : Testing if king can move from e8 to e7
-109060 <first : Vertical dist: -1, horizontal dist: 0
-109060 <first : Testing if king can move from e8 to d8
-109060 <first : Vertical dist: 0, horizontal dist: -1
-109060 <first : Testing if king can move from e8 to f7
-109060 <first : Vertical dist: -1, horizontal dist: 1
-109060 <first : Testing if king can move from e8 to d7
-109060 <first : Vertical dist: -1, horizontal dist: -1
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e8 to f8
-109060 <first : Vertical dist: 0, horizontal dist: 1
-109060 <first : Testing if king can move from e8 to e7
-109060 <first : Vertical dist: -1, horizontal dist: 0
-109060 <first : Testing if king can move from e8 to d8
-109060 <first : Vertical dist: 0, horizontal dist: -1
-109060 <first : Testing if king can move from e1 to d8
-109060 <first : Vertical dist: 7, horizontal dist: -1
-109060 <first : Testing if king can move from e8 to f7
-109060 <first : Vertical dist: -1, horizontal dist: 1
-109060 <first : Testing if king can move from e8 to d7
-109060 <first : Vertical dist: -1, horizontal dist: -1
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : Testing if king can move from e1 to e8
-109060 <first : Vertical dist: 7, horizontal dist: 0
-109060 <first : move d7e6
-110324 >first : time 29996
-110324 >first : otim 22599
-book hit = (NULL)
-110324 >first : usermove 110324 >first : c3c4
-110326 <first : Testing if king can move from e1 to e8
-110326 <first : Vertical dist: 7, horizontal dist: 0
-110326 <first : Testing if king can move from e1 to e8
-110326 <first : Vertical dist: 7, horizontal dist: 0
-110326 <first : Testing if king can move from e8 to f8
-110326 <first : Vertical dist: 0, horizontal dist: 1
-110326 <first : Testing if king can move from e8 to e7
-110326 <first : Vertical dist: -1, horizontal dist: 0
-110326 <first : Testing if king can move from e8 to d8
-110326 <first : Vertical dist: 0, horizontal dist: -1
-110326 <first : Testing if king can move from e8 to f7
-110326 <first : Vertical dist: -1, horizontal dist: 1
-110326 <first : Testing if king can move from e8 to d7
-110326 <first : Vertical dist: -1, horizontal dist: -1
-110326 <first : move e6c4
-111301 >first : time 29996
-111301 >first : otim 22502
-book hit = (NULL)
-111301 >first : usermove 111301 >first : b3c4
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e8 to f8
-111303 <first : Vertical dist: 0, horizontal dist: 1
-111303 <first : Testing if king can move from e8 to e7
-111303 <first : Vertical dist: -1, horizontal dist: 0
-111303 <first : Testing if king can move from e8 to d8
-111303 <first : Vertical dist: 0, horizontal dist: -1
-111303 <first : Testing if king can move from e8 to f7
-111303 <first : Vertical dist: -1, horizontal dist: 1
-111303 <first : Testing if king can move from e8 to d7
-111303 <first : Vertical dist: -1, horizontal dist: -1
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e8 to f8
-111303 <first : Vertical dist: 0, horizontal dist: 1
-111303 <first : Testing if king can move from e8 to e7
-111303 <first : Vertical dist: -1, horizontal dist: 0
-111303 <first : Testing if king can move from e8 to d8
-111303 <first : Vertical dist: 0, horizontal dist: -1
-111303 <first : Testing if king can move from e1 to d8
-111303 <first : Vertical dist: 7, horizontal dist: -1
-111303 <first : Testing if king can move from e8 to f7
-111303 <first : Vertical dist: -1, horizontal dist: 1
-111303 <first : Testing if king can move from e8 to d7
-111303 <first : Vertical dist: -1, horizontal dist: -1
-111303 <first : Testing if king can move from e1 to d7
-111303 <first : Vertical dist: 6, horizontal dist: -1
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : Testing if king can move from e1 to e8
-111303 <first : Vertical dist: 7, horizontal dist: 0
-111303 <first : move e8d8
-114786 >first : time 29995
-114786 >first : otim 22153
-book hit = (NULL)
-114786 >first : usermove 114786 >first : c1a3
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from d8 to e8
-114788 <first : Vertical dist: 0, horizontal dist: 1
-114788 <first : Testing if king can move from d8 to d7
-114788 <first : Vertical dist: -1, horizontal dist: 0
-114788 <first : Testing if king can move from d8 to c8
-114788 <first : Vertical dist: 0, horizontal dist: -1
-114788 <first : Testing if king can move from d8 to e7
-114788 <first : Vertical dist: -1, horizontal dist: 1
-114788 <first : Testing if king can move from d8 to c7
-114788 <first : Vertical dist: -1, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from d8 to e8
-114788 <first : Vertical dist: 0, horizontal dist: 1
-114788 <first : Testing if king can move from e1 to e8
-114788 <first : Vertical dist: 7, horizontal dist: 0
-114788 <first : Testing if king can move from d8 to d7
-114788 <first : Vertical dist: -1, horizontal dist: 0
-114788 <first : Testing if king can move from e1 to d7
-114788 <first : Vertical dist: 6, horizontal dist: -1
-114788 <first : Testing if king can move from d8 to c8
-114788 <first : Vertical dist: 0, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to c8
-114788 <first : Vertical dist: 7, horizontal dist: -2
-114788 <first : Testing if king can move from d8 to e7
-114788 <first : Vertical dist: -1, horizontal dist: 1
-114788 <first : Testing if king can move from d8 to c7
-114788 <first : Vertical dist: -1, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to c7
-114788 <first : Vertical dist: 6, horizontal dist: -2
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : Testing if king can move from e1 to d8
-114788 <first : Vertical dist: 7, horizontal dist: -1
-114788 <first : move d8e8
-116029 >first : time 29995
-116029 >first : otim 22029
-book hit = (NULL)
-116029 >first : usermove 116029 >first : a1d1
-116030 <first : Testing if king can move from e1 to e8
-116030 <first : Vertical dist: 7, horizontal dist: 0
-116030 <first : Testing if king can move from e1 to e8
-116030 <first : Vertical dist: 7, horizontal dist: 0
-116030 <first : Testing if king can move from e8 to f8
-116030 <first : Vertical dist: 0, horizontal dist: 1
-116030 <first : Testing if king can move from e8 to e7
-116030 <first : Vertical dist: -1, horizontal dist: 0
-116030 <first : Testing if king can move from e8 to d8
-116030 <first : Vertical dist: 0, horizontal dist: -1
-116030 <first : Testing if king can move from e8 to f7
-116030 <first : Vertical dist: -1, horizontal dist: 1
-116030 <first : Testing if king can move from e8 to d7
-116030 <first : Vertical dist: -1, horizontal dist: -1
-116030 <first : move f3d1
-126256 >first : time 29995
-126256 >first : otim 21007
-book hit = (NULL)
-126256 >first : usermove 126256 >first : e1d1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from e8 to f8
-126258 <first : Vertical dist: 0, horizontal dist: 1
-126258 <first : Testing if king can move from e8 to e7
-126258 <first : Vertical dist: -1, horizontal dist: 0
-126258 <first : Testing if king can move from e8 to d8
-126258 <first : Vertical dist: 0, horizontal dist: -1
-126258 <first : Testing if king can move from e8 to f7
-126258 <first : Vertical dist: -1, horizontal dist: 1
-126258 <first : Testing if king can move from e8 to d7
-126258 <first : Vertical dist: -1, horizontal dist: -1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from e8 to f8
-126258 <first : Vertical dist: 0, horizontal dist: 1
-126258 <first : Testing if king can move from e8 to e7
-126258 <first : Vertical dist: -1, horizontal dist: 0
-126258 <first : Testing if king can move from e8 to d8
-126258 <first : Vertical dist: 0, horizontal dist: -1
-126258 <first : Testing if king can move from d1 to d8
-126258 <first : Vertical dist: 7, horizontal dist: 0
-126258 <first : Testing if king can move from e8 to f7
-126258 <first : Vertical dist: -1, horizontal dist: 1
-126258 <first : Testing if king can move from e8 to d7
-126258 <first : Vertical dist: -1, horizontal dist: -1
-126258 <first : Testing if king can move from d1 to d7
-126258 <first : Vertical dist: 6, horizontal dist: 0
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : Testing if king can move from d1 to e8
-126258 <first : Vertical dist: 7, horizontal dist: 1
-126258 <first : move g7g6
-138320 >first : time 29995
-138320 >first : otim 19800
-book hit = (NULL)
-138320 >first : usermove 138320 >first : a3b4
-138322 <first : Testing if king can move from d1 to e8
-138322 <first : Vertical dist: 7, horizontal dist: 1
-138322 <first : Testing if king can move from d1 to e8
-138322 <first : Vertical dist: 7, horizontal dist: 1
-138322 <first : Testing if king can move from e8 to f8
-138323 <first : Vertical dist: 0, horizontal dist: 1
-138323 <first : Testing if king can move from e8 to e7
-138323 <first : Vertical dist: -1, horizontal dist: 0
-138323 <first : Testing if king can move from e8 to d8
-138323 <first : Vertical dist: 0, horizontal dist: -1
-138323 <first : Testing if king can move from e8 to f7
-138323 <first : Vertical dist: -1, horizontal dist: 1
-138323 <first : Testing if king can move from e8 to d7
-138323 <first : Vertical dist: -1, horizontal dist: -1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from e8 to f8
-138323 <first : Vertical dist: 0, horizontal dist: 1
-138323 <first : Testing if king can move from e8 to e7
-138323 <first : Vertical dist: -1, horizontal dist: 0
-138323 <first : Testing if king can move from e8 to d8
-138323 <first : Vertical dist: 0, horizontal dist: -1
-138323 <first : Testing if king can move from d1 to d8
-138323 <first : Vertical dist: 7, horizontal dist: 0
-138323 <first : Testing if king can move from e8 to f7
-138323 <first : Vertical dist: -1, horizontal dist: 1
-138323 <first : Testing if king can move from e8 to d7
-138323 <first : Vertical dist: -1, horizontal dist: -1
-138323 <first : Testing if king can move from d1 to d7
-138323 <first : Vertical dist: 6, horizontal dist: 0
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : Testing if king can move from d1 to e8
-138323 <first : Vertical dist: 7, horizontal dist: 1
-138323 <first : move e8d8
-139658 >first : time 29995
-139658 >first : otim 19667
-book hit = (NULL)
-139658 >first : usermove 139658 >first : a2a4
-139660 <first : Testing if king can move from d1 to d8
-139660 <first : Vertical dist: 7, horizontal dist: 0
-139660 <first : Testing if king can move from d1 to d8
-139660 <first : Vertical dist: 7, horizontal dist: 0
-139660 <first : Testing if king can move from d8 to e8
-139660 <first : Vertical dist: 0, horizontal dist: 1
-139660 <first : Testing if king can move from d8 to d7
-139660 <first : Vertical dist: -1, horizontal dist: 0
-139660 <first : Testing if king can move from d8 to c8
-139660 <first : Vertical dist: 0, horizontal dist: -1
-139660 <first : Testing if king can move from d8 to e7
-139660 <first : Vertical dist: -1, horizontal dist: 1
-139660 <first : Testing if king can move from d8 to c7
-139660 <first : Vertical dist: -1, horizontal dist: -1
-139660 <first : move c6b4
-144357 >first : time 29994
-144357 >first : otim 19197
-book hit = (NULL)
-144357 >first : usermove 144357 >first : a4a5
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d8 to e8
-144360 <first : Vertical dist: 0, horizontal dist: 1
-144360 <first : Testing if king can move from d8 to d7
-144360 <first : Vertical dist: -1, horizontal dist: 0
-144360 <first : Testing if king can move from d8 to c8
-144360 <first : Vertical dist: 0, horizontal dist: -1
-144360 <first : Testing if king can move from d8 to e7
-144360 <first : Vertical dist: -1, horizontal dist: 1
-144360 <first : Testing if king can move from d8 to c7
-144360 <first : Vertical dist: -1, horizontal dist: -1
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d8 to e8
-144360 <first : Vertical dist: 0, horizontal dist: 1
-144360 <first : Testing if king can move from d1 to e8
-144360 <first : Vertical dist: 7, horizontal dist: 1
-144360 <first : Testing if king can move from d8 to d7
-144360 <first : Vertical dist: -1, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d7
-144360 <first : Vertical dist: 6, horizontal dist: 0
-144360 <first : Testing if king can move from d8 to c8
-144360 <first : Vertical dist: 0, horizontal dist: -1
-144360 <first : Testing if king can move from d1 to c8
-144360 <first : Vertical dist: 7, horizontal dist: -1
-144360 <first : Testing if king can move from d8 to e7
-144360 <first : Vertical dist: -1, horizontal dist: 1
-144360 <first : Testing if king can move from d8 to c7
-144360 <first : Vertical dist: -1, horizontal dist: -1
-144360 <first : Testing if king can move from d1 to c7
-144360 <first : Vertical dist: 6, horizontal dist: -1
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : Testing if king can move from d1 to d8
-144360 <first : Vertical dist: 7, horizontal dist: 0
-144360 <first : move b4a6
-153550 >first : time 29994
-153550 >first : otim 18278
-book hit = (NULL)
-153550 >first : usermove 153550 >first : c4c5
-153552 <first : Testing if king can move from d1 to d8
-153552 <first : Vertical dist: 7, horizontal dist: 0
-153552 <first : Testing if king can move from d1 to d8
-153552 <first : Vertical dist: 7, horizontal dist: 0
-153552 <first : Testing if king can move from d8 to e8
-153552 <first : Vertical dist: 0, horizontal dist: 1
-153552 <first : Testing if king can move from d8 to d7
-153552 <first : Vertical dist: -1, horizontal dist: 0
-153552 <first : Testing if king can move from d8 to c8
-153552 <first : Vertical dist: 0, horizontal dist: -1
-153552 <first : Testing if king can move from d8 to e7
-153552 <first : Vertical dist: -1, horizontal dist: 1
-153552 <first : Testing if king can move from d8 to c7
-153552 <first : Vertical dist: -1, horizontal dist: -1
-153552 <first : move a6c5
-158740 >first : time 29994
-158740 >first : otim 17759
-book hit = (NULL)
-158740 >first : usermove 158740 >first : a5a6
-158741 <first : Testing if king can move from d1 to d8
-158742 <first : Vertical dist: 7, horizontal dist: 0
-158742 <first : Testing if king can move from d1 to d8
-158742 <first : Vertical dist: 7, horizontal dist: 0
-158742 <first : Testing if king can move from d1 to d8
-158742 <first : Vertical dist: 7, horizontal dist: 0
-158742 <first : Testing if king can move from d8 to e8
-158742 <first : Vertical dist: 0, horizontal dist: 1
-158742 <first : Testing if king can move from d8 to d7
-158742 <first : Vertical dist: -1, horizontal dist: 0
-158742 <first : Testing if king can move from d8 to c8
-158742 <first : Vertical dist: 0, horizontal dist: -1
-158742 <first : Testing if king can move from d8 to e7
-158742 <first : Vertical dist: -1, horizontal dist: 1
-158742 <first : Testing if king can move from d8 to c7
-158742 <first : Vertical dist: -1, horizontal dist: -1
-158742 <first : move b7a6
-159806 >first : time 29994
-159807 >first : otim 17653
-book hit = (NULL)
-159807 >first : usermove 159807 >first : b5a6
-159808 <first : Testing if king can move from d1 to d8
-159808 <first : Vertical dist: 7, horizontal dist: 0
-159808 <first : Testing if king can move from d1 to d8
-159808 <first : Vertical dist: 7, horizontal dist: 0
-159808 <first : Testing if king can move from d8 to e8
-159808 <first : Vertical dist: 0, horizontal dist: 1
-159808 <first : Testing if king can move from d8 to d7
-159808 <first : Vertical dist: -1, horizontal dist: 0
-159808 <first : Testing if king can move from d8 to c8
-159808 <first : Vertical dist: 0, horizontal dist: -1
-159808 <first : Testing if king can move from d8 to e7
-159808 <first : Vertical dist: -1, horizontal dist: 1
-159808 <first : Testing if king can move from d8 to c7
-159808 <first : Vertical dist: -1, horizontal dist: -1
-159808 <first : move c5a6
-Reset(1, 1) from gameMode 2
-recognized 'crazyhouse' (-1) as variant crazyhouse
-GameEnds(0, (null), 2)
-168658 >first : quit
-shuffleOpenings = 0
-StartChildProcess (dir=".") make run
-168668 >first : xboard
-protover 2
-168668 >first : new
-random
-168668 >first : variant crazyhouse
-168668 >first : level 40 5 0
-168668 >first : post
-168668 >first : hard
-168670 <first : make[1]: Entering directory '/home/octavian/dev/sem2/PA/proiect_chess_blocking/proiect-pa-2023-holy-veriks'
+8315 >first : name octavian
 nps: w=-1, b=-1
-170235 >first : name octavian
+8315 >first : time 30000
+8315 >first : otim 30000
+book hit = (NULL)
+8315 >first : usermove 8315 >first : g2g4
+10231 >first : force
+10940 >first : usermove 10940 >first : h7h5
+11486 >first : usermove 11486 >first : g4h5
+12398 >first : usermove 12398 >first : g7g6
+14362 >first : usermove 14362 >first : h5g6
+16052 >first : usermove 16052 >first : h8h2
+17332 >first : usermove 17332 >first : g6g7
+18430 >first : usermove 18430 >first : f8g7
+20626 >first : usermove 20626 >first : h1h2
+27418 >first : usermove 27418 >first : g7e5
+31200 >first : usermove 31200 >first : g1h3
+32152 >first : usermove 32152 >first : e5h2
+32874 >first : usermove 32874 >first : h3g1
+42680 >first : usermove 42680 >first : h2d6
+48808 >first : usermove 48808 >first : d2d3
+50050 >first : usermove 50050 >first : d6b4
+50866 >first : name octavian
+50866 >first : black
+50866 >first : time 30000
+50866 >first : otim 30000
+50866 >first : white
+book hit = (NULL)
+50866 >first : go
 nps: w=-1, b=-1
-170235 >first : time 30000
-170235 >first : otim 30000
+50871 <first : move P@c3
+LegalDrop: 0 @ 4,2)
+LegalDrop: 0 @ 4,2)
+82640 >first : time 29999
+82640 >first : otim 26823
 book hit = (NULL)
-170235 >first : usermove 170235 >first : c2c3
-170701 <first : 
-170707 <first : feature done=0 sigint=0 sigterm=0 san=0 reuse=0 usermove=1 analyze=0 ping=0 setboard=0 level=0 variants="crazyhouse" name="Verik" myname="Verik" done=1
-170707 >first : accepted done
-170707 >first : accepted sigint
-170707 >first : accepted sigterm
-170707 >first : accepted san
-170707 >first : accepted reuse
-170707 >first : accepted usermove
-170707 >first : accepted analyze
-170707 >first : accepted ping
-170707 >first : accepted setboard
-170707 >first : accepted level
-170707 >first : accepted variants
-170707 >first : accepted name
-170707 >first : accepted myname
-170707 >first : accepted done
-170708 <first : Break because of new
-173412 >first : force
-175312 >first : usermove 175312 >first : d7d6
-176826 >first : usermove 176826 >first : d1a4
-178544 >first : name octavian
-178544 >first : white
-178544 >first : time 30000
-178544 >first : otim 30000
-178544 >first : black
+82640 >first : usermove 82640 >first : b4c3
+82642 <first : move b2c3
+84274 >first : time 29999
+84274 >first : otim 26659
 book hit = (NULL)
-178544 >first : go
-nps: w=-1, b=-1
-178549 <first : Testing if king can move from e8 to a4
-178552 <first : Vertical dist: -4, horizontal dist: -4
-178552 <first : Testing if king can move from e8 to f8
-178552 <first : Vertical dist: 0, horizontal dist: 1
-178552 <first : Testing if king can move from e8 to e7
-178552 <first : Vertical dist: -1, horizontal dist: 0
-178552 <first : Testing if king can move from e8 to d8
-178552 <first : Vertical dist: 0, horizontal dist: -1
-178552 <first : Testing if king can move from e8 to f7
-178552 <first : Vertical dist: -1, horizontal dist: 1
-178552 <first : Testing if king can move from e8 to d7
-178552 <first : Vertical dist: -1, horizontal dist: -1
-178552 <first : Testing if king can move from e8 to f8
-178552 <first : Vertical dist: 0, horizontal dist: 1
-178552 <first : Testing if king can move from e8 to e7
-178552 <first : Vertical dist: -1, horizontal dist: 0
-178552 <first : Testing if king can move from e8 to d8
-178552 <first : Vertical dist: 0, horizontal dist: -1
-178552 <first : Testing if king can move from e8 to f7
-178552 <first : Vertical dist: -1, horizontal dist: 1
-178552 <first : Testing if king can move from e8 to d7
-178552 <first : Vertical dist: -1, horizontal dist: -1
-178553 <first : Conditions: 5 2
-178553 <first :  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking 5 2
-178553 <first : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>Destination: b5
-178553 <first : Conditions: 6 3
-178553 <first :  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking 6 3
-178553 <first : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>Destination: c6
-178553 <first : Piece TYPE: PAWN
-178553 <first : Testing if king can move from e1 to e8
-178553 <first : Vertical dist: 7, horizontal dist: 0
-178553 <first : Piece TYPE: KNIGHT
-178553 <first : Testing if king can move from e1 to e8
-178553 <first : Vertical dist: 7, horizontal dist: 0
-178553 <first : Conditions: 7 4
-178553 <first :  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking 7 4
-178553 <first : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>Destination: d7
-178553 <first : Piece TYPE: KNIGHT
-178553 <first : Testing if king can move from e1 to e8
-178553 <first : Vertical dist: 7, horizontal dist: 0
-178553 <first : Piece TYPE: BISHOP
-178553 <first : Testing if king can move from e1 to e8
-178553 <first : Vertical dist: 7, horizontal dist: 0
-178554 <first : Piece TYPE: QUEEN
-178554 <first : Testing if king can move from e1 to e8
-178554 <first : Vertical dist: 7, horizontal dist: 0
-178554 <first : move c8d7
-182835 >first : time 29999
-182835 >first : otim 29571
+84274 >first : usermove 84274 >first : g8f6
+84276 <first : move f2f4
+86468 >first : time 29999
+86468 >first : otim 26440
 book hit = (NULL)
-182835 >first : usermove 182835 >first : e2e4
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e8 to f8
-182837 <first : Vertical dist: 0, horizontal dist: 1
-182837 <first : Testing if king can move from e8 to e7
-182837 <first : Vertical dist: -1, horizontal dist: 0
-182837 <first : Testing if king can move from e8 to d8
-182837 <first : Vertical dist: 0, horizontal dist: -1
-182837 <first : Testing if king can move from e8 to f7
-182837 <first : Vertical dist: -1, horizontal dist: 1
-182837 <first : Testing if king can move from e8 to d7
-182837 <first : Vertical dist: -1, horizontal dist: -1
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182837 <first : Vertical dist: 7, horizontal dist: 0
-182837 <first : Testing if king can move from e1 to e8
-182838 <first : Vertical dist: 7, horizontal dist: 0
-182838 <first : Testing if king can move from e1 to e8
-182838 <first : Vertical dist: 7, horizontal dist: 0
-182838 <first : Testing if king can move from e1 to e8
-182838 <first : Vertical dist: 7, horizontal dist: 0
-182838 <first : Testing if king can move from e8 to f8
-182838 <first : Vertical dist: 0, horizontal dist: 1
-182838 <first : Testing if king can move from e8 to e7
-182838 <first : Vertical dist: -1, horizontal dist: 0
-182838 <first : Testing if king can move from e8 to d8
-182838 <first : Vertical dist: 0, horizontal dist: -1
-182838 <first : Testing if king can move from e8 to f7
-182838 <first : Vertical dist: -1, horizontal dist: 1
-182838 <first : Testing if king can move from e8 to d7
-182838 <first : Vertical dist: -1, horizontal dist: -1
-182838 <first : Testing if king can move from e1 to e8
-182838 <first : Vertical dist: 7, horizontal dist: 0
-182838 <first : Testing if king can move from e1 to e8
-182838 <first : Vertical dist: 7, horizontal dist: 0
-182838 <first : move d7c6
-190946 >first : time 29998
-190946 >first : otim 28761
+86468 >first : usermove 86468 >first : d7d5
+86470 <first : move b1a3
+87188 >first : time 29999
+87188 >first : otim 26368
 book hit = (NULL)
-190946 >first : usermove 190946 >first : f1b5
-190948 <first : Testing if king can move from e1 to e8
-190948 <first : Vertical dist: 7, horizontal dist: 0
-190948 <first : Testing if king can move from e1 to e8
-190948 <first : Vertical dist: 7, horizontal dist: 0
-190948 <first : Testing if king can move from e1 to e8
-190948 <first : Vertical dist: 7, horizontal dist: 0
-190948 <first : Testing if king can move from e8 to f8
-190948 <first : Vertical dist: 0, horizontal dist: 1
-190948 <first : Testing if king can move from e8 to e7
-190948 <first : Vertical dist: -1, horizontal dist: 0
-190948 <first : Testing if king can move from e8 to d8
-190948 <first : Vertical dist: 0, horizontal dist: -1
-190948 <first : Testing if king can move from e8 to f7
-190948 <first : Vertical dist: -1, horizontal dist: 1
-190948 <first : Testing if king can move from e8 to d7
-190948 <first : Vertical dist: -1, horizontal dist: -1
-190948 <first : Testing if king can move from e1 to e8
-190948 <first : Vertical dist: 7, horizontal dist: 0
-190948 <first : Testing if king can move from e1 to e8
-190948 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e8 to f8
-190949 <first : Vertical dist: 0, horizontal dist: 1
-190949 <first : Testing if king can move from e8 to e7
-190949 <first : Vertical dist: -1, horizontal dist: 0
-190949 <first : Testing if king can move from e8 to d8
-190949 <first : Vertical dist: 0, horizontal dist: -1
-190949 <first : Testing if king can move from e8 to f7
-190949 <first : Vertical dist: -1, horizontal dist: 1
-190949 <first : Testing if king can move from e8 to d7
-190949 <first : Vertical dist: -1, horizontal dist: -1
-190949 <first : Testing if king can move from e1 to d7
-190949 <first : Vertical dist: 6, horizontal dist: -1
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : Testing if king can move from e1 to e8
-190949 <first : Vertical dist: 7, horizontal dist: 0
-190949 <first : move g7g6
-193767 >first : time 29998
-193767 >first : otim 28479
+87188 >first : usermove 87188 >first : c7c6
+87190 <first : move f4f5
+88013 >first : time 29998
+88013 >first : otim 26286
 book hit = (NULL)
-193767 >first : usermove 193767 >first : b5c6
-193769 <first : Testing if king can move from e1 to e8
-193769 <first : Vertical dist: 7, horizontal dist: 0
-193769 <first : Testing if king can move from e1 to e8
-193769 <first : Vertical dist: 7, horizontal dist: 0
-193769 <first : Testing if king can move from e1 to e8
-193769 <first : Vertical dist: 7, horizontal dist: 0
-193769 <first : Testing if king can move from e8 to c6
-193769 <first : Vertical dist: -2, horizontal dist: -2
-193769 <first : move b8c6
-238574 >first : time 29998
-238574 >first : otim 23998
+88013 >first : usermove 88014 >first : b7b5
+88015 <first : move a3b5
+88742 >first : time 29998
+88742 >first : otim 26213
 book hit = (NULL)
-238574 >first : usermove 238574 >first : b1a3
-238576 <first : Testing if king can move from e1 to e8
-238576 <first : Vertical dist: 7, horizontal dist: 0
-238576 <first : Testing if king can move from e8 to f8
-238576 <first : Vertical dist: 0, horizontal dist: 1
-238576 <first : Testing if king can move from e8 to e7
-238576 <first : Vertical dist: -1, horizontal dist: 0
-238576 <first : Testing if king can move from e8 to d8
-238576 <first : Vertical dist: 0, horizontal dist: -1
-238576 <first : Testing if king can move from e8 to f7
-238576 <first : Vertical dist: -1, horizontal dist: 1
-238576 <first : Testing if king can move from e8 to d7
-238576 <first : Vertical dist: -1, horizontal dist: -1
-238576 <first : Testing if king can move from e1 to e8
-238576 <first : Vertical dist: 7, horizontal dist: 0
-238576 <first : Testing if king can move from e1 to e8
-238576 <first : Vertical dist: 7, horizontal dist: 0
-238576 <first : Testing if king can move from e1 to e8
-238576 <first : Vertical dist: 7, horizontal dist: 0
-238576 <first : Testing if king can move from e1 to e8
-238576 <first : Vertical dist: 7, horizontal dist: 0
-238576 <first : Testing if king can move from e1 to e8
-238576 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e8 to f8
-238577 <first : Vertical dist: 0, horizontal dist: 1
-238577 <first : Testing if king can move from e8 to e7
-238577 <first : Vertical dist: -1, horizontal dist: 0
-238577 <first : Testing if king can move from e8 to d8
-238577 <first : Vertical dist: 0, horizontal dist: -1
-238577 <first : Testing if king can move from e8 to f7
-238577 <first : Vertical dist: -1, horizontal dist: 1
-238577 <first : Testing if king can move from e8 to d7
-238577 <first : Vertical dist: -1, horizontal dist: -1
-238577 <first : Testing if king can move from e1 to d7
-238577 <first : Vertical dist: 6, horizontal dist: -1
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : Testing if king can move from e1 to e8
-238577 <first : Vertical dist: 7, horizontal dist: 0
-238577 <first : move d6d5
-240033 >first : time 29997
-240033 >first : otim 23853
+88742 >first : usermove 88742 >first : a7a6
+88744 <first : move c1e3
+89528 >first : time 29998
+89528 >first : otim 26135
 book hit = (NULL)
-240033 >first : usermove 240033 >first : a3b5
-240034 <first : Testing if king can move from e1 to e8
-240034 <first : Vertical dist: 7, horizontal dist: 0
-240034 <first : Testing if king can move from e1 to e8
-240034 <first : Vertical dist: 7, horizontal dist: 0
-240034 <first : Testing if king can move from e8 to f8
-240034 <first : Vertical dist: 0, horizontal dist: 1
-240034 <first : Testing if king can move from e8 to e7
-240034 <first : Vertical dist: -1, horizontal dist: 0
-240034 <first : Testing if king can move from e8 to d8
-240034 <first : Vertical dist: 0, horizontal dist: -1
-240034 <first : Testing if king can move from e8 to f7
-240034 <first : Vertical dist: -1, horizontal dist: 1
-240034 <first : Testing if king can move from e8 to d7
-240034 <first : Vertical dist: -1, horizontal dist: -1
-240034 <first : move d5e4
-242285 >first : time 29997
-242285 >first : otim 23628
+89528 >first : usermove 89528 >first : a6b5
+89531 <first : move e3d4
+94798 >first : time 29998
+94798 >first : otim 25608
 book hit = (NULL)
-242285 >first : usermove 242285 >first : b5d6
-242286 <first : Testing if king can move from e1 to e8
-242286 <first : Vertical dist: 7, horizontal dist: 0
-242286 <first : Testing if king can move from e1 to e8
-242286 <first : Vertical dist: 7, horizontal dist: 0
-242286 <first : Testing if king can move from e8 to d6
-242286 <first : Vertical dist: -2, horizontal dist: -1
-242286 <first : move d8d6
-246097 >first : time 29997
-246097 >first : otim 23247
+94798 >first : usermove 94798 >first : d8d6
+94800 <first : move d4f6
+95520 >first : time 29997
+95520 >first : otim 25536
 book hit = (NULL)
-246097 >first : usermove 246097 >first : g1e2
-246098 <first : Testing if king can move from e1 to e8
-246098 <first : Vertical dist: 7, horizontal dist: 0
-246098 <first : Testing if king can move from e1 to e8
-246098 <first : Vertical dist: 7, horizontal dist: 0
-246098 <first : Testing if king can move from e1 to e8
-246098 <first : Vertical dist: 7, horizontal dist: 0
-246098 <first : Testing if king can move from e8 to f8
-246098 <first : Vertical dist: 0, horizontal dist: 1
-246098 <first : Testing if king can move from e8 to e7
-246098 <first : Vertical dist: -1, horizontal dist: 0
-246098 <first : Testing if king can move from e8 to d8
-246098 <first : Vertical dist: 0, horizontal dist: -1
-246098 <first : Testing if king can move from e8 to f7
-246098 <first : Vertical dist: -1, horizontal dist: 1
-246098 <first : Testing if king can move from e8 to d7
-246098 <first : Vertical dist: -1, horizontal dist: -1
-246098 <first : move d6h2
-249117 >first : time 29997
-249117 >first : otim 22945
+95520 >first : usermove 95520 >first : d6f6
+95522 <first : move a2a3
+96016 >first : time 29997
+96016 >first : otim 25487
 book hit = (NULL)
-249117 >first : usermove 249117 >first : h1h2
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e8 to f8
-249118 <first : Vertical dist: 0, horizontal dist: 1
-249118 <first : Testing if king can move from e8 to e7
-249118 <first : Vertical dist: -1, horizontal dist: 0
-249118 <first : Testing if king can move from e8 to d8
-249118 <first : Vertical dist: 0, horizontal dist: -1
-249118 <first : Testing if king can move from e8 to f7
-249118 <first : Vertical dist: -1, horizontal dist: 1
-249118 <first : Testing if king can move from e8 to d7
-249118 <first : Vertical dist: -1, horizontal dist: -1
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e8 to f8
-249118 <first : Vertical dist: 0, horizontal dist: 1
-249118 <first : Testing if king can move from e8 to e7
-249118 <first : Vertical dist: -1, horizontal dist: 0
-249118 <first : Testing if king can move from e8 to d8
-249118 <first : Vertical dist: 0, horizontal dist: -1
-249118 <first : Testing if king can move from e1 to d8
-249118 <first : Vertical dist: 7, horizontal dist: -1
-249118 <first : Testing if king can move from e8 to f7
-249118 <first : Vertical dist: -1, horizontal dist: 1
-249118 <first : Testing if king can move from e8 to d7
-249118 <first : Vertical dist: -1, horizontal dist: -1
-249118 <first : Testing if king can move from e1 to d7
-249118 <first : Vertical dist: 6, horizontal dist: -1
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249118 <first : Testing if king can move from e1 to e8
-249118 <first : Vertical dist: 7, horizontal dist: 0
-249119 <first : Testing if king can move from e1 to e8
-249119 <first : Vertical dist: 7, horizontal dist: 0
-249119 <first : move a7a6
-252587 >first : time 29997
-252587 >first : otim 22598
+96016 >first : usermove 96016 >first : f6f5
+96020 <first : move f1h3
+97820 >first : time 29997
+97820 >first : otim 25307
 book hit = (NULL)
-252587 >first : usermove 252587 >first : h2h4
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e8 to f8
-252589 <first : Vertical dist: 0, horizontal dist: 1
-252589 <first : Testing if king can move from e8 to e7
-252589 <first : Vertical dist: -1, horizontal dist: 0
-252589 <first : Testing if king can move from e8 to d8
-252589 <first : Vertical dist: 0, horizontal dist: -1
-252589 <first : Testing if king can move from e8 to f7
-252589 <first : Vertical dist: -1, horizontal dist: 1
-252589 <first : Testing if king can move from e8 to d7
-252589 <first : Vertical dist: -1, horizontal dist: -1
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252589 <first : Testing if king can move from e1 to e8
-252589 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e8 to f8
-252590 <first : Vertical dist: 0, horizontal dist: 1
-252590 <first : Testing if king can move from e8 to e7
-252590 <first : Vertical dist: -1, horizontal dist: 0
-252590 <first : Testing if king can move from e8 to d8
-252590 <first : Vertical dist: 0, horizontal dist: -1
-252590 <first : Testing if king can move from e1 to d8
-252590 <first : Vertical dist: 7, horizontal dist: -1
-252590 <first : Testing if king can move from e8 to f7
-252590 <first : Vertical dist: -1, horizontal dist: 1
-252590 <first : Testing if king can move from e8 to d7
-252590 <first : Vertical dist: -1, horizontal dist: -1
-252590 <first : Testing if king can move from e1 to d7
-252590 <first : Vertical dist: 6, horizontal dist: -1
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : Testing if king can move from e1 to e8
-252590 <first : Vertical dist: 7, horizontal dist: 0
-252590 <first : move a8b8
-253379 >first : time 29996
-253379 >first : otim 22519
+97820 >first : usermove 97820 >first : f5h3
+97823 <first : move g1h3
+99750 >first : time 29997
+99750 >first : otim 25114
 book hit = (NULL)
-253379 >first : usermove 253379 >first : h4e4
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e8 to f8
-253381 <first : Vertical dist: 0, horizontal dist: 1
-253381 <first : Testing if king can move from e8 to e7
-253381 <first : Vertical dist: -1, horizontal dist: 0
-253381 <first : Testing if king can move from e8 to d8
-253381 <first : Vertical dist: 0, horizontal dist: -1
-253381 <first : Testing if king can move from e8 to f7
-253381 <first : Vertical dist: -1, horizontal dist: 1
-253381 <first : Testing if king can move from e8 to d7
-253381 <first : Vertical dist: -1, horizontal dist: -1
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e8 to f8
-253381 <first : Vertical dist: 0, horizontal dist: 1
-253381 <first : Testing if king can move from e8 to e7
-253381 <first : Vertical dist: -1, horizontal dist: 0
-253381 <first : Testing if king can move from e8 to d8
-253381 <first : Vertical dist: 0, horizontal dist: -1
-253381 <first : Testing if king can move from e1 to d8
-253381 <first : Vertical dist: 7, horizontal dist: -1
-253381 <first : Testing if king can move from e8 to f7
-253381 <first : Vertical dist: -1, horizontal dist: 1
-253381 <first : Testing if king can move from e8 to d7
-253381 <first : Vertical dist: -1, horizontal dist: -1
-253381 <first : Testing if king can move from e1 to d7
-253381 <first : Vertical dist: 6, horizontal dist: -1
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : Testing if king can move from e1 to e8
-253381 <first : Vertical dist: 7, horizontal dist: 0
-253381 <first : move h7h6
-255927 >first : time 29996
-255927 >first : otim 22265
+99750 >first : usermove 99750 >first : c8h3
+99752 <first : move a1a2
+102874 >first : time 29996
+102874 >first : otim 24802
 book hit = (NULL)
-255927 >first : usermove 255927 >first : e4c4
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e8 to f8
-255929 <first : Vertical dist: 0, horizontal dist: 1
-255929 <first : Testing if king can move from e8 to e7
-255929 <first : Vertical dist: -1, horizontal dist: 0
-255929 <first : Testing if king can move from e8 to d8
-255929 <first : Vertical dist: 0, horizontal dist: -1
-255929 <first : Testing if king can move from e8 to f7
-255929 <first : Vertical dist: -1, horizontal dist: 1
-255929 <first : Testing if king can move from e8 to d7
-255929 <first : Vertical dist: -1, horizontal dist: -1
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e8 to f8
-255929 <first : Vertical dist: 0, horizontal dist: 1
-255929 <first : Testing if king can move from e8 to e7
-255929 <first : Vertical dist: -1, horizontal dist: 0
-255929 <first : Testing if king can move from e8 to d8
-255929 <first : Vertical dist: 0, horizontal dist: -1
-255929 <first : Testing if king can move from e1 to d8
-255929 <first : Vertical dist: 7, horizontal dist: -1
-255929 <first : Testing if king can move from e8 to f7
-255929 <first : Vertical dist: -1, horizontal dist: 1
-255929 <first : Testing if king can move from e8 to d7
-255929 <first : Vertical dist: -1, horizontal dist: -1
-255929 <first : Testing if king can move from e1 to d7
-255929 <first : Vertical dist: 6, horizontal dist: -1
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : Testing if king can move from e1 to e8
-255929 <first : Vertical dist: 7, horizontal dist: 0
-255929 <first : move f7f6
-256535 >first : time 29996
-256535 >first : otim 22204
+102874 >first : usermove 102874 >first : b8a6
+102876 <first : move e1d2
+103860 >first : time 29996
+103860 >first : otim 24704
 book hit = (NULL)
-256535 >first : usermove 256535 >first : c4c6
-256537 <first : Testing if king can move from e1 to e8
-256537 <first : Vertical dist: 7, horizontal dist: 0
-256537 <first : Testing if king can move from e1 to e8
-256537 <first : Vertical dist: 7, horizontal dist: 0
-256537 <first : Testing if king can move from e8 to f8
-256537 <first : Vertical dist: 0, horizontal dist: 1
-256537 <first : Testing if king can move from e8 to e7
-256537 <first : Vertical dist: -1, horizontal dist: 0
-256537 <first : Testing if king can move from e8 to d8
-256537 <first : Vertical dist: 0, horizontal dist: -1
-256537 <first : Testing if king can move from e8 to f7
-256537 <first : Vertical dist: -1, horizontal dist: 1
-256537 <first : Testing if king can move from e8 to d7
-256537 <first : Vertical dist: -1, horizontal dist: -1
-256537 <first : move b7c6
-273965 >first : time 29996
-273965 >first : otim 20461
+103860 >first : usermove 103860 >first : e8c8
+103862 <first : move a3a4
+108994 >first : time 29996
+108994 >first : otim 24190
 book hit = (NULL)
-273965 >first : usermove 273965 >first : e2d4
-273966 <first : Testing if king can move from e1 to e8
-273966 <first : Vertical dist: 7, horizontal dist: 0
-273966 <first : Testing if king can move from e1 to e8
-273966 <first : Vertical dist: 7, horizontal dist: 0
-273966 <first : Testing if king can move from e8 to f8
-273966 <first : Vertical dist: 0, horizontal dist: 1
-273966 <first : Testing if king can move from e8 to e7
-273966 <first : Vertical dist: -1, horizontal dist: 0
-273966 <first : Testing if king can move from e8 to d8
-273966 <first : Vertical dist: 0, horizontal dist: -1
-273966 <first : Testing if king can move from e8 to f7
-273966 <first : Vertical dist: -1, horizontal dist: 1
-273966 <first : Testing if king can move from e8 to d7
-273966 <first : Vertical dist: -1, horizontal dist: -1
-273966 <first : move b8b2
-277737 >first : time 29996
-277737 >first : otim 20084
+108994 >first : usermove 108994 >first : h3g4
+108996 <first : move a4b5
+Drop move 20, curr=47, x=0,y=4, p=69
+LegalDrop: 69 @ 8,1)
+LegalDrop: 69 @ 8,1)
+116572 >first : time 29996
+116572 >first : otim 23433
 book hit = (NULL)
-277737 >first : usermove 277737 >first : c1b2
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e8 to f8
-277738 <first : Vertical dist: 0, horizontal dist: 1
-277738 <first : Testing if king can move from e8 to e7
-277738 <first : Vertical dist: -1, horizontal dist: 0
-277738 <first : Testing if king can move from e8 to d8
-277738 <first : Vertical dist: 0, horizontal dist: -1
-277738 <first : Testing if king can move from e8 to f7
-277738 <first : Vertical dist: -1, horizontal dist: 1
-277738 <first : Testing if king can move from e8 to d7
-277738 <first : Vertical dist: -1, horizontal dist: -1
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e8 to f8
-277738 <first : Vertical dist: 0, horizontal dist: 1
-277738 <first : Testing if king can move from e8 to e7
-277738 <first : Vertical dist: -1, horizontal dist: 0
-277738 <first : Testing if king can move from e8 to d8
-277738 <first : Vertical dist: 0, horizontal dist: -1
-277738 <first : Testing if king can move from e1 to d8
-277738 <first : Vertical dist: 7, horizontal dist: -1
-277738 <first : Testing if king can move from e8 to f7
-277738 <first : Vertical dist: -1, horizontal dist: 1
-277738 <first : Testing if king can move from e1 to f7
-277738 <first : Vertical dist: 6, horizontal dist: 1
-277738 <first : Testing if king can move from e8 to d7
-277738 <first : Vertical dist: -1, horizontal dist: -1
-277738 <first : Testing if king can move from e1 to d7
-277738 <first : Vertical dist: 6, horizontal dist: -1
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : Testing if king can move from e1 to e8
-277738 <first : Vertical dist: 7, horizontal dist: 0
-277738 <first : move e8d7
-281183 >first : time 29996
-281183 >first : otim 19740
-book hit = (NULL)
-281183 >first : usermove 281183 >first : a4c6
-281185 <first : Testing if king can move from d7 to c6
-281185 <first : Vertical dist: -1, horizontal dist: -1
-281186 <first : Testing if king can move from e1 to c6
-281186 <first : Vertical dist: 5, horizontal dist: -2
-281186 <first : Testing if king can move from d7 to d8
-281186 <first : Vertical dist: 1, horizontal dist: 0
-281186 <first : Testing if king can move from d7 to e7
-281186 <first : Vertical dist: 0, horizontal dist: 1
-281186 <first : Testing if king can move from d7 to d6
-281186 <first : Vertical dist: -1, horizontal dist: 0
-281186 <first : Testing if king can move from d7 to c7
-281186 <first : Vertical dist: 0, horizontal dist: -1
-281186 <first : Testing if king can move from d7 to e8
-281186 <first : Vertical dist: 1, horizontal dist: 1
-281186 <first : Testing if king can move from d7 to c8
-281186 <first : Vertical dist: 1, horizontal dist: -1
-281186 <first : Testing if king can move from d7 to e6
-281186 <first : Vertical dist: -1, horizontal dist: 1
-281186 <first : Testing if king can move from d7 to c6
-281186 <first : Vertical dist: -1, horizontal dist: -1
-281186 <first : Testing if king can move from e1 to c6
-281186 <first : Vertical dist: 5, horizontal dist: -2
-281186 <first : Testing if king can move from d7 to d8
-281186 <first : Vertical dist: 1, horizontal dist: 0
-281186 <first : Testing if king can move from e1 to d8
-281186 <first : Vertical dist: 7, horizontal dist: -1
-281186 <first : Testing if king can move from d7 to e7
-281186 <first : Vertical dist: 0, horizontal dist: 1
-281186 <first : Testing if king can move from d7 to d6
-281186 <first : Vertical dist: -1, horizontal dist: 0
-281186 <first : Testing if king can move from d7 to c7
-281186 <first : Vertical dist: 0, horizontal dist: -1
-281186 <first : Testing if king can move from d7 to e8
-281186 <first : Vertical dist: 1, horizontal dist: 1
-281186 <first : Testing if king can move from d7 to c8
-281186 <first : Vertical dist: 1, horizontal dist: -1
-281186 <first : Testing if king can move from e1 to c8
-281186 <first : Vertical dist: 7, horizontal dist: -2
-281186 <first : Testing if king can move from d7 to e6
-281186 <first : Vertical dist: -1, horizontal dist: 1
-281186 <first : Testing if king can move from d7 to c6
-281186 <first : Vertical dist: -1, horizontal dist: -1
-281186 <first : move d7d8
-293107 >first : time 29995
-293107 >first : otim 18547
-book hit = (NULL)
-293107 >first : usermove 293107 >first : d4e6
-293109 <first : Testing if king can move from e1 to d8
-293109 <first : Vertical dist: 7, horizontal dist: -1
-293109 <first : Testing if king can move from d8 to e6
-293109 <first : Vertical dist: -2, horizontal dist: 1
-293109 <first : Testing if king can move from d8 to e8
-293109 <first : Vertical dist: 0, horizontal dist: 1
-293109 <first : Testing if king can move from d8 to d7
-293109 <first : Vertical dist: -1, horizontal dist: 0
-293109 <first : Testing if king can move from d8 to c8
-293109 <first : Vertical dist: 0, horizontal dist: -1
-293109 <first : Testing if king can move from d8 to e7
-293109 <first : Vertical dist: -1, horizontal dist: 1
-293109 <first : Testing if king can move from d8 to c7
-293109 <first : Vertical dist: -1, horizontal dist: -1
-293109 <first : Testing if king can move from d8 to e8
-293109 <first : Vertical dist: 0, horizontal dist: 1
-293109 <first : Testing if king can move from d8 to d7
-293109 <first : Vertical dist: -1, horizontal dist: 0
-293109 <first : Testing if king can move from d8 to c8
-293109 <first : Vertical dist: 0, horizontal dist: -1
-293109 <first : Testing if king can move from e1 to c8
-293109 <first : Vertical dist: 7, horizontal dist: -2
-293109 <first : Testing if king can move from d8 to e7
-293109 <first : Vertical dist: -1, horizontal dist: 1
-293109 <first : Testing if king can move from d8 to c7
-293109 <first : Vertical dist: -1, horizontal dist: -1
-293109 <first : move d8c8
-LegalDrop: 69 @ 3,0)
-LegalDrop: 69 @ 3,0)
-LegalDrop: 68 @ 3,0)
-LegalDrop: 68 @ 3,0)
-LegalDrop: 67 @ 3,0)
-LegalDrop: 67 @ 3,0)
-LegalDrop: 66 @ 3,0)
-LegalDrop: 69 @ 4,0)
-LegalDrop: 69 @ 4,0)
-LegalDrop: 68 @ 4,0)
-LegalDrop: 68 @ 4,0)
-LegalDrop: 67 @ 4,0)
-LegalDrop: 67 @ 4,0)
-LegalDrop: 66 @ 4,0)
-LegalDrop: 69 @ 5,0)
-LegalDrop: 69 @ 5,0)
-LegalDrop: 68 @ 5,0)
-LegalDrop: 68 @ 5,0)
-LegalDrop: 67 @ 5,0)
-LegalDrop: 67 @ 5,0)
-LegalDrop: 66 @ 5,0)
-LegalDrop: 69 @ 7,0)
-LegalDrop: 69 @ 7,0)
-LegalDrop: 68 @ 7,0)
-LegalDrop: 68 @ 7,0)
-LegalDrop: 67 @ 7,0)
-LegalDrop: 67 @ 7,0)
-LegalDrop: 66 @ 7,0)
-LegalDrop: 69 @ 8,0)
-LegalDrop: 69 @ 8,0)
-LegalDrop: 68 @ 8,0)
-LegalDrop: 68 @ 8,0)
-LegalDrop: 67 @ 8,0)
-LegalDrop: 67 @ 8,0)
-LegalDrop: 66 @ 8,0)
-LegalDrop: 69 @ 9,0)
-LegalDrop: 69 @ 9,0)
-LegalDrop: 68 @ 9,0)
-LegalDrop: 68 @ 9,0)
-LegalDrop: 67 @ 9,0)
-LegalDrop: 67 @ 9,0)
-LegalDrop: 66 @ 9,0)
-LegalDrop: 69 @ 4,1)
-LegalDrop: 69 @ 4,1)
-LegalDrop: 68 @ 4,1)
-LegalDrop: 68 @ 4,1)
-LegalDrop: 67 @ 4,1)
-LegalDrop: 67 @ 4,1)
-LegalDrop: 66 @ 4,1)
-LegalDrop: 66 @ 4,1)
-LegalDrop: 69 @ 6,1)
-LegalDrop: 69 @ 6,1)
-LegalDrop: 68 @ 6,1)
-LegalDrop: 68 @ 6,1)
-LegalDrop: 67 @ 6,1)
-LegalDrop: 67 @ 6,1)
-LegalDrop: 66 @ 6,1)
-LegalDrop: 66 @ 6,1)
-LegalDrop: 69 @ 9,1)
-LegalDrop: 69 @ 9,1)
-LegalDrop: 68 @ 9,1)
-LegalDrop: 68 @ 9,1)
-LegalDrop: 67 @ 9,1)
-LegalDrop: 67 @ 9,1)
-LegalDrop: 66 @ 9,1)
-LegalDrop: 66 @ 9,1)
-LegalDrop: 69 @ 2,2)
-LegalDrop: 69 @ 2,2)
-LegalDrop: 68 @ 2,2)
-LegalDrop: 68 @ 2,2)
-LegalDrop: 67 @ 2,2)
-LegalDrop: 67 @ 2,2)
-LegalDrop: 66 @ 2,2)
-LegalDrop: 66 @ 2,2)
-LegalDrop: 69 @ 3,2)
-LegalDrop: 69 @ 3,2)
-LegalDrop: 68 @ 3,2)
-LegalDrop: 68 @ 3,2)
-LegalDrop: 67 @ 3,2)
-LegalDrop: 67 @ 3,2)
-LegalDrop: 66 @ 3,2)
-LegalDrop: 66 @ 3,2)
-LegalDrop: 69 @ 5,2)
-LegalDrop: 69 @ 5,2)
-LegalDrop: 68 @ 5,2)
-LegalDrop: 68 @ 5,2)
-LegalDrop: 67 @ 5,2)
-LegalDrop: 67 @ 5,2)
-LegalDrop: 66 @ 5,2)
-LegalDrop: 66 @ 5,2)
-LegalDrop: 69 @ 6,2)
-LegalDrop: 69 @ 6,2)
-LegalDrop: 68 @ 6,2)
-LegalDrop: 68 @ 6,2)
-LegalDrop: 67 @ 6,2)
-LegalDrop: 67 @ 6,2)
-LegalDrop: 66 @ 6,2)
-LegalDrop: 66 @ 6,2)
-LegalDrop: 69 @ 7,2)
-LegalDrop: 69 @ 7,2)
-LegalDrop: 68 @ 7,2)
-LegalDrop: 68 @ 7,2)
-LegalDrop: 67 @ 7,2)
-LegalDrop: 67 @ 7,2)
-LegalDrop: 66 @ 7,2)
-LegalDrop: 66 @ 7,2)
-LegalDrop: 69 @ 8,2)
-LegalDrop: 69 @ 8,2)
-LegalDrop: 68 @ 8,2)
-LegalDrop: 68 @ 8,2)
-LegalDrop: 67 @ 8,2)
-LegalDrop: 67 @ 8,2)
-LegalDrop: 66 @ 8,2)
-LegalDrop: 66 @ 8,2)
-LegalDrop: 69 @ 9,2)
-LegalDrop: 69 @ 9,2)
-LegalDrop: 68 @ 9,2)
-LegalDrop: 68 @ 9,2)
-LegalDrop: 67 @ 9,2)
-LegalDrop: 67 @ 9,2)
-LegalDrop: 66 @ 9,2)
-LegalDrop: 66 @ 9,2)
-LegalDrop: 69 @ 2,3)
-LegalDrop: 69 @ 2,3)
-LegalDrop: 68 @ 2,3)
-LegalDrop: 68 @ 2,3)
-LegalDrop: 67 @ 2,3)
-LegalDrop: 67 @ 2,3)
-LegalDrop: 66 @ 2,3)
-LegalDrop: 66 @ 2,3)
-LegalDrop: 69 @ 3,3)
-LegalDrop: 69 @ 3,3)
-LegalDrop: 68 @ 3,3)
-LegalDrop: 68 @ 3,3)
-LegalDrop: 67 @ 3,3)
-LegalDrop: 67 @ 3,3)
-LegalDrop: 66 @ 3,3)
-LegalDrop: 66 @ 3,3)
-LegalDrop: 69 @ 4,3)
-LegalDrop: 69 @ 4,3)
-LegalDrop: 68 @ 4,3)
-LegalDrop: 68 @ 4,3)
-LegalDrop: 67 @ 4,3)
-LegalDrop: 67 @ 4,3)
-LegalDrop: 66 @ 4,3)
-LegalDrop: 66 @ 4,3)
-LegalDrop: 69 @ 5,3)
-LegalDrop: 69 @ 5,3)
-LegalDrop: 68 @ 5,3)
-LegalDrop: 68 @ 5,3)
-LegalDrop: 67 @ 5,3)
-LegalDrop: 67 @ 5,3)
-LegalDrop: 66 @ 5,3)
-LegalDrop: 66 @ 5,3)
-LegalDrop: 69 @ 6,3)
-LegalDrop: 69 @ 6,3)
-LegalDrop: 68 @ 6,3)
-LegalDrop: 68 @ 6,3)
-LegalDrop: 67 @ 6,3)
-LegalDrop: 67 @ 6,3)
-LegalDrop: 66 @ 6,3)
-LegalDrop: 66 @ 6,3)
-LegalDrop: 69 @ 7,3)
-LegalDrop: 69 @ 7,3)
-LegalDrop: 68 @ 7,3)
-LegalDrop: 68 @ 7,3)
-LegalDrop: 67 @ 7,3)
-LegalDrop: 67 @ 7,3)
-LegalDrop: 66 @ 7,3)
-LegalDrop: 66 @ 7,3)
-LegalDrop: 69 @ 8,3)
-LegalDrop: 69 @ 8,3)
-LegalDrop: 68 @ 8,3)
-LegalDrop: 68 @ 8,3)
-LegalDrop: 67 @ 8,3)
-LegalDrop: 67 @ 8,3)
-LegalDrop: 66 @ 8,3)
-LegalDrop: 66 @ 8,3)
-LegalDrop: 69 @ 9,3)
-LegalDrop: 69 @ 9,3)
-LegalDrop: 68 @ 9,3)
-LegalDrop: 68 @ 9,3)
-LegalDrop: 67 @ 9,3)
-LegalDrop: 67 @ 9,3)
-LegalDrop: 66 @ 9,3)
-LegalDrop: 66 @ 9,3)
-LegalDrop: 69 @ 2,4)
-LegalDrop: 69 @ 2,4)
-LegalDrop: 68 @ 2,4)
-LegalDrop: 68 @ 2,4)
-LegalDrop: 67 @ 2,4)
-LegalDrop: 67 @ 2,4)
-LegalDrop: 66 @ 2,4)
-LegalDrop: 66 @ 2,4)
-LegalDrop: 69 @ 3,4)
-LegalDrop: 69 @ 3,4)
-LegalDrop: 68 @ 3,4)
-LegalDrop: 68 @ 3,4)
-LegalDrop: 67 @ 3,4)
-LegalDrop: 67 @ 3,4)
-LegalDrop: 66 @ 3,4)
-LegalDrop: 66 @ 3,4)
-LegalDrop: 69 @ 4,4)
-LegalDrop: 69 @ 4,4)
-LegalDrop: 68 @ 4,4)
-LegalDrop: 68 @ 4,4)
-LegalDrop: 67 @ 4,4)
-LegalDrop: 67 @ 4,4)
-LegalDrop: 66 @ 4,4)
-LegalDrop: 66 @ 4,4)
-LegalDrop: 69 @ 5,4)
-LegalDrop: 69 @ 5,4)
-LegalDrop: 68 @ 5,4)
-LegalDrop: 68 @ 5,4)
-LegalDrop: 67 @ 5,4)
-LegalDrop: 67 @ 5,4)
-LegalDrop: 66 @ 5,4)
-LegalDrop: 66 @ 5,4)
-LegalDrop: 69 @ 6,4)
-LegalDrop: 69 @ 6,4)
-LegalDrop: 68 @ 6,4)
-LegalDrop: 68 @ 6,4)
-LegalDrop: 67 @ 6,4)
-LegalDrop: 67 @ 6,4)
-LegalDrop: 66 @ 6,4)
-LegalDrop: 66 @ 6,4)
-LegalDrop: 69 @ 7,4)
-LegalDrop: 69 @ 7,4)
-LegalDrop: 68 @ 7,4)
-LegalDrop: 68 @ 7,4)
-LegalDrop: 67 @ 7,4)
-LegalDrop: 67 @ 7,4)
-LegalDrop: 66 @ 7,4)
-LegalDrop: 66 @ 7,4)
-LegalDrop: 69 @ 8,4)
-LegalDrop: 69 @ 8,4)
-LegalDrop: 68 @ 8,4)
-LegalDrop: 68 @ 8,4)
-LegalDrop: 67 @ 8,4)
-LegalDrop: 67 @ 8,4)
-LegalDrop: 66 @ 8,4)
-LegalDrop: 66 @ 8,4)
-LegalDrop: 69 @ 9,4)
-LegalDrop: 69 @ 9,4)
-LegalDrop: 68 @ 9,4)
-LegalDrop: 68 @ 9,4)
-LegalDrop: 67 @ 9,4)
-LegalDrop: 67 @ 9,4)
-LegalDrop: 66 @ 9,4)
-LegalDrop: 66 @ 9,4)
-LegalDrop: 69 @ 3,5)
-LegalDrop: 69 @ 3,5)
-LegalDrop: 68 @ 3,5)
-LegalDrop: 68 @ 3,5)
-LegalDrop: 67 @ 3,5)
-LegalDrop: 67 @ 3,5)
-LegalDrop: 66 @ 3,5)
-LegalDrop: 66 @ 3,5)
-LegalDrop: 69 @ 4,5)
-LegalDrop: 69 @ 4,5)
-LegalDrop: 68 @ 4,5)
-LegalDrop: 68 @ 4,5)
-LegalDrop: 67 @ 4,5)
-LegalDrop: 67 @ 4,5)
-LegalDrop: 66 @ 4,5)
-LegalDrop: 66 @ 4,5)
-LegalDrop: 69 @ 5,5)
-LegalDrop: 69 @ 5,5)
-LegalDrop: 68 @ 5,5)
-LegalDrop: 68 @ 5,5)
-LegalDrop: 67 @ 5,5)
-LegalDrop: 67 @ 5,5)
-LegalDrop: 66 @ 5,5)
-LegalDrop: 66 @ 5,5)
-LegalDrop: 69 @ 2,6)
-LegalDrop: 69 @ 2,6)
-LegalDrop: 68 @ 2,6)
-LegalDrop: 68 @ 2,6)
-LegalDrop: 67 @ 2,6)
-LegalDrop: 67 @ 2,6)
-LegalDrop: 66 @ 2,6)
-LegalDrop: 66 @ 2,6)
-LegalDrop: 69 @ 3,6)
-LegalDrop: 69 @ 3,6)
-LegalDrop: 68 @ 3,6)
-LegalDrop: 68 @ 3,6)
-LegalDrop: 67 @ 3,6)
-LegalDrop: 67 @ 3,6)
-LegalDrop: 66 @ 3,6)
-LegalDrop: 66 @ 3,6)
-LegalDrop: 69 @ 5,6)
-LegalDrop: 69 @ 5,6)
-LegalDrop: 68 @ 5,6)
-LegalDrop: 68 @ 5,6)
-LegalDrop: 67 @ 5,6)
-LegalDrop: 67 @ 5,6)
-LegalDrop: 66 @ 5,6)
-LegalDrop: 66 @ 5,6)
-LegalDrop: 69 @ 7,6)
-LegalDrop: 69 @ 7,6)
-LegalDrop: 68 @ 7,6)
-LegalDrop: 68 @ 7,6)
-LegalDrop: 67 @ 7,6)
-LegalDrop: 67 @ 7,6)
-LegalDrop: 66 @ 7,6)
-LegalDrop: 66 @ 7,6)
-LegalDrop: 69 @ 8,6)
-LegalDrop: 69 @ 8,6)
-LegalDrop: 68 @ 8,6)
-LegalDrop: 68 @ 8,6)
-LegalDrop: 67 @ 8,6)
-LegalDrop: 67 @ 8,6)
-LegalDrop: 66 @ 8,6)
-LegalDrop: 66 @ 8,6)
-LegalDrop: 69 @ 9,6)
-LegalDrop: 69 @ 9,6)
-LegalDrop: 68 @ 9,6)
-LegalDrop: 68 @ 9,6)
-LegalDrop: 67 @ 9,6)
-LegalDrop: 67 @ 9,6)
-LegalDrop: 66 @ 9,6)
-LegalDrop: 66 @ 9,6)
-LegalDrop: 69 @ 2,7)
-LegalDrop: 69 @ 2,7)
-LegalDrop: 68 @ 2,7)
-LegalDrop: 68 @ 2,7)
-LegalDrop: 67 @ 2,7)
-LegalDrop: 67 @ 2,7)
-LegalDrop: 66 @ 2,7)
-LegalDrop: 69 @ 3,7)
-LegalDrop: 69 @ 3,7)
-LegalDrop: 68 @ 3,7)
-LegalDrop: 68 @ 3,7)
+116572 >first : usermove 116572 >first : R@g2
+116574 <first : move a2a6
+Drop move 20, curr=49, x=0,y=6, p=67
 LegalDrop: 67 @ 3,7)
 LegalDrop: 67 @ 3,7)
-LegalDrop: 66 @ 3,7)
-LegalDrop: 69 @ 5,7)
-LegalDrop: 69 @ 5,7)
-LegalDrop: 68 @ 5,7)
-LegalDrop: 68 @ 5,7)
-LegalDrop: 67 @ 5,7)
-LegalDrop: 67 @ 5,7)
-LegalDrop: 66 @ 5,7)
-LegalDrop: 69 @ 6,7)
-LegalDrop: 69 @ 6,7)
-LegalDrop: 68 @ 6,7)
-LegalDrop: 68 @ 6,7)
-LegalDrop: 67 @ 6,7)
-LegalDrop: 67 @ 6,7)
-LegalDrop: 66 @ 6,7)
-LegalDrop: 69 @ 3,0)
-LegalDrop: 69 @ 3,0)
-LegalDrop: 68 @ 3,0)
-LegalDrop: 68 @ 3,0)
-LegalDrop: 67 @ 3,0)
-LegalDrop: 67 @ 3,0)
-LegalDrop: 66 @ 3,0)
-LegalDrop: 69 @ 4,0)
-LegalDrop: 69 @ 4,0)
-LegalDrop: 68 @ 4,0)
-LegalDrop: 68 @ 4,0)
-LegalDrop: 67 @ 4,0)
-LegalDrop: 67 @ 4,0)
-LegalDrop: 66 @ 4,0)
-LegalDrop: 69 @ 5,0)
-LegalDrop: 69 @ 5,0)
-LegalDrop: 68 @ 5,0)
-LegalDrop: 68 @ 5,0)
-LegalDrop: 67 @ 5,0)
-LegalDrop: 67 @ 5,0)
-LegalDrop: 66 @ 5,0)
-LegalDrop: 69 @ 7,0)
-LegalDrop: 69 @ 7,0)
-LegalDrop: 68 @ 7,0)
-LegalDrop: 68 @ 7,0)
-LegalDrop: 67 @ 7,0)
-LegalDrop: 67 @ 7,0)
-LegalDrop: 66 @ 7,0)
-LegalDrop: 69 @ 8,0)
-LegalDrop: 69 @ 8,0)
-LegalDrop: 68 @ 8,0)
-LegalDrop: 68 @ 8,0)
-LegalDrop: 67 @ 8,0)
-LegalDrop: 67 @ 8,0)
-LegalDrop: 66 @ 8,0)
-LegalDrop: 69 @ 9,0)
-LegalDrop: 69 @ 9,0)
-LegalDrop: 68 @ 9,0)
-LegalDrop: 68 @ 9,0)
-LegalDrop: 67 @ 9,0)
-LegalDrop: 67 @ 9,0)
-LegalDrop: 66 @ 9,0)
-LegalDrop: 69 @ 4,1)
-LegalDrop: 69 @ 4,1)
-LegalDrop: 68 @ 4,1)
-LegalDrop: 68 @ 4,1)
-LegalDrop: 67 @ 4,1)
-LegalDrop: 67 @ 4,1)
-LegalDrop: 66 @ 4,1)
-LegalDrop: 66 @ 4,1)
-LegalDrop: 69 @ 6,1)
-LegalDrop: 69 @ 6,1)
-LegalDrop: 68 @ 6,1)
-LegalDrop: 68 @ 6,1)
-LegalDrop: 67 @ 6,1)
-LegalDrop: 67 @ 6,1)
-LegalDrop: 66 @ 6,1)
-LegalDrop: 66 @ 6,1)
-LegalDrop: 69 @ 9,1)
-LegalDrop: 69 @ 9,1)
-LegalDrop: 68 @ 9,1)
-LegalDrop: 68 @ 9,1)
-LegalDrop: 67 @ 9,1)
-LegalDrop: 67 @ 9,1)
-LegalDrop: 66 @ 9,1)
-LegalDrop: 66 @ 9,1)
-LegalDrop: 69 @ 2,2)
-LegalDrop: 69 @ 2,2)
-LegalDrop: 68 @ 2,2)
-LegalDrop: 68 @ 2,2)
-LegalDrop: 67 @ 2,2)
-LegalDrop: 67 @ 2,2)
-LegalDrop: 66 @ 2,2)
-LegalDrop: 66 @ 2,2)
-LegalDrop: 69 @ 3,2)
-LegalDrop: 69 @ 3,2)
-LegalDrop: 68 @ 3,2)
-LegalDrop: 68 @ 3,2)
-LegalDrop: 67 @ 3,2)
-LegalDrop: 67 @ 3,2)
-LegalDrop: 66 @ 3,2)
-LegalDrop: 66 @ 3,2)
-LegalDrop: 69 @ 5,2)
-LegalDrop: 69 @ 5,2)
-LegalDrop: 68 @ 5,2)
-LegalDrop: 68 @ 5,2)
-LegalDrop: 67 @ 5,2)
-LegalDrop: 67 @ 5,2)
-LegalDrop: 66 @ 5,2)
-LegalDrop: 66 @ 5,2)
-LegalDrop: 69 @ 6,2)
-LegalDrop: 69 @ 6,2)
-LegalDrop: 68 @ 6,2)
-LegalDrop: 68 @ 6,2)
-LegalDrop: 67 @ 6,2)
-LegalDrop: 67 @ 6,2)
-LegalDrop: 66 @ 6,2)
-LegalDrop: 66 @ 6,2)
-LegalDrop: 69 @ 7,2)
-LegalDrop: 69 @ 7,2)
-LegalDrop: 68 @ 7,2)
-LegalDrop: 68 @ 7,2)
-LegalDrop: 67 @ 7,2)
-LegalDrop: 67 @ 7,2)
-LegalDrop: 66 @ 7,2)
-LegalDrop: 66 @ 7,2)
-LegalDrop: 69 @ 8,2)
-LegalDrop: 69 @ 8,2)
-LegalDrop: 68 @ 8,2)
-LegalDrop: 68 @ 8,2)
-LegalDrop: 67 @ 8,2)
-LegalDrop: 67 @ 8,2)
-LegalDrop: 66 @ 8,2)
-LegalDrop: 66 @ 8,2)
-LegalDrop: 69 @ 9,2)
-LegalDrop: 69 @ 9,2)
-LegalDrop: 68 @ 9,2)
-LegalDrop: 68 @ 9,2)
-LegalDrop: 67 @ 9,2)
-LegalDrop: 67 @ 9,2)
-LegalDrop: 66 @ 9,2)
-LegalDrop: 66 @ 9,2)
-LegalDrop: 69 @ 2,3)
-LegalDrop: 69 @ 2,3)
-LegalDrop: 68 @ 2,3)
-LegalDrop: 68 @ 2,3)
-LegalDrop: 67 @ 2,3)
-LegalDrop: 67 @ 2,3)
-LegalDrop: 66 @ 2,3)
-LegalDrop: 66 @ 2,3)
-LegalDrop: 69 @ 3,3)
-LegalDrop: 69 @ 3,3)
-LegalDrop: 68 @ 3,3)
-LegalDrop: 68 @ 3,3)
-LegalDrop: 67 @ 3,3)
-LegalDrop: 67 @ 3,3)
-LegalDrop: 66 @ 3,3)
-LegalDrop: 66 @ 3,3)
-LegalDrop: 69 @ 4,3)
-LegalDrop: 69 @ 4,3)
-LegalDrop: 68 @ 4,3)
-LegalDrop: 68 @ 4,3)
-LegalDrop: 67 @ 4,3)
-LegalDrop: 67 @ 4,3)
-LegalDrop: 66 @ 4,3)
-LegalDrop: 66 @ 4,3)
-LegalDrop: 69 @ 5,3)
-LegalDrop: 69 @ 5,3)
-LegalDrop: 68 @ 5,3)
-LegalDrop: 68 @ 5,3)
-LegalDrop: 67 @ 5,3)
-LegalDrop: 67 @ 5,3)
-LegalDrop: 66 @ 5,3)
-LegalDrop: 66 @ 5,3)
-LegalDrop: 69 @ 6,3)
-LegalDrop: 69 @ 6,3)
-LegalDrop: 68 @ 6,3)
-LegalDrop: 68 @ 6,3)
-LegalDrop: 67 @ 6,3)
-LegalDrop: 67 @ 6,3)
-LegalDrop: 66 @ 6,3)
-LegalDrop: 66 @ 6,3)
-LegalDrop: 69 @ 7,3)
-LegalDrop: 69 @ 7,3)
-LegalDrop: 68 @ 7,3)
-LegalDrop: 68 @ 7,3)
-LegalDrop: 67 @ 7,3)
-LegalDrop: 67 @ 7,3)
-LegalDrop: 66 @ 7,3)
-LegalDrop: 66 @ 7,3)
-LegalDrop: 69 @ 8,3)
-LegalDrop: 69 @ 8,3)
-LegalDrop: 68 @ 8,3)
-LegalDrop: 68 @ 8,3)
-LegalDrop: 67 @ 8,3)
-LegalDrop: 67 @ 8,3)
-LegalDrop: 66 @ 8,3)
-LegalDrop: 66 @ 8,3)
-LegalDrop: 69 @ 9,3)
-LegalDrop: 69 @ 9,3)
-LegalDrop: 68 @ 9,3)
-LegalDrop: 68 @ 9,3)
-LegalDrop: 67 @ 9,3)
-LegalDrop: 67 @ 9,3)
-LegalDrop: 66 @ 9,3)
-LegalDrop: 66 @ 9,3)
-LegalDrop: 69 @ 2,4)
-LegalDrop: 69 @ 2,4)
-LegalDrop: 68 @ 2,4)
-LegalDrop: 68 @ 2,4)
-LegalDrop: 67 @ 2,4)
-LegalDrop: 67 @ 2,4)
-LegalDrop: 66 @ 2,4)
-LegalDrop: 66 @ 2,4)
-LegalDrop: 69 @ 3,4)
-LegalDrop: 69 @ 3,4)
-LegalDrop: 68 @ 3,4)
-LegalDrop: 68 @ 3,4)
-LegalDrop: 67 @ 3,4)
-LegalDrop: 67 @ 3,4)
-LegalDrop: 66 @ 3,4)
-LegalDrop: 66 @ 3,4)
-LegalDrop: 69 @ 4,4)
-LegalDrop: 69 @ 4,4)
-LegalDrop: 68 @ 4,4)
-LegalDrop: 68 @ 4,4)
-LegalDrop: 67 @ 4,4)
-LegalDrop: 67 @ 4,4)
-LegalDrop: 66 @ 4,4)
-LegalDrop: 66 @ 4,4)
-LegalDrop: 69 @ 5,4)
-LegalDrop: 69 @ 5,4)
-LegalDrop: 68 @ 5,4)
-LegalDrop: 68 @ 5,4)
-LegalDrop: 67 @ 5,4)
-LegalDrop: 67 @ 5,4)
-LegalDrop: 66 @ 5,4)
-LegalDrop: 66 @ 5,4)
-LegalDrop: 69 @ 6,4)
-LegalDrop: 69 @ 6,4)
-LegalDrop: 68 @ 6,4)
-LegalDrop: 68 @ 6,4)
-LegalDrop: 67 @ 6,4)
-LegalDrop: 67 @ 6,4)
-LegalDrop: 66 @ 6,4)
-LegalDrop: 66 @ 6,4)
-LegalDrop: 69 @ 7,4)
-LegalDrop: 69 @ 7,4)
-LegalDrop: 68 @ 7,4)
-LegalDrop: 68 @ 7,4)
-LegalDrop: 67 @ 7,4)
-LegalDrop: 67 @ 7,4)
-LegalDrop: 66 @ 7,4)
-LegalDrop: 66 @ 7,4)
-LegalDrop: 69 @ 8,4)
-LegalDrop: 69 @ 8,4)
-LegalDrop: 68 @ 8,4)
-LegalDrop: 68 @ 8,4)
-LegalDrop: 67 @ 8,4)
-LegalDrop: 67 @ 8,4)
-LegalDrop: 66 @ 8,4)
-LegalDrop: 66 @ 8,4)
-LegalDrop: 69 @ 9,4)
-LegalDrop: 69 @ 9,4)
-LegalDrop: 68 @ 9,4)
-LegalDrop: 68 @ 9,4)
-LegalDrop: 67 @ 9,4)
-LegalDrop: 67 @ 9,4)
-LegalDrop: 66 @ 9,4)
-LegalDrop: 66 @ 9,4)
-LegalDrop: 69 @ 3,5)
-LegalDrop: 69 @ 3,5)
-LegalDrop: 68 @ 3,5)
-LegalDrop: 68 @ 3,5)
-LegalDrop: 67 @ 3,5)
-LegalDrop: 67 @ 3,5)
-LegalDrop: 66 @ 3,5)
-LegalDrop: 66 @ 3,5)
-LegalDrop: 69 @ 4,5)
-LegalDrop: 69 @ 4,5)
-LegalDrop: 68 @ 4,5)
-LegalDrop: 68 @ 4,5)
-LegalDrop: 67 @ 4,5)
-LegalDrop: 67 @ 4,5)
-LegalDrop: 66 @ 4,5)
-LegalDrop: 66 @ 4,5)
-LegalDrop: 69 @ 5,5)
-LegalDrop: 69 @ 5,5)
-LegalDrop: 68 @ 5,5)
-LegalDrop: 68 @ 5,5)
-LegalDrop: 67 @ 5,5)
-LegalDrop: 67 @ 5,5)
-LegalDrop: 66 @ 5,5)
-LegalDrop: 66 @ 5,5)
-LegalDrop: 69 @ 2,6)
-LegalDrop: 69 @ 2,6)
-LegalDrop: 68 @ 2,6)
-LegalDrop: 68 @ 2,6)
-LegalDrop: 67 @ 2,6)
-LegalDrop: 67 @ 2,6)
-LegalDrop: 66 @ 2,6)
-LegalDrop: 66 @ 2,6)
-LegalDrop: 69 @ 3,6)
-LegalDrop: 69 @ 3,6)
-LegalDrop: 68 @ 3,6)
-LegalDrop: 68 @ 3,6)
-LegalDrop: 67 @ 3,6)
-LegalDrop: 67 @ 3,6)
-LegalDrop: 66 @ 3,6)
-LegalDrop: 66 @ 3,6)
-LegalDrop: 69 @ 5,6)
-LegalDrop: 69 @ 5,6)
-LegalDrop: 68 @ 5,6)
-LegalDrop: 68 @ 5,6)
-LegalDrop: 67 @ 5,6)
-LegalDrop: 67 @ 5,6)
-LegalDrop: 66 @ 5,6)
-LegalDrop: 66 @ 5,6)
-LegalDrop: 69 @ 7,6)
-LegalDrop: 69 @ 7,6)
-LegalDrop: 68 @ 7,6)
-LegalDrop: 68 @ 7,6)
-LegalDrop: 67 @ 7,6)
-LegalDrop: 67 @ 7,6)
-LegalDrop: 66 @ 7,6)
-LegalDrop: 66 @ 7,6)
-LegalDrop: 69 @ 8,6)
-LegalDrop: 69 @ 8,6)
-LegalDrop: 68 @ 8,6)
-LegalDrop: 68 @ 8,6)
-LegalDrop: 67 @ 8,6)
-LegalDrop: 67 @ 8,6)
-LegalDrop: 66 @ 8,6)
-LegalDrop: 66 @ 8,6)
-LegalDrop: 69 @ 9,6)
-LegalDrop: 69 @ 9,6)
-LegalDrop: 68 @ 9,6)
-LegalDrop: 68 @ 9,6)
-LegalDrop: 67 @ 9,6)
-LegalDrop: 67 @ 9,6)
-LegalDrop: 66 @ 9,6)
-LegalDrop: 66 @ 9,6)
-LegalDrop: 69 @ 2,7)
-LegalDrop: 69 @ 2,7)
-LegalDrop: 68 @ 2,7)
-LegalDrop: 68 @ 2,7)
-LegalDrop: 67 @ 2,7)
-LegalDrop: 67 @ 2,7)
-LegalDrop: 66 @ 2,7)
-LegalDrop: 69 @ 3,7)
-LegalDrop: 69 @ 3,7)
-LegalDrop: 68 @ 3,7)
-LegalDrop: 68 @ 3,7)
-LegalDrop: 67 @ 3,7)
-LegalDrop: 67 @ 3,7)
-LegalDrop: 66 @ 3,7)
-LegalDrop: 69 @ 5,7)
-LegalDrop: 69 @ 5,7)
-LegalDrop: 68 @ 5,7)
-LegalDrop: 68 @ 5,7)
-LegalDrop: 67 @ 5,7)
-LegalDrop: 67 @ 5,7)
-LegalDrop: 66 @ 5,7)
-LegalDrop: 69 @ 6,7)
-LegalDrop: 69 @ 6,7)
-LegalDrop: 68 @ 6,7)
-LegalDrop: 68 @ 6,7)
-LegalDrop: 67 @ 6,7)
-LegalDrop: 67 @ 6,7)
-LegalDrop: 66 @ 6,7)
-297973 >first : usermove 297973 >first : c6c7
-GameEnds(26, Xboard adjudication: Checkmate, 4)
-297973 >first : result 1-0 {Xboard adjudication: Checkmate}
-297973 >first : quit
-GameEnds(26, Xboard adjudication: Checkmate, 2)
+119400 >first : time 29996
+119400 >first : otim 23150
+book hit = (NULL)
+119400 >first : usermove 119400 >first : N@b8
+119401 <first : move b5c6
+120248 >first : time 29995
+120248 >first : otim 23066
+book hit = (NULL)
+120248 >first : usermove 120248 >first : b8a6
+120249 <first : move d1f1
+124414 >first : time 29995
+124414 >first : otim 22649
+book hit = (NULL)
+124414 >first : usermove 124414 >first : a6c5
+124416 <first : move f1g2
+Drop move 20, curr=55, x=0,y=4, p=69
+LegalDrop: 69 @ 8,5)
+LegalDrop: 69 @ 8,5)
+128532 >first : time 29995
+128532 >first : otim 22238
+book hit = (NULL)
+128532 >first : usermove 128532 >first : R@g6
+128533 <first : move g2g4
+130990 >first : time 29995
+130990 >first : otim 21992
+book hit = (NULL)
+130990 >first : usermove 130990 >first : g6g4
+130991 <first : move d2e3
+133970 >first : time 29995
+133970 >first : otim 21694
+book hit = (NULL)
+133970 >first : usermove 133970 >first : g4e4
+133973 <first : move d3e4
+134956 >first : time 29994
+134956 >first : otim 21596
+book hit = (NULL)
+134956 >first : usermove 134956 >first : d5e4
+134957 <first : move e3f2
+Drop move 20, curr=63, x=0,y=3, p=70
+LegalDrop: 70 @ 2,3)
+LegalDrop: 70 @ 2,3)
+138058 >first : time 29994
+138058 >first : otim 21286
+book hit = (NULL)
+138058 >first : usermove 138058 >first : Q@a4
+138060 <first : move c3c4
+142806 >first : time 29994
+142806 >first : otim 20811
+book hit = (NULL)
+142806 >first : usermove 142806 >first : a4a2
+142809 <first : move f2f1
+143688 >first : time 29994
+143688 >first : otim 20723
+book hit = (NULL)
+143688 >first : usermove 143688 >first : a2c2
+143690 <first : move f1f2
+145273 >first : time 29994
+145273 >first : otim 20565
+book hit = (NULL)
+145273 >first : usermove 145273 >first : c2c4
+145276 <first : move f2f1
+147588 >first : time 29993
+147588 >first : otim 20334
+book hit = (NULL)
+147588 >first : usermove 147588 >first : c5a6
+147592 <first : move c6c7
+148990 >first : time 29993
+148990 >first : otim 20194
+book hit = (NULL)
+148990 >first : usermove 148990 >first : c8c7
+148992 <first : move f1e1
+151642 >first : time 29993
+151642 >first : otim 19929
+book hit = (NULL)
+151642 >first : usermove 151642 >first : c4c1
+151644 <first : move e1f2
+159709 >first : time 29992
+159709 >first : otim 19123
+book hit = (NULL)
+159709 >first : usermove 159709 >first : c1d2
+159712 <first : move f2g3
+160511 >first : time 59992
+160511 >first : otim 49043
+book hit = (NULL)
+160511 >first : usermove 160511 >first : d2e2
+160514 <first : move g3f4
+164122 >first : time 59992
+164122 >first : otim 48682
+book hit = (NULL)
+164122 >first : usermove 164122 >first : d8d4
+164124 <first : move f4g5
+166550 >first : time 59992
+166550 >first : otim 48439
+book hit = (NULL)
+166550 >first : usermove 166550 >first : e2g2
+166554 <first : move g5h6
+172093 >first : time 59991
+172093 >first : otim 47885
+book hit = (NULL)
+172093 >first : usermove 172093 >first : d4d3
+172096 <first : move h6h5
+LegalDrop: 0 @ 2,0)
+LegalDrop: 1 @ 2,0)
+LegalDrop: 1 @ 2,0)
+LegalDrop: 2 @ 2,0)
+LegalDrop: 2 @ 2,0)
+LegalDrop: 3 @ 2,0)
+LegalDrop: 3 @ 2,0)
+LegalDrop: 4 @ 2,0)
+LegalDrop: 4 @ 2,0)
+LegalDrop: 0 @ 3,0)
+LegalDrop: 1 @ 3,0)
+LegalDrop: 1 @ 3,0)
+LegalDrop: 2 @ 3,0)
+LegalDrop: 2 @ 3,0)
+LegalDrop: 3 @ 3,0)
+LegalDrop: 3 @ 3,0)
+LegalDrop: 4 @ 3,0)
+LegalDrop: 4 @ 3,0)
+LegalDrop: 0 @ 4,0)
+LegalDrop: 1 @ 4,0)
+LegalDrop: 1 @ 4,0)
+LegalDrop: 2 @ 4,0)
+LegalDrop: 2 @ 4,0)
+LegalDrop: 3 @ 4,0)
+LegalDrop: 3 @ 4,0)
+LegalDrop: 4 @ 4,0)
+LegalDrop: 4 @ 4,0)
+LegalDrop: 0 @ 5,0)
+LegalDrop: 1 @ 5,0)
+LegalDrop: 1 @ 5,0)
+LegalDrop: 2 @ 5,0)
+LegalDrop: 2 @ 5,0)
+LegalDrop: 3 @ 5,0)
+LegalDrop: 3 @ 5,0)
+LegalDrop: 4 @ 5,0)
+LegalDrop: 4 @ 5,0)
+LegalDrop: 0 @ 6,0)
+LegalDrop: 1 @ 6,0)
+LegalDrop: 1 @ 6,0)
+LegalDrop: 2 @ 6,0)
+LegalDrop: 2 @ 6,0)
+LegalDrop: 3 @ 6,0)
+LegalDrop: 3 @ 6,0)
+LegalDrop: 4 @ 6,0)
+LegalDrop: 4 @ 6,0)
+LegalDrop: 0 @ 7,0)
+LegalDrop: 1 @ 7,0)
+LegalDrop: 1 @ 7,0)
+LegalDrop: 2 @ 7,0)
+LegalDrop: 2 @ 7,0)
+LegalDrop: 3 @ 7,0)
+LegalDrop: 3 @ 7,0)
+LegalDrop: 4 @ 7,0)
+LegalDrop: 4 @ 7,0)
+LegalDrop: 0 @ 8,0)
+LegalDrop: 1 @ 8,0)
+LegalDrop: 1 @ 8,0)
+LegalDrop: 2 @ 8,0)
+LegalDrop: 2 @ 8,0)
+LegalDrop: 3 @ 8,0)
+LegalDrop: 3 @ 8,0)
+LegalDrop: 4 @ 8,0)
+LegalDrop: 4 @ 8,0)
+LegalDrop: 0 @ 9,0)
+LegalDrop: 1 @ 9,0)
+LegalDrop: 1 @ 9,0)
+LegalDrop: 2 @ 9,0)
+LegalDrop: 2 @ 9,0)
+LegalDrop: 3 @ 9,0)
+LegalDrop: 3 @ 9,0)
+LegalDrop: 4 @ 9,0)
+LegalDrop: 4 @ 9,0)
+LegalDrop: 0 @ 2,1)
+LegalDrop: 0 @ 2,1)
+LegalDrop: 1 @ 2,1)
+LegalDrop: 1 @ 2,1)
+LegalDrop: 2 @ 2,1)
+LegalDrop: 2 @ 2,1)
+LegalDrop: 3 @ 2,1)
+LegalDrop: 3 @ 2,1)
+LegalDrop: 4 @ 2,1)
+LegalDrop: 4 @ 2,1)
+LegalDrop: 0 @ 3,1)
+LegalDrop: 0 @ 3,1)
+LegalDrop: 1 @ 3,1)
+LegalDrop: 1 @ 3,1)
+LegalDrop: 2 @ 3,1)
+LegalDrop: 2 @ 3,1)
+LegalDrop: 3 @ 3,1)
+LegalDrop: 3 @ 3,1)
+LegalDrop: 4 @ 3,1)
+LegalDrop: 4 @ 3,1)
+LegalDrop: 0 @ 4,1)
+LegalDrop: 0 @ 4,1)
+LegalDrop: 1 @ 4,1)
+LegalDrop: 1 @ 4,1)
+LegalDrop: 2 @ 4,1)
+LegalDrop: 2 @ 4,1)
+LegalDrop: 3 @ 4,1)
+LegalDrop: 3 @ 4,1)
+LegalDrop: 4 @ 4,1)
+LegalDrop: 4 @ 4,1)
+LegalDrop: 0 @ 5,1)
+LegalDrop: 0 @ 5,1)
+LegalDrop: 1 @ 5,1)
+LegalDrop: 1 @ 5,1)
+LegalDrop: 2 @ 5,1)
+LegalDrop: 2 @ 5,1)
+LegalDrop: 3 @ 5,1)
+LegalDrop: 3 @ 5,1)
+LegalDrop: 4 @ 5,1)
+LegalDrop: 4 @ 5,1)
+LegalDrop: 0 @ 6,1)
+LegalDrop: 0 @ 6,1)
+LegalDrop: 1 @ 6,1)
+LegalDrop: 1 @ 6,1)
+LegalDrop: 2 @ 6,1)
+LegalDrop: 2 @ 6,1)
+LegalDrop: 3 @ 6,1)
+LegalDrop: 3 @ 6,1)
+LegalDrop: 4 @ 6,1)
+LegalDrop: 4 @ 6,1)
+LegalDrop: 0 @ 7,1)
+LegalDrop: 0 @ 7,1)
+LegalDrop: 1 @ 7,1)
+LegalDrop: 1 @ 7,1)
+LegalDrop: 2 @ 7,1)
+LegalDrop: 2 @ 7,1)
+LegalDrop: 3 @ 7,1)
+LegalDrop: 3 @ 7,1)
+LegalDrop: 4 @ 7,1)
+LegalDrop: 4 @ 7,1)
+LegalDrop: 0 @ 9,1)
+LegalDrop: 0 @ 9,1)
+LegalDrop: 1 @ 9,1)
+LegalDrop: 1 @ 9,1)
+LegalDrop: 2 @ 9,1)
+LegalDrop: 2 @ 9,1)
+LegalDrop: 3 @ 9,1)
+LegalDrop: 3 @ 9,1)
+LegalDrop: 4 @ 9,1)
+LegalDrop: 4 @ 9,1)
+LegalDrop: 0 @ 2,2)
+LegalDrop: 0 @ 2,2)
+LegalDrop: 1 @ 2,2)
+LegalDrop: 1 @ 2,2)
+LegalDrop: 2 @ 2,2)
+LegalDrop: 2 @ 2,2)
+LegalDrop: 3 @ 2,2)
+LegalDrop: 3 @ 2,2)
+LegalDrop: 4 @ 2,2)
+LegalDrop: 4 @ 2,2)
+LegalDrop: 0 @ 3,2)
+LegalDrop: 0 @ 3,2)
+LegalDrop: 1 @ 3,2)
+LegalDrop: 1 @ 3,2)
+LegalDrop: 2 @ 3,2)
+LegalDrop: 2 @ 3,2)
+LegalDrop: 3 @ 3,2)
+LegalDrop: 3 @ 3,2)
+LegalDrop: 4 @ 3,2)
+LegalDrop: 4 @ 3,2)
+LegalDrop: 0 @ 4,2)
+LegalDrop: 0 @ 4,2)
+LegalDrop: 1 @ 4,2)
+LegalDrop: 1 @ 4,2)
+LegalDrop: 2 @ 4,2)
+LegalDrop: 2 @ 4,2)
+LegalDrop: 3 @ 4,2)
+LegalDrop: 3 @ 4,2)
+LegalDrop: 4 @ 4,2)
+LegalDrop: 4 @ 4,2)
+LegalDrop: 0 @ 5,2)
+LegalDrop: 0 @ 5,2)
+LegalDrop: 1 @ 5,2)
+LegalDrop: 1 @ 5,2)
+LegalDrop: 2 @ 5,2)
+LegalDrop: 2 @ 5,2)
+LegalDrop: 3 @ 5,2)
+LegalDrop: 3 @ 5,2)
+LegalDrop: 4 @ 5,2)
+LegalDrop: 4 @ 5,2)
+LegalDrop: 0 @ 6,2)
+LegalDrop: 0 @ 6,2)
+LegalDrop: 1 @ 6,2)
+LegalDrop: 1 @ 6,2)
+LegalDrop: 2 @ 6,2)
+LegalDrop: 2 @ 6,2)
+LegalDrop: 3 @ 6,2)
+LegalDrop: 3 @ 6,2)
+LegalDrop: 4 @ 6,2)
+LegalDrop: 4 @ 6,2)
+LegalDrop: 0 @ 7,2)
+LegalDrop: 0 @ 7,2)
+LegalDrop: 1 @ 7,2)
+LegalDrop: 1 @ 7,2)
+LegalDrop: 2 @ 7,2)
+LegalDrop: 2 @ 7,2)
+LegalDrop: 3 @ 7,2)
+LegalDrop: 3 @ 7,2)
+LegalDrop: 4 @ 7,2)
+LegalDrop: 4 @ 7,2)
+LegalDrop: 0 @ 8,2)
+LegalDrop: 0 @ 8,2)
+LegalDrop: 1 @ 8,2)
+LegalDrop: 1 @ 8,2)
+LegalDrop: 2 @ 8,2)
+LegalDrop: 2 @ 8,2)
+LegalDrop: 3 @ 8,2)
+LegalDrop: 3 @ 8,2)
+LegalDrop: 4 @ 8,2)
+LegalDrop: 4 @ 8,2)
+LegalDrop: 0 @ 2,3)
+LegalDrop: 0 @ 2,3)
+LegalDrop: 1 @ 2,3)
+LegalDrop: 1 @ 2,3)
+LegalDrop: 2 @ 2,3)
+LegalDrop: 2 @ 2,3)
+LegalDrop: 3 @ 2,3)
+LegalDrop: 3 @ 2,3)
+LegalDrop: 4 @ 2,3)
+LegalDrop: 4 @ 2,3)
+LegalDrop: 0 @ 3,3)
+LegalDrop: 0 @ 3,3)
+LegalDrop: 1 @ 3,3)
+LegalDrop: 1 @ 3,3)
+LegalDrop: 2 @ 3,3)
+LegalDrop: 2 @ 3,3)
+LegalDrop: 3 @ 3,3)
+LegalDrop: 3 @ 3,3)
+LegalDrop: 4 @ 3,3)
+LegalDrop: 4 @ 3,3)
+LegalDrop: 0 @ 4,3)
+LegalDrop: 0 @ 4,3)
+LegalDrop: 1 @ 4,3)
+LegalDrop: 1 @ 4,3)
+LegalDrop: 2 @ 4,3)
+LegalDrop: 2 @ 4,3)
+LegalDrop: 3 @ 4,3)
+LegalDrop: 3 @ 4,3)
+LegalDrop: 4 @ 4,3)
+LegalDrop: 4 @ 4,3)
+LegalDrop: 0 @ 5,3)
+LegalDrop: 0 @ 5,3)
+LegalDrop: 1 @ 5,3)
+LegalDrop: 1 @ 5,3)
+LegalDrop: 2 @ 5,3)
+LegalDrop: 2 @ 5,3)
+LegalDrop: 3 @ 5,3)
+LegalDrop: 3 @ 5,3)
+LegalDrop: 4 @ 5,3)
+LegalDrop: 4 @ 5,3)
+LegalDrop: 0 @ 7,3)
+LegalDrop: 0 @ 7,3)
+LegalDrop: 1 @ 7,3)
+LegalDrop: 1 @ 7,3)
+LegalDrop: 2 @ 7,3)
+LegalDrop: 2 @ 7,3)
+LegalDrop: 3 @ 7,3)
+LegalDrop: 3 @ 7,3)
+LegalDrop: 4 @ 7,3)
+LegalDrop: 4 @ 7,3)
+LegalDrop: 0 @ 8,3)
+LegalDrop: 0 @ 8,3)
+LegalDrop: 1 @ 8,3)
+LegalDrop: 1 @ 8,3)
+LegalDrop: 2 @ 8,3)
+LegalDrop: 2 @ 8,3)
+LegalDrop: 3 @ 8,3)
+LegalDrop: 3 @ 8,3)
+LegalDrop: 4 @ 8,3)
+LegalDrop: 4 @ 8,3)
+LegalDrop: 0 @ 9,3)
+LegalDrop: 0 @ 9,3)
+LegalDrop: 0 @ 2,0)
+LegalDrop: 1 @ 2,0)
+LegalDrop: 1 @ 2,0)
+LegalDrop: 2 @ 2,0)
+LegalDrop: 2 @ 2,0)
+LegalDrop: 3 @ 2,0)
+LegalDrop: 3 @ 2,0)
+LegalDrop: 4 @ 2,0)
+LegalDrop: 4 @ 2,0)
+LegalDrop: 0 @ 3,0)
+LegalDrop: 1 @ 3,0)
+LegalDrop: 1 @ 3,0)
+LegalDrop: 2 @ 3,0)
+LegalDrop: 2 @ 3,0)
+LegalDrop: 3 @ 3,0)
+LegalDrop: 3 @ 3,0)
+LegalDrop: 4 @ 3,0)
+LegalDrop: 4 @ 3,0)
+LegalDrop: 0 @ 4,0)
+LegalDrop: 1 @ 4,0)
+LegalDrop: 1 @ 4,0)
+LegalDrop: 2 @ 4,0)
+LegalDrop: 2 @ 4,0)
+LegalDrop: 3 @ 4,0)
+LegalDrop: 3 @ 4,0)
+LegalDrop: 4 @ 4,0)
+LegalDrop: 4 @ 4,0)
+LegalDrop: 0 @ 5,0)
+LegalDrop: 1 @ 5,0)
+LegalDrop: 1 @ 5,0)
+LegalDrop: 2 @ 5,0)
+LegalDrop: 2 @ 5,0)
+LegalDrop: 3 @ 5,0)
+LegalDrop: 3 @ 5,0)
+LegalDrop: 4 @ 5,0)
+LegalDrop: 4 @ 5,0)
+LegalDrop: 0 @ 6,0)
+LegalDrop: 1 @ 6,0)
+LegalDrop: 1 @ 6,0)
+LegalDrop: 2 @ 6,0)
+LegalDrop: 2 @ 6,0)
+LegalDrop: 3 @ 6,0)
+LegalDrop: 3 @ 6,0)
+LegalDrop: 4 @ 6,0)
+LegalDrop: 4 @ 6,0)
+LegalDrop: 0 @ 7,0)
+LegalDrop: 1 @ 7,0)
+LegalDrop: 1 @ 7,0)
+LegalDrop: 2 @ 7,0)
+LegalDrop: 2 @ 7,0)
+LegalDrop: 3 @ 7,0)
+LegalDrop: 3 @ 7,0)
+LegalDrop: 4 @ 7,0)
+LegalDrop: 4 @ 7,0)
+LegalDrop: 0 @ 8,0)
+LegalDrop: 1 @ 8,0)
+LegalDrop: 1 @ 8,0)
+LegalDrop: 2 @ 8,0)
+LegalDrop: 2 @ 8,0)
+LegalDrop: 3 @ 8,0)
+LegalDrop: 3 @ 8,0)
+LegalDrop: 4 @ 8,0)
+LegalDrop: 4 @ 8,0)
+LegalDrop: 0 @ 9,0)
+LegalDrop: 1 @ 9,0)
+LegalDrop: 1 @ 9,0)
+LegalDrop: 2 @ 9,0)
+LegalDrop: 2 @ 9,0)
+LegalDrop: 3 @ 9,0)
+LegalDrop: 3 @ 9,0)
+LegalDrop: 4 @ 9,0)
+LegalDrop: 4 @ 9,0)
+LegalDrop: 0 @ 2,1)
+LegalDrop: 0 @ 2,1)
+LegalDrop: 1 @ 2,1)
+LegalDrop: 1 @ 2,1)
+LegalDrop: 2 @ 2,1)
+LegalDrop: 2 @ 2,1)
+LegalDrop: 3 @ 2,1)
+LegalDrop: 3 @ 2,1)
+LegalDrop: 4 @ 2,1)
+LegalDrop: 4 @ 2,1)
+LegalDrop: 0 @ 3,1)
+LegalDrop: 0 @ 3,1)
+LegalDrop: 1 @ 3,1)
+LegalDrop: 1 @ 3,1)
+LegalDrop: 2 @ 3,1)
+LegalDrop: 2 @ 3,1)
+LegalDrop: 3 @ 3,1)
+LegalDrop: 3 @ 3,1)
+LegalDrop: 4 @ 3,1)
+LegalDrop: 4 @ 3,1)
+LegalDrop: 0 @ 4,1)
+LegalDrop: 0 @ 4,1)
+LegalDrop: 1 @ 4,1)
+LegalDrop: 1 @ 4,1)
+LegalDrop: 2 @ 4,1)
+LegalDrop: 2 @ 4,1)
+LegalDrop: 3 @ 4,1)
+LegalDrop: 3 @ 4,1)
+LegalDrop: 4 @ 4,1)
+LegalDrop: 4 @ 4,1)
+LegalDrop: 0 @ 5,1)
+LegalDrop: 0 @ 5,1)
+LegalDrop: 1 @ 5,1)
+LegalDrop: 1 @ 5,1)
+LegalDrop: 2 @ 5,1)
+LegalDrop: 2 @ 5,1)
+LegalDrop: 3 @ 5,1)
+LegalDrop: 3 @ 5,1)
+LegalDrop: 4 @ 5,1)
+LegalDrop: 4 @ 5,1)
+LegalDrop: 0 @ 6,1)
+LegalDrop: 0 @ 6,1)
+LegalDrop: 1 @ 6,1)
+LegalDrop: 1 @ 6,1)
+LegalDrop: 2 @ 6,1)
+LegalDrop: 2 @ 6,1)
+LegalDrop: 3 @ 6,1)
+LegalDrop: 3 @ 6,1)
+LegalDrop: 4 @ 6,1)
+LegalDrop: 4 @ 6,1)
+LegalDrop: 0 @ 7,1)
+LegalDrop: 0 @ 7,1)
+LegalDrop: 1 @ 7,1)
+LegalDrop: 1 @ 7,1)
+LegalDrop: 2 @ 7,1)
+LegalDrop: 2 @ 7,1)
+LegalDrop: 3 @ 7,1)
+LegalDrop: 3 @ 7,1)
+LegalDrop: 4 @ 7,1)
+LegalDrop: 4 @ 7,1)
+LegalDrop: 0 @ 9,1)
+LegalDrop: 0 @ 9,1)
+LegalDrop: 1 @ 9,1)
+LegalDrop: 1 @ 9,1)
+LegalDrop: 2 @ 9,1)
+LegalDrop: 2 @ 9,1)
+LegalDrop: 3 @ 9,1)
+LegalDrop: 3 @ 9,1)
+LegalDrop: 4 @ 9,1)
+LegalDrop: 4 @ 9,1)
+LegalDrop: 0 @ 2,2)
+LegalDrop: 0 @ 2,2)
+LegalDrop: 1 @ 2,2)
+LegalDrop: 1 @ 2,2)
+LegalDrop: 2 @ 2,2)
+LegalDrop: 2 @ 2,2)
+LegalDrop: 3 @ 2,2)
+LegalDrop: 3 @ 2,2)
+LegalDrop: 4 @ 2,2)
+LegalDrop: 4 @ 2,2)
+LegalDrop: 0 @ 3,2)
+LegalDrop: 0 @ 3,2)
+LegalDrop: 1 @ 3,2)
+LegalDrop: 1 @ 3,2)
+LegalDrop: 2 @ 3,2)
+LegalDrop: 2 @ 3,2)
+LegalDrop: 3 @ 3,2)
+LegalDrop: 3 @ 3,2)
+LegalDrop: 4 @ 3,2)
+LegalDrop: 4 @ 3,2)
+LegalDrop: 0 @ 4,2)
+LegalDrop: 0 @ 4,2)
+LegalDrop: 1 @ 4,2)
+LegalDrop: 1 @ 4,2)
+LegalDrop: 2 @ 4,2)
+LegalDrop: 2 @ 4,2)
+LegalDrop: 3 @ 4,2)
+LegalDrop: 3 @ 4,2)
+LegalDrop: 4 @ 4,2)
+LegalDrop: 4 @ 4,2)
+LegalDrop: 0 @ 5,2)
+LegalDrop: 0 @ 5,2)
+LegalDrop: 1 @ 5,2)
+LegalDrop: 1 @ 5,2)
+LegalDrop: 2 @ 5,2)
+LegalDrop: 2 @ 5,2)
+LegalDrop: 3 @ 5,2)
+LegalDrop: 3 @ 5,2)
+LegalDrop: 4 @ 5,2)
+LegalDrop: 4 @ 5,2)
+LegalDrop: 0 @ 6,2)
+LegalDrop: 0 @ 6,2)
+LegalDrop: 1 @ 6,2)
+LegalDrop: 1 @ 6,2)
+LegalDrop: 2 @ 6,2)
+LegalDrop: 2 @ 6,2)
+LegalDrop: 3 @ 6,2)
+LegalDrop: 3 @ 6,2)
+LegalDrop: 4 @ 6,2)
+LegalDrop: 4 @ 6,2)
+LegalDrop: 0 @ 7,2)
+LegalDrop: 0 @ 7,2)
+LegalDrop: 1 @ 7,2)
+LegalDrop: 1 @ 7,2)
+LegalDrop: 2 @ 7,2)
+LegalDrop: 2 @ 7,2)
+LegalDrop: 3 @ 7,2)
+LegalDrop: 3 @ 7,2)
+LegalDrop: 4 @ 7,2)
+LegalDrop: 4 @ 7,2)
+LegalDrop: 0 @ 8,2)
+LegalDrop: 0 @ 8,2)
+LegalDrop: 1 @ 8,2)
+LegalDrop: 1 @ 8,2)
+LegalDrop: 2 @ 8,2)
+LegalDrop: 2 @ 8,2)
+LegalDrop: 3 @ 8,2)
+LegalDrop: 3 @ 8,2)
+LegalDrop: 4 @ 8,2)
+LegalDrop: 4 @ 8,2)
+LegalDrop: 0 @ 2,3)
+LegalDrop: 0 @ 2,3)
+LegalDrop: 1 @ 2,3)
+LegalDrop: 1 @ 2,3)
+LegalDrop: 2 @ 2,3)
+LegalDrop: 2 @ 2,3)
+LegalDrop: 3 @ 2,3)
+LegalDrop: 3 @ 2,3)
+LegalDrop: 4 @ 2,3)
+LegalDrop: 4 @ 2,3)
+LegalDrop: 0 @ 3,3)
+LegalDrop: 0 @ 3,3)
+LegalDrop: 1 @ 3,3)
+LegalDrop: 1 @ 3,3)
+LegalDrop: 2 @ 3,3)
+LegalDrop: 2 @ 3,3)
+LegalDrop: 3 @ 3,3)
+LegalDrop: 3 @ 3,3)
+LegalDrop: 4 @ 3,3)
+LegalDrop: 4 @ 3,3)
+LegalDrop: 0 @ 4,3)
+LegalDrop: 0 @ 4,3)
+LegalDrop: 1 @ 4,3)
+LegalDrop: 1 @ 4,3)
+LegalDrop: 2 @ 4,3)
+LegalDrop: 2 @ 4,3)
+LegalDrop: 3 @ 4,3)
+LegalDrop: 3 @ 4,3)
+LegalDrop: 4 @ 4,3)
+LegalDrop: 4 @ 4,3)
+LegalDrop: 0 @ 5,3)
+LegalDrop: 0 @ 5,3)
+LegalDrop: 1 @ 5,3)
+LegalDrop: 1 @ 5,3)
+LegalDrop: 2 @ 5,3)
+LegalDrop: 2 @ 5,3)
+LegalDrop: 3 @ 5,3)
+LegalDrop: 3 @ 5,3)
+LegalDrop: 4 @ 5,3)
+LegalDrop: 4 @ 5,3)
+LegalDrop: 0 @ 7,3)
+LegalDrop: 0 @ 7,3)
+LegalDrop: 1 @ 7,3)
+LegalDrop: 1 @ 7,3)
+LegalDrop: 2 @ 7,3)
+LegalDrop: 2 @ 7,3)
+LegalDrop: 3 @ 7,3)
+LegalDrop: 3 @ 7,3)
+LegalDrop: 4 @ 7,3)
+LegalDrop: 4 @ 7,3)
+LegalDrop: 0 @ 8,3)
+LegalDrop: 0 @ 8,3)
+LegalDrop: 1 @ 8,3)
+LegalDrop: 1 @ 8,3)
+LegalDrop: 2 @ 8,3)
+LegalDrop: 2 @ 8,3)
+LegalDrop: 3 @ 8,3)
+LegalDrop: 3 @ 8,3)
+LegalDrop: 4 @ 8,3)
+LegalDrop: 4 @ 8,3)
+LegalDrop: 0 @ 9,3)
+LegalDrop: 0 @ 9,3)
+173038 >first : time 59991
+173038 >first : otim 47791
+book hit = (NULL)
+173038 >first : usermove 173038 >first : d3h3
+173042 <first : move h5h4
+GameEnds(29, xboard exit, 2)
+248684 >first : result * {xboard exit}
+248684 >first : quit

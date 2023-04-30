@@ -168,7 +168,7 @@ public class Move {
                 case PAWN -> "P";
                 default -> "";
             };
-            return pieceCode + "@" + move.getDestination();
+            return pieceCode + "@" + move.getDestination().get();
         } else {
             return "resign";
         }

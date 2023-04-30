@@ -2,7 +2,44 @@ package main;
 
 import pieces.Piece;
 
+import java.util.ArrayList;
+
 public class DebugTools {
+
+	public static void printCaptured(ArrayList<Piece> pieces) {
+		int pawns = 0;
+		int rooks = 0;
+		int knights = 0;
+		int bishops = 0;
+		int queens = 0;
+
+		for (Piece piece: pieces) {
+			if (piece.getType() == PieceType.PAWN) {
+				pawns++;
+			}
+			if (piece.getType() == PieceType.ROOK) {
+				rooks++;
+			}
+			if (piece.getType() == PieceType.KNIGHT) {
+				knights++;
+			}
+			if (piece.getType() == PieceType.BISHOP) {
+				bishops++;
+			}
+			if (piece.getType() == PieceType.QUEEN) {
+				queens++;
+			}
+		}
+
+		System.out.println("Captured pieces:");
+		System.out.println("Pawns: " + pawns);
+		System.out.println("Rooks: " + rooks);
+		System.out.println("Knights: " + knights);
+		System.out.println("Bishops: " + bishops);
+		System.out.println("Queens: " + queens);
+	}
+
+
 	public static void printBoardPretty(Piece[][] board, boolean whiteDown) {
 		int startX = whiteDown ? 8 : 1;
 		int limitX = whiteDown ? 0 : 9;

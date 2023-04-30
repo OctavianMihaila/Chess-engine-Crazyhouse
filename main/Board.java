@@ -310,8 +310,36 @@ public class Board {
 	 *
 	 * @param move the move to register
 	 */
-	public void registerMove(Move move) {
+	public void registerMove(PlaySide side, Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
+
+		if (move.isDropIn()) {
+			ArrayList<Piece> myCaptures = getSameCaptures(side);
+			ArrayList<Piece> myPieces = getSame(side);
+			ArrayList<Piece> mySimulatedPieces = getSimulatedSame(side);
+			PieceType dropPieceType = move.getReplacement().get();
+			Piece chosen = null;
+			for (Piece p: myCaptures) {
+				if (p.getType() == dropPieceType) {
+					// Save the piece because we cant modify the list that we are iterating over
+					chosen = p;
+					break;
+				}
+			}
+
+			if (chosen == null) return;
+			myCaptures.remove(chosen);
+			myPieces.add(chosen);
+			// Dont forget to always add to simulated so simulations are accurate
+			mySimulatedPieces.add(chosen);
+			int dstY = move.getDestinationY();
+			int dstX = move.getDestinationX();
+
+			board[dstX][dstY] = chosen;
+			chosen.updatePosition(dstX, dstY);
+
+			return;
+		}
 
 		int srcY = move.getSourceY();
 		int srcX = move.getSourceX();
@@ -335,7 +363,7 @@ public class Board {
 			}
 
 			myCaptures.add(dstPiece);
-
+			dstPiece.setSide(side);
 			// Mark capture location
 			dstPiece.updatePosition(-1, -1);
 		}
@@ -363,7 +391,6 @@ public class Board {
 	public void doMove(Move move) {
 		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
 
-
 		int srcY = move.getSourceY();
 		int srcX = move.getSourceX();
 		int dstY = move.getDestinationY();
@@ -374,12 +401,9 @@ public class Board {
 		if (srcPiece == null) return;
 		simulatedMoves.push(move);
 
-//		System.out.println("Simulating move: from " + srcPiece + " to " + move.getDestination() + " table now:");
-//		DebugTools.printBoardPretty(this, true);
 		// When destination is not null, it is a capture, simulate it and retain all the information
 		if (capturedPiece != null) {
 			move.markCapture();
-//			System.out.println("Captured piece: " + capturedPiece);
 			if (capturedPiece.getSide() == PlaySide.BLACK) {
 				simulatedWhiteCaptures.push(capturedPiece);
 				simulatedBlackPieces.remove(capturedPiece);
@@ -389,12 +413,9 @@ public class Board {
 			}
 		}
 
-//		System.out.println("Changing position of " + srcPiece + " to " + move.getDestination());
 		srcPiece.updatePosition(dstX, dstY);
 		board[dstX][dstY] = srcPiece;
 		board[srcX][srcY] = null;
-//		System.out.println("Simulated move: from " + srcPiece + " to " + move.getDestination() + " table now:");
-//		DebugTools.printBoardPretty(this, true);
 	}
 
 	/**
@@ -410,33 +431,24 @@ public class Board {
 		int dstY = lastMove.getDestinationY();
 		int dstX = lastMove.getDestinationX();
 
-//		System.out.println("Undoing move: from " + board[dstX][dstY] + " to " + lastMove.getDestination() + " table now:");
-//		DebugTools.printBoardPretty(this, true);
-
 		Piece movedPiece = board[dstX][dstY];
 		board[srcX][srcY] = movedPiece;
 
-		// TODO add a method for undoing a move so that castling can be undone
 		movedPiece.updatePosition(srcX, srcY);
-//		System.out.println("Restored piece " + movedPiece);
 		// If the move was a capture we need to restore the captured piece
 		if (lastMove.isCapture()) {
 			Piece capturedPiece;
 			if (movedPiece.getSide() == PlaySide.WHITE) {
 				capturedPiece = simulatedWhiteCaptures.pop();
-//				System.out.println("Restored piece " + capturedPiece + " to " + capturedPiece.getSrcString());
 				simulatedBlackPieces.add(capturedPiece);
 			} else {
 				capturedPiece = simulatedBlackCaptures.pop();
-//				System.out.println("Restored piece " + capturedPiece + " to " + capturedPiece.getSrcString());
 				simulatedWhitePieces.add(capturedPiece);
 			}
 			board[dstX][dstY] = capturedPiece;
 		} else {
 			board[dstX][dstY] = null;
 		}
-//		System.out.println("Undone move: from " + lastMove.getSource() + " to " + lastMove.getDestination() + " table now:");
-//		DebugTools.printBoardPretty(this, true);
 	}
 
 	/**
@@ -460,12 +472,8 @@ public class Board {
 	 */
 	public Piece getCaptureOnPiece(Piece target) {
 		for (Piece piece : getOpposites(target.getSide())) {
-			if (piece.canCapture(this, target.getX(), target.getY())) {
-//				System.out.println("Piece " + piece + " can capture " + target + " for sure");
-				return piece;
-			}
+			if (piece.canCapture(this, target.getX(), target.getY())) return piece;
 		}
-//		System.out.println("No piece can capture " + target + " for sure");
 		return null;
 	}
 
@@ -477,12 +485,8 @@ public class Board {
 	 */
 	public Piece getCaptureOnSimulatedPiece(Piece target) {
 		for (Piece piece : getSimulatedOpposites(target.getSide())) {
-			if (piece.canCapture(this, target.getX(), target.getY())) {
-//				System.out.println("(Simulated) Piece " + piece + " can capture " + target + " for sure");
-				return piece;
-			}
+			if (piece.canCapture(this, target.getX(), target.getY())) return piece;
 		}
-//		System.out.println("(Simulated) No piece can capture " + target + " for sure");
 		return null;
 	}
 
@@ -523,34 +527,62 @@ public class Board {
 		int yDir = (int) Math.signum(horizontalDist);
 
 		// If the Knight or the pawn is the one attacking, there is no way to block it.
-		if (target.getType() == PieceType.KNIGHT || target.getType() == PieceType.PAWN) {
-			return moves;
-		}
+		if (target.getType() == PieceType.KNIGHT || target.getType() == PieceType.PAWN) return moves;
 
 		for (int i = 1; i < Math.max(Math.abs(horizontalDist), Math.abs(verticalDist)); i++) {
-			System.out.println("Conditions: " + (target.getX() + i * xDir) + " " + (target.getY() + i * yDir));
 			int xPositionToBlock = target.getX() + i * xDir;
 			int yPositionToBlock = target.getY() + i * yDir;
-			System.out.println(" @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking " + xPositionToBlock + " " + yPositionToBlock);
 			if (getPiece(xPositionToBlock, yPositionToBlock) == null) {
-
 				String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
-				System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + "Destination: " + dstString);
-
 				for (Piece piece : getSame(myKing.getSide())) {
 					if (piece.getType() != PieceType.KING && piece.canMove(this, xPositionToBlock, yPositionToBlock)) {
-						System.out.println("Piece TYPE: " + piece.getType());
-						// Don't touch.
-//							if (piece.getType() == PieceType.PAWN && piece.getX() > xPositionToBlock) continue;
-
 						Move potentialMove = Move.moveTo(piece.getSrcString(), dstString);
 						// Simulate the capture and check if the king is in check
 						doMove(potentialMove);
+
 						// Can do capture if king isn't in check
-						if (getCaptureOnSimulatedPiece(myKing) == null) {
-							moves.add(potentialMove);
-						}
+						if (getCaptureOnSimulatedPiece(myKing) == null) moves.add(potentialMove);
 						undoMove();
+					}
+				}
+			}
+		}
+
+		return moves;
+	}
+
+	public ArrayList<Move> getAllCheckBlockingsUsingDrop(Piece target) {
+		ArrayList<Move> moves = new ArrayList<>();
+		// My king is the opposite of the target
+		Piece myKing = getOppositeKing(target.getSide());
+
+		// If there is a double check we can't escape by dropping a piece.
+		if (getAllCapturesOnPiece(myKing).size() > 1) return moves;
+
+		int verticalDist = myKing.getX() - target.getX();
+		int horizontalDist = myKing.getY() - target.getY();
+		int xDir = (int) Math.signum(verticalDist);
+		int yDir = (int) Math.signum(horizontalDist);
+
+		// If the Knight or the pawn is the one attacking, there is no way to block it.
+		if (target.getType() == PieceType.KNIGHT || target.getType() == PieceType.PAWN) return moves;
+
+		for (int i = 1; i < Math.max(Math.abs(horizontalDist), Math.abs(verticalDist)); i++) {
+			int xPositionToBlock = target.getX() + i * xDir;
+			int yPositionToBlock = target.getY() + i * yDir;
+			if (getPiece(xPositionToBlock, yPositionToBlock) == null) {
+				String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
+				for (Piece piece : (myKing.getSide() == PlaySide.WHITE) ? whiteCaptures : blackCaptures) {
+					if (piece.getType() != PieceType.KING) {
+						Move potentialMove =  Move.dropIn(dstString, piece.getType());
+						// Simulate the capture and check if the king is in check
+//						doMove(potentialMove);
+//
+//						// Can do capture if king isn't in check
+//						if (getCaptureOnSimulatedPiece(myKing) == null) moves.add(potentialMove);
+//						undoMove();
+
+						moves.add(potentialMove); // TODO: If we implement drop undo, this should be deleted.
 					}
 				}
 			}
@@ -577,15 +609,22 @@ public class Board {
 		// If king is in chess, try to capture the problem piece or to block with another piece
 		Piece attackingPiece = getCaptureOnPiece(myKing);
 		if (attackingPiece != null) {
+			// Priority 1 try to capture the problem piece using other pieces
 			allPossibleMoves.addAll(getAllCapturesOnPiece(attackingPiece));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
+			// Priority 2 try to capture the problem piece or other pieces so that there is no more check
 			allPossibleMoves.addAll(myKing.getPossibleCaptures(this));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
+			// Priority 3 try to move the king somewhere else
 			allPossibleMoves.addAll(myKing.getPossibleMoves(this));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
+			allPossibleMoves.addAll(getAllCheckBlockingsUsingDrop(attackingPiece));
+			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+			// Priority 4 try to block the path of the attacking piece
 			allPossibleMoves.addAll(getAllCheckBlockings(attackingPiece));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
