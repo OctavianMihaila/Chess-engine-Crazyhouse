@@ -28,16 +28,17 @@ public class Pawn extends Piece {
 
 		// Cant move more than 1 square horizontally
 		if (Math.abs(horizontalDist) > 0) return false;
+		if (Math.abs(verticalDist) > 2) return false;
 
-
-		// Can move 2 squares only if moving from starting positions
-		if (Math.abs(verticalDist) == 2) {
-			if (side == PlaySide.WHITE && x != 2) return false;
-			if (side == PlaySide.BLACK && x != 7) return false;
+		if (side == PlaySide.WHITE) {
+			if (verticalDist <= 0) return false;
+			if (verticalDist == 2 && x != 2) return false;
+		} else {
+			if (verticalDist >= 0) return false;
+			if (verticalDist == -2 && x != -2) return false;
 		}
 
-		// Can move only forward 1 square or 2 if moving from starting position
-		return Math.abs(verticalDist) == 1 || ((x == 2 || x == 7) && Math.abs(verticalDist) == 2);
+		return true;
 	}
 
 	@Override

@@ -93,6 +93,7 @@ public class Board {
 
 	/**
 	 * Getter for the king of the same color as the player
+	 *
 	 * @param side the side of the table
 	 * @return the king
 	 */
@@ -103,6 +104,7 @@ public class Board {
 
 	/**
 	 * Getter for the king of the opposite color as the player
+	 *
 	 * @param side the side of the table
 	 * @return the king
 	 */
@@ -113,6 +115,7 @@ public class Board {
 
 	/**
 	 * Getter for pieces of the same player
+	 *
 	 * @param side the side of the player requesting the pieces
 	 * @return pieces of the player
 	 */
@@ -123,6 +126,7 @@ public class Board {
 
 	/**
 	 * Getter for pieces of the opposite player
+	 *
 	 * @param side the side of the player requesting the opposite pieces
 	 * @return pieces of the opposite player
 	 */
@@ -133,6 +137,7 @@ public class Board {
 
 	/**
 	 * Getter for the captures of the same player
+	 *
 	 * @param side the side of the player requesting the captures
 	 * @return captures of the player
 	 */
@@ -143,6 +148,7 @@ public class Board {
 
 	/**
 	 * Getter for the captures of the opposite player
+	 *
 	 * @param side the side of the player requesting the opposite captures
 	 * @return captures of the opposite player
 	 */
@@ -153,6 +159,7 @@ public class Board {
 
 	/**
 	 * Getter for the simulated pieces of the same player
+	 *
 	 * @param side the side of the player requesting the simulated pieces
 	 * @return simulated pieces of the player
 	 */
@@ -163,6 +170,7 @@ public class Board {
 
 	/**
 	 * Getter for the simulated pieces of the opposite player
+	 *
 	 * @param side the side of the player requesting the opposite simulated pieces
 	 * @return simulated pieces of the opposite player
 	 */
@@ -182,6 +190,7 @@ public class Board {
 
 	/**
 	 * Getter for a piece on the table
+	 *
 	 * @param x vertical coordinate on table
 	 * @param y horizontal coordinate on table
 	 * @return piece at the position
@@ -196,6 +205,7 @@ public class Board {
 
 	/**
 	 * Method used to check if a position is safe for a king to move through
+	 *
 	 * @param enemySide the side of the enemy
 	 * @param x         the x coordinate of the position
 	 * @param y         the y coordinate of the position
@@ -211,6 +221,7 @@ public class Board {
 
 	/**
 	 * rook and king must be on the same side.
+	 *
 	 * @param castleType "short" or "long"
 	 */
 	public boolean canCastle(Rook rook, King king, String castleType) {
@@ -296,6 +307,7 @@ public class Board {
 
 	/**
 	 * Registers a move and also update the internals of the board
+	 *
 	 * @param move the move to register
 	 */
 	public void registerMove(Move move) {
@@ -318,7 +330,7 @@ public class Board {
 
 			oppositePieces.remove(dstPiece);
 			simulatedOppositePieces.remove(dstPiece);
-			if (dstPiece.getType() == PieceType.QUEEN && ((Queen)dstPiece).isPawn()) {
+			if (dstPiece.getType() == PieceType.QUEEN && ((Queen) dstPiece).isPawn()) {
 				dstPiece = new Pawn(dstPiece.getSide(), -1, -1);
 			}
 
@@ -345,6 +357,7 @@ public class Board {
 
 	/**
 	 * Method used to register a move with the capability to undo the move
+	 *
 	 * @param move the move to simulate
 	 */
 	public void doMove(Move move) {
@@ -428,6 +441,7 @@ public class Board {
 
 	/**
 	 * Randomly selects a move from an ArrayList
+	 *
 	 * @param moves list of moves
 	 * @return a random move if list is not null and has members, null otherwise
 	 */
@@ -440,6 +454,7 @@ public class Board {
 
 	/**
 	 * Returns first capture on target piece
+	 *
 	 * @param target the piece to be captured
 	 * @return the first capture on target piece, null if no capture is possible
 	 */
@@ -456,6 +471,7 @@ public class Board {
 
 	/**
 	 * Returns first capture on simulated target piece
+	 *
 	 * @param target the piece to be captured
 	 * @return the first capture on simulated target piece, null if no capture is possible
 	 */
@@ -472,6 +488,7 @@ public class Board {
 
 	/**
 	 * Returns all possible captures on target piece
+	 *
 	 * @param target the piece to be captured
 	 * @return all possible captures on target piece, empty list if no capture is possible
 	 */
@@ -493,9 +510,59 @@ public class Board {
 		}
 		return moves;
 	}
-	
+
+	public ArrayList<Move> getAllCheckBlockings(Piece target) {
+		ArrayList<Move> moves = new ArrayList<>();
+
+		// My king is the opposite of the target
+		Piece myKing = getOppositeKing(target.getSide());
+
+		int verticalDist = myKing.getX() - target.getX();
+		int horizontalDist = myKing.getY() - target.getY();
+		int xDir = (int) Math.signum(verticalDist);
+		int yDir = (int) Math.signum(horizontalDist);
+
+		// If the Knight or the pawn is the one attacking, there is no way to block it.
+		if (target.getType() == PieceType.KNIGHT || target.getType() == PieceType.PAWN) {
+			return moves;
+		}
+
+		for (int i = 1; i < Math.max(Math.abs(horizontalDist), Math.abs(verticalDist)); i++) {
+			System.out.println("Conditions: " + (target.getX() + i * xDir) + " " + (target.getY() + i * yDir));
+			int xPositionToBlock = target.getX() + i * xDir;
+			int yPositionToBlock = target.getY() + i * yDir;
+			System.out.println(" @@@@@@@@@@@@@@@@@@@@@@@@@@@ Checking " + xPositionToBlock + " " + yPositionToBlock);
+			if (getPiece(xPositionToBlock, yPositionToBlock) == null) {
+
+				String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
+				System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + "Destination: " + dstString);
+
+				for (Piece piece : getSame(myKing.getSide())) {
+					if (piece.getType() != PieceType.KING && piece.canMove(this, xPositionToBlock, yPositionToBlock)) {
+						System.out.println("Piece TYPE: " + piece.getType());
+						// Don't touch.
+//							if (piece.getType() == PieceType.PAWN && piece.getX() > xPositionToBlock) continue;
+
+						Move potentialMove = Move.moveTo(piece.getSrcString(), dstString);
+						// Simulate the capture and check if the king is in check
+						doMove(potentialMove);
+						// Can do capture if king isn't in check
+						if (getCaptureOnSimulatedPiece(myKing) == null) {
+							moves.add(potentialMove);
+						}
+						undoMove();
+					}
+				}
+			}
+		}
+
+		return moves;
+	}
+
+
 	/**
 	 * Chooses a random move, but prioritize captures first
+	 *
 	 * @return a random move
 	 */
 	public Move aggressiveMode(PlaySide side) {
@@ -507,7 +574,7 @@ public class Board {
 		ArrayList<Piece> mine = getSame(side);
 		Piece myKing = getSameKing(side);
 
-		// If king is in chess, try to capture the problem piece
+		// If king is in chess, try to capture the problem piece or to block with another piece
 		Piece attackingPiece = getCaptureOnPiece(myKing);
 		if (attackingPiece != null) {
 			allPossibleMoves.addAll(getAllCapturesOnPiece(attackingPiece));
@@ -517,6 +584,9 @@ public class Board {
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 			allPossibleMoves.addAll(myKing.getPossibleMoves(this));
+			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+			allPossibleMoves.addAll(getAllCheckBlockings(attackingPiece));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 			return Move.resign();

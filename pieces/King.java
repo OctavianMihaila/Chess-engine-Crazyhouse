@@ -29,8 +29,6 @@ public class King extends Piece {
 		int verticalDist = xDest - x;
 		int horizontalDist = yDest - y;
 
-		System.out.println("Testing if king can move from " + getSrcString() + " to " + getDstString(xDest, yDest));
-		System.out.println("Vertical dist: " + verticalDist + ", horizontal dist: " + horizontalDist);
 		// Cant move if trying to move more than 2 in any direction
 		if (Math.abs(verticalDist) > 1 || Math.abs(horizontalDist) > 1) return false;
 
