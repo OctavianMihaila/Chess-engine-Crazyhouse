@@ -328,9 +328,10 @@ public class Board {
 			}
 
 			if (chosen == null) return;
+			chosen.setSide(side);
 			myCaptures.remove(chosen);
 			myPieces.add(chosen);
-			// Dont forget to always add to simulated so simulations are accurate
+			// Don't forget to always add to simulated so simulations are accurate
 			mySimulatedPieces.add(chosen);
 			int dstY = move.getDestinationY();
 			int dstX = move.getDestinationX();
@@ -363,7 +364,6 @@ public class Board {
 			}
 
 			myCaptures.add(dstPiece);
-			dstPiece.setSide(side);
 			// Mark capture location
 			dstPiece.updatePosition(-1, -1);
 		}
