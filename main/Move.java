@@ -13,32 +13,15 @@ public class Move {
     /* main.Piece to promote a pawn advancing to last row, or
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
-
+    private boolean isCapture = false;
     private boolean enablesEnPassant;
-
-    /*
-      Use the following 4 constructors for Pieces.main.Move:
-      moveTo(src, dst), if emitting a standard move (advance, capture, castle)
-      promote(src, dst, replace), if advancing a pawn to last row
-      dropIn(dst, replace), if placing a captured piece
-      resign(), if you want to resign
-     */
-
-
-    private Move(String source, String destination, PieceType replacement) {
-        this.source = Optional.ofNullable(source);
-        this.destination = Optional.ofNullable(destination);
-        this.replacement = Optional.ofNullable(replacement);
-        this.enablesEnPassant = false;
-    }
+    private final int score;
 
     public void setEnablesEnPassant(boolean enablesEnPassant) {
         this.enablesEnPassant = enablesEnPassant;
     }
 
-    public boolean isEnablesEnPassant() {
-        return enablesEnPassant;
-    }
+
 
     public Optional<String> getSource() {
         return source;
@@ -52,6 +35,39 @@ public class Move {
         return replacement;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void markCapture() {
+        this.isCapture = true;
+    }
+
+    public boolean isCapture() {
+        return this.isCapture;
+    }
+
+        /*
+      Use the following 4 constructors for Pieces.main.Move:
+      moveTo(src, dst), if emitting a standard move (advance, capture, castle)
+      promote(src, dst, replace), if advancing a pawn to last row
+      dropIn(dst, replace), if placing a captured piece
+      resign(), if you want to resign
+     */
+
+    private Move(String source, String destination, PieceType replacement) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+        this.score = 0;
+    }
+
+    private Move(String source, String destination, PieceType replacement, int score) {
+        this.source = Optional.ofNullable(source);
+        this.destination = Optional.ofNullable(destination);
+        this.replacement = Optional.ofNullable(replacement);
+        this.score = score;
+    }
 
     public int getSourceX() {
         return this.source.get().charAt(1) - '0';
@@ -69,23 +85,8 @@ public class Move {
         return this.destination.get().charAt(0) - 'a' + 1;
     }
 
-    /**
-        Translates a move from opponent's perspective to engine's perspective
-     */
-    public void translateMove() {
-        if (source.isPresent() && destination.isPresent()) {
-            String translatedSource = translatePosition(source.get());
-            String translatedDest = translatePosition(destination.get());
-            source = Optional.of(translatedSource);
-            destination = Optional.of(translatedDest);
-        }
-    }
-
-    private String translatePosition(String pos) {
-        int row = pos.charAt(1) - '0';
-        int col = pos.charAt(0) - 'a';
-        int translatedRow = 9 - row;
-        return "" + (char)('a' + col) + translatedRow;
+    public boolean isEnablesEnPassant() {
+        return enablesEnPassant;
     }
 
     /**
@@ -149,7 +150,72 @@ public class Move {
         return new Move(null, destination, replacement);
     }
 
+    public boolean isCastle() {
+        return source.isPresent() && destination.isPresent() && (Math.abs(getDestinationY() - getSourceY()) == 2);
+    }
+
     public static Move resign() {
         return new Move(null, null, null);
+    }
+
+    public static String serializeMove(Move move) {
+        if (move.isNormal())
+            return move.getSource().orElse("") + move.getDestination().orElse("");
+        else if (move.isPromotion() && move.getReplacement().isPresent()) {
+            String pieceCode = switch (move.getReplacement().get()) {
+                case BISHOP -> "b";
+                case KNIGHT -> "n";
+                case ROOK -> "r";
+                case QUEEN -> "q";
+                default -> "";
+            };
+            return move.getSource().orElse("") + move.getDestination().orElse("") + pieceCode;
+        } else if (move.isDropIn() && move.getReplacement().isPresent()) {
+            String pieceCode = switch (move.getReplacement().get()) {
+                case BISHOP -> "B";
+                case KNIGHT -> "N";
+                case ROOK -> "R";
+                case QUEEN -> "Q";
+                case PAWN -> "P";
+                default -> "";
+            };
+            return pieceCode + "@" + move.getDestination().get();
+        } else {
+            return "resign";
+        }
+    }
+
+    public static Move deserializeMove(String s) {
+        if (s.charAt(1) == '@') {
+            /* Drop-in */
+
+            PieceType piece = switch (s.charAt(0)) {
+                case 'P' -> PieceType.PAWN;
+                case 'R' -> PieceType.ROOK;
+                case 'B' -> PieceType.BISHOP;
+                case 'N' -> PieceType.KNIGHT;
+                case 'Q' -> PieceType.QUEEN;
+                case 'K' -> PieceType.KING; /* This is an illegal move */
+                default -> null;
+            };
+
+            return Move.dropIn(s.substring(2, 4), piece);
+        } else if (s.length() == 5) {
+            /* Pawn promotion */
+            PieceType piece = switch (s.charAt(4)) {
+                case 'p' -> PieceType.PAWN; /* This is an illegal move */
+                case 'r' -> PieceType.ROOK;
+                case 'b' -> PieceType.BISHOP;
+                case 'n' -> PieceType.KNIGHT;
+                case 'q' -> PieceType.QUEEN;
+                case 'k' -> PieceType.KING; /* This is an illegal move */
+                default -> null;
+            };
+
+            return Move.promote(s.substring(0, 2), s.substring(2, 4), piece);
+        }
+
+        /* Normal move/capture/castle/en passant */
+        return Move.moveTo(s.substring(0, 2), s.substring(2, 4));
     }
 }

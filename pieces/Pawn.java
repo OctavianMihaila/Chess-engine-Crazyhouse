@@ -3,38 +3,55 @@ package pieces;
 import main.*;
 
 public class Pawn extends Piece {
-	public static final int[][] moveDirections = {{1, 0}, {2, 0}};
-	public static final int[][] captureDirections = {{1, 1}, {1, -1}};
+	public static final int[][] whiteDirections = {{1, 0}, {2, 0}};
+	public static final int[][] blackDirections = {{-1, 0}, {-2, 0}};
+	public static final int[][] whiteCaptureDirections = {{1, 1}, {1, -1}};
+	public static final int[][] blackCaptureDirections = {{-1, 1}, {-1, -1}};
 
-	public Pawn(PlaySide side, PieceType type, int x, int y) {
-		super(side, type, x, y);
+	public Pawn(PlaySide side, int x, int y) {
+		super(side, PieceType.PAWN, x, y, 1);
 	}
 
 	@Override
-	public boolean clearPath(Piece[][] board, int xDest, int yDest) {
-		if (!validMove(board, xDest, yDest)) return false;
-		if (x == 2) return board[x + 1][y] == null;
+	public boolean validPath(Board board, int xDest, int yDest) {
+		if (x == 2 && side == PlaySide.WHITE) return board.getPiece(x + 1, y) == null;
+		if (x == 7 && side == PlaySide.BLACK) return board.getPiece(x - 1, y) == null;
 		return true;
 	}
 
 	@Override
-	public boolean validMove(Piece[][] board, int xDest, int yDest) {
+	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;
 
 		int horizontalDist = yDest - y;
 		int verticalDist = xDest - x;
 
 		// Cant move more than 1 square horizontally
-		if (Math.abs(horizontalDist) > 1) return false;
+		if (Math.abs(horizontalDist) > 0) return false;
+		if (Math.abs(verticalDist) > 2) return false;
 
-		// Cant capture horizontally in other directions
-		if (Math.abs(horizontalDist) == 1 && verticalDist != 1) return false;
+		if (side == PlaySide.WHITE) {
+			if (verticalDist <= 0) return false;
+			if (verticalDist == 2 && x != 2) return false;
+		} else {
+			if (verticalDist >= 0) return false;
+			if (verticalDist == -2 && x != -2) return false;
+		}
 
-		// Can move 2 squares only if moving from starting position
-		if (x == 2 && (verticalDist < 0 || verticalDist > 2)) return false;
+		return true;
+	}
 
-		// Can move only forward 1 square or 2 if moving from starting position
-		return verticalDist == 1 || (x == 2 && verticalDist == 2);
+	@Override
+	public boolean validCapture(Board board, int xDest, int yDest) {
+		if (!onTable(xDest, yDest)) return false;
+
+		int horizontalDist = yDest - y;
+		int verticalDist = xDest - x;
+
+		// Capture can only be made in diagonal
+		if (Math.abs(horizontalDist) != 1) return false;
+
+		return (side == PlaySide.BLACK && verticalDist == -1) || (side == PlaySide.WHITE && verticalDist == 1);
 	}
 
 	public Move performEnPassant(Piece[][] board, int xDestLastMove, int yDestLastMove, String sourceNewMove, String destinationNewMove) {
@@ -43,15 +60,16 @@ public class Pawn extends Piece {
 		return Move.moveTo(sourceNewMove, destinationNewMove);
 	}
 
-
 	@Override
 	public int[][] getMoveDirections() {
-		return moveDirections;
+		if (side == PlaySide.WHITE) return whiteDirections;
+		return blackDirections;
 	}
 
 	@Override
 	public int[][] getCaptureDirections() {
-		return captureDirections;
+		if (side == PlaySide.WHITE) return whiteCaptureDirections;
+		return blackCaptureDirections;
 	}
 
 	@Override

@@ -6,17 +6,13 @@ public class Bot {
 
     /* Declare custom fields below */
 
-    private Board board;
+    public Board board;
     private static Move lastMove;
 
     /* Declare custom fields above */
 
     public Bot() {
         this.board = new Board();
-    }
-
-    public static Move getLastMove() {
-        return lastMove;
     }
 
     /**
@@ -26,23 +22,21 @@ public class Bot {
      * @param sideToMove side to move (either main.PlaySide.BLACK or main.PlaySide.WHITE)
      */
     public void recordMove(Move move, PlaySide sideToMove) {
-        board.registerMove(move);
-
-//        System.out.println("--- Table after player move ---");
-//        DebugTools.printBoardPretty(board.getBoard(), true);
-
+        board.registerMove(sideToMove, move);
         this.lastMove = move;
+    }
+
+    public static Move getLastMove() {
+        return lastMove;
     }
 
     /**
      * Calculate and return the bot's next move
      * @return your move
      */
-    public Move calculateNextMove() {
-        Move move = board.getRandMove();
-        board.registerMove(move);
-//        System.out.println(" --- Table after bot move ---");
-//        DebugTools.printBoardPretty(board.getBoard(), true);
+    public Move calculateNextMove(PlaySide engineSide) {
+        Move move = board.aggressiveMode(engineSide);
+        board.registerMove(engineSide, move);
         return move;
     }
 
