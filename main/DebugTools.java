@@ -39,7 +39,7 @@ public class DebugTools {
 						System.out.print("K");
 						break;
 				}
-				if (board[i][j].side == PlaySide.WHITE) {
+				if (board[i][j].getSide() == PlaySide.WHITE) {
 					System.out.print("w");
 				} else {
 					System.out.print("b");

@@ -12,6 +12,25 @@ public class Rook extends Piece {
 		super(side, PieceType.ROOK, x, y, 2);
 	}
 
+	public boolean isMoved() {
+		return moved;
+	}
+
+	@Override
+	public int[][] getMoveDirections() {
+		return moveDirections;
+	}
+
+	@Override
+	public int[][] getCaptureDirections() {
+		return moveDirections;
+	}
+
+	@Override
+	public int getMaxMoves() {
+		return 7;
+	}
+
 	@Override
 	public void updatePosition(int x, int y) {
 		moved = true;
@@ -30,18 +49,7 @@ public class Rook extends Piece {
 		return verticalDist != 0 || horizontalDist != 0;
 	}
 
-	@Override
-	public int[][] getMoveDirections() {
-		return moveDirections;
-	}
 
-	@Override
-	public int[][] getCaptureDirections() {
-		return moveDirections;
-	}
 
-	@Override
-	public int getMaxMoves() {
-		return 7;
-	}
+
 }

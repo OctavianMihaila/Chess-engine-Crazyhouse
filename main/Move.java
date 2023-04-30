@@ -139,6 +139,10 @@ public class Move {
         return new Move(null, destination, replacement);
     }
 
+    public boolean isCastle() {
+        return source.isPresent() && destination.isPresent() && (Math.abs(getDestinationY() - getSourceY()) == 2);
+    }
+
     public static Move resign() {
         return new Move(null, null, null);
     }

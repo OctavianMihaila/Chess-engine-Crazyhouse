@@ -16,6 +16,10 @@ public class Queen extends Piece {
 		this.isPawn = isPawn;
 	}
 
+	public boolean isPawn() {
+		return isPawn;
+	}
+
 	@Override
 	public boolean validMove(Board board, int xDest, int yDest) {
 		if (!onTable(xDest, yDest)) return false;

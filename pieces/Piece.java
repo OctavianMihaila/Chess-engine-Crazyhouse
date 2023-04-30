@@ -8,11 +8,11 @@ import main.PlaySide;
 import java.util.ArrayList;
 
 public abstract class Piece {
-	public PlaySide side;
-	private final PieceType type;
-	public int x;
-	public int y;
-	public int value;
+	protected PlaySide side;
+	protected final PieceType type;
+	protected int x;
+	protected int y;
+	protected int value;
 
 	public Piece(PlaySide side, PieceType type, int x, int y, int value) {
 		this.side = side;
@@ -32,6 +32,10 @@ public abstract class Piece {
 
 	public int getValue() {
 		return value;
+	}
+
+	public PlaySide getSide() {
+		return side;
 	}
 
 	public void setValue(int value) {
@@ -178,8 +182,8 @@ public abstract class Piece {
 					Move potentialCapture = Move.moveTo(getSrcString(), getDstString(xDest, yDest));
 					// Simulate the capture and check if the king is in check
 					board.doMove(potentialCapture);
-					// Can do capture if king isn't in check
-					if (board.getAllCapturesOnPiece(myKing).isEmpty()) moves.add(potentialCapture);
+					// Cant do move if king at least a piece can capture the king
+					if (board.getCaptureOnPiece(myKing) == null) moves.add(potentialCapture);
 					board.undoMove();
 				}
 			}
@@ -206,8 +210,8 @@ public abstract class Piece {
 					Move potentialMove = Move.moveTo(getSrcString(), getDstString(xDest, yDest));
 					// Simulate the move and check if the king is in check
 					board.doMove(potentialMove);
-					// Can do move if king isn't in check
-					if (board.getAllCapturesOnPiece(myKing).isEmpty()) moves.add(potentialMove);
+					// Cant do move if king at least a piece can capture the king
+					if (board.getCaptureOnPiece(myKing) == null) moves.add(potentialMove);
 					board.undoMove();
 				}
 			}
@@ -215,6 +219,17 @@ public abstract class Piece {
 
 		return moves;
 	}
+
+//	public ArrayList<Move> getPossibleBlockages(Board board) {
+//		ArrayList<Move> moves = new ArrayList<>();
+//
+//		Piece myKing = board.getSameKing(side);
+//		for (int[] moveDir : getMoveDirections()) {
+//			// TODO: Implement
+//		}
+//
+//		return moves;
+//	}
 
 	/**
 	 * Gets all possible moves and captures for the piece
@@ -249,4 +264,9 @@ public abstract class Piece {
 	 * @return the maximum number of moves the piece can make
 	 */
 	public abstract int getMaxMoves();
+
+	@Override
+	public String toString() {
+		return side + " " + type + " at " + getSrcString();
+	}
 }

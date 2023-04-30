@@ -12,6 +12,10 @@ public class King extends Piece {
 		super(side, PieceType.KING, x, y, 10);
 	}
 
+	public void setMoved(boolean moved) {
+		this.moved = moved;
+	}
+
 	@Override
 	public void updatePosition(int x, int y) {
 		moved = true;
@@ -25,6 +29,8 @@ public class King extends Piece {
 		int verticalDist = xDest - x;
 		int horizontalDist = yDest - y;
 
+		System.out.println("Testing if king can move from " + getSrcString() + " to " + getDstString(xDest, yDest));
+		System.out.println("Vertical dist: " + verticalDist + ", horizontal dist: " + horizontalDist);
 		// Cant move if trying to move more than 2 in any direction
 		if (Math.abs(verticalDist) > 1 || Math.abs(horizontalDist) > 1) return false;
 
@@ -45,5 +51,9 @@ public class King extends Piece {
 	@Override
 	public int getMaxMoves() {
 		return 1;
+	}
+
+	public boolean isMoved() {
+		return moved;
 	}
 }

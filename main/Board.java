@@ -3,11 +3,20 @@ package main;
 import pieces.*;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Random;
 import java.util.Stack;
 
 public class Board {
+	private static final int CASTLING_DISTANCE = 2;
+	private static final int SHORT_CASTLE_KING_DESTINATION_Y = 7;
+	private static final int LONG_CASTLE_KING_DESTINATION_Y = 3;
+	private static final int SHORT_CASTLE_ROOK_DESTINATION_Y = 6;
+	private static final int LONG_CASTLE_ROOK_DESTINATION_Y = 4;
+
+	private static final int SHORT_CASTLE_ROOK_ORIGIN_Y = 8;
+
+	private static final int LONG_CASTLE_ROOK_ORIGIN_Y = 1;
+
 	private final Piece[][] board;
 
 	// Field for pieces on the table
@@ -22,6 +31,8 @@ public class Board {
 
 	// Fields for simulating and undoing moves
 	private final Stack<Move> simulatedMoves = new Stack<>();
+	private final ArrayList<Piece> simulatedWhitePieces = new ArrayList<>();
+	private final ArrayList<Piece> simulatedBlackPieces = new ArrayList<>();
 	private final Stack<Piece> simulatedWhiteCaptures = new Stack<>();
 	private final Stack<Piece> simulatedBlackCaptures = new Stack<>();
 
@@ -68,81 +79,15 @@ public class Board {
 		for (int i = 1; i <= 8; i++) {
 			for (int j = 1; j <= 8; j++) {
 				if (board[i][j] != null) {
-					if (board[i][j].side == PlaySide.WHITE) {
+					if (board[i][j].getSide() == PlaySide.WHITE) {
 						whitePieces.add(board[i][j]);
+						simulatedWhitePieces.add(board[i][j]);
 					} else {
 						blackPieces.add(board[i][j]);
+						simulatedBlackPieces.add(board[i][j]);
 					}
 				}
 			}
-		}
-	}
-
-	/**
-	 * Method used to register a move with the capability to undo the move
-	 * @param move the move to simulate
-	 */
-	public void doMove(Move move) {
-		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
-
-
-		int srcY = move.getSourceY();
-		int srcX = move.getSourceX();
-		int dstY = move.getDestinationY();
-		int dstX = move.getDestinationX();
-
-		Piece srcPiece = board[srcX][srcY];
-		Piece dstPiece = board[dstX][dstY];
-		if (srcPiece == null) return;
-		simulatedMoves.push(move);
-
-		// When destination is not null, it is a capture, simulate it and retain all the information
-		if (dstPiece != null) {
-			move.markCapture();
-			if (dstPiece.side == PlaySide.BLACK) {
-				simulatedWhiteCaptures.push(dstPiece);
-				blackPieces.remove(dstPiece);
-			} else if (dstPiece.side == PlaySide.WHITE) {
-				simulatedBlackCaptures.push(dstPiece);
-				whitePieces.remove(dstPiece);
-			}
-		}
-
-		srcPiece.updatePosition(dstX, dstY);
-		board[dstX][dstY] = srcPiece;
-		board[srcX][srcY] = null;
-	}
-
-	/**
-	 * Method used to undo last move
-	 */
-	public void undoMove() {
-		if (simulatedMoves.size() == 0) return;
-		Move lastMove = simulatedMoves.pop();
-		if (lastMove == null) return;
-
-		int srcY = lastMove.getSourceY();
-		int srcX = lastMove.getSourceX();
-		int dstY = lastMove.getDestinationY();
-		int dstX = lastMove.getDestinationX();
-
-		Piece movedPiece = board[dstX][dstY];
-		board[srcX][srcY] = movedPiece;
-		movedPiece.updatePosition(srcX, srcY);
-
-		// If the move was a capture we need to restore the captured piece
-		if (lastMove.isCapture()) {
-			Piece capturedPiece;
-			if (movedPiece.side == PlaySide.WHITE) {
-				capturedPiece = simulatedWhiteCaptures.pop();
-				blackPieces.add(capturedPiece);
-			} else {
-				capturedPiece = simulatedBlackCaptures.pop();
-				whitePieces.add(capturedPiece);
-			}
-			board[dstX][dstY] = capturedPiece;
-		} else {
-			board[dstX][dstY] = null;
 		}
 	}
 
@@ -187,6 +132,46 @@ public class Board {
 	}
 
 	/**
+	 * Getter for the captures of the same player
+	 * @param side the side of the player requesting the captures
+	 * @return captures of the player
+	 */
+	public ArrayList<Piece> getSameCaptures(PlaySide side) {
+		if (side == PlaySide.WHITE) return whiteCaptures;
+		return blackCaptures;
+	}
+
+	/**
+	 * Getter for the captures of the opposite player
+	 * @param side the side of the player requesting the opposite captures
+	 * @return captures of the opposite player
+	 */
+	public ArrayList<Piece> getOppositeCaptures(PlaySide side) {
+		if (side == PlaySide.WHITE) return blackCaptures;
+		return whiteCaptures;
+	}
+
+	/**
+	 * Getter for the simulated pieces of the same player
+	 * @param side the side of the player requesting the simulated pieces
+	 * @return simulated pieces of the player
+	 */
+	public ArrayList<Piece> getSimulatedSame(PlaySide side) {
+		if (side == PlaySide.WHITE) return simulatedWhitePieces;
+		return simulatedBlackPieces;
+	}
+
+	/**
+	 * Getter for the simulated pieces of the opposite player
+	 * @param side the side of the player requesting the opposite simulated pieces
+	 * @return simulated pieces of the opposite player
+	 */
+	public ArrayList<Piece> getSimulatedOpposites(PlaySide side) {
+		if (side == PlaySide.WHITE) return simulatedBlackPieces;
+		return simulatedWhitePieces;
+	}
+
+	/**
 	 * Getter for the board
 	 *
 	 * @return the board
@@ -197,7 +182,6 @@ public class Board {
 
 	/**
 	 * Getter for a piece on the table
-	 *
 	 * @param x vertical coordinate on table
 	 * @param y horizontal coordinate on table
 	 * @return piece at the position
@@ -206,9 +190,112 @@ public class Board {
 		return board[x][y];
 	}
 
+	public void setPiece(Piece piece, int x, int y) {
+
+	}
+
+	/**
+	 * Method used to check if a position is safe for a king to move through
+	 * @param enemySide the side of the enemy
+	 * @param x         the x coordinate of the position
+	 * @param y         the y coordinate of the position
+	 * @return true if the position is safe, false otherwise
+	 */
+	public boolean checkPositionSafe(PlaySide enemySide, int x, int y) {
+		for (Piece piece : getSame(enemySide)) {
+			if (piece.canMove(this, x, y)) return false;
+		}
+		return true;
+	}
+
+
+	/**
+	 * rook and king must be on the same side.
+	 * @param castleType "short" or "long"
+	 */
+	public boolean canCastle(Rook rook, King king, String castleType) {
+		if (rook.getSide() != king.getSide()) return false;
+
+		// Can't castle if the king or the rook has moved
+		if (rook.isMoved() || king.isMoved()) return false;
+
+		switch (castleType) {
+			case "short" -> {
+				if (king.getSide() == PlaySide.WHITE) {
+					// Check if there are pieces between the king and the rook
+					if (board[1][6] != null || board[1][7] != null) {
+						return false;
+					}
+
+					// Checking if positions between king and rook are safe
+					if (!checkPositionSafe(PlaySide.BLACK, 1, 6)
+							|| !checkPositionSafe(PlaySide.BLACK, 1, 7)) {
+						return false;
+					}
+
+				} else {
+					// Check if there are pieces between the king and the rook
+					if (board[8][6] != null || board[8][7] != null) {
+						return false;
+					}
+
+					// Checking if positions between king and rook are safe
+					if (!checkPositionSafe(PlaySide.WHITE, 8, 6)
+							|| !checkPositionSafe(PlaySide.WHITE, 8, 7)) {
+						return false;
+					}
+				}
+			}
+
+			case "long" -> {
+				if (king.getSide() == PlaySide.WHITE) {
+					// Check if there are pieces between the king and the rook
+					if (board[1][4] != null || board[1][3] != null || board[1][2] != null) return false;
+
+					// Checking if positions between king and rook are safe
+					if (!checkPositionSafe(PlaySide.BLACK, 1, 4)
+							|| !checkPositionSafe(PlaySide.BLACK, 1, 3)) {
+						return false;
+					}
+
+				} else {
+					// Check if there are pieces between the king and the rook
+					if (board[8][4] != null || board[8][3] != null || board[8][2] != null) return false;
+
+					// Checking if positions between king and rook are safe
+					if (!checkPositionSafe(PlaySide.WHITE, 8, 4)
+							|| !checkPositionSafe(PlaySide.WHITE, 8, 3)) {
+						return false;
+					}
+
+				}
+			}
+		}
+
+		return true;
+	}
+
+	public void moveRook(int srcX, int dstY) {
+		Piece rookToMove;
+
+		// Castle
+		if (dstY == SHORT_CASTLE_KING_DESTINATION_Y) {
+			// Moving the rook
+			rookToMove = board[srcX][SHORT_CASTLE_ROOK_ORIGIN_Y];
+			rookToMove.updatePosition(rookToMove.getX(), SHORT_CASTLE_ROOK_DESTINATION_Y);
+			board[srcX][SHORT_CASTLE_ROOK_DESTINATION_Y] = board[srcX][SHORT_CASTLE_ROOK_ORIGIN_Y];
+			board[srcX][SHORT_CASTLE_ROOK_ORIGIN_Y] = null;
+		} else if (dstY == LONG_CASTLE_KING_DESTINATION_Y) {
+			// Moving the rook
+			rookToMove = board[srcX][LONG_CASTLE_ROOK_ORIGIN_Y];
+			rookToMove.updatePosition(rookToMove.getX(), LONG_CASTLE_ROOK_DESTINATION_Y);
+			board[srcX][LONG_CASTLE_ROOK_DESTINATION_Y] = board[srcX][LONG_CASTLE_ROOK_ORIGIN_Y];
+			board[srcX][LONG_CASTLE_ROOK_ORIGIN_Y] = null;
+		}
+	}
+
 	/**
 	 * Registers a move and also update the internals of the board
-	 *
 	 * @param move the move to register
 	 */
 	public void registerMove(Move move) {
@@ -225,22 +312,31 @@ public class Board {
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
-			if (dstPiece.side == PlaySide.BLACK) {
-				whiteCaptures.add(dstPiece);
-				blackPieces.remove(dstPiece);
-			} else if (dstPiece.side == PlaySide.WHITE) {
-				blackCaptures.add(dstPiece);
-				whitePieces.remove(dstPiece);
+			ArrayList<Piece> myCaptures = getSameCaptures(srcPiece.getSide());
+			ArrayList<Piece> oppositePieces = getOpposites(srcPiece.getSide());
+			ArrayList<Piece> simulatedOppositePieces = getSimulatedOpposites(srcPiece.getSide());
+
+			oppositePieces.remove(dstPiece);
+			simulatedOppositePieces.remove(dstPiece);
+			if (dstPiece.getType() == PieceType.QUEEN && ((Queen)dstPiece).isPawn()) {
+				dstPiece = new Pawn(dstPiece.getSide(), -1, -1);
 			}
+
+			myCaptures.add(dstPiece);
 
 			// Mark capture location
 			dstPiece.updatePosition(-1, -1);
 		}
 
 		srcPiece.updatePosition(dstX, dstY);
-		if (move.isPromotion()) {
-			System.out.println("Promoted pawn at " + srcPiece.getSrcString() + " to queen");
-			board[dstX][dstY] = new Queen(srcPiece.side, dstX, dstY, true);
+
+		// Special moves
+		if (move.isPromotion() || (srcPiece.getType() == PieceType.PAWN && (srcPiece.getSide() == PlaySide.WHITE && dstX == 8 || srcPiece.getSide() == PlaySide.BLACK && dstX == 1))) {
+//			System.out.println("Promotion");
+			ArrayList<Piece> pieces = getSame(srcPiece.getSide());
+			pieces.remove(srcPiece);
+			board[dstX][dstY] = new Queen(srcPiece.getSide(), dstX, dstY, true);
+			pieces.add(board[dstX][dstY]);
 		} else {
 			board[dstX][dstY] = srcPiece;
 		}
@@ -248,8 +344,90 @@ public class Board {
 	}
 
 	/**
+	 * Method used to register a move with the capability to undo the move
+	 * @param move the move to simulate
+	 */
+	public void doMove(Move move) {
+		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
+
+
+		int srcY = move.getSourceY();
+		int srcX = move.getSourceX();
+		int dstY = move.getDestinationY();
+		int dstX = move.getDestinationX();
+
+		Piece srcPiece = board[srcX][srcY];
+		Piece capturedPiece = board[dstX][dstY];
+		if (srcPiece == null) return;
+		simulatedMoves.push(move);
+
+//		System.out.println("Simulating move: from " + srcPiece + " to " + move.getDestination() + " table now:");
+//		DebugTools.printBoardPretty(this, true);
+		// When destination is not null, it is a capture, simulate it and retain all the information
+		if (capturedPiece != null) {
+			move.markCapture();
+//			System.out.println("Captured piece: " + capturedPiece);
+			if (capturedPiece.getSide() == PlaySide.BLACK) {
+				simulatedWhiteCaptures.push(capturedPiece);
+				simulatedBlackPieces.remove(capturedPiece);
+			} else {
+				simulatedBlackCaptures.push(capturedPiece);
+				simulatedWhitePieces.remove(capturedPiece);
+			}
+		}
+
+//		System.out.println("Changing position of " + srcPiece + " to " + move.getDestination());
+		srcPiece.updatePosition(dstX, dstY);
+		board[dstX][dstY] = srcPiece;
+		board[srcX][srcY] = null;
+//		System.out.println("Simulated move: from " + srcPiece + " to " + move.getDestination() + " table now:");
+//		DebugTools.printBoardPretty(this, true);
+	}
+
+	/**
+	 * Method used to undo last move
+	 */
+	public void undoMove() {
+		if (simulatedMoves.size() == 0) return;
+		Move lastMove = simulatedMoves.pop();
+		if (lastMove == null) return;
+
+		int srcY = lastMove.getSourceY();
+		int srcX = lastMove.getSourceX();
+		int dstY = lastMove.getDestinationY();
+		int dstX = lastMove.getDestinationX();
+
+//		System.out.println("Undoing move: from " + board[dstX][dstY] + " to " + lastMove.getDestination() + " table now:");
+//		DebugTools.printBoardPretty(this, true);
+
+		Piece movedPiece = board[dstX][dstY];
+		board[srcX][srcY] = movedPiece;
+
+		// TODO add a method for undoing a move so that castling can be undone
+		movedPiece.updatePosition(srcX, srcY);
+//		System.out.println("Restored piece " + movedPiece);
+		// If the move was a capture we need to restore the captured piece
+		if (lastMove.isCapture()) {
+			Piece capturedPiece;
+			if (movedPiece.getSide() == PlaySide.WHITE) {
+				capturedPiece = simulatedWhiteCaptures.pop();
+//				System.out.println("Restored piece " + capturedPiece + " to " + capturedPiece.getSrcString());
+				simulatedBlackPieces.add(capturedPiece);
+			} else {
+				capturedPiece = simulatedBlackCaptures.pop();
+//				System.out.println("Restored piece " + capturedPiece + " to " + capturedPiece.getSrcString());
+				simulatedWhitePieces.add(capturedPiece);
+			}
+			board[dstX][dstY] = capturedPiece;
+		} else {
+			board[dstX][dstY] = null;
+		}
+//		System.out.println("Undone move: from " + lastMove.getSource() + " to " + lastMove.getDestination() + " table now:");
+//		DebugTools.printBoardPretty(this, true);
+	}
+
+	/**
 	 * Randomly selects a move from an ArrayList
-	 *
 	 * @param moves list of moves
 	 * @return a random move if list is not null and has members, null otherwise
 	 */
@@ -260,26 +438,64 @@ public class Board {
 		return moves.get(index);
 	}
 
-	public Piece getAttackingPiece(Piece target) {
-		for (Piece piece : getOpposites(target.side)) {
-			if (piece.canCapture(this, target.x, target.y)) return piece;
+	/**
+	 * Returns first capture on target piece
+	 * @param target the piece to be captured
+	 * @return the first capture on target piece, null if no capture is possible
+	 */
+	public Piece getCaptureOnPiece(Piece target) {
+		for (Piece piece : getOpposites(target.getSide())) {
+			if (piece.canCapture(this, target.getX(), target.getY())) {
+//				System.out.println("Piece " + piece + " can capture " + target + " for sure");
+				return piece;
+			}
 		}
+//		System.out.println("No piece can capture " + target + " for sure");
 		return null;
 	}
 
+	/**
+	 * Returns first capture on simulated target piece
+	 * @param target the piece to be captured
+	 * @return the first capture on simulated target piece, null if no capture is possible
+	 */
+	public Piece getCaptureOnSimulatedPiece(Piece target) {
+		for (Piece piece : getSimulatedOpposites(target.getSide())) {
+			if (piece.canCapture(this, target.getX(), target.getY())) {
+//				System.out.println("(Simulated) Piece " + piece + " can capture " + target + " for sure");
+				return piece;
+			}
+		}
+//		System.out.println("(Simulated) No piece can capture " + target + " for sure");
+		return null;
+	}
+
+	/**
+	 * Returns all possible captures on target piece
+	 * @param target the piece to be captured
+	 * @return all possible captures on target piece, empty list if no capture is possible
+	 */
 	public ArrayList<Move> getAllCapturesOnPiece(Piece target) {
 		ArrayList<Move> moves = new ArrayList<>();
-		for (Piece piece : getOpposites(target.side)) {
-			if (piece.canCapture(this, target.x, target.y)) {
-				moves.add(Move.moveTo(piece.getSrcString(), target.getSrcString()));
+
+		// My king is the opposite of the target
+		Piece myKing = getOppositeKing(target.getSide());
+		for (Piece piece : getOpposites(target.getSide())) {
+			if (piece.canCapture(this, target.getX(), target.getY())) {
+//				System.out.println("Piece " + piece + " can capture " + target + " maybe?");
+				Move potentialCapture = Move.moveTo(piece.getSrcString(), target.getSrcString());
+				// Simulate the capture and check if the king is in check
+				doMove(potentialCapture);
+				// Can do capture if king isn't in check
+				if (getCaptureOnSimulatedPiece(myKing) == null) moves.add(potentialCapture);
+				undoMove();
 			}
 		}
 		return moves;
 	}
-
+	
 	/**
 	 * Chooses a random move, but prioritize captures first
-	 *
 	 * @return a random move
 	 */
 	public Move aggressiveMode(PlaySide side) {
@@ -292,22 +508,33 @@ public class Board {
 		Piece myKing = getSameKing(side);
 
 		// If king is in chess, try to capture the problem piece
-		Piece attackingPiece = getAttackingPiece(myKing);
+		Piece attackingPiece = getCaptureOnPiece(myKing);
 		if (attackingPiece != null) {
-			System.out.println("King is in chess because of " + attackingPiece.getSrcString() + " " + attackingPiece.getType());
-
 			allPossibleMoves.addAll(getAllCapturesOnPiece(attackingPiece));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 			allPossibleMoves.addAll(myKing.getPossibleCaptures(this));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
-			// TODO make other pieces capture the problem piece
 			allPossibleMoves.addAll(myKing.getPossibleMoves(this));
 			if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
 
 			return Move.resign();
 		}
+
+//		// Castling
+//		Piece shortCastleRook = board[1][8];
+//		Piece longCastleRook = board[1][1];
+//
+//		if (shortCastleRook != null && shortCastleRook.getType() == PieceType.ROOK
+//				&& canCastle((Rook)shortCastleRook, (King)whiteKing, "short")) { // short castle
+//			return Move.moveTo(whiteKing.getSrcString(),
+//					Piece.getDstString(whiteKing.getX(), whiteKing.getY() + CASTLING_DISTANCE));
+//		} else if (longCastleRook != null && longCastleRook.getType() == PieceType.ROOK
+//				&& canCastle((Rook)longCastleRook, (King)whiteKing, "long")) { // long castle
+//			return Move.moveTo(whiteKing.getSrcString(),
+//					Piece.getDstString(whiteKing.getX(), whiteKing.getY() - CASTLING_DISTANCE));
+//		}
 
 		// First generate all captures and choose one if there are valid captures
 		for (Piece piece : mine) allPossibleMoves.addAll(piece.getPossibleCaptures(this));
