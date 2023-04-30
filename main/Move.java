@@ -14,15 +14,14 @@ public class Move {
     *  piece to drop-in (from captured assets) */
     private final Optional<PieceType> replacement;
     private boolean isCapture = false;
+    private boolean enablesEnPassant;
     private final int score;
 
-    /*
-      Use the following 4 constructors for Pieces.main.Move:
-      moveTo(src, dst), if emitting a standard move (advance, capture, castle)
-      promote(src, dst, replace), if advancing a pawn to last row
-      dropIn(dst, replace), if placing a captured piece
-      resign(), if you want to resign
-     */
+    public void setEnablesEnPassant(boolean enablesEnPassant) {
+        this.enablesEnPassant = enablesEnPassant;
+    }
+
+
 
     public Optional<String> getSource() {
         return source;
@@ -47,6 +46,14 @@ public class Move {
     public boolean isCapture() {
         return this.isCapture;
     }
+
+        /*
+      Use the following 4 constructors for Pieces.main.Move:
+      moveTo(src, dst), if emitting a standard move (advance, capture, castle)
+      promote(src, dst, replace), if advancing a pawn to last row
+      dropIn(dst, replace), if placing a captured piece
+      resign(), if you want to resign
+     */
 
     private Move(String source, String destination, PieceType replacement) {
         this.source = Optional.ofNullable(source);
@@ -76,6 +83,10 @@ public class Move {
 
     public int getDestinationY() {
         return this.destination.get().charAt(0) - 'a' + 1;
+    }
+
+    public boolean isEnablesEnPassant() {
+        return enablesEnPassant;
     }
 
     /**

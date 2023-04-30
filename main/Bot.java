@@ -7,7 +7,7 @@ public class Bot {
     /* Declare custom fields below */
 
     public Board board;
-    private Move lastMove;
+    private static Move lastMove;
 
     /* Declare custom fields above */
 
@@ -24,6 +24,10 @@ public class Bot {
     public void recordMove(Move move, PlaySide sideToMove) {
         board.registerMove(sideToMove, move);
         this.lastMove = move;
+    }
+
+    public static Move getLastMove() {
+        return lastMove;
     }
 
     /**

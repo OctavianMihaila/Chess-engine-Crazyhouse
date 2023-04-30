@@ -19,6 +19,8 @@ public class Board {
 
 	private final Piece[][] board;
 
+	private boolean imBlack;
+
 	// Field for pieces on the table
 	private final ArrayList<Piece> whitePieces = new ArrayList<>();
 	private final ArrayList<Piece> blackPieces = new ArrayList<>();
@@ -205,6 +207,36 @@ public class Board {
 		piece.updatePosition(x, y);
 	}
 
+	public boolean checkIfEnPassantIsEnabled(int srcX, int srcY, int dstX, int dstY) {
+		// Check if the pawn has moved before
+		if (srcX != 7 && srcX != 2) return false;
+
+		// Check if the pawn moved 2 squares forward
+		if (Math.abs(dstX - srcX) == 2 && dstY == srcY) return true;
+
+		return false;
+	}
+
+	public boolean checkIfEnPassantCapture(PlaySide side, int dstX, int dstY) {
+
+		// Normal capture
+		if (board[dstX][dstY] != null) return false;
+
+		Piece capturedPiece = board[dstX + 1][dstY];
+
+		// TODO: Solve problem with imBlack when the bot can play both sides.
+
+		// There is no pawn that can be captured with en passant (bot's pawn).
+		if (capturedPiece != null && capturedPiece.getType() == PieceType.PAWN
+				&& capturedPiece.getSide() != side
+				&& board[dstX + 1][dstY].getSide() == side) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
 	/**
 	 * Method used to check if a position is safe for a king to move through
 	 *
@@ -307,14 +339,37 @@ public class Board {
 		}
 	}
 
-	/**
-	 * Registers a move and also update the internals of the board
-	 *
-	 * @param move the move to register
-	 */
-	public void registerMove(PlaySide side, Move move) {
-		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
+	public void registerEnPassant(PlaySide side, Move move, Piece srcPiece, int srcX, int srcY, int dstX, int dstY) {
+		// En passant
+		if (move.isNormal() && srcPiece.getType() == PieceType.PAWN) { // moved piece is a pawn
+			// Bot performs en passant.
+			if (srcPiece.getSide() == (imBlack ? PlaySide.WHITE : PlaySide.BLACK)
+					&& checkIfEnPassantIsEnabled(srcX, srcY, dstX, dstY)) {
+				move.setEnablesEnPassant(true);
+			}
 
+			// Bot receives en passant and updates its internal structures.
+			if (checkIfEnPassantCapture(side, dstX, dstY)) {
+				Piece capturedPiece = board[dstX + 1][dstY];
+				ArrayList<Piece> oppositeCaptures = getOppositeCaptures(capturedPiece.getSide());
+				ArrayList<Piece> myPieces = getSame(capturedPiece.getSide());
+				ArrayList<Piece> mySimulatedPieces = getSimulatedSame(capturedPiece.getSide());
+
+				myPieces.remove(srcPiece);
+				mySimulatedPieces.remove(srcPiece);
+				oppositeCaptures.add(srcPiece);
+			}
+		}
+	}
+
+	/**
+	 * Registers a drop in move
+	 *
+	 * @param side the side tha is dropping int
+	 * @param move the move to register
+	 * @return true if the move is a drop in, false otherwise
+	 */
+	private boolean registerDropIn(PlaySide side, Move move) {
 		if (move.isDropIn()) {
 			ArrayList<Piece> myCaptures = getSameCaptures(side);
 			ArrayList<Piece> myPieces = getSame(side);
@@ -322,14 +377,13 @@ public class Board {
 			PieceType dropPieceType = move.getReplacement().get();
 			Piece chosen = null;
 			for (Piece p : myCaptures) {
-				if (p.getType() == dropPieceType) {
-					// Save the piece because we cant modify the list that we are iterating over
-					chosen = p;
-					break;
-				}
+				if (p.getType() != dropPieceType) continue;
+				// Save the piece because we cant modify the list that we are iterating over
+				chosen = p;
+				break;
 			}
 
-			if (chosen == null) return;
+			if (chosen == null) return true;
 			chosen.setSide(side);
 			myCaptures.remove(chosen);
 			myPieces.add(chosen);
@@ -341,8 +395,20 @@ public class Board {
 			board[dstX][dstY] = chosen;
 			chosen.updatePosition(dstX, dstY);
 
-			return;
+			return true;
 		}
+		return false;
+	}
+
+	/**
+	 * Registers a move and also update the internals of the board
+	 *
+	 * @param move the move to register
+	 */
+	public void registerMove(PlaySide side, Move move) {
+		if (!move.isNormal() && !move.isDropIn() && !move.isPromotion()) return;
+
+		if (registerDropIn(side, move)) return;
 
 		int srcY = move.getSourceY();
 		int srcX = move.getSourceX();
@@ -352,6 +418,8 @@ public class Board {
 		Piece srcPiece = getPiece(srcX, srcY);
 		Piece dstPiece = getPiece(dstX, dstY);
 		if (srcPiece == null) return;
+
+		registerEnPassant(side, move, srcPiece, srcX, srcY, dstX, dstY);
 
 		// When destination is not null, it is a capture
 		if (dstPiece != null) {
@@ -384,6 +452,41 @@ public class Board {
 			setPiece(srcPiece, dstX, dstY);
 		}
 		setPiece(null, srcX, srcY);
+	}
+
+	public Move generateEnPassantMove() {
+		Move lastMove = Bot.getLastMove();
+
+		if (lastMove != null && lastMove.isEnablesEnPassant()) {
+			int xDestLastMove = lastMove.getDestinationX();
+			int yDestLastMove = lastMove.getDestinationY();
+			String sourceNewMove = null;
+			String destinationNewMove = Piece.getDstString(xDestLastMove + 1, yDestLastMove);
+
+			Piece leftPiece = null;
+			Piece rightPiece = null;
+
+			// Checking for pieces to the left and to the right of the pawn.
+			if (yDestLastMove == 1) {
+				rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			} else if (yDestLastMove == 8) {
+				leftPiece = board[xDestLastMove][yDestLastMove - 1];
+			} else {
+				leftPiece = board[xDestLastMove][yDestLastMove - 1];
+				rightPiece = board[xDestLastMove][yDestLastMove + 1];
+			}
+
+			// Looking for a pawn that can do en passant.
+			if (leftPiece != null && leftPiece.getType() == PieceType.PAWN && leftPiece.getSide() == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
+				sourceNewMove = leftPiece.getSrcString();
+				return ((Pawn) leftPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
+			} else if (rightPiece != null && rightPiece.getType() == PieceType.PAWN && rightPiece.getSide() == (imBlack ? PlaySide.BLACK : PlaySide.WHITE)) {
+				sourceNewMove = rightPiece.getSrcString();
+				return ((Pawn) rightPiece).performEnPassant(board, xDestLastMove, yDestLastMove, sourceNewMove, destinationNewMove);
+			}
+		}
+
+		return null;
 	}
 
 	/**
@@ -519,8 +622,9 @@ public class Board {
 
 	/**
 	 * Returns all possible moves between an attacker and a target that can prevent a check
+	 *
 	 * @param attacker the piece that is attacking
-	 * @param target the piece that is being attacked (mostly the king)
+	 * @param target   the piece that is being attacked (mostly the king)
 	 * @return moves to prevent a capture from attacker to target
 	 */
 	public ArrayList<Move> getAllBlocksBetween(Piece attacker, Piece target) {
@@ -582,10 +686,9 @@ public class Board {
 			if (getPiece(xPositionToBlock, yPositionToBlock) == null) {
 				String dstString = Piece.getDstString(xPositionToBlock, yPositionToBlock);
 				for (Piece piece : (myKing.getSide() == PlaySide.WHITE) ? whiteCaptures : blackCaptures) {
-					if (piece.getType() != PieceType.KING) {
-						Move potentialMove = Move.dropIn(dstString, piece.getType());
-						moves.add(potentialMove); // TODO: If we implement drop undo, this should be modified.
-					}
+					if (piece.getType() == PieceType.KING) continue;
+					Move potentialMove = Move.dropIn(dstString, piece.getType());
+					moves.add(potentialMove);
 				}
 			}
 		}
@@ -595,6 +698,7 @@ public class Board {
 
 	/**
 	 * Returns all possible drop ins on a table
+	 *
 	 * @param side the side which drops in
 	 * @return all possible drop ins on a table
 	 */
@@ -604,10 +708,9 @@ public class Board {
 		for (Piece piece : getSameCaptures(side)) {
 			for (int i = 1; i <= 8; i++) {
 				for (int j = 1; j <= 8; j++) {
-					if (getPiece(i, j) == null) {
-						Move potentialMove = Move.dropIn(Piece.getDstString(i, j), piece.getType());
-						moves.add(potentialMove);
-					}
+					if (getPiece(i, j) != null) continue;
+					Move potentialMove = Move.dropIn(Piece.getDstString(i, j), piece.getType());
+					moves.add(potentialMove);
 				}
 			}
 		}
@@ -623,8 +726,6 @@ public class Board {
 	 */
 	public Move aggressiveMode(PlaySide side) {
 		ArrayList<Move> allPossibleMoves = new ArrayList<>();
-
-		if (whitePieces.size() == 1 && blackPieces.size() == 1) return Move.resign();
 
 		// Setting up my pieces and the other player pieces
 		ArrayList<Piece> mine = getSame(side);
@@ -656,19 +757,10 @@ public class Board {
 			return Move.resign();
 		}
 
-//		// Castling
-//		Piece shortCastleRook = board[1][8];
-//		Piece longCastleRook = board[1][1];
-//
-//		if (shortCastleRook != null && shortCastleRook.getType() == PieceType.ROOK
-//				&& canCastle((Rook)shortCastleRook, (King)whiteKing, "short")) { // short castle
-//			return Move.moveTo(whiteKing.getSrcString(),
-//					Piece.getDstString(whiteKing.getX(), whiteKing.getY() + CASTLING_DISTANCE));
-//		} else if (longCastleRook != null && longCastleRook.getType() == PieceType.ROOK
-//				&& canCastle((Rook)longCastleRook, (King)whiteKing, "long")) { // long castle
-//			return Move.moveTo(whiteKing.getSrcString(),
-//					Piece.getDstString(whiteKing.getX(), whiteKing.getY() - CASTLING_DISTANCE));
-//		}
+		// Checking if we can do an en passant attack.
+		Move enPassantMove = generateEnPassantMove();
+		if (enPassantMove != null) return enPassantMove;
+
 
 		allPossibleMoves.addAll(getAllDropIns(side));
 		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
@@ -680,6 +772,22 @@ public class Board {
 		// If no captures are valid, generate all moves and choose one
 		for (Piece piece : mine) allPossibleMoves.addAll(piece.getPossibleMoves(this));
 		if (allPossibleMoves.size() != 0) return chooseRandom(allPossibleMoves);
+
+		// TODO: Move Castling here if you want to test it (works only human play with the bot).
+		// TODO further review for illegal moves between 2 bots
+		// Castling commented because it is not working properly need revision
+		Piece shortCastleRook = board[1][8];
+		Piece longCastleRook = board[1][1];
+
+		if (shortCastleRook != null && shortCastleRook.getType() == PieceType.ROOK
+				&& canCastle((Rook) shortCastleRook, (King) whiteKing, "short")) { // short castle
+			return Move.moveTo(whiteKing.getSrcString(),
+					Piece.getDstString(whiteKing.getX(), whiteKing.getY() + CASTLING_DISTANCE));
+		} else if (longCastleRook != null && longCastleRook.getType() == PieceType.ROOK
+				&& canCastle((Rook) longCastleRook, (King) whiteKing, "long")) { // long castle
+			return Move.moveTo(whiteKing.getSrcString(),
+					Piece.getDstString(whiteKing.getX(), whiteKing.getY() - CASTLING_DISTANCE));
+		}
 
 		// If no moves are valid, resign, for now
 		return Move.resign();

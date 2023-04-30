@@ -54,6 +54,12 @@ public class Pawn extends Piece {
 		return (side == PlaySide.BLACK && verticalDist == -1) || (side == PlaySide.WHITE && verticalDist == 1);
 	}
 
+	public Move performEnPassant(Piece[][] board, int xDestLastMove, int yDestLastMove, String sourceNewMove, String destinationNewMove) {
+		// Moving pawn to do en passant and removing the enemy's pawn.
+		board[xDestLastMove][yDestLastMove] = null;
+		return Move.moveTo(sourceNewMove, destinationNewMove);
+	}
+
 	@Override
 	public int[][] getMoveDirections() {
 		if (side == PlaySide.WHITE) return whiteDirections;
