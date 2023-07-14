@@ -1,10 +1,3 @@
-
-<center><img src="logo.gif"></center>
-<center><img src="logo2.png" style="width: 50%"></center>
-<center><img src="logo3.gif"></center>
-<center><img src="logo4.png"></center>
-<hr>
-
 # How to run
 
         -> Play against it: make play
